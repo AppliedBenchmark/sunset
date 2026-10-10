@@ -93,6 +93,8 @@ job summary, and on pull requests keeps one comment up to date with the findings
 Sunset doesn't need the credentials that `actions/checkout` would store: when it has to fetch the base commit
 of a pull request, it passes the token to git itself.
 
+![Sunset's pull request comment listing a retired and a retiring model](docs/assets/pr-comment.png)
+
 The last step is optional: it shows the findings under **Security → Code scanning**. Code scanning is free
 on public repositories; private ones need GitHub Code Security. Without it, drop the step,
 `security-events: write` and `actions: read`. See [docs/code-scanning.md](docs/code-scanning.md).
