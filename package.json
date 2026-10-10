@@ -1,7 +1,6 @@
 {
   "name": "@appliedbenchmark/sunset",
-  "version": "0.3.0",
-  "private": true,
+  "version": "1.0.0-rc.0",
   "description": "Catch deprecated and retiring AI model IDs in your code, with dates quoted from each provider's official page.",
   "keywords": [
     "ai",

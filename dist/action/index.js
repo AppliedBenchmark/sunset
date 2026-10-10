@@ -43330,7 +43330,7 @@ function inferPlatforms(manifests) {
 }
 
 // src/version.ts
-var VERSION = "0.3.0";
+var VERSION = "1.0.0-rc.0";
 
 // src/app/scan.ts
 var STALE_REGISTRY_DAYS = 30;
