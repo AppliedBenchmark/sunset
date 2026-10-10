@@ -1,0 +1,11 @@
+{
+  "source": "vertex/claude-opus-5-5",
+  "urls": [
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-5-5.md.txt"
+  ],
+  "fetched_at": "2026-10-07T23:07:58Z",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "ae28a714b6a0e692e76e749ace5cee93174676c251bb3cb9f53b3ddb7fd1ecfc",
+  "normalizer_version": 1
+}

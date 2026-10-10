@@ -1,0 +1,6 @@
+{
+  // JSONC comment: gpt-fixture-retired
+  "model": "gpt-fixture-retired",
+  "deployment": "${AZURE_DEPLOYMENT}",
+  "escaped": "\"gpt-fixture-3\""
+}

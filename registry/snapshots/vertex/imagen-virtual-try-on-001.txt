@@ -1,0 +1,31 @@
+### Vertex AI documentation is no longer being updated
+
+Vertex AI's services are now part of Gemini Enterprise Agent Platform. See the most up-to-date information in the Agent Platform documentation.
+
+- Home
+-
+Documentation
+-
+AI and ML
+-
+Vertex AI
+-
+Generative AI on Vertex AI
+-
+Guides
+
+# Virtual Try-On 001 Stay organized with collections Save and categorize content based on your preferences.
+
+Virtual Try-On lets you generate virtual try-on images from an image of a person and product photos that you provide. This page documents the capabilities and features of virtual-try-on-001.
+
+| Model ID | virtual-try-on-001 | virtual-try-on-001 |
+| Supported inputs & outputs | Inputs: Images Outputs: Images | Inputs: Images Outputs: Images |
+| Capabilities | Supported Digital watermarking and verification User-configurable safety settings Virtual Try-On Person generation Content Credentials (C2PA) Not supported Image generation | Supported Digital watermarking and verification User-configurable safety settings Virtual Try-On Person generation Content Credentials (C2PA) Not supported Image generation |
+| Usage types | Supported Provisioned Throughput Not supported | Supported Provisioned Throughput Not supported |
+| Technical specifications |
+| Technical specifications | Images photo | Maximum image size: 10MB Maximum number of output images per prompt: 4 Supported aspect ratios: Same as input image Supported resolutions: Same as input image Supported MIME types: image/png, image/jpeg |
+| Versions | virtual-try-on-001 Launch stage: GA Release date: January 20, 2026 Discontinuation date: January 20, 2027 | virtual-try-on-001 Launch stage: GA Release date: January 20, 2026 Discontinuation date: January 20, 2027 |
+| Prompt languages | English |
+| Quotas | Regional online prediction requests per base model per minute per base model: 50 | Regional online prediction requests per base model per minute per base model: 50 |
+
+For Imagen pricing information, see the Imagen section of the Cost of building and deploying AI models in Vertex AI page.

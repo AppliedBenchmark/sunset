@@ -1,0 +1,11 @@
+{
+  "source": "bedrock/model-card-deepseek-deepseek-r1",
+  "urls": [
+    "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-deepseek-deepseek-r1.html"
+  ],
+  "fetched_at": "2026-10-08T19:48:41Z",
+  "etag": "\"AqoQZGxKRyt7szUrRDwA3STfmBk=-gzip\"",
+  "last_modified": "Thu, 08 Oct 2026 19:30:17 GMT",
+  "sha256": "5ae9f3878b716c3107f68da90d19fb70c53a422ab03d3c1179e53d88ac69b28f",
+  "normalizer_version": 1
+}

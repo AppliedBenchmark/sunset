@@ -1,0 +1,11 @@
+{
+  "source": "bedrock/model-card-meta-llama-3-2-3b-instruct",
+  "urls": [
+    "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-3b-instruct.html"
+  ],
+  "fetched_at": "2026-10-08T19:48:41Z",
+  "etag": "\"0IMkmsaj/XlUFdSLBz1EQlIxfrY=-gzip\"",
+  "last_modified": "Thu, 08 Oct 2026 19:30:22 GMT",
+  "sha256": "fc6e45d53b83328267f58374fd2cd0fe7c7064609459cbd37db936c72a783a33",
+  "normalizer_version": 1
+}

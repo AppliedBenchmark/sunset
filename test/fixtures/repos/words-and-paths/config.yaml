@@ -1,0 +1,4 @@
+editor:
+  language: quokka
+llm:
+  model: quokka

@@ -1,0 +1,38 @@
+{
+  "findings": [
+    "app.py:4:6 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "app.py:4:30 notice suppression-expired sunset-ignore until=2098-12-31",
+    "app.py:5:6 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "app.py:6:6 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]"
+  ],
+  "unresolved": [],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [
+    "app.py:1:6 inline model-retired gpt-fixture-retired (tracked in #12)",
+    "app.py:3:6 inline model-retired gpt-fixture-retired (migrating this quarter)",
+    "app.py:7:6 config model-deprecated gpt-fixture-3",
+    "defaults.ts:5:32 inline model-retired gpt-fixture-retired (pinned until the baseline is re-recorded)",
+    "ignored.ts:2:23 inline model-retired gpt-fixture-retired (generated client)",
+    "ignored.ts:3:23 inline model-reference-unresolved process.env.MODEL (generated client)",
+    "legacy/old.py:1:10 config model-retiring gpt-fixture-1-2099-01-10 (frozen code)"
+  ],
+  "diagnostics": [
+    "app.py:5:30 malformed-directive: Malformed \"sunset-ignore\": \"next-week\" is not a valid date (YYYY-MM-DD)",
+    "app.py:6:30 malformed-directive: Unknown directive \"sunset-ignore-line\". Use sunset-ignore, sunset-ignore-next-line, sunset-ignore-file.",
+    "- expired-config-ignore: Config ignore #3 (expired) expired on 2098-06-01; it no longer applies."
+  ],
+  "files": {
+    "listed": 4,
+    "scanned": 4,
+    "lexed": 4,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

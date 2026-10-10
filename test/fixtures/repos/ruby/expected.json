@@ -1,0 +1,25 @@
+{
+  "findings": [
+    "app/chat.rb:3:28 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]"
+  ],
+  "unresolved": [
+    "app/chat.rb:11:34 variable model = MODELS.first"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 1,
+    "scanned": 1,
+    "lexed": 1,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "findings": [],
+  "unresolved": [],
+  "mentions": [
+    "CHANGELOG.txt:1:13 error gpt-fixture-retired",
+    "README.md:3:15 error gpt-fixture-retired",
+    "README.md:6:22 error gpt-fixture-1-2099-01-10",
+    "docs/conf.py:1:10 notice gpt-fixture-unverified",
+    "docs/guide.md:1:5 warning claude-fixture-opus-9",
+    "docs/guide.md:1:31 error anthropic.claude-fixture-1-20990101-v1:0"
+  ],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 4,
+    "scanned": 4,
+    "lexed": 0,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

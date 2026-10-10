@@ -1,0 +1,9 @@
+paths:
+  /chat:
+    post:
+      parameters:
+        - name: model
+          schema:
+            enum:
+              - gpt-fixture-retired
+          in: query

@@ -1,0 +1,45 @@
+{
+  "findings": [
+    "compare_models.ipynb:52:42 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "compare_models.ipynb:129:99 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "deno/hello.ipynb:19:49 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "magics.ipynb:19:14 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "magics.ipynb:20:45 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "magics.ipynb:21:23 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash vertex:gemini-fixture-1.0-flash]",
+    "magics.ipynb:34:24 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    "magics.ipynb:45:13 warning model-retiring mistral-fixture-large-2099 [mistral:mistral-fixture-large-2099]",
+    "magics.ipynb:56:24 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "truncated.ipynb:13:8 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "truncated.ipynb:18:16 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]"
+  ],
+  "unresolved": [
+    "compare_models.ipynb:52:6 environment MODEL = os.environ.get(\"MODEL\", \"gpt-fixture-retired\")",
+    "deno/hello.ipynb:19:12 environment model = Deno.env.get(\"MODEL\") ?? \"gpt-fixture-3\""
+  ],
+  "mentions": [
+    "compare_models.ipynb:15:30 error gpt-fixture-retired",
+    "compare_models.ipynb:120:53 error gpt-fixture-retired",
+    "compare_models.ipynb:138:19 notice gpt-fixture-3",
+    "docs/tour.ipynb:31:38 error gpt-fixture-retired"
+  ],
+  "inventory": [],
+  "suppressed": [
+    "compare_models.ipynb:108:18 inline model-retired gpt-fixture-retired (historical scores)",
+    "compare_models.ipynb:129:72 inline model-deprecated gpt-fixture-3",
+    "magics.ipynb:33:21 inline model-retired gpt-fixture-retired (baseline run)"
+  ],
+  "diagnostics": [],
+  "files": {
+    "listed": 5,
+    "scanned": 5,
+    "lexed": 4,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "source": "vertex/claude-fable-5",
+  "urls": [
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5.md.txt"
+  ],
+  "fetched_at": "2026-10-07T23:07:58Z",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "6b9630bae7e22ea1bc4c346eb204f426cb312a4687d34e8883aeb8b5e32b0b8a",
+  "normalizer_version": 1
+}

@@ -1,0 +1,29 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    ignore:
+      # @types/node follows the oldest supported Node.js line.
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
+    groups:
+      # Built into the bundles: a pull request that updates these also needs `npm run build`
+      # (commit dist/action/index.js) and `npm run licenses`.
+      bundled:
+        patterns: ['@actions/core', 'ajv', 'ignore', 'picomatch', 'yaml']
+      development:
+        patterns: ['*']
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      actions:
+        patterns: ['*']

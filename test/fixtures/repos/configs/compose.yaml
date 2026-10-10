@@ -1,0 +1,5 @@
+services:
+  app:
+    environment:
+      MODEL: ${MODEL:-gpt-fixture-3}
+      OTHER_MODEL: "${{ vars.OTHER_MODEL }}"

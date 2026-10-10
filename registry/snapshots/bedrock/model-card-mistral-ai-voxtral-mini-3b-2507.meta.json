@@ -1,0 +1,11 @@
+{
+  "source": "bedrock/model-card-mistral-ai-voxtral-mini-3b-2507",
+  "urls": [
+    "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-voxtral-mini-3b-2507.html"
+  ],
+  "fetched_at": "2026-10-08T19:48:41Z",
+  "etag": "\"ZvuFeOrnk1qzPg79g9y9ID9N4Gw=-gzip\"",
+  "last_modified": "Thu, 08 Oct 2026 19:30:30 GMT",
+  "sha256": "175a153c93a4faeef3adcce1f53a52b25264ac7c13c4e7cafdd43ae7bbccf8e0",
+  "normalizer_version": 1
+}

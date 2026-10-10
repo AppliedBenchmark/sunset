@@ -1,0 +1,6 @@
+# What `gh release create --generate-notes` puts in a release's notes. The updater's registry pull
+# requests reach users through the remote registry, not through a release, so they are left out.
+changelog:
+  exclude:
+    labels:
+      - registry-update

@@ -1,0 +1,30 @@
+Claude Opus 4.6 on Google Cloud is optimized for coding, enterprise agents, and professional work.
+
+**Retirement Date:** Not sooner than February 5, 2027.
+
+- **Long-running agents:** Power production-ready assistants for multi-step, real-time applications---from customer support automation to complex operational workflows that require peak accuracy, intelligence, and speed.
+- **Coding:** Handle everyday development tasks with enhanced performance---or plan and execute complex software projects spanning hours or days---with the ability to save, maintain, and reference information across multiple sessions.
+- **Cybersecurity:** Deploy agents that autonomously patch vulnerabilities before exploitation---shifting from reactive detection to proactive defense.
+- **Financial analysis:** Conduct entry-level financial analysis, deliver advanced predictive analysis, or preemptively develop intelligent risk management strategies that leverage best-in-class domain knowledge.
+- **Computer use:** Claude Opus 4.6 on Google Cloud is a highly accurate model for computer use, enabling developers to direct Claude to use computers the way people do.
+- **Business tasks:** Generate and edit office files like slides, documents, and spreadsheets with minimal input.
+- **Research:** Perform focused analysis across multiple data sources, turning expert analysis into final deliverables. Ideal for complex problem solving, rapid business intelligence, and real-time decision support.
+
+Try in Agent Studio
+
+View model card in Model Garden
+
+| Model ID | `claude-opus-4-6` ||
+| Launch stage | GA ||
+| Supported inputs \& outputs | - Inputs: Text, Code, Images, Documents - Outputs: Text ||
+| Token limits | - Maximum input tokens: 1,000,000 - Maximum output tokens: 128,000 ||
+| Capabilities | - Supported - Computer use - Web search - Batch predictions - Prompt caching - Function calling - Extended thinking - Count tokens - Not supported ||
+| Usage types | - Supported - Fixed quota - Provisioned Throughput - Not supported ||
+| Technical specifications |
+| Technical specifications |
+| Technical specifications |
+|---|---|---|
+| Images | - **Limitation and specifications:** See Vision in Anthropic's documentation |
+| Documents | - **Limitation and specifications:** See PDF support in Anthropic's documentation |
+| Model availability (Includes fixed quota \& Provisioned Throughput) | - United States - `us-east5` - Europe - `europe-west1` - Asia Pacific - `asia-southeast1` - Global - `global endpoint` |
+| ML processing | - United States - `Multi-region` - Europe - `Multi-region` - Asia Pacific - `asia-southeast1` |

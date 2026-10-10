@@ -1,0 +1,30 @@
+{
+  "findings": [
+    "app.py:3:10 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "config.yaml:2:8 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    "config.yaml:4:5 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "config.yaml:6:10 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]"
+  ],
+  "unresolved": [
+    "app.py:5:15 environment model = os.environ[\"M\"]"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [
+    "app.py:4:10 inline model-retiring gpt-fixture-2-2099-02-15"
+  ],
+  "diagnostics": [],
+  "files": {
+    "listed": 3,
+    "scanned": 2,
+    "lexed": 2,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 1
+    }
+  }
+}

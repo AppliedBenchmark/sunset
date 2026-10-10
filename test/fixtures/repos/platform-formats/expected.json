@@ -1,0 +1,42 @@
+{
+  "findings": [
+    "bedrock.py:5:6 error model-retiring anthropic.claude-fixture-1-20990101-v1:0 [bedrock:anthropic.claude-fixture-1-20990101-v1:0#us-gov-west-1 bedrock:anthropic.claude-fixture-1-20990101-v1:0]",
+    "bedrock.py:6:6 error model-retiring us.anthropic.claude-fixture-1-20990101-v1:0 [bedrock:anthropic.claude-fixture-1-20990101-v1:0#us-gov-west-1 bedrock:anthropic.claude-fixture-1-20990101-v1:0] <bedrock-profile>",
+    "bedrock.py:7:6 warning model-retiring us-gov.anthropic.claude-fixture-opus-9 [bedrock:anthropic.claude-fixture-opus-9] <bedrock-profile>",
+    "bedrock.py:8:6 warning model-retiring global.anthropic.claude-fixture-opus-9 [bedrock:anthropic.claude-fixture-opus-9] <bedrock-profile>",
+    "bedrock.py:9:6 notice model-unverified apac.deepseek.fixture-v3.2 [bedrock:deepseek.fixture-v3.2] <bedrock-profile>",
+    "bedrock.py:10:6 error model-retired anthropic.claude-fixture-v2 [bedrock:anthropic.claude-fixture-v2]",
+    "gateway.ts:4:37 warning model-retired gpt-fixture-retired [openai:gpt-fixture-retired] <vercel-ai-gateway>",
+    "gateway.ts:5:37 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash vertex:gemini-fixture-1.0-flash] <vercel-ai-gateway>",
+    "openrouter.py:2:13 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15] <openrouter>",
+    "openrouter.py:3:16 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9] <openrouter>",
+    "openrouter.py:4:13 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash vertex:gemini-fixture-1.0-flash] <openrouter>",
+    "openrouter.py:5:16 warning model-retiring mistral-fixture-large-2099 [mistral:mistral-fixture-large-2099] <openrouter>",
+    "vertex.ts:1:12 error model-retiring claude-fixture-1@20990101 [vertex:claude-fixture-1@20990101]",
+    "vertex.ts:2:79 notice model-deprecated claude-fixture-opus-9 [vertex:claude-fixture-opus-9] <vertex-path>",
+    "vertex.ts:3:37 notice model-deprecated gemini-fixture-1.0-flash [vertex:gemini-fixture-1.0-flash] <vertex-path>",
+    "vertex.ts:4:12 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "vertex.ts:5:12 error model-retiring claude-fixture-1@20990101 [vertex:claude-fixture-1@20990101]"
+  ],
+  "unresolved": [],
+  "mentions": [],
+  "inventory": [
+    "anthropic/claude-sonnet-4.5 openrouter.py:6:6",
+    "ca.anthropic.claude-fixture-opus-9 bedrock.py:12:6"
+  ],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 4,
+    "scanned": 4,
+    "lexed": 4,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

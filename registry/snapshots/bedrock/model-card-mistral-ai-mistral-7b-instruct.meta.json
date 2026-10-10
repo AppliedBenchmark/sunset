@@ -1,0 +1,11 @@
+{
+  "source": "bedrock/model-card-mistral-ai-mistral-7b-instruct",
+  "urls": [
+    "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-mistral-7b-instruct.html"
+  ],
+  "fetched_at": "2026-10-08T19:48:41Z",
+  "etag": "\"1/Mzdr1nUgpuzYNBRTBD2mwxFpM=-gzip\"",
+  "last_modified": "Thu, 08 Oct 2026 19:30:14 GMT",
+  "sha256": "81a57dd844790f7cd71a65cbfed8016a1c39835f04f22d7c08fe37d406110b25",
+  "normalizer_version": 1
+}

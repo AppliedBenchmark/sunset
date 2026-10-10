@@ -1,0 +1,11 @@
+{
+  "source": "azure-openai/retired-models",
+  "urls": [
+    "https://raw.githubusercontent.com/MicrosoftDocs/azure-ai-docs/main/articles/foundry/openai/includes/concepts-retired-models-content.md"
+  ],
+  "fetched_at": "2026-10-08T19:51:58Z",
+  "etag": "W/\"c25f967561ac89c13f93a2bb0a847748c2210b2f42c2820bd820504917a5aa56\"",
+  "last_modified": null,
+  "sha256": "34f89a4e6d6342822902a5995713fdf35fcd912e2ed42d5129709b824f64091d",
+  "normalizer_version": 1
+}

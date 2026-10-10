@@ -1,0 +1,34 @@
+{
+  "findings": [
+    "Jenkinsfile:7:36 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "src/Program.cs:1:21 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "src/Program.cs:2:19 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "src/Program.cs:4:6 notice model-deprecated claude-fixture-1-20990101 [anthropic:claude-fixture-1-20990101]",
+    "src/main/java/App.java:2:34 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "src/main/java/App.java:4:20 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "src/main/java/App.java:7:21 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "src/main/kotlin/App.kt:1:14 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "src/main/kotlin/App.kt:4:27 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "src/main/kotlin/App.kt:6:5 warning model-retiring mistral-fixture-large-2099 [mistral:mistral-fixture-large-2099]"
+  ],
+  "unresolved": [
+    "src/Program.cs:6:29 environment model = Environment.GetEnvironmentVariable(\"MODEL\")"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 4,
+    "scanned": 4,
+    "lexed": 4,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

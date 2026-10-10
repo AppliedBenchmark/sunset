@@ -1,0 +1,13 @@
+# Sunset's own configuration: the Action and CI scan this repository with it.
+# docs/configuration.md describes every key.
+
+exclude:
+  # The registry and its snapshots list every model on purpose.
+  - registry/**
+  # Tests use fake IDs from test/fixtures/registry, and real ones where a test needs them.
+  - test/**
+
+ignore:
+  # Sunset's code handles model IDs as data (`model_id: row.model_id`) and never calls a model.
+  - rules: [model-reference-unresolved]
+    reason: model IDs are data here; no model is called

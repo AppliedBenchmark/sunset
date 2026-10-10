@@ -1,0 +1,25 @@
+{
+  "findings": [],
+  "unresolved": [],
+  "mentions": [
+    "README.md:1:19 error gpt-fixture-retired"
+  ],
+  "inventory": [
+    "anthropic.claude-fixture-v2:9 app.py:20:6"
+  ],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 10,
+    "scanned": 2,
+    "lexed": 1,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 5,
+      "generated": 3,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

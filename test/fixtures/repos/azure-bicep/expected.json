@@ -1,0 +1,31 @@
+{
+  "findings": [
+    "azuredeploy.json:11:20 error model-retiring gpt-fixture-4o [azure-openai:gpt-fixture-4o@2099-01-05] <azure-deployment>",
+    "deploy.sh:5:16 error model-retiring gpt-fixture-4o [azure-openai:gpt-fixture-4o@2099-01-05] <azure-deployment>",
+    "main.bicep:9:14 error model-retiring gpt-fixture-4o [azure-openai:gpt-fixture-4o@2099-01-05] <azure-deployment>",
+    "main.bicep:38:26 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]"
+  ],
+  "unresolved": [
+    "avm.bicep:20:18 azure-unknown model.version = 2099-12-31",
+    "deploy.sh:6:111 variable model.name = $MODEL_NAME",
+    "main.bicep:21:14 azure-no-version model.name = gpt-fixture-4o",
+    "main.bicep:32:13 variable model.name = modelName"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 4,
+    "scanned": 4,
+    "lexed": 4,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

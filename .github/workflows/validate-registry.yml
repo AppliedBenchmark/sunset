@@ -1,0 +1,53 @@
+name: Validate registry
+
+# Validates registry/ against its schema, sources and committed snapshots. On a pull request it
+# also writes a review table of every added or changed entry (dates, excerpt, link) to the job
+# summary. CI's test job runs the same validation; this workflow adds the review table.
+on:
+  pull_request:
+    paths:
+      - registry/**
+      - src/core/registry/**
+      - src/adapters/registry-files.ts
+      - src/report/registry-review.ts
+      - scripts/validate-registry.ts
+      - .github/workflows/validate-registry.yml
+  push:
+    branches: [main]
+    paths: [registry/**]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  validate:
+    name: Validate registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # The base branch's models.yaml, so the review table shows only what the PR changes.
+      - if: github.event_name == 'pull_request'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.base_ref }}
+          path: base
+          sparse-checkout: registry/models.yaml
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - if: github.event_name == 'pull_request'
+        run: npm run registry:validate -- --base base/registry/models.yaml
+      # No base to compare with: the review table would list every entry as added.
+      - if: github.event_name != 'pull_request'
+        run: npm run registry:validate

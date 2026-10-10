@@ -1,0 +1,47 @@
+name: Bug report
+description: Sunset reported something wrong, missed a model ID, or crashed.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A wrong date or a missing model in the registry? Use **Registry correction** instead.
+        A security problem? Report it privately, as [SECURITY.md](https://github.com/AppliedBenchmark/sunset/blob/main/SECURITY.md) describes.
+  - type: input
+    id: version
+    attributes:
+      label: Sunset version
+      description: The `uses:` line of your workflow, or the output of `npx @appliedbenchmark/sunset --version`.
+      placeholder: AppliedBenchmark/sunset@v1
+    validations:
+      required: true
+  - type: dropdown
+    id: runner
+    attributes:
+      label: How do you run it?
+      options:
+        - GitHub Action
+        - CLI
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened, and what did you expect?
+      description: For a missed or wrong finding, include the line of code, or a small file, with the model ID.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: >-
+        The log or the report. For more detail, add `--debug` (CLI) or re-run the job with debug logging
+        (Action). Remove anything private.
+      render: text
+  - type: textarea
+    id: config
+    attributes:
+      label: Configuration
+      description: Your `.sunset.yml` and the Action's `with:` inputs, if any.
+      render: yaml

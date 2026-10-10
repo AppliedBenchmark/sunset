@@ -1,0 +1,11 @@
+{
+  "source": "vertex/imagen-3-0-generate",
+  "urls": [
+    "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/3-0-generate?hl=en"
+  ],
+  "fetched_at": "2026-10-08T20:00:48Z",
+  "etag": null,
+  "last_modified": "Wed, 07 Oct 2026 08:25:13 GMT",
+  "sha256": "97e853a70b9aaed5dbd1fffe31d7da0a526ea3368cca73bee5e2ec732b20c23c",
+  "normalizer_version": 1
+}

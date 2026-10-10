@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "resources": [
+    {
+      "type": "Microsoft.CognitiveServices/accounts/deployments",
+      "apiVersion": "2024-10-01",
+      "name": "[concat(parameters('account'), '/chat')]",
+      "properties": {
+        "model": {
+          "format": "OpenAI",
+          "name": "gpt-fixture-4o",
+          "version": "2099-01-05"
+        }
+      }
+    }
+  ]
+}

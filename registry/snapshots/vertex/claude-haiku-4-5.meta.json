@@ -1,0 +1,11 @@
+{
+  "source": "vertex/claude-haiku-4-5",
+  "urls": [
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-4-5.md.txt"
+  ],
+  "fetched_at": "2026-10-07T23:07:58Z",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "720d5ceee31fd6349df82093f49f1a35507b62e02f3649f31cc862ba4ccfab2c",
+  "normalizer_version": 1
+}

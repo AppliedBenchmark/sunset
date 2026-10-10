@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+  stages {
+    stage('Eval') {
+      steps {
+        // gpt-fixture-retired was the default until it retired.
+        sh "python eval.py --model gpt-fixture-2-2099-02-15"
+      }
+    }
+  }
+}

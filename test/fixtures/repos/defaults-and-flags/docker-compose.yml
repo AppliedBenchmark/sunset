@@ -1,0 +1,5 @@
+services:
+  worker:
+    command: python worker.py -m gpt-fixture-retired
+  eval:
+    command: python eval.py --temperature 0 --model ${EVAL_MODEL:-claude-fixture-opus-9}

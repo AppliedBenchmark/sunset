@@ -1,0 +1,31 @@
+Claude Opus 4.1 on Google Cloud is Anthropic's Opus-class model and an industry
+leader for coding and agent capabilities, especially agentic search. It excels
+for customers needing frontier intelligence:
+
+**Retirement Date:** Not sooner than Aug 5, 2026.
+
+- **AI agents**: Enable AI agents to complete complex, multi-step tasks with precision and reliability.
+- **Agentic search and analysis**: Connect to multiple data sources to synthesize information and insights across different repositories.
+- **Expert-level coding**: Plan and execute complex coding tasks end-to-end, maintaining high-quality code that is consistent with your style.
+- **Virtual collaboration**: Use the sustained reasoning capabilities to unlock new use cases involving long-horizon tasks and long chains of actions.
+- **Content creation**: Generate content with human-quality, natural prose. Create long-form content, technical documentation, marketing copy, and frontend design mockups.
+- **Long context and memory**: Incorporates memory capabilities that allow it to effectively summarize and reference previous interactions.
+
+Try in Agent Studio
+
+View model card in Model Garden
+
+| Model ID | `claude-opus-4-1` ||
+| Launch stage | GA ||
+| Supported inputs \& outputs | - Inputs: Text, Code, Images - Outputs: Text ||
+| Token limits | - Maximum input tokens: 200,000 - Maximum output tokens: 32,000 ||
+| Capabilities | - Supported - Web search - Batch predictions - Prompt caching - Function calling - Extended thinking - Count tokens - Not supported ||
+| Usage types | - Supported - Fixed quota - Provisioned Throughput - Not supported ||
+| Technical specifications |
+| Technical specifications |
+| Technical specifications |
+|---|---|---|
+| Images | - **Limitation and specifications:** See Vision in Anthropic's documentation |
+| Documents | - **Limitation and specifications:** See PDF support in Anthropic's documentation |
+| Model availability (Includes fixed quota \& Provisioned Throughput) | - United States - `us-east5` - Global - `global endpoint` |
+| ML processing | - United States - `Multi-region` |

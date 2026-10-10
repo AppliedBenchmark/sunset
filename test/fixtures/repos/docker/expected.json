@@ -1,0 +1,44 @@
+{
+  "findings": [
+    "Dockerfile:3:11 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "Dockerfile:4:17 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "Dockerfile:6:27 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "docker-compose.yml:4:50 warning model-retiring mistral-fixture-large-2099 [mistral:mistral-fixture-large-2099]",
+    "docker-compose.yml:9:48 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash vertex:gemini-fixture-1.0-flash]",
+    "docker-compose.yml:10:29 notice model-deprecated claude-fixture-1-20990101 [anthropic:claude-fixture-1-20990101]",
+    "entrypoint.sh:4:17 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    "entrypoint.sh:7:8 notice model-deprecated claude-fixture-1-20990101 [anthropic:claude-fixture-1-20990101]",
+    "entrypoint.sh:9:7 error model-retired gemini-fixture-1.0-pro-001 [gemini-api:gemini-fixture-1.0-pro-001]",
+    "scripts/eval.ps1:7:23 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "scripts/eval.ps1:15:24 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "scripts/eval.sh:9:36 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "scripts/eval.sh:13:24 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]"
+  ],
+  "unresolved": [
+    "Dockerfile:5:5 environment BUILD_MODEL = $DEFAULT_MODEL",
+    "docker-compose.yml:6:9 environment MODEL = ${WORKER_MODEL}",
+    "entrypoint.sh:4:1 environment MODEL = \"${MODEL:-gpt-fixture-1-2099-01-10}\"",
+    "entrypoint.sh:5:20 environment --model = $MODEL",
+    "scripts/eval.sh:9:8 environment JUDGE_MODEL = \"${JUDGE_MODEL:=gpt-fixture-2-2099-02-15}\""
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [
+    "scripts/eval.ps1:11:14 inline model-retired gpt-fixture-retired (baseline)",
+    "scripts/eval.sh:11:24 inline model-retired gpt-fixture-retired (pinned for the baseline)"
+  ],
+  "diagnostics": [],
+  "files": {
+    "listed": 5,
+    "scanned": 5,
+    "lexed": 5,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

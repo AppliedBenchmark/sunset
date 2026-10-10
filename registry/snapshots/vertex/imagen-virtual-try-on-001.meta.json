@@ -1,0 +1,11 @@
+{
+  "source": "vertex/imagen-virtual-try-on-001",
+  "urls": [
+    "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/virtual-try-on-001?hl=en"
+  ],
+  "fetched_at": "2026-10-08T20:00:48Z",
+  "etag": null,
+  "last_modified": "Wed, 07 Oct 2026 08:25:13 GMT",
+  "sha256": "500f44f18f7698a18730fadc7bf3d80d673290cf3ea6ac590f0b88fe8d47164e",
+  "normalizer_version": 1
+}

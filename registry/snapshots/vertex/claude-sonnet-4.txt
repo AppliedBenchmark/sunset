@@ -1,0 +1,28 @@
+Claude Sonnet 4 on Google Cloud balances impressive performance for coding with the
+right speed and cost for high-volume use cases:
+
+**Retirement Date:** Not sooner than May 14, 2026.
+
+- **Coding**: Handle everyday development tasks with enhanced performance---power code reviews, bug fixes, API integrations, and feature development with immediate feedback loops.
+- **AI Assistants**: Power production-ready assistants for real-time applications---from customer support automation to operational workflows that require both intelligence and speed.
+- **Efficient research**: Perform focused analysis across multiple data sources while maintaining fast response times. Ideal for rapid business intelligence, competitive analysis, and real-time decision support.
+- **Large-scale content**: Generate and analyze content at scale with improved quality. Create customer communications, analyze user feedback, and produce marketing materials with the right balance of quality and throughput.
+
+Try in Agent Studio
+
+View model card in Model Garden
+
+| Model ID | `claude-sonnet-4` ||
+| Launch stage | GA ||
+| Supported inputs \& outputs | - Inputs: Text, Code, Images - Outputs: Text ||
+| Token limits | - Maximum input tokens: 1M (Preview) 200,000 (GA) - Maximum output tokens: 64,000 ||
+| Capabilities | - Supported - Web search - Batch predictions - Prompt caching - Function calling - Extended thinking - Count tokens - Not supported ||
+| Usage types | - Supported - Fixed quota - Provisioned Throughput - Not supported ||
+| Technical specifications |
+| Technical specifications |
+| Technical specifications |
+|---|---|---|
+| Images | - **Limitation and specifications:** See Vision in Anthropic's documentation |
+| Documents | - **Limitation and specifications:** See PDF support in Anthropic's documentation |
+| Model availability (Includes fixed quota \& Provisioned Throughput) | - United States - `us-east5` - Europe - `europe-west1` - Global - `global endpoint` |
+| ML processing | - United States - `Multi-region` - Europe - `Multi-region` |

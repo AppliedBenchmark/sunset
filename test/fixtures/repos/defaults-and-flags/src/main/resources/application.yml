@@ -1,0 +1,6 @@
+spring:
+  ai:
+    openai:
+      chat:
+        options:
+          model: ${OPENAI_MODEL:gpt-fixture-2-2099-02-15}

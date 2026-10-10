@@ -1,0 +1,11 @@
+{
+  "source": "vertex/grok-4-1-fast",
+  "urls": [
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-1-fast.md.txt"
+  ],
+  "fetched_at": "2026-10-08T19:46:12Z",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "9aa9d2e0d7659bcd882d7b8b5850277caec078050eaa73fa7b78771123f19c34",
+  "normalizer_version": 1
+}

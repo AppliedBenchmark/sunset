@@ -1,0 +1,162 @@
+# Llama 3.2 3B Instruct
+
+## Meta — Llama 3.2 3B Instruct
+
+## Model Details
+
+Llama 3.2 3B Instruct is Meta's 3-billion parameter lightweight model designed for on-device tasks like summarization and instruction following. For more information about model development and performance, see the model/service card.
+
+-
+Model launch date: Sep 25, 2024
+
+-
+EOL no sooner than: Sep 25, 2025
+
+-
+Legacy period: at least 6 months
+
+-
+Model lifecycle policy: Model lifecycle (For Models Launched Prior to Sept 7 2026)
+
+-
+Model EOL date: July 7, 2026
+
+-
+End User License Agreements and Terms of Use: View
+
+-
+Model lifecycle: Legacy
+
+-
+Context window: 128K tokens
+
+-
+Max output tokens: 4K
+
+-
+Knowledge cutoff: Dec 2023
+
+| Input Modalities | Output Modalities | APIs supported | Endpoints supported |
+| Audio | Embedding | Responses | bedrock-runtime |
+| Image | Image | Chat Completions | bedrock-mantle |
+| Speech | Speech | Invoke | |
+| Text | Text | Converse | |
+| Video | Video | | |
+
+###### Tip
+
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+
+## Capabilities and Features
+
+Bedrock Features
+
+Features supported using bedrock-runtime endpoint
+
+| Supported | Not Supported |
+| Response streaming Guardrails Prompt management Flows Agents | Intelligent prompt routing Abuse detection Prompt optimization Count tokens Knowledge base Model evaluation Structured outputs Client-side tool calling |
+
+## Pricing
+
+For pricing information, see the Amazon Bedrock Pricing page.
+
+## Programmatic Access
+
+Use the following model IDs and endpoint URLs to access this model programmatically. For more information about the available APIs and endpoints, see APIs supported and Endpoints supported.
+
+| Endpoint | Model ID | In-Region endpoint URL | Geo inference ID | Global inference ID |
+| bedrock-runtime | meta.llama3-2-3b-instruct-v1:0 | https://bedrock-runtime.{region}.amazonaws.com | us.meta.llama3-2-3b-instruct-v1:0 eu.meta.llama3-2-3b-instruct-v1:0 | Not supported |
+
+For example, if region is us-east-1 (N. Virginia), then the bedrock-runtime endpoint URL will be "https://bedrock-runtime.us-east-1.amazonaws.com" and for bedrock-mantle will be "https://bedrock-mantle.us-east-1.api.aws/v1".
+
+## Service Tiers
+
+Amazon Bedrock offers multiple service tiers to match your workload requirements. Standard provides pay-per-token access with no commitment (set "service_tier": "default" or omit the field). Priority delivers the fastest response times for a price premium (set "service_tier": "priority"). Flex provides lower-cost access for flexible, non-time-sensitive workloads (set "service_tier": "flex"). Reserved provides dedicated throughput with a term commitment for predictable workloads; it is set at the account level rather than per request (contact your AWS account team to enable). For more information, see service tiers.
+
+| Standard | Priority | Flex | Reserved |
+| | | | |
+
+## Regional Availability
+
+Regional availability at a glance
+
+Amazon Bedrock offers three inference options: In-Region keeps requests within a single Region for strict compliance, Geo Cross-Region routes across Regions within a geography (such as US, EU, and APAC) while respecting data residency, and Global Cross-Region routes anywhere worldwide when there are no residency constraints. Refer to the Regional availability by models page for more details.
+
+| Region | In-Region | Geo | Global |
+| us-east-1 (N. Virginia) | | | |
+| us-east-2 (Ohio) | | | |
+| us-west-2 (Oregon) | | | |
+| eu-central-1 (Frankfurt) | | | |
+| eu-west-1 (Ireland) | | | |
+| eu-west-3 (Paris) | | | |
+
+Geo inference details
+
+Geo: US
+
+Geo Inference ID: us.meta.llama3-2-3b-instruct-v1:0
+
+| Source Region | Destination Regions |
+| us-east-1 (N. Virginia) | us-east-1 (N. Virginia), us-west-2 (Oregon) |
+| us-east-2 (Ohio) | us-east-1 (N. Virginia), us-east-2 (Ohio), us-west-2 (Oregon) |
+| us-west-2 (Oregon) | us-east-1 (N. Virginia), us-west-2 (Oregon) |
+
+Geo: EU
+
+Geo Inference ID: eu.meta.llama3-2-3b-instruct-v1:0
+
+| Source Region | Destination Regions |
+| eu-central-1 (Frankfurt) | eu-central-1 (Frankfurt), eu-west-1 (Ireland), eu-west-3 (Paris) |
+| eu-west-1 (Ireland) | eu-central-1 (Frankfurt), eu-west-1 (Ireland), eu-west-3 (Paris) |
+| eu-west-3 (Paris) | eu-central-1 (Frankfurt), eu-west-1 (Ireland), eu-west-3 (Paris) |
+
+## Quotas and Limits
+
+Your AWS account has default quotas to maintain the performance of the service and to ensure appropriate usage of Amazon Bedrock. The default quotas assigned to an account might be updated depending on regional factors, payment history, fraudulent usage, and/or approval of a quota increase request. For more information, see Quotas for Amazon Bedrock documentation and see the limits for the model.
+
+## Sample Code
+
+Step 1 - AWS Account: If you have an AWS account already, skip this step. If you are new to AWS, sign up for an AWS account.
+
+Step 2 - API key: Go to the Amazon Bedrock console and generate a long-term API key.
+
+Step 3 - Get the SDK: To use this getting started guide, you must have Python already installed. Then install the relevant software depending on the APIs you are using.
+
+pip install boto3
+
+Step 4 - Set environment variables: Configure your environment to use the API key for authentication.
+
+AWS_BEARER_TOKEN_BEDROCK="<provide your Bedrock API key>"
+
+Step 5 - Run your first inference request: Save the file as bedrock-first-request.py
+
+Invoke API
+
+import json
+import boto3
+
+client = boto3.client('bedrock-runtime', region_name='us-east-1')
+response = client.invoke_model(
+modelId='meta.llama3-2-3b-instruct-v1:0',
+body=json.dumps({
+'messages': [{ 'role': 'user', 'content': 'Can you explain the features of Amazon Bedrock?'}],
+'max_tokens': 1024
+})
+)
+print(json.loads(response['body'].read()))
+
+Converse API
+
+import boto3
+
+client = boto3.client('bedrock-runtime', region_name='us-east-1')
+response = client.converse(
+modelId='meta.llama3-2-3b-instruct-v1:0',
+messages=[
+{
+'role': 'user',
+'content': [{'text': 'Can you explain the features of Amazon Bedrock?'}]
+}
+]
+)
+print(response)

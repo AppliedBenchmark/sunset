@@ -1,0 +1,31 @@
+Claude Opus 4 on Google Cloud is a state-of-the-art model for coding and agent
+capabilities, especially agentic search. It excels for customers needing
+frontier intelligence:
+
+**Retirement Date:** Not sooner than May 14, 2026.
+
+- **Advanced coding**: Independently plan and execute complex development tasks end-to-end. It adapts to your style and maintains high code quality throughout.
+- **Long-horizon tasks and complex problem solving (virtual collaborator)**: Unlock new use cases that involves long-horizon tasks that require memory, sustained reasoning, and long chains of actions.
+- **AI agents**: Enable agents to tackle complex, multi-step tasks that require peak accuracy.
+- **Agentic search and research**: Connect to multiple data sources to synthesize comprehensive insights across repositories.
+- **Content creation**: Create human-quality content with natural prose. Produce long-form creative content, technical documentation, marketing copy, and frontend design mockups.
+- **Memory and context management**: Incorporates memory capabilities that allow it to effectively summarize and reference previous interactions.
+
+Try in Agent Studio
+
+View model card in Model Garden
+
+| Model ID | `claude-opus-4` ||
+| Launch stage | GA ||
+| Supported inputs \& outputs | - Inputs: Text, Code, Images - Outputs: Text ||
+| Token limits | - Maximum input tokens: 200,000 - Maximum output tokens: 32,000 ||
+| Capabilities | - Supported - Web search - Batch predictions - Prompt caching - Function calling - Extended thinking - Count tokens - Not supported ||
+| Usage types | - Supported - Fixed quota - Provisioned Throughput - Not supported ||
+| Technical specifications |
+| Technical specifications |
+| Technical specifications |
+|---|---|---|
+| Images | - **Limitation and specifications:** See Vision in Anthropic's documentation |
+| Documents | - **Limitation and specifications:** See PDF support in Anthropic's documentation |
+| Model availability (Includes fixed quota \& Provisioned Throughput) | - United States - `us-east5` - Global - `global endpoint` |
+| ML processing | - United States - `Multi-region` |

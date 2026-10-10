@@ -1,0 +1,94 @@
+name: AppliedBenchmark Sunset
+description: >-
+  Catch deprecated and retiring AI model IDs in your code, with dates quoted from each provider's official
+  page.
+author: AppliedBenchmark
+
+branding:
+  icon: sunset
+  color: orange
+
+inputs:
+  path:
+    description: >-
+      The directory to scan, relative to the workspace. A path that isn't a directory fails the step.
+      Default: the workspace.
+    default: .
+  config:
+    description: >-
+      A config file. Default: .sunset.yml or .sunset.yaml in the scanned directory, if there is one.
+    default: ''
+  registry:
+    description: >-
+      remote (the latest registry, falling back to the bundled copy), bundled (no network calls), a path
+      to a models.yaml, or an https URL of a mirror. Default: the config file's value, or remote.
+    default: ''
+  fail-on:
+    description: >-
+      The lowest severity that fails the step: error, warning or never. Default: the config file's value,
+      or error.
+    default: ''
+  fail-scope:
+    description: >-
+      On pull requests, all fails on every finding at or above fail-on, and new fails only on findings
+      the pull request adds. Default: the config file's value, or all.
+    default: ''
+  platforms:
+    description: >-
+      Comma-separated platforms the repository uses, such as openai,bedrock. Default: the config file's
+      value. Without one, Sunset infers the platforms from the dependency manifests and uses them only for
+      IDs that several platforms serve.
+    default: ''
+  sarif-file:
+    description: >-
+      Write a SARIF 2.1.0 report to this path, for github/codeql-action/upload-sarif. Default: none.
+    default: ''
+  json-file:
+    description: >-
+      Write the JSON report to this path. Default: none.
+    default: ''
+  annotations:
+    description: >-
+      Annotate findings in the workflow run and the pull request's files. Default: true.
+    default: 'true'
+  summary:
+    description: >-
+      Write the results to the job summary. Default: true.
+    default: 'true'
+  pr-comment:
+    description: >-
+      On pull requests, keep one comment up to date with the findings the pull request adds. Needs
+      pull-requests write permission. If GitHub refuses the comment, as it does for pull requests from
+      forks, Sunset logs a notice and doesn't fail. Default: true.
+    default: 'true'
+  github-token:
+    description: >-
+      The token for the PR comment and for fetching the base commit. Default: the workflow's token.
+    default: ${{ github.token }}
+
+outputs:
+  errors:
+    description: >-
+      The number of findings at error level.
+  warnings:
+    description: >-
+      The number of findings at warning level.
+  notices:
+    description: >-
+      The number of findings at notice level. Unresolved references aren't counted.
+  sarif-file:
+    description: >-
+      The SARIF file's absolute path, if one was written.
+  json-file:
+    description: >-
+      The JSON report's absolute path, if one was written.
+  registry-origin:
+    description: >-
+      Where the registry came from: remote, bundled or file.
+  registry-version:
+    description: >-
+      The registry's registry_version.
+
+runs:
+  using: node24
+  main: dist/action/index.js

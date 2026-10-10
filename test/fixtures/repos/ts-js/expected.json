@@ -1,0 +1,45 @@
+{
+  "findings": [
+    "lib/legacy.cjs:2:28 warning model-retiring mistral-fixture-large-2099 [mistral:mistral-fixture-large-2099]",
+    "src/App.tsx:2:18 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "src/Settings.tsx:4:49 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "src/Settings.tsx:5:38 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "src/__fixtures__/chat-response.json:4:13 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired] (test)",
+    "src/client.ts:4:23 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    "src/client.ts:6:32 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "src/client.ts:8:88 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "src/client.ts:11:51 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "src/client.ts:16:35 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "src/threads.ts:8:31 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "web/Chat.svelte:2:23 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "web/Chat.svelte:5:26 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    "web/ModelPicker.vue:14:20 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "web/pages/index.astro:3:16 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "web/public/index.html:5:38 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "web/public/index.html:7:30 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]"
+  ],
+  "unresolved": [
+    "src/client.ts:8:43 environment model = process.env.OPENAI_MODEL ?? 'gpt-fixture-3'",
+    "src/client.ts:18:26 environment model = process.env.MODEL",
+    "src/client.ts:18:52 variable deployment = config.deployment"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [
+    "web/ModelPicker.vue:6:20 inline model-retired gpt-fixture-retired (kept for old sessions)"
+  ],
+  "diagnostics": [],
+  "files": {
+    "listed": 10,
+    "scanned": 10,
+    "lexed": 10,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "findings": [
+    "agent.ts:5:37 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "agent.ts:6:40 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "agent.ts:7:58 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]"
+  ],
+  "unresolved": [
+    "agent.ts:7:22 environment model = openai(process.env.MODEL ?? 'gpt-fixture-3')",
+    "app.py:3:32 environment model = os.environ[\"OPENAI_MODEL\"]",
+    "app.py:4:32 variable model = settings.model_name",
+    "app.py:5:24 interpolated model = f\"claude-{tier}-fixture\"",
+    "app.py:7:1 environment model_id = os.getenv(\"MODEL_ID\")",
+    "client.ts:1:7 environment model = process.env.MODEL!",
+    "client.ts:3:40 variable model = config.model",
+    "client.ts:4:40 interpolated model = `${family}-mini`",
+    "deploy.yaml:4:29 environment --model = ${{ vars.EVAL_MODEL }}",
+    "deploy.yaml:6:7 environment MODEL = ${{ secrets.MODEL }}",
+    "main.go:6:14 environment Model = os.Getenv(\"MODEL\")",
+    "main.go:7:14 variable Model = cfg.Model"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 5,
+    "scanned": 5,
+    "lexed": 5,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

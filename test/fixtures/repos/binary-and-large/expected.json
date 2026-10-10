@@ -1,0 +1,23 @@
+{
+  "findings": [
+    "small.py:1:10 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]"
+  ],
+  "unresolved": [],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 5,
+    "scanned": 1,
+    "lexed": 1,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 1,
+      "too-large": 1,
+      "no-lexer": 2
+    }
+  }
+}

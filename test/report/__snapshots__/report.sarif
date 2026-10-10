@@ -1,0 +1,594 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Sunset",
+          "semanticVersion": "1.2.3",
+          "version": "1.2.3",
+          "informationUri": "https://github.com/AppliedBenchmark/sunset",
+          "rules": [
+            {
+              "id": "sunset/model-retired",
+              "name": "ModelRetired",
+              "shortDescription": {
+                "text": "The model is retired; requests to it fail."
+              },
+              "fullDescription": {
+                "text": "The code references a model whose retirement date has passed, or that its provider lists as retired. Requests that use it fail or are served by another model."
+              },
+              "help": {
+                "text": "Move to the recommended replacement, if the message names one, and test the change: replacements are not always drop-in. If the reference is intentional, suppress it with sunset-ignore and a reason.",
+                "markdown": "Move to the recommended replacement, if the message names one, and test the change: replacements are not always drop-in. If the reference is intentional, suppress it with `sunset-ignore` and a `reason`."
+              },
+              "helpUri": "https://github.com/AppliedBenchmark/sunset/blob/main/docs/rules.md#model-retired",
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "maintainability",
+                  "ai-models"
+                ]
+              }
+            },
+            {
+              "id": "sunset/model-retiring",
+              "name": "ModelRetiring",
+              "shortDescription": {
+                "text": "The model retires soon."
+              },
+              "fullDescription": {
+                "text": "The model has an announced retirement date. The finding is an error under 30 days and a warning under 90 days. A date the provider gives as \"no earlier than\" is the earliest it can happen."
+              },
+              "help": {
+                "text": "Plan the migration before the date in the message. Use sunset-ignore until=YYYY-MM-DD to defer the finding without losing track of it.",
+                "markdown": "Plan the migration before the date in the message. Use `sunset-ignore until=YYYY-MM-DD` to defer the finding without losing track of it."
+              },
+              "helpUri": "https://github.com/AppliedBenchmark/sunset/blob/main/docs/rules.md#model-retiring",
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "maintainability",
+                  "ai-models"
+                ]
+              }
+            },
+            {
+              "id": "sunset/model-deprecated",
+              "name": "ModelDeprecated",
+              "shortDescription": {
+                "text": "The model is deprecated."
+              },
+              "fullDescription": {
+                "text": "The provider has deprecated the model, but its retirement is 90 days or more away, or not yet announced."
+              },
+              "help": {
+                "text": "No action is needed yet. Plan a move to the recommended replacement; the finding becomes a warning 90 days before retirement.",
+                "markdown": "No action is needed yet. Plan a move to the recommended replacement; the finding becomes a warning 90 days before retirement."
+              },
+              "helpUri": "https://github.com/AppliedBenchmark/sunset/blob/main/docs/rules.md#model-deprecated",
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "properties": {
+                "tags": [
+                  "maintainability",
+                  "ai-models"
+                ]
+              }
+            },
+            {
+              "id": "sunset/model-unverified",
+              "name": "ModelUnverified",
+              "shortDescription": {
+                "text": "The model's lifecycle isn't verified from an official source."
+              },
+              "fullDescription": {
+                "text": "The model is in Sunset's registry, but its lifecycle couldn't be tied to an official source yet, so Sunset can't say whether it is at risk."
+              },
+              "help": {
+                "text": "Check the provider's documentation for the model's status.",
+                "markdown": "Check the provider's documentation for the model's status."
+              },
+              "helpUri": "https://github.com/AppliedBenchmark/sunset/blob/main/docs/rules.md#model-unverified",
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "properties": {
+                "tags": [
+                  "maintainability",
+                  "ai-models"
+                ]
+              }
+            },
+            {
+              "id": "sunset/model-legacy",
+              "name": "ModelLegacy",
+              "shortDescription": {
+                "text": "The provider lists the model as legacy."
+              },
+              "fullDescription": {
+                "text": "The provider lists the model as legacy but has announced no deprecation. Reported only when `legacy` is enabled."
+              },
+              "help": {
+                "text": "Consider moving to a current model before it is deprecated.",
+                "markdown": "Consider moving to a current model before it is deprecated."
+              },
+              "helpUri": "https://github.com/AppliedBenchmark/sunset/blob/main/docs/rules.md#model-legacy",
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "properties": {
+                "tags": [
+                  "maintainability",
+                  "ai-models"
+                ]
+              }
+            },
+            {
+              "id": "sunset/model-reference-unresolved",
+              "name": "ModelReferenceUnresolved",
+              "shortDescription": {
+                "text": "A model is chosen at run time, so Sunset can't check it."
+              },
+              "fullDescription": {
+                "text": "A model parameter is set from the environment, a variable or an interpolated string, or an Azure deployment has no model version. Sunset reports it instead of skipping it silently."
+              },
+              "help": {
+                "text": "Make sure the model that ends up here isn't deprecated or retiring. Suppress the notice with sunset-ignore once you have checked it.",
+                "markdown": "Make sure the model that ends up here isn't deprecated or retiring. Suppress the notice with `sunset-ignore` once you have checked it."
+              },
+              "helpUri": "https://github.com/AppliedBenchmark/sunset/blob/main/docs/rules.md#model-reference-unresolved",
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "properties": {
+                "tags": [
+                  "maintainability",
+                  "ai-models"
+                ]
+              }
+            },
+            {
+              "id": "sunset/model-id-unknown",
+              "name": "ModelIdUnknown",
+              "shortDescription": {
+                "text": "A model ID that no provider lists, but whose parts match one that does."
+              },
+              "fullDescription": {
+                "text": "The string has the same words and numbers as a model ID in the registry, in another order (`claude-haiku-3-5` for `claude-3-5-haiku`). Requests with it will most likely fail."
+              },
+              "help": {
+                "text": "Check the provider's model list and use the exact ID. If the ID is right (a custom name on a gateway, say), suppress the notice with sunset-ignore.",
+                "markdown": "Check the provider's model list and use the exact ID. If the ID is right (a custom name on a gateway, say), suppress the notice with `sunset-ignore`."
+              },
+              "helpUri": "https://github.com/AppliedBenchmark/sunset/blob/main/docs/rules.md#model-id-unknown",
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "properties": {
+                "tags": [
+                  "maintainability",
+                  "ai-models"
+                ]
+              }
+            },
+            {
+              "id": "sunset/suppression-expired",
+              "name": "SuppressionExpired",
+              "shortDescription": {
+                "text": "A suppression has passed its `until` date."
+              },
+              "fullDescription": {
+                "text": "An inline `sunset-ignore` directive has an `until` date that has passed, so what it covered is reported again."
+              },
+              "help": {
+                "text": "Remove the directive, or extend its until date if the migration is still pending.",
+                "markdown": "Remove the directive, or extend its `until` date if the migration is still pending."
+              },
+              "helpUri": "https://github.com/AppliedBenchmark/sunset/blob/main/docs/rules.md#suppression-expired",
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "properties": {
+                "tags": [
+                  "maintainability",
+                  "ai-models"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "columnKind": "utf16CodeUnits",
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "toolExecutionNotifications": [],
+          "toolConfigurationNotifications": [
+            {
+              "level": "note",
+              "descriptor": {
+                "id": "malformed-directive"
+              },
+              "message": {
+                "text": "Malformed \"sunset-ignore\": \"soon\" is not a valid date (YYYY-MM-DD)"
+              },
+              "locations": [
+                {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "src/client.ts",
+                      "uriBaseId": "%SRCROOT%"
+                    },
+                    "region": {
+                      "startLine": 11,
+                      "startColumn": 40,
+                      "endLine": 11,
+                      "endColumn": 64
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "level": "note",
+              "descriptor": {
+                "id": "expired-config-ignore"
+              },
+              "message": {
+                "text": "Config ignore #1 (expired ignore) expired on 2098-06-01; it no longer applies."
+              }
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "sunset/model-retiring",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "us-gov.anthropic.claude-fixture-1-20990101-v1:0 (bedrock us-gov-west-1; Bedrock us-gov. inference profile) retires on 2099-01-20, in 19 days. Other dates: bedrock other regions: 2099-06-01."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "infra/bedrock.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 10,
+                  "endLine": 1,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "modelId": "us-gov.anthropic.claude-fixture-1-20990101-v1:0",
+            "entry": "bedrock:anthropic.claude-fixture-1-20990101-v1:0#us-gov-west-1",
+            "platform": "bedrock",
+            "retirementDate": "2099-01-20",
+            "daysLeft": 19
+          }
+        },
+        {
+          "ruleId": "sunset/model-retiring",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "anthropic.claude-fixture-opus-9 (bedrock) retires on 2099-02-20, in 50 days."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "infra/bedrock.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 9,
+                  "endLine": 2,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "modelId": "anthropic.claude-fixture-opus-9",
+            "entry": "bedrock:anthropic.claude-fixture-opus-9",
+            "platform": "bedrock",
+            "retirementDate": "2099-02-20",
+            "daysLeft": 50
+          }
+        },
+        {
+          "ruleId": "sunset/model-retiring",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "gpt-fixture-4o (azure-openai 2099-01-05; Azure deployment (terraform)) retires on 2099-01-25, in 24 days."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "infra/main.tf",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 16,
+                  "endLine": 4,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "modelId": "gpt-fixture-4o",
+            "entry": "azure-openai:gpt-fixture-4o@2099-01-05",
+            "platform": "azure-openai",
+            "retirementDate": "2099-01-25",
+            "daysLeft": 24
+          }
+        },
+        {
+          "ruleId": "sunset/model-retired",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/client.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 18,
+                  "endLine": 2,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "modelId": "gpt-fixture-retired",
+            "entry": "openai:gpt-fixture-retired",
+            "platform": "openai",
+            "retirementDate": "2098-06-30",
+            "daysLeft": -185
+          }
+        },
+        {
+          "ruleId": "sunset/model-retiring",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "gpt-fixture-1-2099-01-10 (openai) retires on 2099-01-10, in 9 days."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/client.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 15,
+                  "endLine": 3,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "modelId": "gpt-fixture-1-2099-01-10",
+            "entry": "openai:gpt-fixture-1-2099-01-10",
+            "platform": "openai",
+            "retirementDate": "2099-01-10",
+            "daysLeft": 9
+          }
+        },
+        {
+          "ruleId": "sunset/model-retiring",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "gpt-fixture-2-2099-02-15 (openai) retires on 2099-02-15, in 45 days."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/client.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 16,
+                  "endLine": 4,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "modelId": "gpt-fixture-2-2099-02-15",
+            "entry": "openai:gpt-fixture-2-2099-02-15",
+            "platform": "openai",
+            "retirementDate": "2099-02-15",
+            "daysLeft": 45
+          }
+        },
+        {
+          "ruleId": "sunset/model-unverified",
+          "ruleIndex": 3,
+          "level": "note",
+          "message": {
+            "text": "gpt-fixture-unverified (openai) is in the registry, but its lifecycle isn't verified from an official source yet."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/client.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 18,
+                  "endLine": 6,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "modelId": "gpt-fixture-unverified",
+            "entry": "openai:gpt-fixture-unverified",
+            "platform": "openai",
+            "retirementDate": null,
+            "daysLeft": null
+          }
+        },
+        {
+          "ruleId": "sunset/model-reference-unresolved",
+          "ruleIndex": 5,
+          "level": "note",
+          "message": {
+            "text": "`model` comes from the environment (process.env.MODEL). Sunset can't check it; make sure the model it names isn't deprecated or retiring."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/client.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 39,
+                  "endLine": 8,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "reason": "environment",
+            "expression": "process.env.MODEL"
+          }
+        },
+        {
+          "ruleId": "sunset/model-retired",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/client.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 16,
+                  "endLine": 10,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "modelId": "gpt-fixture-retired",
+            "entry": "openai:gpt-fixture-retired",
+            "platform": "openai",
+            "retirementDate": "2098-06-30",
+            "daysLeft": -185
+          }
+        },
+        {
+          "ruleId": "sunset/suppression-expired",
+          "ruleIndex": 7,
+          "level": "note",
+          "message": {
+            "text": "Suppression \"sunset-ignore until=2098-12-31\" expired on 2098-12-31; what it covered is reported again. Remove it or extend the date."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/client.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 41,
+                  "endLine": 10,
+                  "endColumn": 71
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "sunset/model-retired",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/client.ts",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 15,
+                  "endLine": 11,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "modelId": "gpt-fixture-retired",
+            "entry": "openai:gpt-fixture-retired",
+            "platform": "openai",
+            "retirementDate": "2098-06-30",
+            "daysLeft": -185
+          }
+        }
+      ],
+      "properties": {
+        "today": "2099-01-01",
+        "registry": {
+          "origin": "bundled",
+          "version": 1,
+          "newestCheck": "2099-01-01"
+        }
+      }
+    }
+  ]
+}

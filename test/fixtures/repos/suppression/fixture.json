@@ -1,0 +1,26 @@
+{
+  "ignores": [
+    {
+      "paths": [
+        "legacy/**"
+      ],
+      "reason": "frozen code"
+    },
+    {
+      "models": [
+        "gpt-fixture-3"
+      ],
+      "rules": [
+        "model-deprecated"
+      ],
+      "until": "2099-12-31"
+    },
+    {
+      "models": [
+        "claude-fixture-opus-9"
+      ],
+      "until": "2098-06-01",
+      "reason": "expired"
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AppliedBenchmark/sunset/registry/schema.json",
+  "title": "Registry",
+  "description": "registry/models.yaml. The $defs also describe registry/sources.yaml (SourcesFile) and registry/formats.yaml (PlatformFormats). docs/registry.md has the rules for each field.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "registry_version", "generated_at", "models"],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "registry_version": {
+      "description": "Increases by one with every change to the models list.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "generated_at": {
+      "description": "When the file was last written, in UTC.",
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/RegistryEntry"
+      }
+    }
+  },
+  "$defs": {
+    "IsoDate": {
+      "title": "IsoDate",
+      "description": "A calendar date in UTC, formatted YYYY-MM-DD.",
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "tsType": "string & { readonly __brand: 'IsoDate' }"
+    },
+    "Platform": {
+      "title": "Platform",
+      "description": "Where a model is served. A model router (OpenRouter, the Vercel AI Gateway) isn't a platform: its `<vendor>/<first-party ID>` slug gets the upstream model's dates.",
+      "type": "string",
+      "enum": [
+        "openai",
+        "anthropic",
+        "gemini-api",
+        "vertex",
+        "bedrock",
+        "azure-openai",
+        "mistral",
+        "deepseek"
+      ]
+    },
+    "ModelStatus": {
+      "title": "ModelStatus",
+      "type": "string",
+      "enum": ["active", "legacy", "deprecated", "retired", "unverified"]
+    },
+    "DateQualifier": {
+      "title": "DateQualifier",
+      "type": "string",
+      "enum": ["exact", "no_earlier_than", "approximate"]
+    },
+    "Slug": {
+      "title": "Slug",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "SourceId": {
+      "title": "SourceId",
+      "description": "`<provider>/<slug>`: a record in registry/sources.yaml and the snapshot registry/snapshots/<provider>/<slug>.txt.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*/[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "HttpsUrl": {
+      "title": "HttpsUrl",
+      "type": "string",
+      "pattern": "^https://[^\\s/]+/\\S*$"
+    },
+    "Replacement": {
+      "title": "Replacement",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_id", "platform"],
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "pattern": "^\\S+$"
+        },
+        "platform": {
+          "$ref": "#/$defs/Platform"
+        }
+      }
+    },
+    "RegistryEntry": {
+      "title": "RegistryEntry",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "provider",
+        "platform",
+        "model_id",
+        "version",
+        "aliases",
+        "status",
+        "deprecation_date",
+        "retirement_date",
+        "retirement_date_qualifier",
+        "recommended_replacements",
+        "drop_in",
+        "source",
+        "source_url",
+        "source_excerpt",
+        "verified_on",
+        "notes"
+      ],
+      "properties": {
+        "id": {
+          "description": "`platform:model_id[@version][#regions]`, computed by the validator from the other fields; never chosen by hand.",
+          "type": "string"
+        },
+        "provider": {
+          "$ref": "#/$defs/Slug",
+          "$comment": "Who makes the model, e.g. `anthropic` for a Claude model on Bedrock."
+        },
+        "platform": {
+          "$ref": "#/$defs/Platform"
+        },
+        "model_id": {
+          "description": "The ID as it is written in code.",
+          "type": "string",
+          "pattern": "^\\S+$"
+        },
+        "version": {
+          "description": "The model version. Required for azure-openai, null elsewhere.",
+          "type": ["string", "null"],
+          "pattern": "^\\S+$"
+        },
+        "regions": {
+          "description": "Region scope: the regions these dates apply to, sorted. Absent or null means every region that no sibling entry lists.",
+          "anyOf": [
+            {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "$comment": "A region name as the platform writes it: `us-gov-west-1`, `eusc-de-east-1`, `us-central1`.",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "aliases": {
+          "description": "Other IDs that name exactly this entry. Floating aliases are separate entries.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^\\S+$"
+          }
+        },
+        "status": {
+          "$ref": "#/$defs/ModelStatus"
+        },
+        "deprecation_date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IsoDate"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "retirement_date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IsoDate"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "retirement_date_qualifier": {
+          "$ref": "#/$defs/DateQualifier"
+        },
+        "recommended_replacements": {
+          "description": "Only replacements the source names.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Replacement"
+          }
+        },
+        "drop_in": {
+          "description": "True only if the provider explicitly says the replacement is a drop-in.",
+          "type": "boolean"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceId"
+        },
+        "source_url": {
+          "$ref": "#/$defs/HttpsUrl",
+          "$comment": "The human page of `source`; on the provider's allowlist."
+        },
+        "source_excerpt": {
+          "description": "Verbatim text from the normalized snapshot of `source` that contains the model ID, the dates and the replacements. Null only for `unverified` entries without dates.",
+          "type": ["string", "null"],
+          "minLength": 1
+        },
+        "verified_on": {
+          "$ref": "#/$defs/IsoDate"
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "SourcesFile": {
+      "title": "SourcesFile",
+      "description": "registry/sources.yaml: where each provider publishes its lifecycle data.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "providers", "sources"],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "providers": {
+          "description": "Source provider (the platform owner) → its allowlist.",
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Platform"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/ProviderAllowlist"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Source"
+          }
+        }
+      }
+    },
+    "ProviderAllowlist": {
+      "title": "ProviderAllowlist",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allow"],
+      "properties": {
+        "allow": {
+          "description": "URL prefixes (scheme, host and path) that source and fetch URLs must start with. A prefix ends at a `/` or matches the whole path.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/HttpsUrl"
+          }
+        }
+      }
+    },
+    "Source": {
+      "title": "Source",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "provider", "platforms", "url", "fetch", "parser"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/SourceId"
+        },
+        "provider": {
+          "$ref": "#/$defs/Platform"
+        },
+        "platforms": {
+          "description": "The platforms whose entries this page may support.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/Platform"
+          }
+        },
+        "url": {
+          "$ref": "#/$defs/HttpsUrl",
+          "$comment": "The human page: entries link to it as `source_url`."
+        },
+        "fetch": {
+          "$ref": "#/$defs/SourceFetch"
+        },
+        "expect": {
+          "description": "Text the normalized page must contain; catches soft 404s and redirects to a home page.",
+          "type": "string",
+          "minLength": 1
+        },
+        "page_qualifier": {
+          "description": "A date qualifier the page states once for all of its dates, with the sentence that says so. Entries from this source may use the qualifier without their own excerpt saying it.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["qualifier", "excerpt"],
+          "properties": {
+            "qualifier": {
+              "$ref": "#/$defs/DateQualifier"
+            },
+            "excerpt": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "models": {
+          "description": "For a page about specific models only, such as a model card: their IDs, each of which must appear on the page. Excerpts from this page needn't repeat the model ID.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^\\S+$"
+          }
+        },
+        "markup": {
+          "description": "An HTML page whose table-row classes carry state the fetched variant lacks (the Gemini API page marks shut-down models only with `row-gray`). The snapshot's .meta.json records the first cell of every row with one of these classes.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["url", "row_classes"],
+          "properties": {
+            "url": {
+              "$ref": "#/$defs/HttpsUrl"
+            },
+            "row_classes": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]+$"
+              }
+            }
+          }
+        },
+        "parser": {
+          "$ref": "#/$defs/Slug",
+          "$comment": "The updater's deterministic parser for this page."
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "SourceFetch": {
+      "title": "SourceFetch",
+      "description": "The machine-readable variant of the page to fetch.",
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "url", "format"],
+          "properties": {
+            "kind": {
+              "const": "url"
+            },
+            "url": {
+              "$ref": "#/$defs/HttpsUrl"
+            },
+            "format": {
+              "enum": ["markdown", "html", "text"]
+            },
+            "accept": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "repo", "ref", "path"],
+          "properties": {
+            "kind": {
+              "const": "github-file"
+            },
+            "repo": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9._-]+$"
+            },
+            "ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "path": {
+              "type": "string",
+              "pattern": "^[^/\\s][^\\s]*$"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "repo", "ref", "path", "include"],
+          "properties": {
+            "kind": {
+              "const": "github-dir"
+            },
+            "repo": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9._-]+$"
+            },
+            "ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "path": {
+              "type": "string",
+              "pattern": "^[^/\\s][^\\s]*[^/]$"
+            },
+            "include": {
+              "description": "File-name suffix, e.g. `.ts`. Files are read as text and never executed.",
+              "type": "string",
+              "minLength": 1
+            },
+            "exclude": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ModelRouter": {
+      "title": "ModelRouter",
+      "description": "A service that serves `<vendor>/<id>` through any provider that still has the model.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["vendors"],
+      "properties": {
+        "vendors": {
+          "description": "The router's vendor slug → the first-party platforms whose IDs its slugs reuse.",
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Slug"
+          },
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/Platform"
+            }
+          }
+        }
+      }
+    },
+    "PlatformFormats": {
+      "title": "PlatformFormats",
+      "description": "registry/formats.yaml: ID-format data kept out of code because providers add to it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bedrock", "openrouter"],
+      "properties": {
+        "bedrock": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["geo_prefixes", "arn_partitions"],
+          "properties": {
+            "geo_prefixes": {
+              "description": "Cross-region inference-profile prefixes, without the trailing dot.",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z]+(-[a-z]+)*$"
+              }
+            },
+            "arn_partitions": {
+              "description": "ARN partitions, e.g. `aws`, `aws-us-gov`.",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^aws(-[a-z]+)*$"
+              }
+            }
+          }
+        },
+        "openrouter": {
+          "$ref": "#/$defs/ModelRouter"
+        },
+        "vercel_ai_gateway": {
+          "$ref": "#/$defs/ModelRouter"
+        },
+        "prefixes": {
+          "description": "A library's prefix before a model ID (`gemini/`, `anthropic:`) → the platforms the ID is checked on.",
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/Platform"
+            }
+          }
+        }
+      }
+    }
+  }
+}

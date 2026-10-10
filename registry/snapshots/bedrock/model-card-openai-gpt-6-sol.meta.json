@@ -1,0 +1,9 @@
+{
+  "source": "bedrock/model-card-openai-gpt-6-sol",
+  "urls": ["https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-sol.html"],
+  "fetched_at": "2026-10-10T13:32:01Z",
+  "etag": "\"dC5Rk8TD1usUfUzkexusqSyPgjg=-gzip\"",
+  "last_modified": "Sat, 10 Oct 2026 07:14:25 GMT",
+  "sha256": "ac27044b8cdb1a56036eb654ba777d95ea44f10d9de4a48f3685a5ccf1717eb5",
+  "normalizer_version": 1
+}

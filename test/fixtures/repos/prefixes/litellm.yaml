@@ -1,0 +1,29 @@
+# A LiteLLM proxy config: the prefix chooses the platform.
+model_list:
+  - model_name: flash
+    litellm_params:
+      model: gemini/gemini-fixture-1.0-flash # the Gemini API's date
+  - model_name: flash-on-vertex
+    litellm_params:
+      model: vertex_ai/gemini-fixture-1.0-flash # Vertex's date
+  - model_name: through-the-proxy
+    litellm_params:
+      model: litellm_proxy/gemini/gemini-fixture-1.0-flash
+  - model_name: legacy
+    litellm_params:
+      model: bedrock/converse/anthropic.claude-fixture-v2
+  - model_name: gpt
+    litellm_params:
+      model: azure/gpt-fixture-4o # a deployment name: Azure's versions
+  - model_name: elsewhere
+    litellm_params:
+      model: snowflake/claude-fixture-opus-9 # another provider's name: not checked
+  - model_name: routed
+    litellm_params:
+      model: openrouter/anthropic/claude-fixture-opus-9 # OpenRouter may route it elsewhere
+  - model_name: direct
+    litellm_params:
+      model: anthropic/claude-fixture-opus-9 # the file names its OpenRouter routes: Anthropic's own API
+  - model_name: openai/gpt-fixture-3* # a wildcard route, not a model
+    litellm_params:
+      model: openai/gpt-fixture-3*

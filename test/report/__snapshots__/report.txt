@@ -1,0 +1,48 @@
+Errors (6)
+
+  error   infra/bedrock.py:1:10  model-retiring
+    us-gov.anthropic.claude-fixture-1-20990101-v1:0 (bedrock us-gov-west-1; Bedrock us-gov. inference profile) retires on 2099-01-20, in 19 days. Other dates: bedrock other regions: 2099-06-01.
+
+  error   infra/main.tf:4:16  model-retiring
+    gpt-fixture-4o (azure-openai 2099-01-05; Azure deployment (terraform)) retires on 2099-01-25, in 24 days.
+
+  error   src/client.ts:2:18  model-retired
+    gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).
+
+  error   src/client.ts:3:15  model-retiring
+    gpt-fixture-1-2099-01-10 (openai) retires on 2099-01-10, in 9 days.
+
+  error   src/client.ts:10:16  model-retired
+    gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).
+
+  error   src/client.ts:11:15  model-retired
+    gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).
+
+Warnings (2)
+
+  warning infra/bedrock.py:2:9  model-retiring
+    anthropic.claude-fixture-opus-9 (bedrock) retires on 2099-02-20, in 50 days.
+
+  warning src/client.ts:4:16  model-retiring
+    gpt-fixture-2-2099-02-15 (openai) retires on 2099-02-15, in 45 days.
+
+Notices (2)
+
+  notice  src/client.ts:6:18  model-unverified
+    gpt-fixture-unverified (openai) is in the registry, but its lifecycle isn't verified from an official source yet.
+
+  notice  src/client.ts:10:41  suppression-expired
+    Suppression "sunset-ignore until=2098-12-31" expired on 2098-12-31; what it covered is reported again. Remove it or extend the date.
+
+Unresolved references (1)
+
+  notice  src/client.ts:8:39  model-reference-unresolved
+    `model` comes from the environment (process.env.MODEL). Sunset can't check it; make sure the model it names isn't deprecated or retiring.
+
+Directive and config problems (2)
+
+  src/client.ts:11:40  Malformed "sunset-ignore": "soon" is not a valid date (YYYY-MM-DD)
+  Config ignore #1 (expired ignore) expired on 2098-06-01; it no longer applies.
+
+6 errors, 2 warnings, 2 notices · 1 unresolved reference · 1 mention in docs · 2 suppressed
+Scanned 4 files on 2099-01-01 with sunset 1.2.3, bundled registry v1 (27 entries, last checked 2099-01-01, today).

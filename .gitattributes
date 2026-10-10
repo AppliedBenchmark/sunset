@@ -1,0 +1,5 @@
+* text=auto eol=lf
+dist/** linguist-generated
+# Fixture repos test CRLF and binary input; keep their bytes as committed.
+test/fixtures/repos/crlf/** -text
+test/fixtures/repos/binary-and-large/** -text

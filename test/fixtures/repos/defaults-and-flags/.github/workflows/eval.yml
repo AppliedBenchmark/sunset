@@ -1,0 +1,15 @@
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        default: gpt-fixture-3
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    env:
+      MODEL: ${{ inputs.model || 'gpt-fixture-retired' }}
+    steps:
+      - run: |
+          llm -m gpt-fixture-1-2099-01-10 "Summarize the report"
+          python eval.py --model_name gpt-fixture-2-2099-02-15 --judge claude-fixture-opus-9
+          echo "Compare with the default 'gpt-fixture-retired' model."

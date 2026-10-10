@@ -1,0 +1,935 @@
+# Where each provider publishes lifecycle data: only the providers' own pages, so every value in
+# the registry can be traced to one. Validated against registry/schema.json#/$defs/SourcesFile.
+#
+# - `providers` maps each source provider (the platform owner) to its allowlist. Every `url`, and
+#   every URL the snapshot tool fetches, must start with one of the prefixes.
+# - Each source is snapshotted to registry/snapshots/<id>.txt by `npm run registry:snapshot`.
+#   Registry entries name their source by `id` and use its `url` as `source_url`.
+# - `fetch` is the machine-readable variant; `url` is the human page. `expect` is text the
+#   normalized page must contain, which catches soft 404s and pages in another language.
+# - `parser` names the updater's parser for the page; parsers are deterministic code, never a
+#   language model.
+#
+# URLs verified on 2026-10-08.
+schema_version: 1
+
+providers:
+  openai:
+    allow:
+      - https://developers.openai.com/api/docs/
+      - https://platform.openai.com/docs/
+  anthropic:
+    allow:
+      - https://platform.claude.com/docs/
+      - https://docs.claude.com/
+      - https://docs.anthropic.com/
+  gemini-api:
+    allow:
+      - https://ai.google.dev/gemini-api/docs/
+  vertex:
+    allow:
+      - https://docs.cloud.google.com/gemini-enterprise-agent-platform/
+      # Imagen's model pages, which Agent Platform's docs don't have.
+      - https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/
+  bedrock:
+    allow:
+      - https://docs.aws.amazon.com/bedrock/
+  azure-openai:
+    allow:
+      - https://learn.microsoft.com/en-us/azure/foundry/
+      - https://raw.githubusercontent.com/MicrosoftDocs/azure-ai-docs/
+  mistral:
+    allow:
+      - https://docs.mistral.ai/
+      - https://raw.githubusercontent.com/mistralai/platform-docs-public/
+  deepseek:
+    allow:
+      - https://api-docs.deepseek.com/
+
+sources:
+  - id: openai/deprecations
+    provider: openai
+    platforms: [openai]
+    url: https://developers.openai.com/api/docs/deprecations
+    fetch:
+      kind: url
+      url: https://developers.openai.com/api/docs/deprecations.md
+      format: markdown
+    expect: Shutdown date
+    parser: openai-deprecations
+    notes: >-
+      One `YYYY-MM-DD: <title>` heading per announcement, each followed by a table whose first
+      column is `Shutdown date`. Date formats are mixed.
+
+  - id: anthropic/model-deprecations
+    provider: anthropic
+    platforms: [anthropic]
+    url: https://platform.claude.com/docs/en/about-claude/model-deprecations
+    fetch:
+      kind: url
+      url: https://platform.claude.com/docs/en/about-claude/model-deprecations.md
+      format: markdown
+    expect: Model status
+    parser: anthropic-deprecations
+    notes: >-
+      The "Model status" table, plus per-announcement history tables. The dates apply to
+      Anthropic-operated platforms only; Bedrock and Vertex set their own.
+
+  - id: gemini-api/deprecations
+    provider: gemini-api
+    platforms: [gemini-api]
+    url: https://ai.google.dev/gemini-api/docs/deprecations
+    fetch:
+      kind: url
+      url: https://ai.google.dev/gemini-api/docs/deprecations.md.txt
+      format: markdown
+    expect: Shutdown date
+    # The Markdown variant doesn't say which rows are shut down; the HTML page marks them gray.
+    # Without `hl=en`, the HTML page redirects to a random language for Node's fetch.
+    markup:
+      url: https://ai.google.dev/gemini-api/docs/deprecations?hl=en
+      row_classes: [row-gray]
+    parser: gemini-api-deprecations
+    page_qualifier:
+      qualifier: no_earlier_than
+      excerpt: 'The **shutdown dates listed in the table indicate the *earliest possible > dates* on which a model might be retired**.'
+
+  - id: gemini-api/release-notes
+    provider: gemini-api
+    platforms: [gemini-api]
+    url: https://ai.google.dev/gemini-api/docs/changelog
+    fetch:
+      kind: url
+      url: https://ai.google.dev/gemini-api/docs/changelog.md.txt
+      format: markdown
+    expect: This page documents updates to the Gemini API.
+    parser: gemini-api-release-notes
+    notes: >-
+      Adds the shut-down models the deprecations table no longer lists, such as Gemini 1.5: a
+      dated note whose first bullet says they are shut down. Models the deprecations page lists
+      stay its entries.
+
+  - id: vertex/model-versions
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions.md.txt
+      format: markdown
+    expect: Retirement date
+    parser: vertex-model-versions
+    notes: Google models. `<date> or later` is a no-earlier-than date.
+
+  - id: vertex/partner-deprecations
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models.md.txt
+      format: markdown
+    expect: shut down
+    parser: vertex-partner-deprecations
+    notes: Deprecated partner (MaaS) models, as prose sentences.
+
+  - id: vertex/open-model-deprecations
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models.md.txt
+      format: markdown
+    expect: Self-deploy alternative
+    parser: vertex-open-model-deprecations
+    notes: >-
+      Deprecated open models served as MaaS. The IDs are written without the publisher that code
+      puts in front of them (`meta/llama-3.3-70b-instruct-maas`).
+
+  # A model page whose deprecation notice gives the shutdown date of the models on it.
+  - id: vertex/grok-4-1-fast
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-1-fast
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-1-fast.md.txt
+      format: markdown
+    expect: 'Deprecated:'
+    parser: vertex-deprecation-notice
+    models: [grok-4.1-fast-reasoning, grok-4.1-fast-non-reasoning]
+
+  # Imagen model pages of the Vertex AI documentation, which Google no longer updates; Agent
+  # Platform's docs have no pages for these models. Only the HTML page has the Versions rows with
+  # the discontinuation dates.
+  - id: vertex/imagen-3-0-generate
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/3-0-generate
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/3-0-generate?hl=en
+      format: html
+    expect: Discontinuation date
+    parser: vertex-model-page-versions
+    models: [imagen-3.0-generate-002, imagen-3.0-generate-001, imagen-3.0-fast-generate-001, imagen-3.0-capability-001]
+
+  - id: vertex/imagen-4-0-generate
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/4-0-generate
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/4-0-generate?hl=en
+      format: html
+    expect: Discontinuation date
+    parser: vertex-model-page-versions
+    models: [imagen-4.0-generate-001, imagen-4.0-fast-generate-001, imagen-4.0-ultra-generate-001]
+
+  - id: vertex/imagen-virtual-try-on-001
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/virtual-try-on-001
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/virtual-try-on-001?hl=en
+      format: html
+    expect: Discontinuation date
+    parser: vertex-model-page-versions
+    models: [virtual-try-on-001]
+
+  # Per-model Claude pages: active Claude models' "Retirement Date: Not sooner than …". The
+  # page for claude-sonnet-4-6 has no date and is left out.
+  - id: vertex/claude-fable-5
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-fable-5]
+
+  - id: vertex/claude-fable-5-1
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5-1
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5-1.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-fable-5-1]
+
+  - id: vertex/claude-haiku-4-5
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-4-5
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-4-5.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-haiku-4-5]
+
+  - id: vertex/claude-haiku-5-5
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-haiku-5-5]
+
+  - id: vertex/claude-opus-4
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-opus-4]
+
+  - id: vertex/claude-opus-4-1
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-1
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-1.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-opus-4-1]
+
+  - id: vertex/claude-opus-4-5
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-5
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-5.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-opus-4-5]
+
+  - id: vertex/claude-opus-4-6
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-6
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-6.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-opus-4-6]
+
+  - id: vertex/claude-opus-4-7
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-7
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-7.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-opus-4-7]
+
+  - id: vertex/claude-opus-4-8
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-8
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-8.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-opus-4-8]
+
+  - id: vertex/claude-opus-5
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-5
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-5.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-opus-5]
+
+  - id: vertex/claude-opus-5-5
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-5-5
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-5-5.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-opus-5-5]
+
+  - id: vertex/claude-sonnet-4
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-4
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-4.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-sonnet-4]
+
+  - id: vertex/claude-sonnet-4-5
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-4-5
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-4-5.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-sonnet-4-5]
+
+  - id: vertex/claude-sonnet-5
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-5
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-5.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-sonnet-5]
+
+  - id: vertex/claude-sonnet-5-5
+    provider: vertex
+    platforms: [vertex]
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-5-5
+    fetch:
+      kind: url
+      url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-5-5.md.txt
+      format: markdown
+    expect: Retirement
+    parser: vertex-claude-model-page
+    models: [claude-sonnet-5-5]
+
+  - id: bedrock/model-lifecycle-legacy
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html
+      format: html
+    expect: EOL date
+    parser: bedrock-lifecycle-table
+    notes: >-
+      Models launched before 2026-09-07. Per-region rows use rowspan; the snapshot repeats
+      spanned cells so every row stands alone.
+
+  - id: bedrock/model-lifecycle
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html
+      format: html
+    expect: Legacy and end-of-life
+    parser: bedrock-lifecycle-table
+    notes: Models launched on or after 2026-09-07.
+
+  # Model cards for models launched on or after 2026-09-07 that give an "EOL no sooner than"
+  # date (the Kimi K3 and GLM-5.3 cards say "Not Applicable").
+  - id: bedrock/model-card-anthropic-claude-haiku-5-5
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html
+      format: html
+    expect: EOL no sooner than
+    parser: bedrock-model-card
+    models: [anthropic.claude-haiku-5-5]
+
+  - id: bedrock/model-card-anthropic-claude-opus-5-5
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-opus-5-5.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-opus-5-5.html
+      format: html
+    expect: EOL no sooner than
+    parser: bedrock-model-card
+    models: [anthropic.claude-opus-5-5]
+
+  - id: bedrock/model-card-anthropic-claude-sonnet-5-5
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-5-5.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-5-5.html
+      format: html
+    expect: EOL no sooner than
+    parser: bedrock-model-card
+    models: [anthropic.claude-sonnet-5-5]
+
+  - id: bedrock/model-card-openai-gpt-6-astra
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-astra.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-astra.html
+      format: html
+    expect: EOL no sooner than
+    parser: bedrock-model-card
+    models: [openai.gpt-6-astra]
+
+  - id: bedrock/model-card-openai-gpt-6-luna
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-luna.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-luna.html
+      format: html
+    expect: EOL no sooner than
+    parser: bedrock-model-card
+    models: [openai.gpt-6-luna]
+
+  - id: bedrock/model-card-openai-gpt-6-sol
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-sol.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-sol.html
+      format: html
+    expect: EOL no sooner than
+    parser: bedrock-model-card
+    models: [openai.gpt-6-sol]
+
+  - id: bedrock/model-card-xai-grok-4-7
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-7.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-7.html
+      format: html
+    expect: EOL no sooner than
+    parser: bedrock-model-card
+    models: [xai.grok-4.7]
+
+  # Model cards of older models that say "Model lifecycle: Legacy" and give a "Model EOL date",
+  # for the models bedrock/model-lifecycle-legacy doesn't list: that table owns the ones it lists.
+  # The Llama 3.1 405B card's "Model EOL date: Legacy: July 7, 2026" isn't a date the parser
+  # reads, so that card isn't a source. Where a card gives the model a second ID on
+  # bedrock-mantle, `models` names both, and the entry lists the second as an alias.
+  - id: bedrock/model-card-deepseek-deepseek-r1
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-deepseek-deepseek-r1.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-deepseek-deepseek-r1.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [deepseek.r1-v1:0]
+
+  - id: bedrock/model-card-deepseek-deepseek-v3-1
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-deepseek-deepseek-v3-1.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-deepseek-deepseek-v3-1.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [deepseek.v3-v1:0, deepseek.v3.1]
+
+  - id: bedrock/model-card-google-gemma-3-12b-it
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-12b-it.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-12b-it.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [google.gemma-3-12b-it]
+
+  - id: bedrock/model-card-google-gemma-3-27b-pt
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-27b-pt.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-27b-pt.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [google.gemma-3-27b-it]
+
+  - id: bedrock/model-card-google-gemma-3-4b-it
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-4b-it.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-4b-it.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [google.gemma-3-4b-it]
+
+  - id: bedrock/model-card-meta-llama-3-1-70b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-1-70b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-1-70b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama3-1-70b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-3-1-8b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-1-8b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-1-8b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama3-1-8b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-3-2-11b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-11b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-11b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama3-2-11b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-3-2-1b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-1b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-1b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama3-2-1b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-3-2-3b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-3b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-3b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama3-2-3b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-3-2-90b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-90b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-90b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama3-2-90b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-3-3-70b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-3-70b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-3-70b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama3-3-70b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-3-70b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-70b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-70b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama3-70b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-3-8b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-8b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-8b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama3-8b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-4-maverick-17b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-4-maverick-17b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-4-maverick-17b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama4-maverick-17b-instruct-v1:0]
+
+  - id: bedrock/model-card-meta-llama-4-scout-17b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-4-scout-17b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-4-scout-17b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [meta.llama4-scout-17b-instruct-v1:0]
+
+  - id: bedrock/model-card-minimax-minimax-m2-1
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-minimax-minimax-m2-1.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-minimax-minimax-m2-1.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [minimax.minimax-m2.1]
+
+  - id: bedrock/model-card-minimax-minimax-m2
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-minimax-minimax-m2.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-minimax-minimax-m2.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [minimax.minimax-m2]
+
+  - id: bedrock/model-card-mistral-ai-devstral-2-123b
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-devstral-2-123b.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-devstral-2-123b.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [mistral.devstral-2-123b]
+
+  - id: bedrock/model-card-mistral-ai-mistral-7b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-mistral-7b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-mistral-7b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [mistral.mistral-7b-instruct-v0:2]
+
+  - id: bedrock/model-card-mistral-ai-mixtral-8x7b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-mixtral-8x7b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-mixtral-8x7b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [mistral.mixtral-8x7b-instruct-v0:1]
+
+  - id: bedrock/model-card-mistral-ai-voxtral-mini-3b-2507
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-voxtral-mini-3b-2507.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-voxtral-mini-3b-2507.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [mistral.voxtral-mini-3b-2507]
+
+  - id: bedrock/model-card-mistral-ai-voxtral-small-24b-2507
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-voxtral-small-24b-2507.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-voxtral-small-24b-2507.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [mistral.voxtral-small-24b-2507]
+
+  - id: bedrock/model-card-moonshot-ai-kimi-k2-thinking
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k2-thinking.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k2-thinking.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [moonshot.kimi-k2-thinking, moonshotai.kimi-k2-thinking]
+
+  - id: bedrock/model-card-nvidia-nvidia-nemotron-nano-12b-v2-vl-bf16
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-nvidia-nvidia-nemotron-nano-12b-v2-vl-bf16.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-nvidia-nvidia-nemotron-nano-12b-v2-vl-bf16.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [nvidia.nemotron-nano-12b-v2]
+
+  - id: bedrock/model-card-nvidia-nvidia-nemotron-nano-9b-v2
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-nvidia-nvidia-nemotron-nano-9b-v2.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-nvidia-nvidia-nemotron-nano-9b-v2.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [nvidia.nemotron-nano-9b-v2]
+
+  - id: bedrock/model-card-qwen-qwen3-coder-30b-a3b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-qwen-qwen3-coder-30b-a3b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-qwen-qwen3-coder-30b-a3b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [qwen.qwen3-coder-30b-a3b-v1:0, qwen.qwen3-coder-30b-a3b-instruct]
+
+  - id: bedrock/model-card-qwen-qwen3-coder-480b-a35b-instruct
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-qwen-qwen3-coder-480b-a35b-instruct.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-qwen-qwen3-coder-480b-a35b-instruct.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [qwen.qwen3-coder-480b-a35b-v1:0, qwen.qwen3-coder-480b-a35b-instruct]
+
+  - id: bedrock/model-card-zai-glm-4-7-flash
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-zai-glm-4-7-flash.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-zai-glm-4-7-flash.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [zai.glm-4.7-flash]
+
+  - id: bedrock/model-card-zai-glm-4-7
+    provider: bedrock
+    platforms: [bedrock]
+    url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-zai-glm-4-7.html
+    fetch:
+      kind: url
+      url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-zai-glm-4-7.html
+      format: html
+    expect: Model EOL date
+    parser: bedrock-model-card
+    models: [zai.glm-4.7]
+
+  - id: azure-openai/model-retirement-schedule
+    provider: azure-openai
+    platforms: [azure-openai]
+    url: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule
+    fetch:
+      kind: github-file
+      repo: MicrosoftDocs/azure-ai-docs
+      ref: main
+      path: articles/foundry/openai/includes/concepts-model-retirement-schedule-content.md
+    expect: Retirement date
+    parser: azure-retirement-tables
+    notes: >-
+      The page's include file in the public docs repo (the `live` branch is stale). Every model
+      maker's table is read. (name, version) isn't unique across the tables: a pair listed twice
+      with different values is unverified.
+
+  - id: azure-openai/retired-models
+    provider: azure-openai
+    platforms: [azure-openai]
+    url: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/retired-models
+    fetch:
+      kind: github-file
+      repo: MicrosoftDocs/azure-ai-docs
+      ref: main
+      path: articles/foundry/openai/includes/concepts-retired-models-content.md
+    expect: Suggested replacement
+    parser: azure-retired-models
+    notes: >-
+      The page's include file, as for the retirement schedule. Only the Azure OpenAI table gives
+      versions. The page only adds models: versions the schedule still lists stay its entries.
+
+  - id: mistral/models
+    provider: mistral
+    platforms: [mistral]
+    url: https://docs.mistral.ai/models
+    fetch:
+      kind: github-dir
+      repo: mistralai/platform-docs-public
+      ref: main
+      path: src/schema/models/models
+      include: .ts
+      exclude: [index.ts]
+    expect: apiNames
+    parser: mistral-model-files
+    notes: >-
+      One TypeScript file per model with ISO `deprecationDate`, `retirementDate` and
+      `replacement`. The files are read as text and never executed.
+
+  - id: deepseek/updates
+    provider: deepseek
+    platforms: [deepseek]
+    url: https://api-docs.deepseek.com/updates
+    fetch:
+      kind: url
+      # `/updates` redirects here, and has answered 400 at times.
+      url: https://api-docs.deepseek.com/updates/
+      format: html
+    expect: 'Date:'
+    parser: deepseek-updates
+    notes: >-
+      A change log in free text, so the updater only lists model names it doesn't know for a
+      human; it never changes DeepSeek entries. Unknown paths return the home page with a 200,
+      hence `expect`.

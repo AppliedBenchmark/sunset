@@ -1,0 +1,5 @@
+{
+  "generate": {
+    "node_modules/pkg/index.js": "module.exports = \"gpt-fixture-retired\";\n"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "name": "@appliedbenchmark/sunset",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Catch deprecated and retiring AI model IDs in your code, with dates quoted from each provider's official page.",
+  "keywords": [
+    "ai",
+    "llm",
+    "model-deprecation",
+    "model-retirement",
+    "openai",
+    "anthropic",
+    "gemini",
+    "vertex-ai",
+    "bedrock",
+    "azure-openai",
+    "mistral",
+    "deepseek",
+    "github-action",
+    "sarif",
+    "cli"
+  ],
+  "license": "Apache-2.0",
+  "author": "AppliedBenchmark",
+  "homepage": "https://github.com/AppliedBenchmark/sunset#readme",
+  "bugs": {
+    "url": "https://github.com/AppliedBenchmark/sunset/issues"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AppliedBenchmark/sunset.git"
+  },
+  "bin": {
+    "sunset": "dist/cli/index.js"
+  },
+  "files": [
+    "dist/cli",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_LICENSES"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc -p .",
+    "format": "biome format --write .",
+    "lint": "biome ci . && npm run lint:types",
+    "lint:types": "oxlint --type-aware -A all -D typescript/no-floating-promises -D typescript/no-misused-promises -D typescript/switch-exhaustiveness-check src updater",
+    "test": "vitest run --coverage",
+    "test:boundaries": "vitest run test/boundaries.test.ts",
+    "bench": "node scripts/bench.ts",
+    "gen:types": "node scripts/gen-types.ts",
+    "licenses": "node scripts/licenses.ts",
+    "registry:snapshot": "node updater/snapshot.ts",
+    "registry:update": "node updater/run.ts",
+    "registry:check-models": "node updater/check-models.ts",
+    "registry:validate": "node scripts/validate-registry.ts",
+    "registry:format": "node scripts/format-registry.ts"
+  },
+  "devDependencies": {
+    "@actions/core": "3.0.1",
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "22.20.5",
+    "@types/picomatch": "4.0.3",
+    "@types/sarif": "2.1.7",
+    "@vitest/coverage-v8": "5.0.3",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "cheerio": "1.2.0",
+    "diff": "9.0.0",
+    "domhandler": "5.0.3",
+    "esbuild": "0.28.2",
+    "fast-check": "4.10.2",
+    "ignore": "7.0.12",
+    "json-schema-to-typescript": "16.0.0",
+    "oxlint": "1.87.0",
+    "oxlint-tsgolint": "7.0.2003",
+    "picomatch": "4.0.7",
+    "typescript": "7.0.2",
+    "vite": "8.3.3",
+    "vitest": "5.0.3",
+    "yaml": "2.9.1"
+  }
+}

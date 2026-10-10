@@ -1,0 +1,25 @@
+{
+  "findings": [
+    "app.py:1:10 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "keep.local.py:1:6 notice model-unverified gpt-fixture-unverified [openai:gpt-fixture-unverified]",
+    "sub/visible.py:1:6 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]"
+  ],
+  "unresolved": [],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 5,
+    "scanned": 3,
+    "lexed": 3,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 2
+    }
+  }
+}

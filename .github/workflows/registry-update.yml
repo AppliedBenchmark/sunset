@@ -1,0 +1,149 @@
+name: Registry update
+
+# Keeps the registry current from the providers' official pages.
+# - `update`: one job per provider, so one provider's failure doesn't hold up the others. It
+#   refreshes the snapshots, merges grounded changes into registry/models.yaml and opens or
+#   updates one PR per provider. Failures (fetch, layout change, parse, grounding, missing models,
+#   entries that would not validate) go to one issue per provider, closed when it succeeds again.
+# - `check-models`: the secondary list-models check. It only files issues.
+#
+# PRs and issues use the updater GitHub App's tokens, so `Validate registry` runs on the PRs
+# without a manual approval (GitHub doesn't run workflows for PRs that GITHUB_TOKEN opens). Each
+# step gets only what it needs: the steps that run npm packages or parse provider pages hold an
+# issues-only token at most, and only the pinned create-pull-request step gets a token that can
+# push (contents: write can move any branch or tag).
+#
+# The App's private key and the provider API keys are secrets of the `registry-updater`
+# environment, which only `main` may use, so a branch with changed updater code can't reach them.
+# The App's client ID stays a repository variable: a job's `if` can't see environment variables.
+# Until it is set, the jobs are skipped. Public repositories disable schedules after 60 days
+# without activity: see "Registry updater" in docs/maintainers.md.
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: Fetch and parse, print what would change, and open no PRs or issues
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Update (${{ matrix.provider }})
+    if: vars.UPDATER_APP_CLIENT_ID != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: registry-updater
+      deployment: false
+    strategy:
+      fail-fast: false
+      matrix:
+        provider: [openai, anthropic, gemini-api, vertex, bedrock, azure-openai, mistral, deepseek]
+    env:
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry-run && 'true' || 'false' }}
+      PROVIDER: ${{ matrix.provider }}
+    steps:
+      # Issues only: npm packages and the page parsers run with this token.
+      - id: issues-token
+        if: env.DRY_RUN != 'true'
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.UPDATER_APP_CLIENT_ID }}
+          private-key: ${{ secrets.UPDATER_APP_PRIVATE_KEY }}
+          permission-issues: write
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Run the updater
+        id: run
+        env:
+          # Files the issues, and raises the GitHub API rate limit for the Mistral listing.
+          GITHUB_TOKEN: ${{ steps.issues-token.outputs.token || github.token }}
+        run: |
+          if [ "$DRY_RUN" = true ]; then
+            node updater/run.ts --provider "$PROVIDER" --dry-run
+          else
+            node updater/run.ts --provider "$PROVIDER" --pr-dir "$RUNNER_TEMP/pr" --issues
+            echo "title=$(cat "$RUNNER_TEMP/pr/title.txt")" >> "$GITHUB_OUTPUT"
+          fi
+      # Contents and pull requests: minted after every step that runs npm packages or parses
+      # pages, for the pinned create-pull-request alone.
+      - id: pr-token
+        if: env.DRY_RUN != 'true'
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.UPDATER_APP_CLIENT_ID }}
+          private-key: ${{ secrets.UPDATER_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+      - if: env.DRY_RUN != 'true'
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ steps.pr-token.outputs.token }}
+          branch: registry-update/${{ matrix.provider }}
+          delete-branch: true
+          add-paths: registry/**
+          commit-message: ${{ steps.run.outputs.title }}
+          title: ${{ steps.run.outputs.title }}
+          body-path: ${{ runner.temp }}/pr/body.md
+          labels: registry, registry-update
+          sign-commits: true
+
+  check-models:
+    name: List-models check
+    if: vars.UPDATER_APP_CLIENT_ID != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: registry-updater
+      deployment: false
+    env:
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry-run && 'true' || 'false' }}
+    steps:
+      - id: token
+        if: env.DRY_RUN != 'true'
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.UPDATER_APP_CLIENT_ID }}
+          private-key: ${{ secrets.UPDATER_APP_PRIVATE_KEY }}
+          permission-issues: write
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci --ignore-scripts
+      # Each provider is optional and skipped when its secret isn't set. A failing API fails the
+      # job (visible in the run) but files no issue.
+      - name: Compare the list-models APIs with the registry
+        env:
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.UPDATER_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.UPDATER_AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ vars.UPDATER_AWS_REGION }}
+        run: |
+          if [ "$DRY_RUN" = true ]; then
+            node updater/check-models.ts --dry-run
+          else
+            node updater/check-models.ts --issues
+          fi

@@ -1,0 +1,9 @@
+{
+  "source": "bedrock/model-lifecycle-legacy",
+  "urls": ["https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html"],
+  "fetched_at": "2026-10-10T13:32:01Z",
+  "etag": "\"KMQaYzOr5Vv/ocTI4i/AOdQqHeQ=-gzip\"",
+  "last_modified": "Sat, 10 Oct 2026 07:14:11 GMT",
+  "sha256": "a4d6b0861264a0cf6bfd58c2a238485de68baa1747c6a21ecf86bcf01ca718bf",
+  "normalizer_version": 1
+}

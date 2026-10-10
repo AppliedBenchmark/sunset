@@ -1,0 +1,11 @@
+{
+  "source": "vertex/partner-deprecations",
+  "urls": [
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models.md.txt"
+  ],
+  "fetched_at": "2026-10-07T23:03:43Z",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "8a0a697b460e98cd958d10b95a8ca1ef59fdef44ef4f492e55b3a6bc2650c168",
+  "normalizer_version": 1
+}

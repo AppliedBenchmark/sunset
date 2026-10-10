@@ -1,0 +1,11 @@
+{
+  "source": "vertex/claude-sonnet-4",
+  "urls": [
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-4.md.txt"
+  ],
+  "fetched_at": "2026-10-07T23:07:58Z",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "85a95bb792226b37038d7049cd48bb361819cdd1f90394566e08173c4ebef223",
+  "normalizer_version": 1
+}

@@ -1,0 +1,7 @@
+node_modules/
+coverage/
+# The CLI bundle is built at release time; only the Action bundle is committed.
+dist/*
+!dist/action/
+*.tgz
+.DS_Store

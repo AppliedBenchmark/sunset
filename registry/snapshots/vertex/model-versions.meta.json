@@ -1,0 +1,11 @@
+{
+  "source": "vertex/model-versions",
+  "urls": [
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions.md.txt"
+  ],
+  "fetched_at": "2026-10-07T23:03:44Z",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "fec893be509f9ab11a14632b0da2f42de425e4c9623cecb02b64a0c805513822",
+  "normalizer_version": 1
+}

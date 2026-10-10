@@ -1,0 +1,10 @@
+services:
+  worker:
+    image: app:latest
+    command: ["python", "worker.py", "--model", "mistral-fixture-large-2099"]
+    environment:
+      - MODEL=${WORKER_MODEL}
+  eval:
+    image: app:latest
+    entrypoint: ["/bin/sh", "-c", "exec llm -m gemini-fixture-1.0-flash serve"]
+    command: python eval.py claude-fixture-1-20990101

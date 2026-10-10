@@ -1,0 +1,468 @@
+# Test-only registry. Every ID is fake but follows a real format, and every date is
+# relative to the fixture date 2099-01-01. No test may depend on real lifecycle data.
+schema_version: 1
+registry_version: 1
+generated_at: '2099-01-01T00:00:00Z'
+models:
+  - id: 'openai:gpt-fixture-retired'
+    provider: openai
+    platform: openai
+    model_id: gpt-fixture-retired
+    version: null
+    aliases: []
+    status: retired
+    deprecation_date: '2098-01-01'
+    retirement_date: '2098-06-30'
+    retirement_date_qualifier: exact
+    recommended_replacements:
+      - { model_id: gpt-fixture-4o, platform: openai }
+    drop_in: false
+    source: fixture/openai
+    source_url: https://fixture.invalid/openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Retired; has a replacement."
+  - id: 'openai:gpt-fixture-1-2099-01-10'
+    provider: openai
+    platform: openai
+    model_id: gpt-fixture-1-2099-01-10
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-10-10'
+    retirement_date: '2099-01-10'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/openai
+    source_url: https://fixture.invalid/openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Retires in 9 days: error."
+  - id: 'openai:gpt-fixture-2-2099-02-15'
+    provider: openai
+    platform: openai
+    model_id: gpt-fixture-2-2099-02-15
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-11-15'
+    retirement_date: '2099-02-15'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/openai
+    source_url: https://fixture.invalid/openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Retires in 45 days: warning."
+  - id: 'openai:gpt-fixture-3'
+    provider: openai
+    platform: openai
+    model_id: gpt-fixture-3
+    version: null
+    aliases: [gpt-fixture-3-0301]
+    status: deprecated
+    deprecation_date: '2098-12-01'
+    retirement_date: '2099-12-31'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/openai
+    source_url: https://fixture.invalid/openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Deprecated, retirement far away: notice. Prefix of gpt-fixture-3-mini."
+  - id: 'openai:gpt-fixture-3-mini'
+    provider: openai
+    platform: openai
+    model_id: gpt-fixture-3-mini
+    version: null
+    aliases: []
+    status: active
+    deprecation_date: null
+    retirement_date: null
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/openai
+    source_url: https://fixture.invalid/openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Active: never reported."
+  - id: 'openai:gpt-fixture-4o'
+    provider: openai
+    platform: openai
+    model_id: gpt-fixture-4o
+    version: null
+    aliases: []
+    status: active
+    deprecation_date: null
+    retirement_date: null
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/openai
+    source_url: https://fixture.invalid/openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Active; the same name as the Azure entries."
+  - id: 'openai:gpt-fixture-unverified'
+    provider: openai
+    platform: openai
+    model_id: gpt-fixture-unverified
+    version: null
+    aliases: []
+    status: unverified
+    deprecation_date: null
+    retirement_date: null
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/openai
+    source_url: https://fixture.invalid/openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Unverified: notice."
+  - id: 'openai:gpt-fixture-legacy'
+    provider: openai
+    platform: openai
+    model_id: gpt-fixture-legacy
+    version: null
+    aliases: []
+    status: legacy
+    deprecation_date: null
+    retirement_date: null
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/openai
+    source_url: https://fixture.invalid/openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Legacy: reported only when opted in."
+  - id: 'openai:gpt-fixture-soon'
+    provider: openai
+    platform: openai
+    model_id: gpt-fixture-soon
+    version: null
+    aliases: []
+    status: active
+    deprecation_date: null
+    retirement_date: '2099-03-15'
+    retirement_date_qualifier: no_earlier_than
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/openai
+    source_url: https://fixture.invalid/openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Active with an announced date 73 days out: warning, no earlier than."
+  - id: 'anthropic:claude-fixture-1-20990101'
+    provider: anthropic
+    platform: anthropic
+    model_id: claude-fixture-1-20990101
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-12-01'
+    retirement_date: '2099-06-01'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/anthropic
+    source_url: https://fixture.invalid/anthropic
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Dated pre-4.6 style ID."
+  - id: 'anthropic:claude-fixture-opus-9'
+    provider: anthropic
+    platform: anthropic
+    model_id: claude-fixture-opus-9
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-12-01'
+    retirement_date: '2099-01-20'
+    retirement_date_qualifier: exact
+    recommended_replacements:
+      - { model_id: claude-fixture-opus-10, platform: anthropic }
+    drop_in: true
+    source: fixture/anthropic
+    source_url: https://fixture.invalid/anthropic
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Dateless 4.6+ style ID, shared with Vertex."
+  - id: 'gemini-api:gemini-fixture-1.0-flash'
+    provider: google
+    platform: gemini-api
+    model_id: gemini-fixture-1.0-flash
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-11-01'
+    retirement_date: '2099-02-01'
+    retirement_date_qualifier: approximate
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/gemini
+    source_url: https://fixture.invalid/gemini-api
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Dotted ID, shared with Vertex. 31 days: warning."
+  - id: 'gemini-api:gemini-fixture-1.0-pro-001'
+    provider: google
+    platform: gemini-api
+    model_id: gemini-fixture-1.0-pro-001
+    version: null
+    aliases: []
+    status: retired
+    deprecation_date: '2098-01-01'
+    retirement_date: '2098-09-24'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/gemini
+    source_url: https://fixture.invalid/gemini-api
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: null
+  - id: 'vertex:claude-fixture-1@20990101'
+    provider: anthropic
+    platform: vertex
+    model_id: 'claude-fixture-1@20990101'
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-12-01'
+    retirement_date: '2099-01-15'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/vertex
+    source_url: https://fixture.invalid/vertex
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Vertex @date form: 14 days, error."
+  - id: 'vertex:claude-fixture-opus-9'
+    provider: anthropic
+    platform: vertex
+    model_id: claude-fixture-opus-9
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-12-01'
+    retirement_date: '2099-04-01'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/vertex
+    source_url: https://fixture.invalid/vertex
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "90 days out: notice (the warning threshold is < 90)."
+  - id: 'vertex:gemini-fixture-1.0-flash'
+    provider: google
+    platform: vertex
+    model_id: gemini-fixture-1.0-flash
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-11-01'
+    retirement_date: '2099-05-01'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/vertex
+    source_url: https://fixture.invalid/vertex
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: null
+  - id: 'bedrock:anthropic.claude-fixture-1-20990101-v1:0#us-gov-west-1'
+    provider: anthropic
+    platform: bedrock
+    model_id: 'anthropic.claude-fixture-1-20990101-v1:0'
+    version: null
+    regions: [us-gov-west-1]
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-12-01'
+    retirement_date: '2099-01-20'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/bedrock
+    source_url: https://fixture.invalid/bedrock
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "GovCloud retires earlier."
+  - id: 'bedrock:anthropic.claude-fixture-1-20990101-v1:0'
+    provider: anthropic
+    platform: bedrock
+    model_id: 'anthropic.claude-fixture-1-20990101-v1:0'
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-12-01'
+    retirement_date: '2099-06-01'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/bedrock
+    source_url: https://fixture.invalid/bedrock
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Every other region."
+  - id: 'bedrock:anthropic.claude-fixture-opus-9'
+    provider: anthropic
+    platform: bedrock
+    model_id: anthropic.claude-fixture-opus-9
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-12-01'
+    retirement_date: '2099-02-20'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/bedrock
+    source_url: https://fixture.invalid/bedrock
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "No -v1:0 suffix (4.6+). 50 days: warning."
+  - id: 'bedrock:deepseek.fixture-v3.2'
+    provider: deepseek
+    platform: bedrock
+    model_id: deepseek.fixture-v3.2
+    version: null
+    aliases: []
+    status: unverified
+    deprecation_date: null
+    retirement_date: null
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/bedrock
+    source_url: https://fixture.invalid/bedrock
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Dots in the base ID."
+  - id: 'bedrock:anthropic.claude-fixture-v2'
+    provider: anthropic
+    platform: bedrock
+    model_id: anthropic.claude-fixture-v2
+    version: null
+    aliases: []
+    status: retired
+    deprecation_date: '2097-06-01'
+    retirement_date: '2098-01-01'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/bedrock
+    source_url: https://fixture.invalid/bedrock
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "A prefix of anthropic.claude-fixture-v2:1."
+  - id: 'bedrock:anthropic.claude-fixture-v2:1'
+    provider: anthropic
+    platform: bedrock
+    model_id: 'anthropic.claude-fixture-v2:1'
+    version: null
+    aliases: []
+    status: active
+    deprecation_date: null
+    retirement_date: null
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/bedrock
+    source_url: https://fixture.invalid/bedrock
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: null
+  - id: 'azure-openai:gpt-fixture-4o@2099-01-05'
+    provider: openai
+    platform: azure-openai
+    model_id: gpt-fixture-4o
+    version: '2099-01-05'
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-11-01'
+    retirement_date: '2099-01-25'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/azure
+    source_url: https://fixture.invalid/azure-openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "24 days: error."
+  - id: 'azure-openai:gpt-fixture-4o@2099-08-06'
+    provider: openai
+    platform: azure-openai
+    model_id: gpt-fixture-4o
+    version: '2099-08-06'
+    aliases: []
+    status: active
+    deprecation_date: null
+    retirement_date: '2099-09-30'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/azure
+    source_url: https://fixture.invalid/azure-openai
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "Far away: not reported."
+  - id: 'mistral:mistral-fixture-large-2099'
+    provider: mistral
+    platform: mistral
+    model_id: mistral-fixture-large-2099
+    version: null
+    aliases: []
+    status: deprecated
+    deprecation_date: '2098-12-01'
+    retirement_date: '2099-03-30'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/mistral
+    source_url: https://fixture.invalid/mistral
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "88 days: warning."
+  - id: 'mistral:open-mistral-fixture-7b'
+    provider: mistral
+    platform: mistral
+    model_id: open-mistral-fixture-7b
+    version: null
+    aliases: []
+    status: retired
+    deprecation_date: '2098-01-01'
+    retirement_date: '2098-03-30'
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/mistral
+    source_url: https://fixture.invalid/mistral
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: null
+  - id: 'deepseek:deepseek-fixture-chat'
+    provider: deepseek
+    platform: deepseek
+    model_id: deepseek-fixture-chat
+    version: null
+    aliases: []
+    status: unverified
+    deprecation_date: null
+    retirement_date: null
+    retirement_date_qualifier: exact
+    recommended_replacements: []
+    drop_in: false
+    source: fixture/deepseek
+    source_url: https://fixture.invalid/deepseek
+    source_excerpt: Fixture entry; not real data.
+    verified_on: '2099-01-01'
+    notes: "DeepSeek is best effort."

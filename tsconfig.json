@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es2024",
+    // Node 22 is the oldest supported version: APIs newer than ES2024, such as RegExp.escape, fail
+    // type-checking.
+    "lib": ["es2024"],
+    "module": "nodenext",
+    "types": ["node"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    // Keeps sources runnable by Node's type stripping.
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    // tsc only type-checks; esbuild bundles.
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "updater", "test", "scripts", "*.ts"],
+  "exclude": ["test/fixtures"]
+}

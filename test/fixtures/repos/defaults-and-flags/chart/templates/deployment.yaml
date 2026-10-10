@@ -1,0 +1,9 @@
+spec:
+  containers:
+    - name: app
+      env:
+        - name: MODEL
+          value: {{ .Values.model | default "gpt-fixture-retired" | quote }}
+      args:
+        - --fallback
+        - {{ default "claude-fixture-opus-9" .Values.fallback }}

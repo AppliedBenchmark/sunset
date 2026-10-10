@@ -1,0 +1,7 @@
+jobs:
+  eval:
+    steps:
+      - run: python eval.py --model ${{ vars.EVAL_MODEL }}
+    env:
+      MODEL: ${{ secrets.MODEL }}
+      model_name: gpt-fixture-3-mini

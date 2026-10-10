@@ -1,0 +1,385 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/AppliedBenchmark/sunset/main/docs/schemas/report-v1.schema.json",
+  "title": "Sunset JSON report, version 1",
+  "description": "The output of `sunset scan --format json`. Fields may be added within version 1; removing or changing one means a new report_version.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "report_version",
+    "tool",
+    "today",
+    "registry",
+    "summary",
+    "findings",
+    "unresolved",
+    "mentions",
+    "inventory",
+    "suppressed",
+    "diagnostics",
+    "stats"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "report_version": { "const": 1 },
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": { "const": "sunset" },
+        "version": { "type": "string" }
+      }
+    },
+    "today": {
+      "$ref": "#/$defs/IsoDate",
+      "description": "The date the scan was evaluated against (UTC)."
+    },
+    "registry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin",
+        "schema_version",
+        "registry_version",
+        "generated_at",
+        "entries",
+        "newest_check",
+        "age_days"
+      ],
+      "properties": {
+        "origin": {
+          "description": "Where the registry came from; null when unknown.",
+          "enum": ["remote", "bundled", "file", null]
+        },
+        "schema_version": { "type": "integer", "minimum": 1 },
+        "registry_version": { "type": ["integer", "null"], "minimum": 1 },
+        "generated_at": { "type": "string" },
+        "entries": { "type": "integer", "minimum": 0 },
+        "newest_check": {
+          "description": "The latest verified_on date of any entry.",
+          "oneOf": [{ "$ref": "#/$defs/IsoDate" }, { "type": "null" }]
+        },
+        "age_days": {
+          "description": "Whole days from newest_check to today.",
+          "type": ["integer", "null"]
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "errors",
+        "warnings",
+        "notices",
+        "unresolved",
+        "mentions",
+        "inventory",
+        "suppressed",
+        "diagnostics"
+      ],
+      "properties": {
+        "errors": { "$ref": "#/$defs/Count" },
+        "warnings": { "$ref": "#/$defs/Count" },
+        "notices": { "$ref": "#/$defs/Count" },
+        "unresolved": { "$ref": "#/$defs/Count" },
+        "mentions": { "$ref": "#/$defs/Count" },
+        "inventory": { "$ref": "#/$defs/Count" },
+        "suppressed": { "$ref": "#/$defs/Count" },
+        "diagnostics": { "$ref": "#/$defs/Count" }
+      }
+    },
+    "findings": {
+      "description": "Sorted by path, line, column and rule.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/Finding" }
+    },
+    "unresolved": { "type": "array", "items": { "$ref": "#/$defs/Unresolved" } },
+    "mentions": {
+      "description": "Registry IDs in docs files. They never fail a run.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/Mention" }
+    },
+    "inventory": {
+      "description": "Model-like strings that aren't in the registry.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/InventoryItem" }
+    },
+    "suppressed": { "type": "array", "items": { "$ref": "#/$defs/Suppressed" } },
+    "diagnostics": { "type": "array", "items": { "$ref": "#/$defs/Diagnostic" } },
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files", "lines"],
+      "properties": {
+        "files": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["listed", "scanned", "lexed", "skipped"],
+          "properties": {
+            "listed": { "$ref": "#/$defs/Count" },
+            "scanned": { "$ref": "#/$defs/Count" },
+            "lexed": { "$ref": "#/$defs/Count" },
+            "skipped": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["excluded", "vendored", "generated", "binary", "too-large", "no-lexer"],
+              "properties": {
+                "excluded": { "$ref": "#/$defs/Count" },
+                "vendored": { "$ref": "#/$defs/Count" },
+                "generated": { "$ref": "#/$defs/Count" },
+                "binary": { "$ref": "#/$defs/Count" },
+                "too-large": { "$ref": "#/$defs/Count" },
+                "no-lexer": { "$ref": "#/$defs/Count" }
+              }
+            }
+          }
+        },
+        "lines": { "$ref": "#/$defs/Count" }
+      }
+    }
+  },
+  "$defs": {
+    "Count": { "type": "integer", "minimum": 0 },
+    "IsoDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "NullableDate": { "oneOf": [{ "$ref": "#/$defs/IsoDate" }, { "type": "null" }] },
+    "Severity": { "enum": ["error", "warning", "notice"] },
+    "Rule": {
+      "enum": [
+        "sunset/model-retired",
+        "sunset/model-retiring",
+        "sunset/model-deprecated",
+        "sunset/model-unverified",
+        "sunset/model-legacy",
+        "sunset/model-reference-unresolved",
+        "sunset/model-id-unknown",
+        "sunset/suppression-expired"
+      ]
+    },
+    "FileClass": { "enum": ["code", "config", "docs", "test", "vendored", "generated"] },
+    "Location": {
+      "description": "Lines and columns are 1-based; columns count UTF-16 code units; end_column is exclusive.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "line", "column", "end_line", "end_column"],
+      "properties": {
+        "path": {
+          "description": "POSIX-style, relative to the repository's root when the scanned directory is in a git work tree, and to the scanned directory otherwise.",
+          "type": "string"
+        },
+        "line": { "type": "integer", "minimum": 1 },
+        "column": { "type": "integer", "minimum": 1 },
+        "end_line": { "type": "integer", "minimum": 1 },
+        "end_column": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "Entry": {
+      "description": "A registry entry, without its excerpt and notes.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "provider",
+        "platform",
+        "model_id",
+        "version",
+        "regions",
+        "status",
+        "deprecation_date",
+        "retirement_date",
+        "retirement_date_qualifier",
+        "recommended_replacements",
+        "drop_in",
+        "source_url",
+        "verified_on"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "provider": { "type": "string" },
+        "platform": { "type": "string" },
+        "model_id": { "type": "string" },
+        "version": { "type": ["string", "null"] },
+        "regions": {
+          "oneOf": [{ "type": "array", "items": { "type": "string" } }, { "type": "null" }]
+        },
+        "status": { "enum": ["active", "legacy", "deprecated", "retired", "unverified"] },
+        "deprecation_date": { "$ref": "#/$defs/NullableDate" },
+        "retirement_date": { "$ref": "#/$defs/NullableDate" },
+        "retirement_date_qualifier": { "enum": ["exact", "no_earlier_than", "approximate"] },
+        "recommended_replacements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["model_id", "platform"],
+            "properties": {
+              "model_id": { "type": "string" },
+              "platform": { "type": "string" }
+            }
+          }
+        },
+        "drop_in": { "type": "boolean" },
+        "source_url": { "type": "string" },
+        "verified_on": { "$ref": "#/$defs/IsoDate" }
+      }
+    },
+    "Context": {
+      "description": "How the ID was written.",
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "literal",
+            "bedrock-profile",
+            "bedrock-arn",
+            "vertex-path",
+            "openrouter",
+            "vercel-ai-gateway",
+            "prefix",
+            "azure-deployment"
+          ]
+        },
+        "geo": { "type": ["string", "null"] },
+        "resource": { "enum": ["foundation-model", "inference-profile"] },
+        "publisher": { "type": "string" },
+        "vendor": { "type": "string" },
+        "prefix": {
+          "description": "A library's prefix that names the platform, as written: `gemini/`, `anthropic:`.",
+          "type": "string"
+        },
+        "source": { "enum": ["terraform", "bicep", "arm", "cli"] }
+      },
+      "additionalProperties": false
+    },
+    "Finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rule",
+        "severity",
+        "message",
+        "location",
+        "file_class",
+        "model_id",
+        "context",
+        "retirement_date",
+        "days_left",
+        "entry",
+        "entries"
+      ],
+      "properties": {
+        "rule": { "$ref": "#/$defs/Rule" },
+        "severity": { "$ref": "#/$defs/Severity" },
+        "message": { "type": "string" },
+        "location": { "$ref": "#/$defs/Location" },
+        "file_class": { "$ref": "#/$defs/FileClass" },
+        "model_id": {
+          "description": "The text that matched; for suppression-expired, the directive.",
+          "type": "string"
+        },
+        "context": { "oneOf": [{ "$ref": "#/$defs/Context" }, { "type": "null" }] },
+        "retirement_date": { "$ref": "#/$defs/NullableDate" },
+        "days_left": {
+          "description": "Whole UTC days until retirement; negative once it has passed.",
+          "type": ["integer", "null"]
+        },
+        "entry": {
+          "description": "The entry that decides the severity; null for suppression-expired.",
+          "oneOf": [{ "$ref": "#/$defs/Entry" }, { "type": "null" }]
+        },
+        "entries": {
+          "description": "Every candidate entry, including `entry`.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/Entry" }
+        }
+      }
+    },
+    "Unresolved": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rule",
+        "severity",
+        "message",
+        "location",
+        "file_class",
+        "reason",
+        "key",
+        "expression",
+        "entries"
+      ],
+      "properties": {
+        "rule": { "const": "sunset/model-reference-unresolved" },
+        "severity": { "const": "notice" },
+        "message": { "type": "string" },
+        "location": { "$ref": "#/$defs/Location" },
+        "file_class": { "$ref": "#/$defs/FileClass" },
+        "reason": {
+          "enum": [
+            "environment",
+            "variable",
+            "interpolated",
+            "opaque-arn",
+            "azure-no-version",
+            "azure-unknown",
+            "azure-deployment-name"
+          ]
+        },
+        "key": { "type": ["string", "null"] },
+        "expression": { "type": "string" },
+        "entries": { "type": "array", "items": { "$ref": "#/$defs/Entry" } }
+      }
+    },
+    "Mention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["severity_in_code", "message", "location", "model_id", "entry", "entries"],
+      "properties": {
+        "severity_in_code": {
+          "description": "What the severity would be outside docs.",
+          "$ref": "#/$defs/Severity"
+        },
+        "message": { "type": "string" },
+        "location": { "$ref": "#/$defs/Location" },
+        "model_id": { "type": "string" },
+        "entry": { "$ref": "#/$defs/Entry" },
+        "entries": { "type": "array", "items": { "$ref": "#/$defs/Entry" } }
+      }
+    },
+    "InventoryItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_id", "locations"],
+      "properties": {
+        "model_id": { "type": "string" },
+        "locations": { "type": "array", "items": { "$ref": "#/$defs/Location" } }
+      }
+    },
+    "Suppressed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule", "location", "model_id", "by", "until", "reason"],
+      "properties": {
+        "rule": { "$ref": "#/$defs/Rule" },
+        "location": { "$ref": "#/$defs/Location" },
+        "model_id": { "type": "string" },
+        "by": { "enum": ["inline", "config"] },
+        "until": { "$ref": "#/$defs/NullableDate" },
+        "reason": { "type": ["string", "null"] }
+      }
+    },
+    "Diagnostic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "message", "location"],
+      "properties": {
+        "kind": { "enum": ["malformed-directive", "expired-config-ignore"] },
+        "message": { "type": "string" },
+        "location": { "oneOf": [{ "$ref": "#/$defs/Location" }, { "type": "null" }] }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><title>Change Log | DeepSeek API Docs</title><script>window.x=1</script></head><body><nav>Navigation</nav><main><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_gDTe" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_fbmM"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Change Log</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_lKxX theme-doc-toc-mobile tocMobile_kO7c"><button type="button" class="clean-btn tocCollapsibleButton_KNXb">On this page</button></div><div class="theme-doc-markdown markdown"><div class="row"><div class="col col--12"><h1>Change Log</h1>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_YAqC" id="date-2026-09-10">Date: 2026-09-10<a href="#date-2026-09-10" class="hash-link" aria-label="Direct link to Date: 2026-09-10" title="Direct link to Date: 2026-09-10">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_YAqC" id="deepseek-v41-flash-release">DeepSeek-V4.1-Flash Release<a href="#deepseek-v41-flash-release" class="hash-link" aria-label="Direct link to DeepSeek-V4.1-Flash Release" title="Direct link to DeepSeek-V4.1-Flash Release">​</a></h3>
+<p>Today, we officially release the DeepSeek-V4.1-Flash model. It is the smallest model in our new architecture family, with native multimodal visual understanding. The new architecture is designed for a higher capability ceiling, faster inference, higher throughput, and scaling to larger models.</p>
+<ul>
+<li>GPQA Diamond: 90.9</li>
+<li>HLE: 36.8 (39.1*)</li>
+<li>Codeforces (Rating): 3471</li>
+<li>MathArena Apex: 65.6</li>
+<li>Terminal-Bench 2.1: 90.6</li>
+<li>Terminal-Bench 3.0: 30.0</li>
+<li>Terminal-Bench 4.0: 31.2</li>
+<li>DeepSWE v1.1: 74.2</li>
+<li>ProgramBench: 20.3</li>
+<li>NL2Repo-Bench: 65.4</li>
+<li>CyberGym: 88.1</li>
+<li>SEC-Bench Pro: 62.8</li>
+<li>ExploitGym: 15.3</li>
+<li>HLE (w/tools): 63.9</li>
+<li>Automation-Bench: 54.8</li>
+<li>Agents&#x27; Last Exam: 31.8</li>
+<li>Chartography (w/tools): 78.9</li>
+<li>BabyVision (w/tools): 89.6</li>
+<li>ZeroBench-main (w/tools): 49.0</li>
+</ul>
+<div style="font-size:14px"><p>* Tested only on the pure-text subset of the HLE benchmark set.</p></div>
+<b>API changes</b>
+<p>DeepSeek V4.1 Flash is now available on the DeepSeek API with native multimodal support. Change the model name to <code>deepseek-flash</code> to call the latest V4.1 Flash model. The previous-generation models V4 Flash and V4 Flash Vision Exp have been retired; for compatibility, the model names <code>deepseek-v4-flash</code> and <code>deepseek-v4-flash-vision-exp</code> are temporarily routed to V4.1 Flash.</p>
+<p>In response to user demand, we have decided to continue providing API services for DeepSeek V4 Pro after September 14, 2026, with the billing method remaining unchanged. We will provide further notice should there be any changes. Thank you for your understanding and support!</p>
+<b>API pricing adjustment</b>
+<p>With the release of DeepSeek-V4.1-Flash, API prices have been reduced accordingly. For details, please refer to <a href="/quick_start/pricing">Models &amp; Pricing</a>.</p>
+<p>For more details, please refer to <a href="/news/news260910">this documentation</a>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_YAqC" id="date-2024-09-05">Date: 2024-09-05<a href="#date-2024-09-05" class="hash-link" aria-label="Direct link to Date: 2024-09-05" title="Direct link to Date: 2024-09-05">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_YAqC" id="deepseek-coder--deepseek-chat-upgraded-to-deepseek-v25-model"><code>deepseek-coder</code> &amp; <code>deepseek-chat</code> Upgraded to DeepSeek V2.5 Model<a href="#deepseek-coder--deepseek-chat-upgraded-to-deepseek-v25-model" class="hash-link" aria-label="Direct link to deepseek-coder--deepseek-chat-upgraded-to-deepseek-v25-model" title="Direct link to deepseek-coder--deepseek-chat-upgraded-to-deepseek-v25-model">​</a></h3>
+<p>The DeepSeek V2 Chat and DeepSeek Coder V2 models have been merged and upgraded into the new model, DeepSeek V2.5.</p>
+<p>For backward compatibility, API users can access the new model through either <code>deepseek-coder</code> or <code>deepseek-chat</code>.</p>
+<p>The new model significantly surpasses the previous versions in both general capabilities and code abilities.</p>
+<p><strong>The new model better aligns with human preferences and has been optimized in various areas such as writing tasks and instruction following:</strong></p>
+<ul>
+<li>ArenaHard win rate improved from 68.3% to 76.3%</li>
+<li>AlpacaEval 2.0 LC win rate increased from 46.61% to 50.52%</li>
+<li>MT-Bench score rose from 8.84 to 9.02</li>
+<li>AlignBench score increased from 7.88 to 8.04</li>
+</ul>
+<p><strong>The new model has further enhanced its code generation capabilities based on the original Coder model, optimized for common programming application scenarios, and achieved the following results on the standard test set:</strong></p>
+<ul>
+<li>HumanEval: 89%</li>
+<li>LiveCodeBench (January-September): 41%</li>
+</ul>
+<hr>
+</article></main></body></html>

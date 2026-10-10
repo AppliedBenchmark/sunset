@@ -1,0 +1,20 @@
+name: eval
+on: [push]
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run the evaluation
+        run: |
+          # gpt-fixture-retired stays below until the baseline is re-run.
+          # sunset-ignore-next-line reason="pinned baseline"
+          python eval.py --model gpt-fixture-retired
+          python eval.py --model gpt-fixture-3
+      - name: Compare with the candidate
+        run: |
+          llm -m claude-fixture-opus-9 "Summarize the results"
+          python compare.py gpt-fixture-1-2099-01-10
+        env:
+          CANDIDATES: gpt-fixture-2-2099-02-15

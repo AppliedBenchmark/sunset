@@ -1,0 +1,54 @@
+name: Registry correction
+description: A wrong or missing date, status or replacement for a model.
+title: 'Registry: '
+labels: [registry]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every value in the registry is quoted from the provider's official page, so a correction needs
+        that page. News articles and third-party trackers can't be used as sources. To fix the entry
+        yourself, see [docs/registry.md](https://github.com/AppliedBenchmark/sunset/blob/main/docs/registry.md).
+  - type: input
+    id: model-id
+    attributes:
+      label: Model ID
+      description: Exactly as it is written in code.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Where the model is served.
+      options:
+        - OpenAI (openai)
+        - Anthropic (anthropic)
+        - Gemini API (gemini-api)
+        - Vertex AI (vertex)
+        - Amazon Bedrock (bedrock)
+        - Azure, Microsoft Foundry (azure-openai)
+        - Mistral (mistral)
+        - DeepSeek (deepseek)
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Official source
+      description: The provider's page that states the correct value.
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: excerpt
+    attributes:
+      label: What the page says
+      description: Copy the table row or the sentence word for word.
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What Sunset reports
+      description: The finding's message, or the registry entry. If Sunset reports nothing, say so.

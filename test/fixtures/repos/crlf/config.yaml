@@ -1,0 +1,6 @@
+a: 1
+model: gpt-fixture-1-2099-01-10
+list:
+  - claude-fixture-opus-9
+block: |
+  model: gpt-fixture-3

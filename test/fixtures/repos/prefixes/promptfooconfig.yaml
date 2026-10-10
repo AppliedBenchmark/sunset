@@ -1,0 +1,6 @@
+providers:
+  - anthropic:messages:claude-fixture-opus-9
+  - openai:chat:gpt-fixture-1-2099-01-10
+  - azure:chat:gpt-fixture-4o
+  - vertex:claude-fixture-opus-9
+  - openrouter:openai/gpt-fixture-retired

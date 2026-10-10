@@ -1,0 +1,93 @@
+# ID-format data for the scanner: the forms around an ID that tell its platform. It is data, not
+# code, because providers add new forms over time. Verified 2026-10-07.
+
+bedrock:
+  # Cross-region inference-profile prefixes. `ca.` and `uk.` appear only as guardrail profiles.
+  geo_prefixes: [us, eu, apac, jp, au, in, us-gov, global]
+  # ARN partitions in `arn:<partition>:bedrock:<region>:<account>:<resource>/<id>`. `aws-eusc` is
+  # the AWS European Sovereign Cloud (region `eusc-de-east-1`, docs.aws.eu/general/latest/gr/arns.html).
+  arn_partitions: [aws, aws-us-gov, aws-eusc]
+
+# Model routers serve `<vendor>/<id>` through any provider that still has the model, so their slug
+# gets the vendor's dates as a warning at most. Each maps its
+# vendor slugs → the first-party platforms whose IDs the slugs reuse. Only `<vendor>/<first-party ID>`
+# matches; every other slug goes to the inventory.
+#
+# LiteLLM writes the same `<vendor>/<id>` to call the vendor's own API. So it's a router's slug only
+# after the router's own segment (`openrouter/`, LiteLLM's `vercel_ai_gateway/`), or in a file that
+# uses the router and doesn't write such a segment itself; elsewhere `<vendor>/` is a prefix below.
+openrouter:
+  vendors:
+    openai: [openai]
+    anthropic: [anthropic]
+    # Served through Google AI Studio and Vertex AI (openrouter.ai/api/v1/models/google/
+    # gemini-2.5-flash/endpoints, verified 2026-10-10).
+    google: [gemini-api, vertex]
+    mistralai: [mistral]
+    deepseek: [deepseek]
+
+# The Vercel AI Gateway's model list (ai-gateway.vercel.sh/v1/models, verified 2026-10-09) names
+# Mistral `mistral/`. Its `/v1/models/<id>/endpoints` serve `google/` models through the Gemini API,
+# Vertex AI or both. LiteLLM routes to it with `vercel_ai_gateway/<vendor>/<id>`
+# (docs.litellm.ai/docs/providers/vercel_ai_gateway).
+vercel_ai_gateway:
+  vendors:
+    openai: [openai]
+    anthropic: [anthropic]
+    google: [gemini-api, vertex]
+    mistral: [mistral]
+    deepseek: [deepseek]
+
+# Prefixes that libraries write before a model ID to choose its platform: `<prefix>/<id>` in
+# LiteLLM, `<prefix>:<id>` in LangChain's init_chat_model, promptfoo, Pydantic AI and aisuite
+# (github.com/andrewyng/aisuite, `<provider>:<model-name>`), possibly with route
+# segments in between (`bedrock/converse/`, `anthropic:messages:`). The ID is checked on these
+# platforms only. `azure-openai` means the ID names an Azure deployment, which has Azure's
+# dates. The routers' vendors above win for a router's slug; an unknown prefix makes the ID part
+# of a path, which isn't checked. Verified 2026-10-08 against docs.litellm.ai/docs/providers,
+# reference.langchain.com (init_chat_model) and promptfoo.dev/docs/providers.
+prefixes:
+  openai: [openai]
+  text-completion-openai: [openai]
+  # Pydantic AI's `<provider>:<id>` (pydantic.dev/docs/ai/models/overview, verified 2026-10-08).
+  openai-chat: [openai]
+  openai-responses: [openai]
+  # OpenAI's fine-tuned models, `ft:<base model>:<org>:<suffix>:<id>`, run until the base model is
+  # deprecated (developers.openai.com/api/docs/deprecations).
+  ft: [openai]
+  anthropic: [anthropic]
+  gemini: [gemini-api]
+  # promptfoo's `google:` and Pydantic AI's call the Gemini API; aisuite's `google:` calls Vertex
+  # AI (aisuite/providers/google_provider.py, `vertexai.init`, verified 2026-10-09). Without the
+  # library, `google:` can be either.
+  google: [gemini-api, vertex]
+  # langchain-google-genai calls Vertex too since 4.0.
+  google_genai: [gemini-api, vertex]
+  # Pydantic AI: `google-cloud:` is Vertex AI (pydantic.dev/docs/ai/models/google, verified
+  # 2026-10-08). Its 1.x releases still take `google-gla:` for the Gemini API and `google-vertex:`
+  # for Vertex AI, deprecated (pydantic_ai/providers/__init__.py at v1.107.7).
+  google-cloud: [vertex]
+  google-gla: [gemini-api]
+  google-vertex: [vertex]
+  vertex_ai: [vertex]
+  # LiteLLM's older route to Vertex AI, still in its provider list (litellm/types/utils.py,
+  # verified 2026-10-08).
+  vertex_ai_beta: [vertex]
+  vertex: [vertex]
+  google_vertexai: [vertex]
+  google_anthropic_vertex: [vertex]
+  bedrock: [bedrock]
+  bedrock_converse: [bedrock]
+  anthropic_bedrock: [bedrock]
+  # aisuite's `<provider>:<id>` for Bedrock (aisuite/providers/aws_provider.py, a `bedrock-runtime`
+  # client, verified 2026-10-09).
+  aws: [bedrock]
+  azure: [azure-openai]
+  azure_ai: [azure-openai]
+  azure_openai: [azure-openai]
+  mistral: [mistral]
+  mistralai: [mistral]
+  # LiteLLM's Codestral API routes (docs.litellm.ai/docs/providers/codestral, verified 2026-10-08).
+  codestral: [mistral]
+  text-completion-codestral: [mistral]
+  deepseek: [deepseek]

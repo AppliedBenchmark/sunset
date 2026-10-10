@@ -1,0 +1,733 @@
+{
+  "$schema": "https://raw.githubusercontent.com/AppliedBenchmark/sunset/main/docs/schemas/report-v1.schema.json",
+  "report_version": 1,
+  "tool": {
+    "name": "sunset",
+    "version": "1.2.3"
+  },
+  "today": "2099-01-01",
+  "registry": {
+    "origin": "bundled",
+    "schema_version": 1,
+    "registry_version": 1,
+    "generated_at": "2099-01-01T00:00:00Z",
+    "entries": 27,
+    "newest_check": "2099-01-01",
+    "age_days": 0
+  },
+  "summary": {
+    "errors": 6,
+    "warnings": 2,
+    "notices": 2,
+    "unresolved": 1,
+    "mentions": 1,
+    "inventory": 1,
+    "suppressed": 2,
+    "diagnostics": 2
+  },
+  "findings": [
+    {
+      "rule": "sunset/model-retiring",
+      "severity": "error",
+      "message": "us-gov.anthropic.claude-fixture-1-20990101-v1:0 (bedrock us-gov-west-1; Bedrock us-gov. inference profile) retires on 2099-01-20, in 19 days. Other dates: bedrock other regions: 2099-06-01.",
+      "location": {
+        "path": "infra/bedrock.py",
+        "line": 1,
+        "column": 10,
+        "end_line": 1,
+        "end_column": 57
+      },
+      "file_class": "code",
+      "model_id": "us-gov.anthropic.claude-fixture-1-20990101-v1:0",
+      "context": {
+        "kind": "bedrock-profile",
+        "geo": "us-gov"
+      },
+      "retirement_date": "2099-01-20",
+      "days_left": 19,
+      "entry": {
+        "id": "bedrock:anthropic.claude-fixture-1-20990101-v1:0#us-gov-west-1",
+        "provider": "anthropic",
+        "platform": "bedrock",
+        "model_id": "anthropic.claude-fixture-1-20990101-v1:0",
+        "version": null,
+        "regions": [
+          "us-gov-west-1"
+        ],
+        "status": "deprecated",
+        "deprecation_date": "2098-12-01",
+        "retirement_date": "2099-01-20",
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/bedrock",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "bedrock:anthropic.claude-fixture-1-20990101-v1:0#us-gov-west-1",
+          "provider": "anthropic",
+          "platform": "bedrock",
+          "model_id": "anthropic.claude-fixture-1-20990101-v1:0",
+          "version": null,
+          "regions": [
+            "us-gov-west-1"
+          ],
+          "status": "deprecated",
+          "deprecation_date": "2098-12-01",
+          "retirement_date": "2099-01-20",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/bedrock",
+          "verified_on": "2099-01-01"
+        },
+        {
+          "id": "bedrock:anthropic.claude-fixture-1-20990101-v1:0",
+          "provider": "anthropic",
+          "platform": "bedrock",
+          "model_id": "anthropic.claude-fixture-1-20990101-v1:0",
+          "version": null,
+          "regions": null,
+          "status": "deprecated",
+          "deprecation_date": "2098-12-01",
+          "retirement_date": "2099-06-01",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/bedrock",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    },
+    {
+      "rule": "sunset/model-retiring",
+      "severity": "warning",
+      "message": "anthropic.claude-fixture-opus-9 (bedrock) retires on 2099-02-20, in 50 days.",
+      "location": {
+        "path": "infra/bedrock.py",
+        "line": 2,
+        "column": 9,
+        "end_line": 2,
+        "end_column": 40
+      },
+      "file_class": "code",
+      "model_id": "anthropic.claude-fixture-opus-9",
+      "context": {
+        "kind": "literal"
+      },
+      "retirement_date": "2099-02-20",
+      "days_left": 50,
+      "entry": {
+        "id": "bedrock:anthropic.claude-fixture-opus-9",
+        "provider": "anthropic",
+        "platform": "bedrock",
+        "model_id": "anthropic.claude-fixture-opus-9",
+        "version": null,
+        "regions": null,
+        "status": "deprecated",
+        "deprecation_date": "2098-12-01",
+        "retirement_date": "2099-02-20",
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/bedrock",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "bedrock:anthropic.claude-fixture-opus-9",
+          "provider": "anthropic",
+          "platform": "bedrock",
+          "model_id": "anthropic.claude-fixture-opus-9",
+          "version": null,
+          "regions": null,
+          "status": "deprecated",
+          "deprecation_date": "2098-12-01",
+          "retirement_date": "2099-02-20",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/bedrock",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    },
+    {
+      "rule": "sunset/model-retiring",
+      "severity": "error",
+      "message": "gpt-fixture-4o (azure-openai 2099-01-05; Azure deployment (terraform)) retires on 2099-01-25, in 24 days.",
+      "location": {
+        "path": "infra/main.tf",
+        "line": 4,
+        "column": 16,
+        "end_line": 4,
+        "end_column": 30
+      },
+      "file_class": "config",
+      "model_id": "gpt-fixture-4o",
+      "context": {
+        "kind": "azure-deployment",
+        "source": "terraform"
+      },
+      "retirement_date": "2099-01-25",
+      "days_left": 24,
+      "entry": {
+        "id": "azure-openai:gpt-fixture-4o@2099-01-05",
+        "provider": "openai",
+        "platform": "azure-openai",
+        "model_id": "gpt-fixture-4o",
+        "version": "2099-01-05",
+        "regions": null,
+        "status": "deprecated",
+        "deprecation_date": "2098-11-01",
+        "retirement_date": "2099-01-25",
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/azure-openai",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "azure-openai:gpt-fixture-4o@2099-01-05",
+          "provider": "openai",
+          "platform": "azure-openai",
+          "model_id": "gpt-fixture-4o",
+          "version": "2099-01-05",
+          "regions": null,
+          "status": "deprecated",
+          "deprecation_date": "2098-11-01",
+          "retirement_date": "2099-01-25",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/azure-openai",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    },
+    {
+      "rule": "sunset/model-retired",
+      "severity": "error",
+      "message": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).",
+      "location": {
+        "path": "src/client.ts",
+        "line": 2,
+        "column": 18,
+        "end_line": 2,
+        "end_column": 37
+      },
+      "file_class": "code",
+      "model_id": "gpt-fixture-retired",
+      "context": {
+        "kind": "literal"
+      },
+      "retirement_date": "2098-06-30",
+      "days_left": -185,
+      "entry": {
+        "id": "openai:gpt-fixture-retired",
+        "provider": "openai",
+        "platform": "openai",
+        "model_id": "gpt-fixture-retired",
+        "version": null,
+        "regions": null,
+        "status": "retired",
+        "deprecation_date": "2098-01-01",
+        "retirement_date": "2098-06-30",
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [
+          {
+            "model_id": "gpt-fixture-4o",
+            "platform": "openai"
+          }
+        ],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/openai",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "openai:gpt-fixture-retired",
+          "provider": "openai",
+          "platform": "openai",
+          "model_id": "gpt-fixture-retired",
+          "version": null,
+          "regions": null,
+          "status": "retired",
+          "deprecation_date": "2098-01-01",
+          "retirement_date": "2098-06-30",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [
+            {
+              "model_id": "gpt-fixture-4o",
+              "platform": "openai"
+            }
+          ],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/openai",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    },
+    {
+      "rule": "sunset/model-retiring",
+      "severity": "error",
+      "message": "gpt-fixture-1-2099-01-10 (openai) retires on 2099-01-10, in 9 days.",
+      "location": {
+        "path": "src/client.ts",
+        "line": 3,
+        "column": 15,
+        "end_line": 3,
+        "end_column": 39
+      },
+      "file_class": "code",
+      "model_id": "gpt-fixture-1-2099-01-10",
+      "context": {
+        "kind": "literal"
+      },
+      "retirement_date": "2099-01-10",
+      "days_left": 9,
+      "entry": {
+        "id": "openai:gpt-fixture-1-2099-01-10",
+        "provider": "openai",
+        "platform": "openai",
+        "model_id": "gpt-fixture-1-2099-01-10",
+        "version": null,
+        "regions": null,
+        "status": "deprecated",
+        "deprecation_date": "2098-10-10",
+        "retirement_date": "2099-01-10",
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/openai",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "openai:gpt-fixture-1-2099-01-10",
+          "provider": "openai",
+          "platform": "openai",
+          "model_id": "gpt-fixture-1-2099-01-10",
+          "version": null,
+          "regions": null,
+          "status": "deprecated",
+          "deprecation_date": "2098-10-10",
+          "retirement_date": "2099-01-10",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/openai",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    },
+    {
+      "rule": "sunset/model-retiring",
+      "severity": "warning",
+      "message": "gpt-fixture-2-2099-02-15 (openai) retires on 2099-02-15, in 45 days.",
+      "location": {
+        "path": "src/client.ts",
+        "line": 4,
+        "column": 16,
+        "end_line": 4,
+        "end_column": 40
+      },
+      "file_class": "code",
+      "model_id": "gpt-fixture-2-2099-02-15",
+      "context": {
+        "kind": "literal"
+      },
+      "retirement_date": "2099-02-15",
+      "days_left": 45,
+      "entry": {
+        "id": "openai:gpt-fixture-2-2099-02-15",
+        "provider": "openai",
+        "platform": "openai",
+        "model_id": "gpt-fixture-2-2099-02-15",
+        "version": null,
+        "regions": null,
+        "status": "deprecated",
+        "deprecation_date": "2098-11-15",
+        "retirement_date": "2099-02-15",
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/openai",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "openai:gpt-fixture-2-2099-02-15",
+          "provider": "openai",
+          "platform": "openai",
+          "model_id": "gpt-fixture-2-2099-02-15",
+          "version": null,
+          "regions": null,
+          "status": "deprecated",
+          "deprecation_date": "2098-11-15",
+          "retirement_date": "2099-02-15",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/openai",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    },
+    {
+      "rule": "sunset/model-unverified",
+      "severity": "notice",
+      "message": "gpt-fixture-unverified (openai) is in the registry, but its lifecycle isn't verified from an official source yet.",
+      "location": {
+        "path": "src/client.ts",
+        "line": 6,
+        "column": 18,
+        "end_line": 6,
+        "end_column": 40
+      },
+      "file_class": "code",
+      "model_id": "gpt-fixture-unverified",
+      "context": {
+        "kind": "literal"
+      },
+      "retirement_date": null,
+      "days_left": null,
+      "entry": {
+        "id": "openai:gpt-fixture-unverified",
+        "provider": "openai",
+        "platform": "openai",
+        "model_id": "gpt-fixture-unverified",
+        "version": null,
+        "regions": null,
+        "status": "unverified",
+        "deprecation_date": null,
+        "retirement_date": null,
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/openai",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "openai:gpt-fixture-unverified",
+          "provider": "openai",
+          "platform": "openai",
+          "model_id": "gpt-fixture-unverified",
+          "version": null,
+          "regions": null,
+          "status": "unverified",
+          "deprecation_date": null,
+          "retirement_date": null,
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/openai",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    },
+    {
+      "rule": "sunset/model-retired",
+      "severity": "error",
+      "message": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).",
+      "location": {
+        "path": "src/client.ts",
+        "line": 10,
+        "column": 16,
+        "end_line": 10,
+        "end_column": 35
+      },
+      "file_class": "code",
+      "model_id": "gpt-fixture-retired",
+      "context": {
+        "kind": "literal"
+      },
+      "retirement_date": "2098-06-30",
+      "days_left": -185,
+      "entry": {
+        "id": "openai:gpt-fixture-retired",
+        "provider": "openai",
+        "platform": "openai",
+        "model_id": "gpt-fixture-retired",
+        "version": null,
+        "regions": null,
+        "status": "retired",
+        "deprecation_date": "2098-01-01",
+        "retirement_date": "2098-06-30",
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [
+          {
+            "model_id": "gpt-fixture-4o",
+            "platform": "openai"
+          }
+        ],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/openai",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "openai:gpt-fixture-retired",
+          "provider": "openai",
+          "platform": "openai",
+          "model_id": "gpt-fixture-retired",
+          "version": null,
+          "regions": null,
+          "status": "retired",
+          "deprecation_date": "2098-01-01",
+          "retirement_date": "2098-06-30",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [
+            {
+              "model_id": "gpt-fixture-4o",
+              "platform": "openai"
+            }
+          ],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/openai",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    },
+    {
+      "rule": "sunset/suppression-expired",
+      "severity": "notice",
+      "message": "Suppression \"sunset-ignore until=2098-12-31\" expired on 2098-12-31; what it covered is reported again. Remove it or extend the date.",
+      "location": {
+        "path": "src/client.ts",
+        "line": 10,
+        "column": 41,
+        "end_line": 10,
+        "end_column": 71
+      },
+      "file_class": "code",
+      "model_id": "sunset-ignore until=2098-12-31",
+      "context": null,
+      "retirement_date": null,
+      "days_left": null,
+      "entry": null,
+      "entries": []
+    },
+    {
+      "rule": "sunset/model-retired",
+      "severity": "error",
+      "message": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).",
+      "location": {
+        "path": "src/client.ts",
+        "line": 11,
+        "column": 15,
+        "end_line": 11,
+        "end_column": 34
+      },
+      "file_class": "code",
+      "model_id": "gpt-fixture-retired",
+      "context": {
+        "kind": "literal"
+      },
+      "retirement_date": "2098-06-30",
+      "days_left": -185,
+      "entry": {
+        "id": "openai:gpt-fixture-retired",
+        "provider": "openai",
+        "platform": "openai",
+        "model_id": "gpt-fixture-retired",
+        "version": null,
+        "regions": null,
+        "status": "retired",
+        "deprecation_date": "2098-01-01",
+        "retirement_date": "2098-06-30",
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [
+          {
+            "model_id": "gpt-fixture-4o",
+            "platform": "openai"
+          }
+        ],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/openai",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "openai:gpt-fixture-retired",
+          "provider": "openai",
+          "platform": "openai",
+          "model_id": "gpt-fixture-retired",
+          "version": null,
+          "regions": null,
+          "status": "retired",
+          "deprecation_date": "2098-01-01",
+          "retirement_date": "2098-06-30",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [
+            {
+              "model_id": "gpt-fixture-4o",
+              "platform": "openai"
+            }
+          ],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/openai",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "rule": "sunset/model-reference-unresolved",
+      "severity": "notice",
+      "message": "`model` comes from the environment (process.env.MODEL). Sunset can't check it; make sure the model it names isn't deprecated or retiring.",
+      "location": {
+        "path": "src/client.ts",
+        "line": 8,
+        "column": 39,
+        "end_line": 8,
+        "end_column": 63
+      },
+      "file_class": "code",
+      "reason": "environment",
+      "key": "model",
+      "expression": "process.env.MODEL",
+      "entries": []
+    }
+  ],
+  "mentions": [
+    {
+      "severity_in_code": "error",
+      "message": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).",
+      "location": {
+        "path": "docs/migration.md",
+        "line": 1,
+        "column": 15,
+        "end_line": 1,
+        "end_column": 34
+      },
+      "model_id": "gpt-fixture-retired",
+      "entry": {
+        "id": "openai:gpt-fixture-retired",
+        "provider": "openai",
+        "platform": "openai",
+        "model_id": "gpt-fixture-retired",
+        "version": null,
+        "regions": null,
+        "status": "retired",
+        "deprecation_date": "2098-01-01",
+        "retirement_date": "2098-06-30",
+        "retirement_date_qualifier": "exact",
+        "recommended_replacements": [
+          {
+            "model_id": "gpt-fixture-4o",
+            "platform": "openai"
+          }
+        ],
+        "drop_in": false,
+        "source_url": "https://fixture.invalid/openai",
+        "verified_on": "2099-01-01"
+      },
+      "entries": [
+        {
+          "id": "openai:gpt-fixture-retired",
+          "provider": "openai",
+          "platform": "openai",
+          "model_id": "gpt-fixture-retired",
+          "version": null,
+          "regions": null,
+          "status": "retired",
+          "deprecation_date": "2098-01-01",
+          "retirement_date": "2098-06-30",
+          "retirement_date_qualifier": "exact",
+          "recommended_replacements": [
+            {
+              "model_id": "gpt-fixture-4o",
+              "platform": "openai"
+            }
+          ],
+          "drop_in": false,
+          "source_url": "https://fixture.invalid/openai",
+          "verified_on": "2099-01-01"
+        }
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "model_id": "gpt-9-turbo",
+      "locations": [
+        {
+          "path": "src/client.ts",
+          "line": 7,
+          "column": 24,
+          "end_line": 7,
+          "end_column": 35
+        }
+      ]
+    }
+  ],
+  "suppressed": [
+    {
+      "rule": "sunset/model-deprecated",
+      "location": {
+        "path": "src/client.ts",
+        "line": 5,
+        "column": 14,
+        "end_line": 5,
+        "end_column": 27
+      },
+      "model_id": "gpt-fixture-3",
+      "by": "config",
+      "until": "2099-06-30",
+      "reason": "tracked in #42"
+    },
+    {
+      "rule": "sunset/model-retired",
+      "location": {
+        "path": "src/client.ts",
+        "line": 9,
+        "column": 15,
+        "end_line": 9,
+        "end_column": 34
+      },
+      "model_id": "gpt-fixture-retired",
+      "by": "inline",
+      "until": null,
+      "reason": "pinned for replay tests"
+    }
+  ],
+  "diagnostics": [
+    {
+      "kind": "malformed-directive",
+      "message": "Malformed \"sunset-ignore\": \"soon\" is not a valid date (YYYY-MM-DD)",
+      "location": {
+        "path": "src/client.ts",
+        "line": 11,
+        "column": 40,
+        "end_line": 11,
+        "end_column": 64
+      }
+    },
+    {
+      "kind": "expired-config-ignore",
+      "message": "Config ignore #1 (expired ignore) expired on 2098-06-01; it no longer applies.",
+      "location": null
+    }
+  ],
+  "stats": {
+    "files": {
+      "listed": 4,
+      "scanned": 4,
+      "lexed": 3,
+      "skipped": {
+        "excluded": 0,
+        "vendored": 0,
+        "generated": 0,
+        "binary": 0,
+        "too-large": 0,
+        "no-lexer": 0
+      }
+    },
+    "lines": 22
+  }
+}

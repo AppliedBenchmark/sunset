@@ -1,0 +1,11 @@
+{
+  "source": "bedrock/model-card-anthropic-claude-haiku-5-5",
+  "urls": [
+    "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html"
+  ],
+  "fetched_at": "2026-10-08T19:48:41Z",
+  "etag": "\"MW6P0Hby1/5N7LX8DWMKZv34ZSs=-gzip\"",
+  "last_modified": "Thu, 08 Oct 2026 19:30:22 GMT",
+  "sha256": "21b307b513464e7241dbb10bc9f40e697841cce5e890700907869ed217279322",
+  "normalizer_version": 1
+}

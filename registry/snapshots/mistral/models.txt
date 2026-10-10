@@ -1,0 +1,3975 @@
+==> src/schema/models/models/codestral-24-05.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Codestral',
+describe: (l) => ({
+description: l.text(`Our first cutting-edge language model for coding and FIM, released under the MNPL license.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our first cutting-edge language model for coding and FIM.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'codestral-24-05',
+releaseDate: '2024-05-29',
+version: '24.05',
+frontier: false,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/codestral',
+status: 'Retired',
+avatar: { icon: 'codestral', backgroundColor: 'yellow' },
+weights: [
+{
+name: 'Weights',
+license: 'MNPL',
+licenseUrl: 'https://mistral.ai/static/licenses/MNPL-0.1.md',
+url: 'https://huggingface.co/mistralai/Codestral-22B-v0.1',
+parameters: '22',
+minGpuRam: {
+bf16: '52',
+fp8: '26',
+fp4: null,
+fp4_16: null,
+},
+active: '22',
+contextSize: '32k',
+}
+],
+bloglink: 'https://mistral.ai/news/codestral',
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['codestral-2405'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-12-02', retirementDate: '2025-06-16', replacement: 'Codestral'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/codestral-25-01.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Codestral',
+describe: (l) => ({
+description: l.text(`Our cutting-edge language model for coding. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our cutting-edge language model for coding.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'codestral-25-01',
+releaseDate: '2025-01-13',
+version: '25.01',
+frontier: false,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/codestral',
+status: 'Retired',
+avatar: { icon: 'codestral', backgroundColor: 'orange' },
+weights: [],
+bloglink: 'https://mistral.ai/news/codestral-2501',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.9, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['codestral-2501'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'predicted-outputs', 'document-qna', 'prefix', 'chat-completions', 'batching', 'fim'],
+
+},
+metadata: {deprecationDate: '2025-11-06', retirementDate: '2025-11-30', replacement: 'Codestral'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/codestral-25-08.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Codestral',
+describe: (l) => ({
+description: l.text(`Our cutting-edge language model for code completion released end of July 2025, Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM) and code generation.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our cutting-edge language model for code completion released end of July 2025.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'codestral-25-08',
+slugAliases: ['codestral'],
+releaseDate: '2025-07-30',
+version: '25.08',
+frontier: true,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/codestral',
+status: 'GA',
+avatar: { icon: 'codestral', backgroundColor: 'yellow' },
+weights: [],
+bloglink: 'https://mistral.ai/news/codestral-25-08',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.9, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['codestral-2508', 'codestral-latest'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'predicted-outputs', 'document-qna', 'prefix', 'batching', 'chat-completions', 'fim'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/codestral-embed-25-05.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Codestral Embed',
+describe: (l) => ({
+description: l.text(`Our state-of-the-art semantic for extracting representation of code extracts`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our state-of-the-art semantic for extracting representation of code extracts`, { context: 'Short description of an AI model' }),
+}),
+slug: 'codestral-embed-25-05',
+releaseDate: '2025-05-28',
+version: '25.05',
+frontier: true,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/codestral',
+status: 'GA',
+avatar: { icon: 'codestral-embed', backgroundColor: 'orange' },
+weights: [],
+bloglink: 'https://mistral.ai/news/codestral-embed',
+paperlink: null,
+contextLength: '8k',
+ratings: {
+speed: 4.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 0.15, denominator: '/M Tokens' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['codestral-embed-2505', 'codestral-embed'] },
+capabilities: {
+input: ['text'],
+output: ['embeddings'],
+features: ['embeddings', 'batching'],
+
+},
+metadata: {},
+playground: '',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/codestral-mamba-7b-0-1.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Codestral Mamba 7B',
+describe: (l) => ({
+description: l.text(`A coding dedicated model using a mamba 2 architecture for research purposes under an open license.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A coding dedicated model using a mamba 2 architecture for research purposes.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'codestral-mamba-7b-0-1',
+releaseDate: '2024-07-16',
+version: '0.1',
+frontier: false,
+class: 'Specialist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/codestral',
+status: 'Retired',
+avatar: { icon: 'codestral-mamba', backgroundColor: 'orange' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mamba-Codestral-7B-v0.1',
+parameters: '7',
+minGpuRam: {
+bf16: '20',
+fp8: '10',
+fp4: '5',
+fp4_16: null,
+},
+active: '7',
+contextSize: '256k',
+}
+],
+bloglink: 'https://mistral.ai/news/codestral-mamba',
+paperlink: null,
+contextLength: '256k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['open-codestral-mamba'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2025-06-06', retirementDate: '2025-06-06', replacement: 'Codestral'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/devstral-2-25-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Devstral 2',
+describe: (l) => ({
+description: l.text(`Our frontier code agents model for solving software engineering tasks; excels at using tools to explore codebases, editing multiple files and power software engineering agents.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our frontier code agents model for solving software engineering tasks.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'devstral-2-25-12',
+releaseDate: '2025-12-09',
+version: '25.12',
+frontier: true,
+class: 'Specialist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/devstral-2',
+status: 'Deprecated',
+avatar: { icon: 'devstral', backgroundColor: 'green' },
+weights: [
+{
+name: 'Weights',
+license: 'Modified MIT',
+licenseUrl: 'https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE',
+url: 'https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512',
+parameters: '123',
+minGpuRam: {
+bf16: '297',
+fp8: '149',
+fp4: '75',
+fp4_16: '66',
+},
+active: '123',
+contextSize: '256k',
+}
+],
+bloglink: 'https://mistral.ai/news/devstral-2-vibe-cli',
+paperlink: null,
+contextLength: '256k',
+ratings: {
+speed: 3.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.4, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 2.0, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['devstral-2512', 'devstral-latest', 'devstral-medium-latest'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-05-22', retirementDate: '2026-07-31', replacement: 'Mistral Medium 3.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/devstral-medium-1-0-25-07.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Devstral Medium 1.0',
+describe: (l) => ({
+description: l.text(`An enterprise grade text model, that excels at using tools to explore codebases, editing multiple files and power software engineering agents.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`An enterprise grade text model, that excels at SWE use cases.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'devstral-medium-1-0-25-07',
+releaseDate: '2025-07-10',
+version: '25.07',
+frontier: false,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/devstral-medium-1',
+status: 'Deprecated',
+avatar: { icon: 'devstral', backgroundColor: 'green' },
+weights: [],
+bloglink: 'https://mistral.ai/news/devstral-2507',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.4, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 2.0, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['devstral-medium-2507'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-02-27', retirementDate: '2026-05-31', replacement: 'Mistral Medium 3.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/devstral-small-1-0-25-05.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Devstral Small 1.0',
+describe: (l) => ({
+description: l.text(`A 24B text model, open source model that excels at using tools to explore codebases, editing multiple files and power software engineering agents.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A 24B text model, open source model that excels at SWE use cases.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'devstral-small-1-0-25-05',
+releaseDate: '2025-05-21',
+version: '25.05',
+frontier: false,
+class: 'Specialist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/devstral-small-1',
+status: 'Retired',
+avatar: { icon: 'devstral', backgroundColor: 'green' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Devstral-Small-2505',
+parameters: '24',
+minGpuRam: {
+bf16: '78',
+fp8: '39',
+fp4: '20',
+fp4_16: '16',
+},
+active: '24',
+contextSize: '128k',
+}
+],
+bloglink: 'https://mistral.ai/news/devstral',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['devstral-small-2505'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-10-31', retirementDate: '2025-11-30', replacement: 'Mistral Medium 3.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/devstral-small-1-1-25-07.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Devstral Small 1.1',
+describe: (l) => ({
+description: l.text(`An update to our open source model that excels at using tools to explore codebases, editing multiple files and power software engineering agents. Learn more in our [blog post](https://mistral.ai/news/devstral-2507)`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`An update to our open source model that excels at SWE use cases.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'devstral-small-1-1-25-07',
+releaseDate: '2025-07-10',
+version: '25.07',
+frontier: false,
+class: 'Specialist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/devstral-small-1',
+status: 'Deprecated',
+avatar: { icon: 'devstral', backgroundColor: 'green' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Devstral-Small-2507',
+parameters: '24',
+minGpuRam: {
+bf16: '78',
+fp8: '39',
+fp4: '20',
+fp4_16: '16',
+},
+active: '24',
+contextSize: '128k',
+}
+],
+bloglink: 'https://mistral.ai/news/devstral-2507',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['devstral-small-2507'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-02-27', retirementDate: '2026-05-31', replacement: 'Mistral Small 4'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/devstral-small-2-25-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Devstral Small 2',
+describe: (l) => ({
+description: l.text(`Our open source model that excels at using tools to explore codebases, editing multiple files and power software engineering agents.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Model that excels at using tools to explore codebases, editing multiple files and power software engineering agents.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'devstral-small-2-25-12',
+releaseDate: '2025-12-09',
+version: '25.12',
+frontier: false,
+class: 'Specialist',
+type: 'Labs',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/devstral-small-2',
+status: 'Deprecated',
+avatar: { icon: 'devstral', backgroundColor: 'green' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512',
+parameters: '24',
+minGpuRam: {
+bf16: '78',
+fp8: '39',
+fp4: '20',
+fp4_16: '16',
+},
+active: '24',
+contextSize: '256k',
+}
+],
+bloglink: 'https://mistral.ai/news/devstral-2-vibe-cli',
+paperlink: null,
+contextLength: '256k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['labs-devstral-small-2512', 'devstral-small-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-02-27', retirementDate: '2026-03-31', replacement: 'Mistral Medium 3.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/leanstral-1-5.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Leanstral 1.5',
+describe: (l) => ({
+description: l.text(`An updated Lean 4 formal proof engineering model optimised for automated theorem proving and autoformalization. 119B total parameters, 6.5B active.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Updated code agent for Lean 4 formal proof engineering and automated theorem proving.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'leanstral-1-5',
+releaseDate: '2026-06-30',
+version: '1.5',
+frontier: true,
+class: 'Specialist',
+type: 'Labs',
+legalButton: null,
+status: 'Deprecated',
+avatar: { icon: 'leanstral', backgroundColor: 'teal' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B',
+parameters: '119',
+minGpuRam: {
+bf16: '238',
+fp8: '119',
+fp4: '60',
+fp4_16: null,
+},
+active: '6.5',
+contextSize: '256k',
+},
+],
+bloglink: 'https://mistral.ai/news/leanstral-1-5/',
+paperlink: null,
+contextLength: '256k',
+outputTokenLimit: '128k',
+ratings: {
+speed: 4.0,
+performance: 4.0,
+input: 4.0,
+output: 3.5,
+},
+pricing: {
+type: 'custom',
+free: true,
+input: [
+{ type: 'range', price: 0.0, denominator: '/M Tokens' },
+],
+output: [
+{ type: 'range', price: 0.0, denominator: '/M Tokens' },
+],
+},
+identifiers: { apiNames: ['labs-leanstral-1-5'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['chat-completions', 'function-calling', 'agents-conversations', 'structured-outputs'],
+},
+metadata: {deprecationDate: '2026-09-29', retirementDate: '2026-09-30'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/leanstral-26-03.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Leanstral',
+describe: (l) => ({
+description: l.text(`Our first open-source code agent designed for Lean 4, built for formal proof engineering in realistic repositories. 119B parameters with 6.5B active.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Open-source code agent for Lean 4 formal proof engineering.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'leanstral-26-03',
+releaseDate: '2026-03-16',
+version: '26.03',
+frontier: true,
+class: 'Specialist',
+type: 'Labs',
+legalButton: null,
+status: 'Retired',
+avatar: { icon: 'leanstral', backgroundColor: 'teal' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Leanstral-2603',
+parameters: '119',
+minGpuRam: {
+bf16: '238',
+fp8: '119',
+fp4: '60',
+fp4_16: null,
+},
+active: '6.5',
+contextSize: '256k',
+},
+],
+bloglink: null,
+paperlink: null,
+contextLength: '256k',
+ratings: {
+speed: 4.0,
+performance: 3.5,
+input: 4.0,
+output: 3.5,
+},
+pricing: {
+type: 'custom',
+free: true,
+input: [
+{ type: 'range', price: 0.0, denominator: '/M Tokens' },
+],
+output: [
+{ type: 'range', price: 0.0, denominator: '/M Tokens' },
+],
+},
+identifiers: { apiNames: ['labs-leanstral-2603'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['chat-completions', 'function-calling', 'agents-conversations', 'structured-outputs'],
+
+},
+metadata: {deprecationDate: '2026-05-22', retirementDate: '2026-06-30', replacement: 'Leanstral 1.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/magistral-medium-1-0-25-06.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Magistral Medium 1.0',
+describe: (l) => ({
+description: l.text(`Our first frontier-class reasoning model released June 2025. `, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our first frontier-class reasoning model released June 2025`, { context: 'Short description of an AI model' }),
+}),
+slug: 'magistral-medium-1-0-25-06',
+releaseDate: '2025-06-10',
+version: '25.06',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/magistral-medium-1',
+status: 'Retired',
+avatar: { icon: 'magistral', backgroundColor: 'beige' },
+weights: [],
+bloglink: 'https://mistral.ai/news/magistral',
+paperlink: 'https://arxiv.org/pdf/2506.10910',
+contextLength: '40k',
+ratings: {
+speed: 3.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 2.0, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 5.0, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['magistral-medium-2506'] },
+capabilities: {
+input: ['text'],
+output: ['reasoning', 'text'],
+features: ['function-calling', 'document-qna', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-10-31', retirementDate: '2025-11-30', replacement: 'Mistral Medium 3.5'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/magistral-medium-1-1-25-07.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Magistral Medium 1.1',
+describe: (l) => ({
+description: l.text(`Our frontier-class reasoning model released July 2025.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our frontier-class reasoning model released July 2025.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'magistral-medium-1-1-25-07',
+releaseDate: '2025-07-24',
+version: '25.07',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/magistral-medium-1',
+status: 'Retired',
+avatar: { icon: 'magistral', backgroundColor: 'beige' },
+weights: [],
+bloglink: null,
+paperlink: null,
+contextLength: '40k',
+ratings: {
+speed: 3.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 2.0, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 5.0, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['magistral-medium-2507'] },
+capabilities: {
+input: ['text'],
+output: ['reasoning', 'text'],
+features: ['function-calling', 'document-qna', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-10-31', retirementDate: '2025-11-30', replacement: 'Mistral Medium 3.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/magistral-medium-1-2-25-09.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Magistral Medium 1.2',
+describe: (l) => ({
+description: l.text(`Our frontier-class multimodal reasoning model update of September 2025.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our frontier-class multimodal reasoning model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'magistral-medium-1-2-25-09',
+releaseDate: '2025-09-18',
+version: '25.09',
+frontier: true,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/magistral-medium-1',
+status: 'Deprecated',
+avatar: { icon: 'magistral', backgroundColor: 'beige' },
+weights: [],
+bloglink: null,
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 2.0, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 5.0, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['magistral-medium-2509', 'magistral-medium-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['reasoning', 'text'],
+features: ['function-calling', 'document-qna', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-05-22', retirementDate: '2026-07-31', replacement: 'Mistral Medium 3.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/magistral-small-1-0-25-06.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Magistral Small 1.0',
+describe: (l) => ({
+description: l.text(`Our first small reasoning model released June 2025. Learn more in our [blog post](https://mistral.ai/news/magistral/)`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our first small reasoning model released June 2025.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'magistral-small-1-0-25-06',
+releaseDate: '2025-06-10',
+version: '25.06',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/magistral-small-1',
+status: 'Retired',
+avatar: { icon: 'magistral', backgroundColor: 'beige' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Magistral-Small-2506',
+parameters: '24',
+minGpuRam: {
+bf16: '56',
+fp8: '28',
+fp4: '14',
+fp4_16: null,
+},
+active: '24',
+contextSize: '40k',
+}
+],
+bloglink: 'https://mistral.ai/news/magistral',
+paperlink: 'https://arxiv.org/pdf/2506.10910',
+contextLength: '40k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.5, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 1.5, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['magistral-small-2506'] },
+capabilities: {
+input: ['text'],
+output: ['reasoning', 'text'],
+features: ['function-calling', 'document-qna', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-10-31', retirementDate: '2025-11-30', replacement: 'Mistral Small 4'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/magistral-small-1-1-25-07.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Magistral Small 1.1',
+describe: (l) => ({
+description: l.text(`Our small reasoning model released July 2025.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our small reasoning model released July 2025.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'magistral-small-1-1-25-07',
+releaseDate: '2025-07-24',
+version: '25.07',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/magistral-small-1',
+status: 'Retired',
+avatar: { icon: 'magistral', backgroundColor: 'beige' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Magistral-Small-2507',
+parameters: '24',
+minGpuRam: {
+bf16: '56',
+fp8: '28',
+fp4: '14',
+fp4_16: null,
+},
+active: '24',
+contextSize: '40k',
+}
+],
+bloglink: null,
+paperlink: null,
+contextLength: '40k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.5, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 1.5, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['magistral-small-2507'] },
+capabilities: {
+input: ['text'],
+output: ['reasoning', 'text'],
+features: ['function-calling', 'document-qna', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-10-31', retirementDate: '2025-11-30', replacement: 'Mistral Small 4'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/magistral-small-1-2-25-09.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Magistral Small 1.2',
+describe: (l) => ({
+description: l.text(`Our small multimodal reasoning model update of September 2025.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our small multimodal reasoning model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'magistral-small-1-2-25-09',
+releaseDate: '2025-09-18',
+version: '25.09',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/magistral-small-1',
+status: 'Deprecated',
+avatar: { icon: 'magistral', backgroundColor: 'beige' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Magistral-Small-2509',
+parameters: '24',
+minGpuRam: {
+bf16: '78',
+fp8: '39',
+fp4: '20',
+fp4_16: '16',
+},
+active: '24',
+contextSize: '128k',
+}
+],
+bloglink: null,
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.5, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 1.5, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['magistral-small-2509', 'magistral-small-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['reasoning', 'text'],
+features: ['function-calling', 'document-qna', 'chat-completions', 'batching'],
+
+},
+metadata: { deprecationDate: 'April 30, 2026', retirementDate: 'July 31, 2026', replacement: 'Mistral Small 4' },
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mathstral-7b-0-1.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mathstral 7B',
+describe: (l) => ({
+description: l.text(`A math dedicated model for research purposes under an open license.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A math dedicated model for research purposes.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mathstral-7b-0-1',
+releaseDate: '2024-07-16',
+version: '0.1',
+frontier: false,
+class: 'Specialist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mathstral-7b',
+status: 'Retired',
+avatar: { icon: 'mathstral', backgroundColor: 'beige' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mathstral-7B-v0.1',
+parameters: '7',
+minGpuRam: {
+bf16: '20',
+fp8: '10',
+fp4: '5',
+fp4_16: null,
+},
+active: '7',
+contextSize: '32k',
+}
+],
+bloglink: 'https://mistral.ai/news/mathstral',
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: [] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '', retirementDate: '', replacement: 'Mistral Small 4'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ministral-3-14b-25-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Ministral 3 14B',
+describe: (l) => ({
+description: l.text(`Ministral 3 14B is the largest model in the Ministral 3 family, offering state-of-the-art capabilities and performance comparable to its larger Mistral Small 3.2 24B counterpart. Optimized for local deployment, it delivers high performance across diverse hardware, including local setups. `, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A powerful model offering best-in-class text and vision capabilities. `, { context: 'Short description of an AI model' }),
+}),
+slug: 'ministral-3-14b-25-12',
+releaseDate: '2025-12-02',
+version: '25.12',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/ministral-3-14b',
+status: 'GA',
+avatar: { icon: 'ministral', backgroundColor: 'beige' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512',
+parameters: '14',
+minGpuRam: {
+bf16: '93',
+fp8: '47',
+fp4: '24',
+fp4_16: '11',
+},
+active: '14',
+contextSize: '256k',
+}, {
+name: 'Reasoning Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Ministral-3-14B-Reasoning-2512',
+parameters: '14',
+minGpuRam: {
+bf16: '93',
+fp8: '47',
+fp4: '24',
+fp4_16: '11',
+},
+active: '14',
+contextSize: '256k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Ministral-3-14B-Base-2512',
+parameters: '14',
+minGpuRam: {
+bf16: '93',
+fp8: '47',
+fp4: '24',
+fp4_16: '11',
+},
+active: '14',
+contextSize: '256k',
+}
+],
+bloglink: 'https://mistral.ai/news/mistral-3',
+paperlink: 'https://arxiv.org/abs/2601.08584',
+contextLength: '256k',
+ratings: {
+speed: 3.0,
+performance: 2.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.2, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.2, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['ministral-14b-2512', 'ministral-14b-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ministral-3-3b-25-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Ministral 3 3B',
+describe: (l) => ({
+description: l.text(`Ministral 3 3B is the smallest and most efficient model in the Ministral 3 family, offering robust language and vision capabilities in a compact package. Designed for edge deployment, it delivers high performance across diverse hardware, including local setups.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A tiny and efficient model offering best-in-class text and vision capabilities. `, { context: 'Short description of an AI model' }),
+}),
+slug: 'ministral-3-3b-25-12',
+releaseDate: '2025-12-02',
+version: '25.12',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/ministral-3-3b',
+status: 'GA',
+avatar: { icon: 'ministral', backgroundColor: 'red' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512',
+parameters: '3',
+minGpuRam: {
+bf16: '43',
+fp8: '22',
+fp4: '11',
+fp4_16: '5',
+},
+active: '3',
+contextSize: '256k',
+}, {
+name: 'Reasoning Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Ministral-3-3B-Reasoning-2512',
+parameters: '3',
+minGpuRam: {
+bf16: '43',
+fp8: '22',
+fp4: '11',
+fp4_16: '5',
+},
+active: '3',
+contextSize: '256k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Ministral-3-3B-Base-2512',
+parameters: '3',
+minGpuRam: {
+bf16: '43',
+fp8: '22',
+fp4: '11',
+fp4_16: '5',
+},
+active: '3',
+contextSize: '256k',
+}
+],
+bloglink: 'https://mistral.ai/news/mistral-3',
+paperlink: 'https://arxiv.org/abs/2601.08584',
+contextLength: '256k',
+ratings: {
+speed: 4.0,
+performance: 1.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['ministral-3b-2512', 'ministral-3b-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ministral-3-8b-25-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Ministral 3 8B',
+describe: (l) => ({
+description: l.text(`Ministral 3 8B is a powerful and efficient model in the Ministral 3 family, offering best-in-class text and vision capabilities. Built for edge deployment, it delivers high performance across diverse hardware, including local setups.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A powerful and efficient model offering best-in-class text and vision capabilities. `, { context: 'Short description of an AI model' }),
+}),
+slug: 'ministral-3-8b-25-12',
+releaseDate: '2025-12-02',
+version: '25.12',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/ministral-3-8b',
+status: 'GA',
+avatar: { icon: 'ministral', backgroundColor: 'yellow' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512',
+parameters: '8',
+minGpuRam: {
+bf16: '67',
+fp8: '34',
+fp4: '17',
+fp4_16: '8',
+},
+active: '8',
+contextSize: '256k',
+}, {
+name: 'Reasoning Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Ministral-3-8B-Reasoning-2512',
+parameters: '8',
+minGpuRam: {
+bf16: '67',
+fp8: '34',
+fp4: '17',
+fp4_16: '8',
+},
+active: '8',
+contextSize: '256k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Ministral-3-8B-Base-2512',
+parameters: '8',
+minGpuRam: {
+bf16: '67',
+fp8: '34',
+fp4: '17',
+fp4_16: '8',
+},
+active: '8',
+contextSize: '256k',
+}
+],
+bloglink: 'https://mistral.ai/news/mistral-3',
+paperlink: 'https://arxiv.org/abs/2601.08584',
+contextLength: '256k',
+ratings: {
+speed: 3.0,
+performance: 2.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.15, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.15, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['ministral-8b-2512', 'ministral-8b-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ministral-3b-24-1.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Ministral 3B',
+describe: (l) => ({
+description: l.text(`World’s best edge model.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`World’s best edge model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'ministral-3b-24-1',
+releaseDate: '2024-10-09',
+version: '24.1',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/ministral-1-3b',
+status: 'Deprecated',
+avatar: { icon: 'ministral', backgroundColor: 'lime' },
+weights: [],
+bloglink: 'https://mistral.ai/news/ministraux',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 4.0,
+performance: 1.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.04, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.04, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['ministral-3b-2410'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-12-02', retirementDate: '2025-12-31', replacement: 'Ministral 3 3B'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ministral-8b-24-1.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Ministral 8B',
+describe: (l) => ({
+description: l.text(`Powerful edge model with extremely high performance/price ratio. Learn more in our [blog post](https://mistral.ai/news/ministraux/)`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Powerful edge model with extremely high performance/price ratio.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'ministral-8b-24-1',
+releaseDate: '2024-10-09',
+version: '24.1',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/ministral-1-8b',
+status: 'Deprecated',
+avatar: { icon: 'ministral', backgroundColor: 'purple' },
+weights: [
+{
+name: 'Weights',
+license: 'MRL',
+licenseUrl: 'https://mistral.ai/static/licenses/MRL-0.1.md',
+url: 'https://huggingface.co/mistralai/Ministral-8B-Instruct-2410',
+parameters: '8',
+minGpuRam: {
+bf16: '42',
+fp8: '21',
+fp4: '11',
+fp4_16: '8',
+},
+active: '8',
+contextSize: '128k',
+}
+],
+bloglink: 'https://mistral.ai/news/ministraux',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 2.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['ministral-8b-2410'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-12-02', retirementDate: '2025-12-31', replacement: 'Ministral 3 8B'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-7b-0-1.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral 7B',
+describe: (l) => ({
+description: l.text(`Our very first open model, SOTA competing against models up to 2 to 3x larger.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our very first open model, SOTA competing against models up to 2 to 3x larger.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-7b-0-1',
+releaseDate: '2023-09-27',
+version: '0.1',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-7-b',
+status: 'Retired',
+avatar: { icon: 'mistral-7b', backgroundColor: 'gray' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1',
+parameters: '7',
+minGpuRam: {
+bf16: '16',
+fp8: '8',
+fp4: '4',
+fp4_16: null,
+},
+active: '7',
+contextSize: '8k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-7B-v0.1',
+parameters: '7',
+minGpuRam: {
+bf16: '16',
+fp8: '8',
+fp4: '4',
+fp4_16: null,
+},
+active: '7',
+contextSize: '8k',
+}
+],
+bloglink: 'https://mistral.ai/news/announcing-mistral-7b',
+paperlink: 'https://arxiv.org/pdf/2310.06825',
+contextLength: '8k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: [] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-11-30', retirementDate: '2025-03-30', replacement: 'Ministral 3 8B'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-7b-0-2.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral 7B',
+describe: (l) => ({
+description: l.text(`An update to our first open model with better context.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`An update to our first open model with better context.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-7b-0-2',
+releaseDate: '2023-12-11',
+version: '0.2',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-7-b',
+status: 'Retired',
+avatar: { icon: 'mistral-7b', backgroundColor: 'gray' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2',
+parameters: '7',
+minGpuRam: {
+bf16: '20',
+fp8: '10',
+fp4: '5',
+fp4_16: null,
+},
+active: '7',
+contextSize: '32k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://models.mistralcdn.com/mistral-7b-v0-2/mistral-7B-v0.2.tar',
+parameters: '7',
+minGpuRam: {
+bf16: '20',
+fp8: '10',
+fp4: '5',
+fp4_16: null,
+},
+active: '7',
+contextSize: '32k',
+}
+],
+bloglink: null,
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['open-mistral-7b'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-11-30', retirementDate: '2025-03-30', replacement: 'Ministral 3 8B'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-7b-0-3.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral 7B',
+describe: (l) => ({
+description: l.text(`A minor update to our first open model.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A minor update to our first open model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-7b-0-3',
+releaseDate: '2024-05-22',
+version: '0.3',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-7-b',
+status: 'Retired',
+avatar: { icon: 'mistral-7b', backgroundColor: 'fuschia' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3',
+parameters: '7',
+minGpuRam: {
+bf16: '20',
+fp8: '10',
+fp4: '5',
+fp4_16: null,
+},
+active: '7',
+contextSize: '32k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-7B-v0.3',
+parameters: '7',
+minGpuRam: {
+bf16: '20',
+fp8: '10',
+fp4: '5',
+fp4_16: null,
+},
+active: '7',
+contextSize: '32k',
+}
+],
+bloglink: null,
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['open-mistral-7b'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-11-30', retirementDate: '2025-03-30', replacement: 'Ministral 3 8B'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-embed-23-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Embed',
+describe: (l) => ({
+description: l.text(`Our state-of-the-art semantic for extracting representation of code extracts`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our state-of-the-art semantic for extracting representation of code extracts`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-embed-23-12',
+releaseDate: '2023-12-11',
+version: '23.12',
+frontier: true,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-embed',
+status: 'GA',
+avatar: { icon: 'mistral-embed', backgroundColor: 'beige' },
+weights: [],
+bloglink: 'https://mistral.ai/news/la-plateforme',
+paperlink: null,
+contextLength: '8k',
+ratings: {
+speed: 4.0,
+performance: 2.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-embed-2312', 'mistral-embed'] },
+capabilities: {
+input: ['text'],
+output: ['embeddings'],
+features: ['embeddings', 'batching'],
+
+},
+metadata: {},
+playground: '',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-large-1-0-24-02.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Large 1.0',
+describe: (l) => ({
+description: l.text(`Our first and larger SOTA model for enterprise use cases with powerfull chat capabilities.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our first and larger SOTA model for enterprise use cases.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-large-1-0-24-02',
+releaseDate: '2024-02-26',
+version: '24.02',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-large-1',
+status: 'Retired',
+avatar: { icon: 'mistral-large', backgroundColor: 'yellow' },
+weights: [],
+bloglink: 'https://mistral.ai/news/mistral-large',
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-large-2402'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-11-30', retirementDate: '2025-06-16', replacement: 'Mistral Large 3'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-large-2-0-24-07.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Large 2.0',
+describe: (l) => ({
+description: l.text(`A powerfull model with open weights under a MRL license, competing agains SOTA much larger models.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A powerfull model with open weights under a MRL license.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-large-2-0-24-07',
+releaseDate: '2024-07-24',
+version: '24.07',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-large-2',
+status: 'Retired',
+avatar: { icon: 'mistral-large', backgroundColor: 'red' },
+weights: [
+{
+name: 'Weights',
+license: 'MRL',
+licenseUrl: 'https://mistral.ai/static/licenses/MRL-0.1.md',
+url: 'https://huggingface.co/mistralai/Mistral-Large-Instruct-2407',
+parameters: '123',
+minGpuRam: {
+bf16: '297',
+fp8: '149',
+fp4: '75',
+fp4_16: null,
+},
+active: '123',
+contextSize: '128k',
+}
+],
+bloglink: 'https://mistral.ai/news/mistral-large-2407',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-large-2407'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-11-30', retirementDate: '2025-03-30', replacement: 'Mistral Large 3'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-large-2-1-24-11.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Large 2.1',
+describe: (l) => ({
+description: l.text(`Our top-tier large model for high-complexity tasks with the lastest version released November 2024.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our top-tier large model for high-complexity tasks with the lastest version released November 2024.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-large-2-1-24-11',
+releaseDate: '2024-11-18',
+version: '24.11',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-large-2',
+status: 'Deprecated',
+avatar: { icon: 'mistral-large', backgroundColor: 'orange' },
+weights: [
+{
+name: 'Weights',
+license: 'MRL',
+licenseUrl: 'https://mistral.ai/static/licenses/MRL-0.1.md',
+url: 'https://huggingface.co/mistralai/Mistral-Large-Instruct-2411',
+parameters: '123',
+minGpuRam: {
+bf16: '297',
+fp8: '149',
+fp4: '75',
+fp4_16: '66',
+},
+active: '123',
+contextSize: '128k',
+}
+],
+bloglink: 'https://mistral.ai/news/pixtral-large',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 1.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 2.0, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 6.0, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['mistral-large-2411'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'predicted-outputs', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-02-27', retirementDate: '2026-05-31', replacement: 'Mistral Medium 3.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-large-3-25-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Large 3',
+describe: (l) => ({
+description: l.text(`Mistral Large 3, is a state-of-the-art, open-weight, general-purpose multimodal model with a granular Mixture-of-Experts architecture. It features 41B active parameters and 675B total parameters.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A state-of-the-art, open-weight, general-purpose multimodal model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-large-3-25-12',
+releaseDate: '2025-12-02',
+version: '25.12',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-large-3',
+status: 'GA',
+avatar: { icon: 'mistral-large', backgroundColor: 'red' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512',
+parameters: '675',
+minGpuRam: {
+bf16: '1800',
+fp8: '900',
+fp4: '450',
+fp4_16: '360',
+},
+active: '41',
+contextSize: '256k',
+}
+],
+bloglink: 'https://mistral.ai/news/mistral-3',
+paperlink: null,
+contextLength: '256k',
+ratings: {
+speed: 2.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.5, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 1.5, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['mistral-large-2512', 'mistral-large-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching', 'agents-conversations', 'connectors'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-large-4-0.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Large 4',
+describe: (l) => ({
+description: l.text(`Mistral Large 4 is a state-of-the-art, open-weight, general-purpose multimodal model with a granular Mixture-of-Experts architecture. It features 52B active parameters and 1.05T total parameters, and a 1.6B vision encoder.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A state-of-the-art, open-weight, general-purpose multimodal model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-large-4-0',
+slugAliases: ['mistral-large', 'mistral-large-4'],
+releaseDate: '2026-10-06',
+version: '26.10',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: null,
+status: 'PublicPreview',
+avatar: { icon: 'mistral-large-4', backgroundColor: 'lechonk' },
+weights: [
+{
+name: 'Coming soon',
+license: '',
+licenseUrl: null,
+url: 'https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B',
+parameters: '1.05T',
+minGpuRam: {
+bf16: null,
+fp8: null,
+fp4: null,
+fp4_16: null,
+},
+active: '52',
+contextSize: '1M',
+visionEncoder: '1.6',
+}
+],
+bloglink: null,
+paperlink: null,
+contextLength: '1M',
+ratings: {
+speed: 5.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricingLayout: 'stacked',
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.68, denominator: '/M Tokens', label: 'Input', originalPrice: 1.36 },
+{ type: 'range', price: 0.07, denominator: '/M Tokens', label: 'Cached input', originalPrice: 0.14 },
+],
+output: [
+{ type: 'range', price: 2.09, denominator: '/M Tokens', label: 'Output', originalPrice: 4.18 },
+],
+},
+identifiers: { apiNames: ['mistral-large-4', 'mistral-large-4-0'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['reasoning', 'text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching', 'agents-conversations', 'connectors'],
+
+},
+metadata: { parameters: '1.05T' },
+usageExample: 'mistral-large-4-0',
+playground: 'https://console.mistral.ai/build/playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-medium-1-0-23-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Medium 1.0',
+describe: (l) => ({
+description: l.text(`Our first SOTA enterprise grade model.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our first SOTA enterprise grade model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-medium-1-0-23-12',
+releaseDate: '2023-12-11',
+version: '23.12',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-medium-1',
+status: 'Retired',
+avatar: { icon: 'mistral-medium', backgroundColor: 'blue' },
+weights: [],
+bloglink: 'https://mistral.ai/news/la-plateforme',
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-medium-2312'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-11-30', retirementDate: '2025-06-16', replacement: 'Mistral Medium 3.5'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-medium-3-1-25-08.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Medium 3.1',
+describe: (l) => ({
+description: l.text(`Our frontier-class multimodal model released August 2025. Improving tone and performance.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our frontier-class multimodal model released August 2025.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-medium-3-1-25-08',
+releaseDate: '2025-08-12',
+version: '25.08',
+frontier: true,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-medium-3',
+status: 'Deprecated',
+avatar: { icon: 'mistral-medium', backgroundColor: 'blue' },
+weights: [],
+bloglink: null,
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 2.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.4, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 2.0, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['mistral-medium-2508'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'predicted-outputs', 'document-qna', 'prefix', 'batching', 'agents-conversations', 'chat-completions', 'connectors'],
+
+},
+metadata: {deprecationDate: '2026-05-22', retirementDate: '2026-08-31', replacement: 'Mistral Medium 3.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-medium-3-25-05.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Medium 3',
+describe: (l) => ({
+description: l.text(`Our frontier-class multimodal model released May 2025. Learn more in our [blog post](https://mistral.ai/news/mistral-medium-3/)`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our frontier-class multimodal model released May 2025.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-medium-3-25-05',
+releaseDate: '2025-05-07',
+version: '25.05',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-medium-3',
+status: 'Deprecated',
+avatar: { icon: 'mistral-medium', backgroundColor: 'blue' },
+weights: [],
+bloglink: 'https://mistral.ai/news/mistral-medium-3/',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 2.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.4, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 2.0, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['mistral-medium-2505'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'agents-conversations', 'connectors', 'batching', 'predicted-outputs'],
+
+},
+metadata: {deprecationDate: '2026-05-22', retirementDate: '2026-08-31', replacement: 'Mistral Medium 3.5'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-medium-3-5-26-04.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Medium 3.5',
+describe: (l) => ({
+description: l.text(`Our frontier-class multimodal model optimized for agentic and coding use cases. Released as open weights under a Modified MIT license.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our frontier-class multimodal model optimized for agentic and coding use cases.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-medium-3-5-26-04',
+releaseDate: '2026-04-28',
+version: '26.04',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-medium-3',
+status: 'GA',
+avatar: { icon: 'mistral-medium', backgroundColor: 'blue' },
+weights: [
+{
+name: 'Weights',
+license: 'Modified MIT',
+licenseUrl: 'https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/blob/main/LICENSE',
+url: 'https://huggingface.co/mistralai/Mistral-Medium-3.5-128B',
+parameters: '128',
+minGpuRam: {
+bf16: '256',
+fp8: '128',
+fp4: '64',
+fp4_16: null,
+},
+active: '128',
+contextSize: '256k',
+},
+],
+bloglink: 'https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5',
+paperlink: null,
+contextLength: '256k',
+ratings: {
+speed: 2.0,
+performance: 4.5,
+input: 4.0,
+output: 2.0,
+},
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 1.5, denominator: '/M Tokens' },
+],
+output: [
+{ type: 'range', price: 7.5, denominator: '/M Tokens' },
+],
+},
+identifiers: { apiNames: ['mistral-medium-3-5', 'mistral-medium-3', 'mistral-medium-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['reasoning', 'text'],
+features: ['structured-outputs', 'function-calling', 'predicted-outputs', 'document-qna', 'prefix', 'batching', 'agents-conversations', 'chat-completions', 'connectors'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-moderation-24-11.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Moderation',
+describe: (l) => ({
+description: l.text(`Our moderation service that enables our users to detect harmful text content`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our moderation service that enables our users to detect harmful text content.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-moderation-24-11',
+releaseDate: '2024-11-06',
+version: '24.11',
+frontier: true,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-moderation',
+status: 'Deprecated',
+avatar: { icon: 'moderation', backgroundColor: 'beige' },
+weights: [],
+bloglink: 'https://mistral.ai/news/mistral-moderation',
+paperlink: null,
+contextLength: '8k',
+ratings: {
+speed: 4.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-moderation-2411'] },
+capabilities: {
+input: ['text'],
+output: ['scores'],
+features: ['moderations', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-03-31', retirementDate: '2026-06-30', replacement: 'Mistral Moderation 2'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-moderation-26-03.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Moderation 2',
+describe: (l) => ({
+description: l.text(`Our latest moderation model with 128k context window and jailbreaking detection. Strong performance on complex multilingual data including long multi-turn conversations.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our latest moderation model with 128k context window and jailbreaking detection.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-moderation-26-03',
+releaseDate: '2026-03-01',
+version: '26.03',
+frontier: true,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-moderation',
+status: 'GA',
+avatar: { icon: 'moderation', backgroundColor: 'beige' },
+weights: [],
+bloglink: null,
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 5.0,
+performance: 3.5, input: 5.0, output: 2.0 },
+pricing: {
+type: 'flat',
+free: true,
+price: 0,
+denominator: '/M Tokens',
+},
+identifiers: { apiNames: ['mistral-moderation-2603'] },
+capabilities: {
+input: ['text'],
+output: ['scores'],
+features: ['moderations', 'batching'],
+
+},
+metadata: {},
+playground: '',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-nemo-12b-24-07.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Nemo 12B',
+describe: (l) => ({
+description: l.text(`Our best multilingual open source model released July 2024.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our best multilingual open source model released July 2024.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-nemo-12b-24-07',
+releaseDate: '2024-07-18',
+version: '24.07',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/open-mistral-nemo-2407',
+status: 'Deprecated',
+avatar: { icon: 'mistral-nemo', backgroundColor: 'red' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407',
+parameters: '12',
+minGpuRam: {
+bf16: '56',
+fp8: '28',
+fp4: '14',
+fp4_16: null,
+},
+active: '12',
+contextSize: '128k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Nemo-Base-2407',
+parameters: '12',
+minGpuRam: {
+bf16: '56',
+fp8: '28',
+fp4: '14',
+fp4_16: null,
+},
+active: '12',
+contextSize: '128k',
+}, {
+name: 'FP8 Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Nemo-Instruct-FP8-2407',
+parameters: '12',
+minGpuRam: {
+bf16: '56',
+fp8: '28',
+fp4: '14',
+fp4_16: null,
+},
+active: '12',
+contextSize: '128k',
+}
+],
+bloglink: 'https://mistral.ai/news/mistral-nemo',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 2.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.15, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.15, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['open-mistral-nemo-2407', 'open-mistral-nemo'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-05-22', retirementDate: '2026-07-31', replacement: 'Ministral 3 8B'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-next.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Next',
+describe: (l) => ({
+description: l.text(`A prototype model, designed to be brief and concise.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A prototype model, designed to be brief and concise.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-next',
+releaseDate: '2024-02-26',
+version: '',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-next',
+status: 'Retired',
+avatar: { icon: 'mistral-large', backgroundColor: 'orange' },
+weights: [],
+bloglink: 'https://mistral.ai/news/le-chat-mistral',
+paperlink: null,
+contextLength: null,
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: [] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '', retirementDate: '', replacement: 'Mistral Large 3'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-saba-25-02.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Saba',
+describe: (l) => ({
+description: l.text(`A finetuned Small model trained on meticulously curated datasets from across the Middle East and South Asia.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A finetuned Small model trained on meticulously curated datasets.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-saba-25-02',
+releaseDate: '2025-02-17',
+version: '25.02',
+frontier: false,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-saba',
+status: 'Retired',
+avatar: { icon: 'mistral-saba', backgroundColor: 'amber' },
+weights: [],
+bloglink: 'https://mistral.ai/news/mistral-saba',
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-saba-2502', 'mistral-saba-latest'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2025-06-10', retirementDate: '2025-09-30', replacement: 'Mistral Small 4'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-small-1-0-24-02.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Small 1.0',
+describe: (l) => ({
+description: l.text(`An enterprise grade small model for efficiency.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`An enterprise grade small model for efficiency.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-small-1-0-24-02',
+releaseDate: '2024-02-26',
+version: '24.02',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-small-1',
+status: 'Retired',
+avatar: { icon: 'mistral-small', backgroundColor: 'purple' },
+weights: [],
+bloglink: 'https://mistral.ai/news/mistral-large',
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-small-2402'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-11-30', retirementDate: '2025-06-16', replacement: 'Mistral Small 4'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-small-2-0-24-09.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Small 2.0',
+describe: (l) => ({
+description: l.text(`An update to our efficient small model with open weights under an MRL license.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`An update to our efficient small model with open weights under an MRL license.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-small-2-0-24-09',
+releaseDate: '2024-09-17',
+version: '24.09',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-small-2',
+status: 'Retired',
+avatar: { icon: 'mistral-small', backgroundColor: 'gray' },
+weights: [
+{
+name: 'Weights',
+license: 'MRL',
+licenseUrl: 'https://mistral.ai/static/licenses/MRL-0.1.md',
+url: 'https://huggingface.co/mistralai/Mistral-Small-Instruct-2409',
+parameters: '22',
+minGpuRam: {
+bf16: '52',
+fp8: '26',
+fp4: '13',
+fp4_16: null,
+},
+active: '22',
+contextSize: '32k',
+}
+],
+bloglink: 'https://mistral.ai/news/september-24-release',
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 3.0,
+performance: 2.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['mistral-small-2409'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-11-06', retirementDate: '2025-11-30', replacement: 'Mistral Small 4'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-small-3-0-25-01.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Small 3.0',
+describe: (l) => ({
+description: l.text(`A small efficient and powerfull 24B open model for personal or commercial use.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A small efficient and powerfull 24B open model for personal or commercial use.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-small-3-0-25-01',
+releaseDate: '2025-01-30',
+version: '25.01',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-small-3',
+status: 'Retired',
+avatar: { icon: 'mistral-small', backgroundColor: 'purple' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501',
+parameters: '24',
+minGpuRam: {
+bf16: '54',
+fp8: '27',
+fp4: '14',
+fp4_16: null,
+},
+active: '24',
+contextSize: '32k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Small-24B-Base-2501',
+parameters: '24',
+minGpuRam: {
+bf16: '54',
+fp8: '27',
+fp4: '14',
+fp4_16: null,
+},
+active: '24',
+contextSize: '32k',
+}
+],
+bloglink: 'https://mistral.ai/news/mistral-small-3',
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['mistral-small-2501'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'agents-conversations', 'connectors', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-11-06', retirementDate: '2025-11-30', replacement: 'Mistral Small 4'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-small-3-1-25-03.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Small 3.1',
+describe: (l) => ({
+description: l.text(`A new leader in the small models category with image understanding capabilities, released March 2025.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A new leader in the small models category with image understanding capabilities.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-small-3-1-25-03',
+releaseDate: '2025-03-17',
+version: '25.03',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-small-3',
+status: 'Retired',
+avatar: { icon: 'mistral-small', backgroundColor: 'gray' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503',
+parameters: '24',
+minGpuRam: {
+bf16: '78',
+fp8: '39',
+fp4: '20',
+fp4_16: '16',
+},
+active: '24',
+contextSize: '128k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Base-2503',
+parameters: '24',
+minGpuRam: {
+bf16: '78',
+fp8: '39',
+fp4: '20',
+fp4_16: '16',
+},
+active: '24',
+contextSize: '128k',
+}
+],
+bloglink: 'https://mistral.ai/news/mistral-small-3-1 ',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['mistral-small-2503'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'agents-conversations', 'connectors', 'batching', 'predicted-outputs'],
+
+},
+metadata: {deprecationDate: '2025-11-06', retirementDate: '2025-11-30', replacement: 'Mistral Small 4'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-small-3-2-25-06.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Small 3.2',
+describe: (l) => ({
+description: l.text(`An update to our previous small model, released June 2025.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`An update to our previous small model, released June 2025.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-small-3-2-25-06',
+releaseDate: '2025-06-20',
+version: '25.06',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-small-3',
+status: 'Deprecated',
+avatar: { icon: 'mistral-small', backgroundColor: 'purple' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506',
+parameters: '24',
+minGpuRam: {
+bf16: '78',
+fp8: '39',
+fp4: '20',
+fp4_16: '16',
+},
+active: '24',
+contextSize: '128k',
+}
+],
+bloglink: null,
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['mistral-small-2506'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'agents-conversations', 'batching', 'connectors', 'predicted-outputs'],
+
+},
+metadata: { deprecationDate: '2026-04-30', retirementDate: '2026-07-31', replacement: 'Mistral Small 4' },
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-small-4-0-26-03.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Small 4',
+describe: (l) => ({
+description: l.text(`Our powerful hybrid model unifying instruct, reasoning, and coding capabilities in a single model. 119B parameters with 6.5B active.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Hybrid model unifying instruct, reasoning, and coding in a single efficient model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-small-4-0-26-03',
+releaseDate: '2026-03-16',
+version: '26.03',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'DEFAULT',
+status: 'GA',
+avatar: { icon: 'mistral-small', backgroundColor: 'orange' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mistral-Small-4-2603',
+parameters: '119',
+minGpuRam: {
+bf16: '238',
+fp8: '119',
+fp4: '60',
+fp4_16: null,
+},
+active: '6.5',
+contextSize: '256k',
+},
+],
+bloglink: null,
+paperlink: null,
+contextLength: '256k',
+ratings: {
+speed: 4.0,
+performance: 3.5,
+input: 4.0,
+output: 3.5,
+},
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.15, denominator: '/M Tokens' },
+],
+output: [
+{ type: 'range', price: 0.6, denominator: '/M Tokens' },
+],
+},
+identifiers: { apiNames: ['mistral-small-2603', 'mistral-small-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['reasoning', 'text'],
+features: ['chat-completions', 'function-calling', 'agents-conversations', 'connectors', 'structured-outputs', 'predicted-outputs', 'document-qna', 'prefix', 'batching'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mistral-small-creative-25-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mistral Small Creative',
+describe: (l) => ({
+description: l.text(`An experimental specialized small model trained on meticulously curated data, designed for creative writing, narrative generation, roleplay and character-driven dialog, general-purpose instruction following and conversational agents.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A specialized model designed for creative writing and dynamic character interaction.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mistral-small-creative-25-12',
+releaseDate: '2025-12-11',
+version: '25.12',
+frontier: false,
+class: 'Specialist',
+type: 'Labs',
+legalButton: 'DEFAULT',
+status: 'Deprecated',
+avatar: { icon: 'mistral-small', backgroundColor: 'yellow' },
+weights: [],
+bloglink: null,
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.3, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['labs-mistral-small-creative'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: ['document-qna', 'chat-completions', 'batching', 'structured-outputs', 'function-calling'],
+
+},
+metadata: {deprecationDate: '2026-03-31', retirementDate: '2026-04-30', replacement: 'Ministral 3 8B'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mixtral-8x22b-0-1-0-3.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mixtral 8x22B',
+describe: (l) => ({
+description: l.text(`A large open MoE model competing with much larger dense models.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A large open MoE model competing with much larger dense models.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mixtral-8x22b-0-1-0-3',
+releaseDate: '2024-04-17',
+version: '0.1-0.3',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mixtral-8-22b',
+status: 'Retired',
+avatar: { icon: 'mistral-7b', backgroundColor: 'yellow' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1',
+parameters: '141',
+minGpuRam: {
+bf16: '283',
+fp8: '142',
+fp4: '71',
+fp4_16: null,
+},
+active: '39',
+contextSize: '64k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mixtral-8x22B-v0.1',
+parameters: '141',
+minGpuRam: {
+bf16: '283',
+fp8: '142',
+fp4: '71',
+fp4_16: null,
+},
+active: '39',
+contextSize: '64k',
+}
+],
+bloglink: 'https://mistral.ai/news/mixtral-8x22b',
+paperlink: null,
+contextLength: '64k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['open-mixtral-8x22b'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-11-30', retirementDate: '2025-03-30', replacement: 'Mistral Small 4'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/mixtral-8x7b-0-1.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Mixtral 8x7B',
+describe: (l) => ({
+description: l.text(`Our first open MoE model, SOTA competing against models up to 2 to 3x larger.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our first open MoE model, SOTA competing against models up to 2 to 3x larger.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'mixtral-8x7b-0-1',
+releaseDate: '2023-12-11',
+version: '0.1',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mixtral-8-7b',
+status: 'Retired',
+avatar: { icon: 'mistral-7b', backgroundColor: 'green' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1',
+parameters: '47',
+minGpuRam: {
+bf16: '94',
+fp8: '48',
+fp4: '13',
+fp4_16: null,
+},
+active: '13',
+contextSize: '32k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Mixtral-8x7B-v0.1',
+parameters: '47',
+minGpuRam: {
+bf16: '94',
+fp8: '48',
+fp4: '13',
+fp4_16: null,
+},
+active: '13',
+contextSize: '32k',
+}
+],
+bloglink: 'https://mistral.ai/news/mixtral-of-experts',
+paperlink: 'https://arxiv.org/pdf/2401.04088',
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['open-mixtral-8x7b'] },
+capabilities: {
+input: ['text'],
+output: ['text'],
+features: [],
+
+},
+metadata: {deprecationDate: '2024-11-30', retirementDate: '2025-03-30', replacement: 'Mistral Small 4'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ocr-2-25-05.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'OCR 2',
+describe: (l) => ({
+description: l.text(`Our OCR service powering our Document AI stack that enables our users to extract interleaved text and images`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our OCR service powering our Document AI stack.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'ocr-2-25-05',
+releaseDate: '2025-05-22',
+version: '25.05',
+frontier: false,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-ocr',
+status: 'Deprecated',
+avatar: { icon: 'ocr', backgroundColor: 'red' },
+weights: [],
+bloglink: 'https://mistral.ai/solutions/document-ai',
+paperlink: null,
+contextLength: null,
+ratings: {
+speed: 4.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 1.0, denominator: '/1000 Pages' },
+{ type: 'flat', price: 3.0, denominator: '/1000 Annotated Pages' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-ocr-2505'] },
+capabilities: {
+input: ['image', 'document'],
+output: ['text', 'image'],
+features: ['bbox-extraction', 'ocr', 'annotations-structured-ocr', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-02-27', retirementDate: '2026-05-31', replacement: 'OCR 4.1'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ocr-25-03.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'OCR',
+describe: (l) => ({
+description: l.text(`Our first OCR optimized model.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our first OCR optimized model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'ocr-25-03',
+releaseDate: '2025-03-06',
+version: '25.03',
+frontier: false,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-ocr',
+status: 'Deprecated',
+avatar: { icon: 'ocr', backgroundColor: 'gray' },
+weights: [],
+bloglink: 'https://mistral.ai/news/mistral-ocr',
+paperlink: null,
+contextLength: null,
+ratings: {
+speed: 0.0,
+performance: 0.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-ocr-2503'] },
+capabilities: {
+input: ['image', 'document'],
+output: ['text', 'image'],
+features: [],
+
+},
+metadata: {deprecationDate: '2025-12-02', retirementDate: '2025-12-31', replacement: 'OCR 4.1'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ocr-3-25-12.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'OCR 3',
+describe: (l) => ({
+description: l.text(`Our OCR service powering our Document AI stack that enables our users to extract interleaved text and images. OCR 4 is available as the newer model. OCR 3 remains available for existing integrations and production workloads.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our OCR service powering our Document AI stack. OCR 4 is available as the newer model. OCR 3 remains available for existing integrations and production workloads.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'ocr-3-25-12',
+releaseDate: '2025-12-18',
+version: '25.12',
+frontier: true,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-ocr',
+status: 'GA',
+avatar: { icon: 'ocr', backgroundColor: 'red' },
+weights: [],
+bloglink: 'https://mistral.ai/news/mistral-ocr-3',
+paperlink: null,
+contextLength: null,
+ratings: {
+speed: 4.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 2.0, denominator: '/1000 Pages' },
+{ type: 'flat', price: 3.0, denominator: '/1000 Annotated Pages' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-ocr-2512'] },
+capabilities: {
+input: ['image', 'document'],
+output: ['text', 'image'],
+features: ['ocr', 'annotations-structured-ocr', 'batching'],
+
+},
+metadata: { replacement: 'OCR 4.1' },
+playground: 'https://console.mistral.ai/build/document-ai/ocr-playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ocr-4-0.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'OCR 4.0',
+describe: (l) => ({
+description: l.text(`Our latest OCR service powering our Document AI stack, with native paragraph-level bounding box extraction and structural block labels.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our latest OCR service with paragraph-level bounding boxes and structural block labels.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'ocr-4-0',
+releaseDate: '2026-06-23',
+version: '4.0',
+frontier: false,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-ocr',
+status: 'Deprecated',
+avatar: { icon: 'ocr', backgroundColor: 'red' },
+weights: [],
+bloglink: 'https://mistral.ai/news/ocr-4/',
+paperlink: null,
+contextLength: null,
+ratings: {
+speed: 4.0,
+performance: 4.0, input: 4.0, output: 3.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 4.0, denominator: '/1000 Pages' },
+{ type: 'flat', price: 5.0, denominator: '/1000 Annotated Pages' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-ocr-4-0'] },
+capabilities: {
+input: ['image', 'document'],
+output: ['text', 'image'],
+features: ['bbox-extraction', 'ocr', 'annotations-structured-ocr', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-09-29', retirementDate: '2026-09-30', replacement: 'OCR 4.1'},
+playground: 'https://console.mistral.ai/build/document-ai/ocr-playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/ocr-4-1.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'OCR 4.1',
+describe: (l) => ({
+description: l.text(`Our latest OCR service powering our Document AI stack, with native paragraph-level bounding box extraction, structural block labels, and block-level confidence scores.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our latest OCR service with paragraph-level bounding boxes, structural block labels, and block-level confidence scores.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'ocr-4-1',
+slugAliases: ['ocr'],
+releaseDate: '2026-07-16',
+version: '4.1',
+frontier: true,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/mistral-ocr',
+status: 'GA',
+avatar: { icon: 'ocr', backgroundColor: 'red' },
+weights: [],
+bloglink: null,
+paperlink: null,
+contextLength: null,
+ratings: {
+speed: 4.0,
+performance: 4.0, input: 4.0, output: 3.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 4.0, denominator: '/1000 Pages' },
+{ type: 'flat', price: 5.0, denominator: '/1000 Annotated Pages' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['mistral-ocr-4-1', 'mistral-ocr-4', 'mistral-ocr-latest'] },
+capabilities: {
+input: ['image', 'document'],
+output: ['text', 'image'],
+features: ['bbox-extraction', 'ocr', 'annotations-structured-ocr', 'batching'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/document-ai/ocr-playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/pixtral-12b-24-09.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Pixtral 12B',
+describe: (l) => ({
+description: l.text(`A 12B model with image understanding capabilities in addition to text.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A 12B model with image understanding capabilities in addition to text.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'pixtral-12b-24-09',
+releaseDate: '2024-09-11',
+version: '24.09',
+frontier: false,
+class: 'Generalist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/pixtral-12b',
+status: 'Deprecated',
+avatar: { icon: 'pixtral', backgroundColor: 'orange' },
+weights: [
+{
+name: 'Instruct Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Pixtral-12B-2409',
+parameters: '12',
+minGpuRam: {
+bf16: '56',
+fp8: '28',
+fp4: '14',
+fp4_16: null,
+},
+active: '12',
+contextSize: '128k',
+}, {
+name: 'Base Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Pixtral-12B-Base-2409',
+parameters: '12',
+minGpuRam: {
+bf16: '56',
+fp8: '28',
+fp4: '14',
+fp4_16: null,
+},
+active: '12',
+contextSize: '128k',
+}
+],
+bloglink: 'https://mistral.ai/news/pixtral-12b',
+paperlink: 'https://arxiv.org/pdf/2410.07073',
+contextLength: '128k',
+ratings: {
+speed: 2.0,
+performance: 2.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.15, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.15, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['pixtral-12b-2409'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2025-12-02', retirementDate: '2025-12-31', replacement: 'Ministral 3 14B'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/pixtral-large-24-11.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Pixtral Large',
+describe: (l) => ({
+description: l.text(`Our first frontier-class multimodal model released November 2024. Learn more in our [blog post](https://mistral.ai/news/pixtral-large/)`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our first frontier-class multimodal model released November 2024.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'pixtral-large-24-11',
+releaseDate: '2024-11-18',
+version: '24.11',
+frontier: false,
+class: 'Generalist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/pixtral-large',
+status: 'Deprecated',
+avatar: { icon: 'mistral-large', backgroundColor: 'orange' },
+weights: [
+{
+name: 'Weights',
+license: 'MRL',
+licenseUrl: 'https://mistral.ai/static/licenses/MRL-0.1.md',
+url: 'https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411',
+parameters: '124',
+minGpuRam: {
+bf16: '297',
+fp8: '149',
+fp4: '75',
+fp4_16: '66',
+},
+active: '124',
+contextSize: '128k',
+}
+],
+bloglink: 'https://mistral.ai/news/pixtral-large',
+paperlink: null,
+contextLength: '128k',
+ratings: {
+speed: 1.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 2.0, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 6.0, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['pixtral-large-2411', 'pixtral-large-latest'] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: ['structured-outputs', 'function-calling', 'predicted-outputs', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-02-27', retirementDate: '2026-05-31', replacement: 'Mistral Medium 3.5'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/shieldstral-1-0.ts <==
+import { StaticModel } from '../schema';
+
+export default {
+name: 'Shieldstral 1.0',
+describe: (l) => ({
+description: l.text(`A compact multimodal moderation model for prompt moderation, response moderation, prompt-response pair classification, refusal detection, and safety filtering across text and image inputs. It uses natural-language policy questions and returns a yes or no classification.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Compact multimodal moderation model for text and image safety classification.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'shieldstral-1-0',
+releaseDate: '2026-08-04',
+version: '1.0',
+frontier: true,
+class: 'Specialist',
+type: 'Labs',
+legalButton: null,
+status: 'PublicPreview',
+avatar: { icon: 'shieldstral', backgroundColor: 'beige' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Shieldstral-1.0',
+parameters: '3.8',
+minGpuRam: {
+bf16: null,
+fp8: null,
+fp4: null,
+fp4_16: null,
+},
+active: '3.8',
+contextSize: '32k',
+},
+],
+bloglink: null,
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 0.0,
+performance: 0.0,
+input: 4.0,
+output: 2.0,
+},
+hideRatings: true,
+pricing: {
+type: 'custom',
+free: false,
+input: [],
+output: [],
+},
+identifiers: { apiNames: [] },
+capabilities: {
+input: ['text', 'image'],
+output: ['text'],
+features: [],
+},
+metadata: { parameters: '3.8B total and active' },
+playground: '',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/voxtral-mini-25-07.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Voxtral Mini',
+describe: (l) => ({
+description: l.text(`A mini version of our first audio input model.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`A mini version of our first audio input model.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'voxtral-mini-25-07',
+releaseDate: '2025-07-15',
+version: '25.07',
+frontier: true,
+class: 'Specialist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/voxtral-small',
+status: 'Deprecated',
+avatar: { icon: 'voxtral', backgroundColor: 'pink' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Voxtral-Mini-3B-2507',
+parameters: '4',
+minGpuRam: {
+bf16: '14',
+fp8: '7',
+fp4: '4',
+fp4_16: null,
+},
+active: '4',
+contextSize: '32k',
+}
+],
+bloglink: 'https://mistral.ai/news/voxtral',
+paperlink: 'https://arxiv.org/pdf/2507.13264',
+contextLength: '32k',
+ratings: {
+speed: 4.0,
+performance: 2.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.001, denominator: '/Min' },
+{ type: 'flat', price: 0.04, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.04, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['voxtral-mini-2507', 'voxtral-mini-latest'] },
+capabilities: {
+input: ['audio', 'text'],
+output: ['text'],
+features: ['structured-outputs', 'document-qna', 'prefix', 'chat-completions', 'batching'],
+
+},
+metadata: {deprecationDate: '2026-02-27', retirementDate: '2026-05-31', replacement: 'Voxtral Mini Transcribe 2'},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/voxtral-mini-transcribe-25-07.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Voxtral Mini Transcribe',
+describe: (l) => ({
+description: l.text(`An efficient audio input model, pre-trained and optimized for transcription purposes only.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`An efficient audio input model, pre-trained and optimized for transcription purposes.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'voxtral-mini-transcribe-25-07',
+releaseDate: '2025-07-15',
+version: '25.07',
+frontier: true,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/voxtral-small',
+status: 'Deprecated',
+avatar: { icon: 'voxtral', backgroundColor: 'pink' },
+weights: [],
+bloglink: 'https://mistral.ai/news/voxtral',
+paperlink: null,
+contextLength: '32k',
+ratings: {
+speed: 4.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 0.002, denominator: '/Min' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['voxtral-mini-2507'] },
+capabilities: {
+input: ['audio'],
+output: ['text'],
+features: ['timestamps', 'transcriptions'],
+
+},
+metadata: {deprecationDate: '2026-02-27', retirementDate: '2026-05-31', replacement: 'Voxtral Mini Transcribe 2'},
+playground: '',
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/voxtral-mini-transcribe-26-02.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Voxtral Mini Transcribe 2',
+describe: (l) => ({
+description: l.text(`An efficient audio input model, pre-trained and optimized for transcription purposes only.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`An efficient audio input model, pre-trained and optimized for transcription purposes.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'voxtral-mini-transcribe-26-02',
+releaseDate: '2026-02-04',
+version: '26.02',
+frontier: true,
+class: 'Specialist',
+type: 'Premier',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/voxtral-small',
+status: 'GA',
+avatar: { icon: 'voxtral', backgroundColor: 'pink' },
+weights: [],
+bloglink: 'https://mistral.ai/news/voxtral-transcribe-2',
+paperlink: null,
+contextLength: '--',
+ratings: {
+speed: 4.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 0.003, denominator: '/Min' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['voxtral-mini-2602', 'voxtral-mini-latest'] },
+capabilities: {
+input: ['audio'],
+output: ['text'],
+features: ['timestamps', 'transcriptions'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/audio/speech-to-text',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/voxtral-mini-transcribe-realtime-26-02.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Voxtral Mini Transcribe Realtime',
+describe: (l) => ({
+description: l.text(`An efficient audio input model, pre-trained and optimized for live transcription purposes only.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`An efficient audio input model, pre-trained and optimized for live transcription purposes.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'voxtral-mini-transcribe-realtime-26-02',
+releaseDate: '2026-02-04',
+version: '26.02',
+frontier: true,
+class: 'Specialist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/voxtral-small',
+status: 'GA',
+avatar: { icon: 'voxtral', backgroundColor: 'pink' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602',
+parameters: '4',
+minGpuRam: {
+bf16: '14',
+fp8: null,
+fp4: null,
+fp4_16: null,
+},
+active: '4',
+contextSize: '--',
+}
+],
+bloglink: 'https://mistral.ai/news/voxtral-transcribe-2',
+paperlink: 'https://arxiv.org/abs/2602.11298',
+contextLength: '--',
+ratings: {
+speed: 4.0,
+performance: 4.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'flat', price: 0.006, denominator: '/Min' }
+],
+output: [
+
+]
+},
+identifiers: { apiNames: ['voxtral-mini-transcribe-realtime-2602', 'voxtral-mini-realtime-latest'] },
+capabilities: {
+input: ['audio'],
+output: ['text'],
+features: ['transcriptions'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/audio/realtime',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/voxtral-small-25-07.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Voxtral Small',
+describe: (l) => ({
+description: l.text(`Our first model with audio input capabilities for instruct use cases.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`Our first model with audio input capabilities for instruct use cases.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'voxtral-small-25-07',
+releaseDate: '2025-07-15',
+version: '25.07',
+frontier: true,
+class: 'Specialist',
+type: 'Open',
+legalButton: 'https://legal.mistral.ai/ai-governance/models/voxtral-small',
+status: 'GA',
+avatar: { icon: 'voxtral', backgroundColor: 'pink' },
+weights: [
+{
+name: 'Weights',
+license: 'Apache 2.0',
+licenseUrl: 'https://www.apache.org/licenses/LICENSE-2.0.txt',
+url: 'https://huggingface.co/mistralai/Voxtral-Small-24B-2507',
+parameters: '24',
+minGpuRam: {
+bf16: '54',
+fp8: '27',
+fp4: '14',
+fp4_16: null,
+},
+active: '24',
+contextSize: '32k',
+}
+],
+bloglink: 'https://mistral.ai/news/voxtral',
+paperlink: 'https://arxiv.org/pdf/2507.13264',
+contextLength: '32k',
+ratings: {
+speed: 3.0,
+performance: 3.0, input: 4.0, output: 2.0 },
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.004, denominator: '/Min' },
+{ type: 'flat', price: 0.1, denominator: '/M Tokens' }
+],
+output: [
+{ type: 'range', price: 0.4, denominator: '/M Tokens' }
+]
+},
+identifiers: { apiNames: ['voxtral-small-2507', 'voxtral-small-latest'] },
+capabilities: {
+input: ['audio', 'text'],
+output: ['text'],
+features: ['structured-outputs', 'document-qna', 'prefix', 'chat-completions', 'batching', 'function-calling'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/playground',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/voxtral-tts-26-03.ts <==
+import { StaticModel } from '../schema';
+export default {
+name: 'Voxtral TTS',
+describe: (l) => ({
+description: l.text(`Our state-of-the-art text-to-speech model with zero-shot voice cloning. Supports 9 languages, streaming with ~90ms time-to-first-audio, and no transcript required for voice prompts.`, { context: 'Full description of an AI model' }),
+shortDescription: l.text(`State-of-the-art TTS with zero-shot voice cloning and multilingual support.`, { context: 'Short description of an AI model' }),
+}),
+slug: 'voxtral-tts-26-03',
+releaseDate: '2026-03-23',
+version: '26.03',
+frontier: true,
+class: 'Specialist',
+type: 'Open',
+legalButton: null,
+status: 'GA',
+avatar: { icon: 'voxtral', backgroundColor: 'pink' },
+weights: [
+{
+name: 'Weights',
+license: 'CC BY-NC 4.0',
+licenseUrl: 'https://creativecommons.org/licenses/by-nc/4.0/',
+url: 'https://huggingface.co/mistralai/Voxtral-4B-TTS-2603',
+parameters: '4',
+minGpuRam: {
+bf16: '14',
+fp8: null,
+fp4: null,
+fp4_16: null,
+},
+active: '4',
+contextSize: '--',
+}
+],
+bloglink: null,
+paperlink: null,
+contextLength: null,
+ratings: {
+speed: 4.5,
+performance: 4.0,
+input: 4.5,
+output: 4.0,
+},
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 0.0, denominator: '/M Chars' },
+],
+output: [
+{ type: 'range', price: 16.0, denominator: '/M Chars' },
+],
+},
+identifiers: { apiNames: ['voxtral-mini-tts-2603', 'voxtral-mini-tts-latest'] },
+capabilities: {
+input: ['text', 'audio'],
+output: ['audio'],
+features: ['tts', 'voice-cloning'],
+
+},
+metadata: {},
+playground: 'https://console.mistral.ai/build/audio/text-to-speech',
+legacy: false,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/zai-glm-5-2.ts <==
+import { StaticModel } from '../schema';
+
+export default {
+name: 'Z.ai GLM 5.2',
+describe: (l) => ({
+description: l.text('A third-party open weight text model from Z.ai, hosted by Mistral for long-context coding and agentic workflows. The model is served without Mistral modifications.', { context: 'Full description of an AI model' }),
+shortDescription: l.text('A third-party open weight text model from Z.ai with a 1M-token context window.', { context: 'Short description of an AI model' }),
+}),
+slug: 'zai-glm-5-2',
+releaseDate: '2026-08-06',
+version: '5.2',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: null,
+status: 'Deprecated',
+avatar: { icon: 'zai-glm', backgroundColor: 'gray' },
+weights: [],
+bloglink: 'https://z.ai/blog/glm-5.2',
+paperlink: null,
+externalLinks: [{ href: 'https://huggingface.co/zai-org/GLM-5.2', label: 'Hugging Face' }],
+tags: ['third-party'],
+pricingLayout: 'stacked',
+performanceMaxStars: 5.0,
+usageExample: 'zai-glm-5-2',
+contextLength: '1M',
+outputTokenLimit: '128k',
+ratings: {
+speed: 5.0,
+performance: 5.0,
+input: 4.0,
+output: 2.0,
+},
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 1.4, denominator: '/M Tokens', label: 'Input' },
+{ type: 'range', price: 0.14, denominator: '/M Tokens', label: 'Cached input' },
+],
+output: [
+{ type: 'range', price: 4.4, denominator: '/M Tokens', label: 'Output' },
+],
+},
+identifiers: { apiNames: ['zai-glm-5-2'] },
+capabilities: {
+input: ['text'],
+output: ['reasoning', 'text'],
+features: ['chat-completions', 'function-calling', 'structured-outputs', 'predicted-outputs', 'prefix', 'batching'],
+},
+relatedModels: ['Mistral Medium 3.5', 'Mistral Large 3'],
+metadata: {deprecationDate: '2026-09-29', retirementDate: '2026-10-31', replacement: 'Z.ai GLM 5.3'},
+playground: undefined,
+legacy: true,
+} as const satisfies StaticModel;
+
+==> src/schema/models/models/zai-glm-5-3.ts <==
+import { StaticModel } from '../schema';
+
+export default {
+name: 'Z.ai GLM 5.3',
+describe: (l) => ({
+description: l.text('A third-party open weight text model from Z.ai, hosted by Mistral for long-context coding and agentic workflows. The model is served without Mistral modifications.', { context: 'Full description of an AI model' }),
+shortDescription: l.text('A third-party open weight text model from Z.ai with a 1M-token context window.', { context: 'Short description of an AI model' }),
+}),
+slug: 'zai-glm-5-3',
+releaseDate: '2026-09-15',
+version: '5.3',
+frontier: true,
+class: 'Generalist',
+type: 'Open',
+legalButton: null,
+status: 'GA',
+avatar: { icon: 'zai-glm', backgroundColor: 'gray' },
+weights: [],
+bloglink: 'https://z.ai/blog/glm-5.3',
+paperlink: null,
+externalLinks: [{ href: 'https://huggingface.co/zai-org/GLM-5.3', label: 'Hugging Face' }],
+tags: ['third-party'],
+pricingLayout: 'stacked',
+performanceMaxStars: 5.0,
+usageExample: 'zai-glm-5-3',
+contextLength: '1M',
+outputTokenLimit: '128k',
+ratings: {
+speed: 5.0,
+performance: 5.0,
+input: 4.0,
+output: 2.0,
+},
+pricing: {
+type: 'custom',
+free: false,
+input: [
+{ type: 'range', price: 1.4, denominator: '/M Tokens', label: 'Input' },
+{ type: 'range', price: 0.14, denominator: '/M Tokens', label: 'Cached input' },
+],
+output: [
+{ type: 'range', price: 4.4, denominator: '/M Tokens', label: 'Output' },
+],
+},
+identifiers: { apiNames: ['zai-glm-5-3', 'zai-glm-5', 'zai-glm-latest'] },
+capabilities: {
+input: ['text'],
+output: ['reasoning', 'text'],
+features: ['chat-completions', 'function-calling', 'structured-outputs', 'predicted-outputs', 'prefix', 'batching'],
+},
+relatedModels: ['Mistral Medium 3.5', 'Mistral Large 3'],
+metadata: {},
+playground: undefined,
+legacy: false,
+} as const satisfies StaticModel;

@@ -1,0 +1,87 @@
+### Vertex AI documentation is no longer being updated
+
+Vertex AI's services are now part of Gemini Enterprise Agent Platform. See the most up-to-date information in the Agent Platform documentation.
+
+- Home
+-
+Documentation
+-
+AI and ML
+-
+Vertex AI
+-
+Generative AI on Vertex AI
+-
+Guides
+
+# Imagen 3 Stay organized with collections Save and categorize content based on your preferences.
+
+This page documents the capabilities and features of the Imagen 3 models.
+
+Caution: The following table describes image generation endpoints that are deprecated and their replacements. We recommend updating your model endpoints before June 30, 2026, to avoid service disruption.
+
+| Discontinued endpoints | Recommended endpoint migration |
+| imagegeneration@002 | gemini-2.5-flash-image |
+| imagegeneration@003 | gemini-2.5-flash-image |
+| imagegeneration@004 | gemini-2.5-flash-image |
+| imagegeneration@005 | gemini-2.5-flash-image |
+| imagegeneration@006 | gemini-2.5-flash-image |
+| imagetext@001 | gemini-2.5-flash-image |
+| imagen-3.0-capability-001 | gemini-2.5-flash-image |
+| imagen-3.0-capability-002 | gemini-2.5-flash-image |
+| imagen-3.0-fast-generate-001 | gemini-2.5-flash-image |
+| imagen-3.0-generate-001 | gemini-2.5-flash-image |
+| imagen-3.0-generate-002 | gemini-2.5-flash-image |
+| imagen-4.0-fast-generate-001 | gemini-2.5-flash-image |
+| imagen-4.0-generate-001 | gemini-2.5-flash-image |
+| imagen-4.0-ultra-generate-001 | gemini-2.5-flash-image |
+
+## 3.0 Generate 002
+
+| Model ID | imagen-3.0-generate-002 | imagen-3.0-generate-002 |
+| Supported inputs & outputs | Inputs: Text Outputs: Images | Inputs: Text Outputs: Images |
+| Capabilities | Supported Image generation Digital watermarking and verification User-configurable safety settings Prompt enhancement using prompt rewriter Person generation checklist_rtl GA allowlist feature Content Credentials (C2PA) Not supported Image customization using few-shot learning Subject customization for product, person, and animal companion Style customization Controlled customization Instruct customization or style transfer Mask-based image editing Insert objects in images Remove objects from images Outpainting Product image editing Upscale images Negative prompting | Supported Image generation Digital watermarking and verification User-configurable safety settings Prompt enhancement using prompt rewriter Person generation checklist_rtl GA allowlist feature Content Credentials (C2PA) Not supported Image customization using few-shot learning Subject customization for product, person, and animal companion Style customization Controlled customization Instruct customization or style transfer Mask-based image editing Insert objects in images Remove objects from images Outpainting Product image editing Upscale images Negative prompting |
+| Usage types | Supported Provisioned Throughput Not supported | Supported Provisioned Throughput Not supported |
+| Technical specifications |
+| Technical specifications | Images photo | Maximum image size: 10MB Maximum number of output images per prompt: 4 Supported aspect ratios: 1:1, 3:4, 4:3, 9:16, and 16:9 Supported resolutions: 1024x1024, 896x1280, 1280x896, 768x1408, 1408x768 Supported MIME types: image/png, image/jpeg |
+| Versions | imagen-3.0-generate-002 Launch stage: GA Release date: January 29, 2025 Discontinuation date: June 30, 2026 | imagen-3.0-generate-002 Launch stage: GA Release date: January 29, 2025 Discontinuation date: June 30, 2026 |
+| Prompt languages | English Chinese (simplified) preview Preview feature Chinese (traditional) preview Preview feature Hindi preview Preview feature Japanese preview Preview feature Korean preview Preview feature Portuguese preview Preview feature Spanish preview Preview feature |
+| Quotas | Regional online prediction requests per base model per minute per base model: 20 | Regional online prediction requests per base model per minute per base model: 20 |
+
+## 3.0 Generate 001
+
+| Model ID | imagen-3.0-generate-001 | imagen-3.0-generate-001 |
+| Supported inputs & outputs | Inputs: Text Outputs: Images | Inputs: Text Outputs: Images |
+| Capabilities | Supported Image generation Digital watermarking and verification User-configurable safety settings Negative prompting Person generation checklist_rtl GA allowlist feature Content Credentials (C2PA) Not supported Prompt enhancement using prompt rewriter Image customization using few-shot learning Subject customization for product, person, and animal companion Style customization Controlled customization Instruct customization or style transfer Mask-based image editing Insert objects in images Remove objects from images Outpainting Product image editing Upscale images | Supported Image generation Digital watermarking and verification User-configurable safety settings Negative prompting Person generation checklist_rtl GA allowlist feature Content Credentials (C2PA) Not supported Prompt enhancement using prompt rewriter Image customization using few-shot learning Subject customization for product, person, and animal companion Style customization Controlled customization Instruct customization or style transfer Mask-based image editing Insert objects in images Remove objects from images Outpainting Product image editing Upscale images |
+| Usage types | Supported Provisioned Throughput Not supported | Supported Provisioned Throughput Not supported |
+| Technical specifications |
+| Technical specifications | Images photo | Maximum image size: 10MB Maximum number of output images per prompt: 4 Supported aspect ratios: 1:1, 3:4, 4:3, 9:16, and 16:9 Supported resolutions: 1024x1024, 896x1280, 1280x896, 768x1408, 1408x768 Supported MIME types: image/png, image/jpeg |
+| Versions | imagen-3.0-generate-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 | imagen-3.0-generate-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 |
+| Prompt languages | English Chinese (simplified) preview Preview feature Chinese (traditional) preview Preview feature Hindi preview Preview feature Japanese preview Preview feature Korean preview Preview feature Portuguese preview Preview feature Spanish preview Preview feature |
+| Quotas | Regional online prediction requests per base model per minute per base model: 20 | Regional online prediction requests per base model per minute per base model: 20 |
+
+## 3.0 Fast Generate 001
+
+| Model ID | imagen-3.0-fast-generate-001 | imagen-3.0-fast-generate-001 |
+| Supported inputs & outputs | Inputs: Text Outputs: Images | Inputs: Text Outputs: Images |
+| Capabilities | Supported Image generation Digital watermarking and verification User-configurable safety settings Negative prompting Person generation checklist_rtl GA allowlist feature Content Credentials (C2PA) Not supported Prompt enhancement using prompt rewriter Image customization using few-shot learning Subject customization for product, person, and animal companion Style customization Controlled customization Instruct customization or style transfer Mask-based image editing Insert objects in images Remove objects from images Outpainting Product image editing Upscale images | Supported Image generation Digital watermarking and verification User-configurable safety settings Negative prompting Person generation checklist_rtl GA allowlist feature Content Credentials (C2PA) Not supported Prompt enhancement using prompt rewriter Image customization using few-shot learning Subject customization for product, person, and animal companion Style customization Controlled customization Instruct customization or style transfer Mask-based image editing Insert objects in images Remove objects from images Outpainting Product image editing Upscale images |
+| Usage types | Supported Provisioned Throughput Not supported | Supported Provisioned Throughput Not supported |
+| Technical specifications |
+| Technical specifications | Images photo | Maximum image size: 10MB Maximum number of output images per prompt: 4 Supported aspect ratios: 1:1, 3:4, 4:3, 9:16, and 16:9 Supported resolutions: 1024x1024, 896x1280, 1280x896, 768x1408, 1408x768 Supported MIME types: image/png, image/jpeg |
+| Versions | imagen-3.0-fast-generate-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 | imagen-3.0-fast-generate-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 |
+| Prompt languages | English Chinese (simplified) preview Preview feature Chinese (traditional) preview Preview feature Hindi preview Preview feature Japanese preview Preview feature Korean preview Preview feature Portuguese preview Preview feature Spanish preview Preview feature |
+| Quotas | Regional online prediction requests per base model per minute per base model: 200 | Regional online prediction requests per base model per minute per base model: 200 |
+
+## 3.0 Capability 001
+
+| Model ID | imagen-3.0-capability-001 | imagen-3.0-capability-001 |
+| Supported inputs & outputs | Inputs: Images, text Outputs: Images | Inputs: Images, text Outputs: Images |
+| Capabilities | Supported User-configurable safety settings Image customization using few-shot learning Subject customization for product, person, and animal companion Style customization Controlled customization Instruct customization or style transfer Mask-based image editing Insert objects in images Remove objects from images Outpainting Change image backgrounds Product image editing Negative prompting Content Credentials (C2PA) Not supported Image generation Digital watermarking and verification Prompt enhancement using prompt rewriter Upscale images Person generation | Supported User-configurable safety settings Image customization using few-shot learning Subject customization for product, person, and animal companion Style customization Controlled customization Instruct customization or style transfer Mask-based image editing Insert objects in images Remove objects from images Outpainting Change image backgrounds Product image editing Negative prompting Content Credentials (C2PA) Not supported Image generation Digital watermarking and verification Prompt enhancement using prompt rewriter Upscale images Person generation |
+| Usage types | Supported Not supported Provisioned Throughput | Supported Not supported Provisioned Throughput |
+| Technical specifications |
+| Technical specifications | Images photo | Maximum image size: 10MB Maximum number of output images per prompt: 4 Supported aspect ratios: 1:1, 3:4, 4:3, 9:16, and 16:9 Supported resolutions: 1024x1024, 896x1280, 1280x896, 768x1408, 1408x768 Supported MIME types: image/png, image/jpeg |
+| Versions | imagen-3.0-capability-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 | imagen-3.0-capability-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 |
+| Prompt languages | English Chinese (simplified) preview Preview feature Chinese (traditional) preview Preview feature Hindi preview Preview feature Japanese preview Preview feature Korean preview Preview feature Portuguese preview Preview feature Spanish preview Preview feature |
+| Quotas | Regional online prediction requests per base model per minute per base model: 100 | Regional online prediction requests per base model per minute per base model: 100 |
+
+For Imagen pricing information, see the Imagen section of the Cost of building and deploying AI models in Vertex AI page.

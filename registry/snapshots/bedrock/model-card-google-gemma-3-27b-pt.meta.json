@@ -1,0 +1,11 @@
+{
+  "source": "bedrock/model-card-google-gemma-3-27b-pt",
+  "urls": [
+    "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-27b-pt.html"
+  ],
+  "fetched_at": "2026-10-08T19:48:41Z",
+  "etag": "\"/GUpL111bnAgrHLbp+vM71Z8TG8=-gzip\"",
+  "last_modified": "Thu, 08 Oct 2026 19:30:23 GMT",
+  "sha256": "5f9c2681585a6ff98ee910edee85e9f0ed8215e71033623d37d199952a62f1b8",
+  "normalizer_version": 1
+}

@@ -1,0 +1,33 @@
+{
+  "findings": [
+    "checks.py:8:22 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "config.yaml:4:10 error model-retired quokka [openai:quokka]",
+    "legacy.py:4:47 error model-retired quokka [openai:quokka]",
+    "legacy.py:5:44 error model-retired quokka [openai:quokka]",
+    "legacy.py:6:23 error model-retired quokka [openai:quokka]",
+    "src/logo.ts:4:23 error model-retired q7 [openai:q7]",
+    "src/prose.spec.ts:3:23 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3] (test)",
+    "src/prose.spec.ts:5:57 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired] (test)",
+    "src/prose.spec.ts:6:48 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired] (test)"
+  ],
+  "unresolved": [],
+  "mentions": [
+    "README.md:6:34 error quokka"
+  ],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 8,
+    "scanned": 8,
+    "lexed": 7,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

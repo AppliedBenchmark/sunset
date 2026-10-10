@@ -1,0 +1,11 @@
+{
+  "source": "bedrock/model-card-nvidia-nvidia-nemotron-nano-12b-v2-vl-bf16",
+  "urls": [
+    "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-nvidia-nvidia-nemotron-nano-12b-v2-vl-bf16.html"
+  ],
+  "fetched_at": "2026-10-08T19:48:41Z",
+  "etag": "\"UuqWx24LMqIXWG/AV1W5ssXkok0=-gzip\"",
+  "last_modified": "Thu, 08 Oct 2026 19:30:29 GMT",
+  "sha256": "c5cff7ba4ce1708a5ff8364e57dbd66152a989ce6c1a855bf36156cd3e4cffdc",
+  "normalizer_version": 1
+}

@@ -1,0 +1,6 @@
+{
+  "id": "chatcmpl-123",
+  "object": "chat.completion",
+  "model": "gpt-fixture-retired",
+  "choices": []
+}

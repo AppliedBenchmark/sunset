@@ -1,0 +1,51 @@
+{
+  "findings": [
+    "agents.py:3:27 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash] <prefix>",
+    "agents.py:4:34 notice model-deprecated gemini-fixture-1.0-flash [vertex:gemini-fixture-1.0-flash] <prefix>",
+    "agents.py:5:32 notice model-deprecated gemini-fixture-1.0-flash [vertex:gemini-fixture-1.0-flash] <prefix>",
+    "agents.py:6:27 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired] <prefix>",
+    "agents.py:8:29 error model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9] <prefix>",
+    "aisuite.py:5:43 error model-retired anthropic.claude-fixture-v2 [bedrock:anthropic.claude-fixture-v2] <prefix>",
+    "aisuite.py:6:46 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash vertex:gemini-fixture-1.0-flash] <prefix>",
+    "chains.py:3:35 error model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9] <prefix>",
+    "chains.py:4:42 notice model-deprecated gemini-fixture-1.0-flash [vertex:gemini-fixture-1.0-flash] <prefix>",
+    "chains.py:7:13 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired] <prefix>",
+    "direct.py:4:36 error model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9] <prefix>",
+    "direct.py:5:36 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired] <prefix>",
+    "litellm.yaml:5:21 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash] <prefix>",
+    "litellm.yaml:8:24 notice model-deprecated gemini-fixture-1.0-flash [vertex:gemini-fixture-1.0-flash] <prefix>",
+    "litellm.yaml:11:35 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash] <prefix>",
+    "litellm.yaml:14:31 error model-retired anthropic.claude-fixture-v2 [bedrock:anthropic.claude-fixture-v2] <prefix>",
+    "litellm.yaml:23:35 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9] <openrouter>",
+    "litellm.yaml:26:24 error model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9] <prefix>",
+    "promptfooconfig.yaml:2:24 error model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9] <prefix>",
+    "promptfooconfig.yaml:3:17 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10] <prefix>",
+    "promptfooconfig.yaml:5:12 notice model-deprecated claude-fixture-opus-9 [vertex:claude-fixture-opus-9] <prefix>",
+    "promptfooconfig.yaml:6:23 warning model-retired gpt-fixture-retired [openai:gpt-fixture-retired] <openrouter>",
+    "urls.ts:4:60 error model-retired gemini-fixture-1.0-pro-001 [gemini-api:gemini-fixture-1.0-pro-001]",
+    "urls.ts:8:39 error model-retired llama-fixture-maas [vertex:llama-fixture-maas] <vertex-path>"
+  ],
+  "unresolved": [
+    "chains.py:5:37 azure-deployment-name - = azure_openai:gpt-fixture-4o",
+    "litellm.yaml:17:20 azure-deployment-name - = azure/gpt-fixture-4o",
+    "promptfooconfig.yaml:4:16 azure-deployment-name - = azure:chat:gpt-fixture-4o",
+    "urls.ts:2:60 azure-deployment-name - = openai/deployments/gpt-fixture-4o"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 7,
+    "scanned": 7,
+    "lexed": 7,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

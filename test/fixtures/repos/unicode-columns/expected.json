@@ -1,0 +1,26 @@
+{
+  "findings": [
+    "app.py:2:20 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "app.py:3:11 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "app.py:4:20 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "bom.ts:1:12 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]"
+  ],
+  "unresolved": [],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 2,
+    "scanned": 2,
+    "lexed": 2,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

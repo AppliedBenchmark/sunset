@@ -1,0 +1,42 @@
+Claude Fable 5.1 on Google Cloud is optimized for autonomous knowledge work and coding,
+handling long-running, complex, and asynchronous tasks.
+
+> [!NOTE]
+> **Advanced AI Safety Notice:** Claude Fable 5 on Google Cloud is within the scope of the Advanced AI Safety Addendum. All prompts and responses are stored for up to 30 days for the sole purpose of monitoring for potential abuse of relevant terms of service. See Responsible AI and Abuse Monitoring to learn more.
+
+<br />
+
+**Retirement date:** No sooner than March 1, 2027.
+
+Try in Agent Studio
+
+View model card in Model Garden
+
+| Model ID | `claude-fable-5-1` ||
+| Launch stage | GA ||
+| Supported inputs \& outputs | - Inputs: Text, Image, PDF - Outputs: Text ||
+| Token limits | - Maximum input tokens: 1,000,000 - Maximum output tokens: 128,000 ||
+| Capabilities | - Supported - Computer use - Web search - Batch predictions - Prompt caching - Function calling - Count tokens - Not supported ||
+| Usage types | - Supported - Shared Model Lineage Quota - Provisioned Throughput - Not supported ||
+| Technical specifications |
+| Technical specifications |
+| Technical specifications |
+|---|---|---|
+| Images | - **Limitation and specifications:** See Vision in Anthropic's documentation |
+| Documents | - **Limitation and specifications:** See PDF support in Anthropic's documentation |
+| Model availability (Includes fixed quota \& Provisioned Throughput) | - United States - `Multi-region` - Europe - `Multi-region` - Global - `global endpoint` |
+| ML processing | - United States - `Multi-region` - Europe - `Multi-region` - Asia Pacific - `asia-southeast1` |
+
+## Enable Claude Fable 5.1 on Google Cloud in your project
+
+Follow these steps to enable Claude Fable 5.1 on Google Cloud in your project:
+
+- Consent to the Advanced AI Safety Addendum in Model Garden (required once per project). See Abuse Monitoring to learn more.
+- For online terms customers, click 'enable' on the [Model Garden
+model card](https://console.cloud.google.com/agent-platform/publishers/anthropic/model-garden/claude-fable-5) to:
+- Answer relevant company and use case questions in Model Garden.
+- Accept Anthropic and Marketplace terms of service in Cloud Marketplace.
+- For Private Offer customers:
+- Accept the Private Offer in Cloud Marketplace (required once per Billing Account).
+- Enable the model location using the `enableModel` API
+- As required by Section F of Anthropic's Service Specific Terms, enable prompt-response sharing with Anthropic for each model location. See Request-Response Logging and Sharing to learn more.

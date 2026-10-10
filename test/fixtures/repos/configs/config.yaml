@@ -1,0 +1,13 @@
+# Model settings (gpt-fixture-retired in a comment is ignored)
+model: gpt-fixture-1-2099-01-10
+fallback: "gpt-fixture-3"
+models:
+  - claude-fixture-opus-9
+  - 'gemini-fixture-1.0-flash'
+flow: [gpt-fixture-2-2099-02-15, {name: mistral-fixture-large-2099}]
+prompt: |
+  model: deepseek-fixture-chat
+description: >-
+  model: gpt-fixture-unverified
+gpt-fixture-retired: as a key
+url: https://example.com/gpt-fixture-3#anchor

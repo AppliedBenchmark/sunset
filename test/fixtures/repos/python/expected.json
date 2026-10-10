@@ -1,0 +1,38 @@
+{
+  "findings": [
+    "analysis/compare.R:4:30 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "app.py:7:18 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    "app.py:8:13 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "app.py:12:37 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "app.py:24:9 error model-retired gemini-fixture-1.0-pro-001 [gemini-api:gemini-fixture-1.0-pro-001]",
+    "app.py:25:30 warning model-retiring mistral-fixture-large-2099 [mistral:mistral-fixture-large-2099]",
+    "app.py:27:1 notice model-unverified deepseek-fixture-chat [deepseek:deepseek-fixture-chat]",
+    "settings.py:2:17 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "settings.py:3:15 notice model-unverified gpt-fixture-unverified [openai:gpt-fixture-unverified]",
+    "tests/test_app.py:5:30 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired] (test)"
+  ],
+  "unresolved": [
+    "app.py:9:1 environment SUMMARY_MODEL = os.environ.get(\"SUMMARY_MODEL\", \"gpt-fixture-3-mini\")",
+    "app.py:21:35 interpolated model = f\"claude-{family}-fixture\"",
+    "settings.py:6:12 variable model = MODELS[\"default\"]"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [
+    "analysis/compare.R:7:14 inline model-retired gpt-fixture-retired (reproduces the published table)"
+  ],
+  "diagnostics": [],
+  "files": {
+    "listed": 4,
+    "scanned": 4,
+    "lexed": 4,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

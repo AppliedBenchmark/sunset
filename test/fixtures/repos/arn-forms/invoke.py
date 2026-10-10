@@ -1,0 +1,7 @@
+FOUNDATION = "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-fixture-1-20990101-v1:0"
+PROFILE = "arn:aws:bedrock:us-east-1:123456789012:inference-profile/us.anthropic.claude-fixture-opus-9"
+GOV = "arn:aws-us-gov:bedrock:us-gov-west-1:123456789012:inference-profile/us-gov.anthropic.claude-fixture-opus-9"
+APP = "arn:aws:bedrock:us-east-1:123456789012:application-inference-profile/a1b2c3d4e5f6"
+PROVISIONED = "arn:aws:bedrock:us-east-1:123456789012:provisioned-model/abcdef123456"
+CHINA = "arn:aws-cn:bedrock:cn-north-1::foundation-model/anthropic.claude-fixture-opus-9"
+MISMATCH = "arn:aws:bedrock:us-east-1::foundation-model/us.anthropic.claude-fixture-opus-9"

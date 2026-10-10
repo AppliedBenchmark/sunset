@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest a new capability, platform or output.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: The [roadmap](https://github.com/AppliedBenchmark/sunset/blob/main/ROADMAP.md) may already list your idea.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what gets in the way?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like Sunset to do
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you have considered

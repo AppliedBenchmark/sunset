@@ -1,0 +1,57 @@
+{
+  "findings": [
+    ".env:1:14 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    ".github/workflows/eval.yml:14:34 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    ".github/workflows/eval.yml:17:18 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    ".github/workflows/eval.yml:18:29 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    ".github/workflows/eval.yml:20:23 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "app.ini:3:9 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "batch/requests.jsonl:1:96 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "batch/requests.jsonl:2:96 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "compose.yaml:4:23 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "config.yaml:2:8 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    "config.yaml:3:12 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "config.yaml:5:5 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "config.yaml:6:6 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash vertex:gemini-fixture-1.0-flash]",
+    "config.yaml:7:8 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "config.yaml:7:41 warning model-retiring mistral-fixture-large-2099 [mistral:mistral-fixture-large-2099]",
+    "config.yaml:9:10 notice model-unverified deepseek-fixture-chat [deepseek:deepseek-fixture-chat]",
+    "config.yaml:11:10 notice model-unverified gpt-fixture-unverified [openai:gpt-fixture-unverified]",
+    "config.yaml:12:1 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "notebook.ipynb:6:16 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "nvim/init.lua:5:14 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    "pyproject.toml:2:10 notice model-deprecated claude-fixture-1-20990101 [anthropic:claude-fixture-1-20990101]",
+    "pyproject.toml:3:15 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "pyproject.toml:5:8 notice model-unverified gpt-fixture-unverified [openai:gpt-fixture-unverified]",
+    "settings.json:3:13 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "settings.json:5:17 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    "src/defaults.py:6:12 notice model-deprecated claude-fixture-1-20990101 [anthropic:claude-fixture-1-20990101]",
+    "src/main/resources/application.properties:2:37 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]"
+  ],
+  "unresolved": [
+    ".env:2:1 environment FALLBACK_MODEL = \"$OPENAI_MODEL\"",
+    "compose.yaml:4:7 environment MODEL = ${MODEL:-gpt-fixture-3}",
+    "compose.yaml:5:7 environment OTHER_MODEL = \"${{ vars.OTHER_MODEL }}\"",
+    "settings.json:4:4 environment deployment = \"${AZURE_DEPLOYMENT}\""
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [
+    ".github/workflows/eval.yml:13:34 inline model-retired gpt-fixture-retired (pinned baseline)",
+    "nvim/init.lua:7:18 inline model-retired gpt-fixture-retired (pinned for the demo)"
+  ],
+  "diagnostics": [],
+  "files": {
+    "listed": 12,
+    "scanned": 12,
+    "lexed": 12,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

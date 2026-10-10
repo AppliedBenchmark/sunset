@@ -1,0 +1,186 @@
+<!DOCTYPE html><html><head><title>Model lifecycle (Legacy)</title></head><body><div id="main-col-body"><h1 class="topictitle">Model lifecycle (Legacy)</h1>
+        <h2 id="versions-for-legacy-and-eol-legacy">Legacy and end-of-life (EOL) models</h2>
+
+        <p><b>Legacy</b> — We will notify you when a model
+            provider moves a model to the Legacy state. <b>A model will be in
+            the Legacy state for at least 6 months before the EOL date</b>. While you can
+            continue to use a Legacy model during this period, you should plan to transition to an
+            Active model before the EOL date. New customers can't use Legacy models and existing
+            customers may lose access to Legacy models after 15 days of inactivity. </p>
+
+        <p><b>For models with EOL dates after February 1, 2026: </b>
+            After a minimum of 3 months in the Legacy state, a model will enter the public extended
+            access portion of the Legacy period. During this public extended access period, active
+            users of a Legacy model can continue to use it until the EOL date (for a minimum of 3
+            months), but you should expect higher pricing, which will be set by the model
+            provider. When the model first enters the Legacy state, we will notify you of the
+            provider's chosen date to transition a model to public extended access (which will be at
+            least 3 months from notification) and pricing changes (if any). We will also notify you
+            before any further pricing changes during the public extended access period. </p>
+        
+        <p>You can't create a new <a href="./prov-throughput.html">Provisioned Throughput</a> for models in the Legacy state.</p>
+
+        <p><b>EOL</b> — After the EOL date, a model will be
+            marked EOL in the console and in the following table. On, or soon after the EOL date,
+            the model is no longer available for use in all AWS Regions and requests made to this
+            version will fail, unless there is a private arrangement between you and the provider
+            for continued access. You will need to migrate to the latest model by updating your
+            application code before the EOL date. Migration will not happen automatically.</p>
+
+        <p>Model lifecycle state can differ by AWS Region. The <b>Regions</b> column in the following tables lists only the Regions covered by a
+            model's announced EOL date. A model can remain Active in other Regions, and the absence
+            of a Region from a row doesn't mean the model will stay available there indefinitely. To
+            check the current state for the Region you use, call <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListFoundationModels.html">ListFoundationModels</a> or <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetFoundationModel.html">GetFoundationModel</a> in that Region and read the <code class="code">modelLifecycle</code>
+            field.</p>
+
+        <p><b>Models with a scheduled EOL date</b></p>
+
+        <p>The following models are in the Legacy state with an announced EOL date. Migrate to an
+            Active model before the EOL date.</p>
+
+        <div class="table-container"><div class="table-contents"><table id="w639aac13c28c13c17"><thead>
+                    <tr>
+                        <th>Model provider</th>
+                        <th>Model name</th>
+                        <th>Model ID</th>
+                        <th>Regions</th>
+                        <th>Legacy date</th>
+                        <th>End-of-life date</th>
+                        <th>Public extended access start date</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td tabindex="-1">AI21 Labs</td>
+                        <td tabindex="-1">Jamba 1.5 Large</td>
+                        <td tabindex="-1">ai21.jamba-1-5-large-v1:0</td>
+                        <td tabindex="-1">us-east-1</td>
+                        <td tabindex="-1">May 26, 2026</td>
+                        <td tabindex="-1">November 26, 2026</td>
+                        <td tabindex="-1">August 26, 2026</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">AI21 Labs</td>
+                        <td tabindex="-1">Jamba 1.5 Mini</td>
+                        <td tabindex="-1">ai21.jamba-1-5-mini-v1:0</td>
+                        <td tabindex="-1">us-east-1</td>
+                        <td tabindex="-1">May 26, 2026</td>
+                        <td tabindex="-1">November 26, 2026</td>
+                        <td tabindex="-1">August 26, 2026</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">Anthropic</td>
+                        <td tabindex="-1">Claude Opus 4.1</td>
+                        <td tabindex="-1">anthropic.claude-opus-4-1-20250805-v1:0</td>
+                        <td tabindex="-1">us-east-1, us-east-2, us-west-2</td>
+                        <td tabindex="-1">July 8, 2026</td>
+                        <td tabindex="-1">January 8, 2027</td>
+                        <td tabindex="-1">October 8, 2026</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">Anthropic</td>
+                        <td tabindex="-1">Claude Sonnet 4</td>
+                        <td tabindex="-1">anthropic.claude-sonnet-4-20250514-v1:0</td>
+                        <td tabindex="-1">ap-northeast-1, eu-central-1, eu-north-1, eu-south-1, eu-south-2, eu-west-1, eu-west-3, us-east-1, us-east-2, us-west-1, us-west-2, ap-east-2, ap-northeast-2, ap-northeast-3, ap-south-1, ap-south-2, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-4, ap-southeast-5, ap-southeast-7, il-central-1</td>
+                        <td tabindex="-1">April 14, 2026</td>
+                        <td tabindex="-1">October 14, 2026</td>
+                        <td tabindex="-1">July 14, 2026</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">TwelveLabs</td>
+                        <td tabindex="-1">Marengo Embed v2.7</td>
+                        <td tabindex="-1">twelvelabs.marengo-embed-2-7-v1:0</td>
+                        <td tabindex="-1">ap-northeast-2, eu-west-1, us-east-1</td>
+                        <td tabindex="-1">May 29, 2026</td>
+                        <td tabindex="-1">November 30, 2026</td>
+                        <td tabindex="-1">August 29, 2026</td>
+                    </tr>
+                </table></div></div>
+
+        <p><b>Models that have reached EOL</b></p>
+
+        <p>The following models have passed their EOL date. They have been removed from the
+            Regions listed, and requests to them fail. These entries are retained for reference, so
+            that you can identify a model ID that no longer works and see when it reached EOL.</p>
+
+        <div class="table-container"><div class="table-contents"><table id="w639aac13c28c13c23"><thead>
+                    <tr>
+                        <th>Model provider</th>
+                        <th>Model name</th>
+                        <th>Model ID</th>
+                        <th>Regions</th>
+                        <th>Legacy date</th>
+                        <th>End-of-life date</th>
+                        <th>Public extended access start date</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td tabindex="-1">Amazon</td>
+                        <td tabindex="-1">Nova Canvas</td>
+                        <td tabindex="-1">amazon.nova-canvas-v1:0</td>
+                        <td tabindex="-1">ap-northeast-1, eu-west-1, us-east-1</td>
+                        <td tabindex="-1">March 30, 2026</td>
+                        <td tabindex="-1">September 30, 2026</td>
+                        <td tabindex="-1">—</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">Amazon</td>
+                        <td tabindex="-1">Nova Reel</td>
+                        <td tabindex="-1">amazon.nova-reel-v1:0</td>
+                        <td tabindex="-1">ap-northeast-1, eu-west-1, us-east-1</td>
+                        <td tabindex="-1">March 30, 2026</td>
+                        <td tabindex="-1">September 30, 2026</td>
+                        <td tabindex="-1">—</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">Amazon</td>
+                        <td tabindex="-1">Nova Reel</td>
+                        <td tabindex="-1">amazon.nova-reel-v1:1</td>
+                        <td tabindex="-1">us-east-1</td>
+                        <td tabindex="-1">March 30, 2026</td>
+                        <td tabindex="-1">September 30, 2026</td>
+                        <td tabindex="-1">—</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">Amazon</td>
+                        <td tabindex="-1">Nova Sonic</td>
+                        <td tabindex="-1">amazon.nova-sonic-v1:0</td>
+                        <td tabindex="-1">ap-northeast-1, eu-north-1, us-east-1</td>
+                        <td tabindex="-1">March 13, 2026</td>
+                        <td tabindex="-1">September 14, 2026</td>
+                        <td tabindex="-1">—</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" tabindex="-1">Anthropic</td>
+                        <td rowspan="2" tabindex="-1">Claude 3 Haiku</td>
+                        <td rowspan="2" tabindex="-1">anthropic.claude-3-haiku-20240307-v1:0</td>
+                        <td tabindex="-1">ap-northeast-1, ap-southeast-2, eu-central-1, eu-west-1, eu-west-2, eu-west-3, us-east-1, us-east-2, us-west-2</td>
+                        <td tabindex="-1">March 10, 2026</td>
+                        <td tabindex="-1">September 10, 2026</td>
+                        <td tabindex="-1">June 10, 2026</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">us-gov-east-1, us-gov-west-1</td>
+                        <td tabindex="-1">March 10, 2026</td>
+                        <td tabindex="-1">September 10, 2026</td>
+                        <td tabindex="-1">June 10, 2026</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">Cohere</td>
+                        <td tabindex="-1">Command R</td>
+                        <td tabindex="-1">cohere.command-r-v1:0</td>
+                        <td tabindex="-1">us-east-1, us-west-2</td>
+                        <td tabindex="-1">February 19, 2026</td>
+                        <td tabindex="-1">August 19, 2026</td>
+                        <td tabindex="-1">May 19, 2026</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1">Cohere</td>
+                        <td tabindex="-1">Command R+</td>
+                        <td tabindex="-1">cohere.command-r-plus-v1:0</td>
+                        <td tabindex="-1">us-east-1, us-west-2</td>
+                        <td tabindex="-1">February 19, 2026</td>
+                        <td tabindex="-1">August 19, 2026</td>
+                        <td tabindex="-1">May 19, 2026</td>
+                    </tr>
+                </table></div></div>
+</div></body></html>

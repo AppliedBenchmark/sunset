@@ -1,0 +1,13 @@
+{
+  "modes": [
+    "walk",
+    "git"
+  ],
+  "generate": {
+    "build/out.py": "M = \"gpt-fixture-retired\"\n",
+    "settings.local.py": "M = \"gpt-fixture-retired\"\n",
+    "keep.local.py": "M = \"gpt-fixture-unverified\"\n",
+    "sub/secret.py": "M = \"gpt-fixture-retired\"\n",
+    "sub/visible.py": "M = \"claude-fixture-opus-9\"\n"
+  }
+}

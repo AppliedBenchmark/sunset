@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/AppliedBenchmark/sunset/security/advisories/new
+    about: Report it privately, not in a public issue. SECURITY.md explains how.
+  - name: Documentation
+    url: https://github.com/AppliedBenchmark/sunset#readme
+    about: Setup, configuration, the rules and the registry.

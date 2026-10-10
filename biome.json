@@ -1,0 +1,146 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "files": {
+    "includes": [
+      "**",
+      "!dist",
+      "!coverage",
+      "!docs/assets",
+      "!package-lock.json",
+      "!test/fixtures/boundary",
+      "!test/fixtures/repos",
+      "!test/fixtures/pages",
+      "!test/schemas",
+      "!test/report/__snapshots__"
+    ]
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": { "quoteStyle": "single" }
+  },
+  "linter": {
+    "rules": {
+      "preset": "recommended",
+      "suspicious": { "noImportCycles": "error" },
+      "nursery": {
+        "noFloatingPromises": "error",
+        "noMisusedPromises": "error"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["test/**"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noTemplateCurlyInString": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["**/updater/**"],
+                    "message": "src must not depend on the updater; it is never bundled"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/core/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  { "group": ["node:*"], "message": "core is pure: inject I/O through ports" },
+                  {
+                    "group": [
+                      "**/adapters/**",
+                      "**/report/**",
+                      "**/cli/**",
+                      "**/action/**",
+                      "**/updater/**",
+                      "@actions/*"
+                    ],
+                    "message": "core must not depend on outer layers"
+                  }
+                ]
+              }
+            },
+            "noRestrictedGlobals": {
+              "level": "error",
+              "options": {
+                "deniedGlobals": {
+                  "fetch": "use an injected port",
+                  "process": "pass configuration in explicitly",
+                  "console": "use the injected Logger"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/report/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["node:*"],
+                    "message": "reporters are pure: (ScanResult, options) → output"
+                  },
+                  {
+                    "group": [
+                      "**/adapters/**",
+                      "**/cli/**",
+                      "**/action/**",
+                      "**/updater/**",
+                      "@actions/*"
+                    ],
+                    "message": "report may import only from core"
+                  }
+                ]
+              }
+            },
+            "noRestrictedGlobals": {
+              "level": "error",
+              "options": {
+                "deniedGlobals": {
+                  "fetch": "reporters are pure",
+                  "process": "pass options in explicitly",
+                  "console": "return the output; adapters write it"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

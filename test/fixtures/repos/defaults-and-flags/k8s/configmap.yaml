@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  models.txt: |
+    gpt-fixture-retired
+    gpt-fixture-1-2099-01-10
+  notes.txt: |
+    gpt-fixture-retired was the default until it retired.

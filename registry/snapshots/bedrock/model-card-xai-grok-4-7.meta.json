@@ -1,0 +1,9 @@
+{
+  "source": "bedrock/model-card-xai-grok-4-7",
+  "urls": ["https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-7.html"],
+  "fetched_at": "2026-10-07T23:07:58Z",
+  "etag": "\"GxLu3/nVrMbJgI3UgpJOtWx/r4M=-gzip\"",
+  "last_modified": "Wed, 07 Oct 2026 23:03:28 GMT",
+  "sha256": "f2113488d3f56d9d1c7e5f54dc9fe74a91bd4b497291f0f79fdf0a14980b5aab",
+  "normalizer_version": 1
+}

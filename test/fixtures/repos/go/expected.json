@@ -1,0 +1,27 @@
+{
+  "findings": [
+    "main.go:8:23 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "main.go:11:8 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "main.go:23:30 warning model-retiring gemini-fixture-1.0-flash [gemini-api:gemini-fixture-1.0-flash vertex:gemini-fixture-1.0-flash]"
+  ],
+  "unresolved": [
+    "main.go:19:17 environment Model = os.Getenv(\"MODEL\")"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 1,
+    "scanned": 1,
+    "lexed": 1,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

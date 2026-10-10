@@ -1,0 +1,122 @@
+[
+  {
+    "level": "error",
+    "message": "us-gov.anthropic.claude-fixture-1-20990101-v1:0 (bedrock us-gov-west-1; Bedrock us-gov. inference profile) retires on 2099-01-20, in 19 days. Other dates: bedrock other regions: 2099-06-01.",
+    "title": "Retiring model: us-gov.anthropic.claude-fixture-1-20990101-v1:0",
+    "file": "infra/bedrock.py",
+    "startLine": 1,
+    "endLine": 1,
+    "startColumn": 10,
+    "endColumn": 57
+  },
+  {
+    "level": "error",
+    "message": "gpt-fixture-4o (azure-openai 2099-01-05; Azure deployment (terraform)) retires on 2099-01-25, in 24 days.",
+    "title": "Retiring model: gpt-fixture-4o",
+    "file": "infra/main.tf",
+    "startLine": 4,
+    "endLine": 4,
+    "startColumn": 16,
+    "endColumn": 30
+  },
+  {
+    "level": "error",
+    "message": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).",
+    "title": "Retired model: gpt-fixture-retired",
+    "file": "src/client.ts",
+    "startLine": 2,
+    "endLine": 2,
+    "startColumn": 18,
+    "endColumn": 37
+  },
+  {
+    "level": "error",
+    "message": "gpt-fixture-1-2099-01-10 (openai) retires on 2099-01-10, in 9 days.",
+    "title": "Retiring model: gpt-fixture-1-2099-01-10",
+    "file": "src/client.ts",
+    "startLine": 3,
+    "endLine": 3,
+    "startColumn": 15,
+    "endColumn": 39
+  },
+  {
+    "level": "error",
+    "message": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).",
+    "title": "Retired model: gpt-fixture-retired",
+    "file": "src/client.ts",
+    "startLine": 10,
+    "endLine": 10,
+    "startColumn": 16,
+    "endColumn": 35
+  },
+  {
+    "level": "error",
+    "message": "gpt-fixture-retired (openai) was retired on 2098-06-30. Recommended replacement: gpt-fixture-4o (openai).",
+    "title": "Retired model: gpt-fixture-retired",
+    "file": "src/client.ts",
+    "startLine": 11,
+    "endLine": 11,
+    "startColumn": 15,
+    "endColumn": 34
+  },
+  {
+    "level": "warning",
+    "message": "anthropic.claude-fixture-opus-9 (bedrock) retires on 2099-02-20, in 50 days.",
+    "title": "Retiring model: anthropic.claude-fixture-opus-9",
+    "file": "infra/bedrock.py",
+    "startLine": 2,
+    "endLine": 2,
+    "startColumn": 9,
+    "endColumn": 40
+  },
+  {
+    "level": "warning",
+    "message": "gpt-fixture-2-2099-02-15 (openai) retires on 2099-02-15, in 45 days.",
+    "title": "Retiring model: gpt-fixture-2-2099-02-15",
+    "file": "src/client.ts",
+    "startLine": 4,
+    "endLine": 4,
+    "startColumn": 16,
+    "endColumn": 40
+  },
+  {
+    "level": "notice",
+    "message": "gpt-fixture-unverified (openai) is in the registry, but its lifecycle isn't verified from an official source yet.",
+    "title": "Unverified model: gpt-fixture-unverified",
+    "file": "src/client.ts",
+    "startLine": 6,
+    "endLine": 6,
+    "startColumn": 18,
+    "endColumn": 40
+  },
+  {
+    "level": "notice",
+    "message": "`model` comes from the environment (process.env.MODEL). Sunset can't check it; make sure the model it names isn't deprecated or retiring.",
+    "title": "Unresolved model reference: process.env.MODEL",
+    "file": "src/client.ts",
+    "startLine": 8,
+    "endLine": 8,
+    "startColumn": 39,
+    "endColumn": 63
+  },
+  {
+    "level": "notice",
+    "message": "Suppression \"sunset-ignore until=2098-12-31\" expired on 2098-12-31; what it covered is reported again. Remove it or extend the date.",
+    "title": "Expired suppression: sunset-ignore until=2098-12-31",
+    "file": "src/client.ts",
+    "startLine": 10,
+    "endLine": 10,
+    "startColumn": 41,
+    "endColumn": 71
+  },
+  {
+    "level": "notice",
+    "message": "Malformed \"sunset-ignore\": \"soon\" is not a valid date (YYYY-MM-DD)",
+    "title": "Sunset: malformed directive",
+    "file": "src/client.ts",
+    "startLine": 11,
+    "endLine": 11,
+    "startColumn": 40,
+    "endColumn": 64
+  }
+]

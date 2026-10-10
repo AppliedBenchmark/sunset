@@ -1,0 +1,11 @@
+{
+  "source": "bedrock/model-card-meta-llama-4-scout-17b-instruct",
+  "urls": [
+    "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-4-scout-17b-instruct.html"
+  ],
+  "fetched_at": "2026-10-08T19:48:41Z",
+  "etag": "\"kR84dx8AcAqhuCF3e77C9h23Yn0=-gzip\"",
+  "last_modified": "Thu, 08 Oct 2026 19:30:14 GMT",
+  "sha256": "7e8e81f70927a66dc687d0ab41824f96a8946154b0e04e634d4495cea4e21cef",
+  "normalizer_version": 1
+}

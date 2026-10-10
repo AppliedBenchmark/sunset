@@ -1,0 +1,6 @@
+[tool.app]
+model = "claude-fixture-1-20990101"  # comment gpt-fixture-retired
+fallbacks = ['gpt-fixture-3', "gpt-fixture-3-mini"]
+notes = """
+model: gpt-fixture-unverified
+"""

@@ -1,0 +1,11 @@
+{
+  "source": "azure-openai/model-retirement-schedule",
+  "urls": [
+    "https://raw.githubusercontent.com/MicrosoftDocs/azure-ai-docs/main/articles/foundry/openai/includes/concepts-model-retirement-schedule-content.md"
+  ],
+  "fetched_at": "2026-10-10T13:21:11Z",
+  "etag": "W/\"a895656bafc9de1c0839247ef495c7ea87ed1ff90bfd45d5162bffdff0ce4682\"",
+  "last_modified": null,
+  "sha256": "8181a392014a5f9d986d70f1ad66ed4254c7f21cece91b3db6183c3b0c177dc4",
+  "normalizer_version": 1
+}

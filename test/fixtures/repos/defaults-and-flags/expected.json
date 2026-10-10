@@ -1,0 +1,46 @@
+{
+  "findings": [
+    ".env:2:18 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    ".env:2:38 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    ".github/workflows/eval.yml:5:18 notice model-deprecated gpt-fixture-3 [openai:gpt-fixture-3]",
+    ".github/workflows/eval.yml:10:35 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    ".github/workflows/eval.yml:13:18 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    ".github/workflows/eval.yml:14:39 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]",
+    ".github/workflows/eval.yml:14:72 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "Request.cs:2:40 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "api/openapi.yaml:8:17 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "chart/templates/deployment.yaml:6:46 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "chart/templates/deployment.yaml:9:23 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "docker-compose.yml:3:34 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "docker-compose.yml:5:67 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "k8s/configmap.yaml:5:5 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "k8s/configmap.yaml:6:5 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    "roles/llm/defaults/main.yml:1:54 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "src/main/java/Chat.java:3:49 error model-retired gpt-fixture-retired [openai:gpt-fixture-retired]",
+    "src/main/java/Chat.java:6:32 warning model-retiring claude-fixture-opus-9 [anthropic:claude-fixture-opus-9 vertex:claude-fixture-opus-9]",
+    "src/main/resources/application.properties:1:52 error model-retiring gpt-fixture-1-2099-01-10 [openai:gpt-fixture-1-2099-01-10]",
+    "src/main/resources/application.yml:6:33 warning model-retiring gpt-fixture-2-2099-02-15 [openai:gpt-fixture-2-2099-02-15]"
+  ],
+  "unresolved": [
+    ".github/workflows/eval.yml:10:7 environment MODEL = ${{ inputs.model || 'gpt-fixture-retired' }}",
+    "docker-compose.yml:5:45 environment --model = ${EVAL_MODEL:-claude-fixture-opus-9}",
+    "src/main/resources/application.yml:6:11 interpolated model = ${OPENAI_MODEL:gpt-fixture-2-2099-02-15}"
+  ],
+  "mentions": [],
+  "inventory": [],
+  "suppressed": [],
+  "diagnostics": [],
+  "files": {
+    "listed": 11,
+    "scanned": 11,
+    "lexed": 11,
+    "skipped": {
+      "excluded": 0,
+      "vendored": 0,
+      "generated": 0,
+      "binary": 0,
+      "too-large": 0,
+      "no-lexer": 0
+    }
+  }
+}

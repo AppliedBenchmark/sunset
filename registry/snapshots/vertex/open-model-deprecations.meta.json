@@ -1,0 +1,11 @@
+{
+  "source": "vertex/open-model-deprecations",
+  "urls": [
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models.md.txt"
+  ],
+  "fetched_at": "2026-10-08T19:46:12Z",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "cd42f775e2b947b72741493e556f67f68f472caf5b66a645b67e92cc74283b54",
+  "normalizer_version": 1
+}
