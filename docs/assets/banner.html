@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<!-- README banner (docs/assets/banner.png): the website's Sunset morning scene. A clear blue sky warming
-     to peach at the horizon, a half-risen sun (gold to orange, with a coral ripple in a 4×4 Bayer dither,
-     as Paper Shaders' `Dithering` draws it) and a still sea with swell lines. The Applied
+<!-- README banner (docs/assets/banner.png): the website's Sunset evening scene. A pale blush sky deepening
+     to orange at the horizon, a half-set sun (gold to orange, with a coral ripple in a 4×4 Bayer dither,
+     as Paper Shaders' `Dithering` draws it) and a still, deep blue sea with faint swell lines. The Applied
      Benchmark logo (appliedbenchmark.svg) and the text sit on the sky, clear of the sun.
      Render at 2x (2560×840), from the repository root:
        "<Chrome>" --headless --hide-scrollbars --force-device-scale-factor=2 --window-size=1280,420 \
@@ -14,9 +14,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
 <style>
   :root {
-    --sky-high: #b9d6ee;
-    --sky-low: #dcebf6;
-    --peach: #ffe6d2;
+    --sky-high: #efe3df;
+    --sky-low: #f8d2c0;
+    --peach: #ffb98f;
     --gold: #ffd696;
     --sun: #ff8a4c;
     --coral: #f05c4a;
@@ -28,7 +28,7 @@
   html, body { width: 1280px; height: 420px; overflow: hidden; }
   body {
     position: relative;
-    background: linear-gradient(var(--sky-high), var(--sky-low) 45%, var(--peach) 72%, #ffc9a8);
+    background: linear-gradient(var(--sky-high), var(--sky-low) 40%, var(--peach) 78%, #ff9668);
     font-family: Geist, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     color: var(--ink);
@@ -44,10 +44,10 @@
   .sun canvas { position: absolute; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; }
   .sea {
     position: absolute; inset-inline: 0; bottom: 0; height: var(--horizon); overflow: hidden;
-    background: linear-gradient(#8fb8dd, #5f97c6 35%, #3f77ab);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.6);
+    background: linear-gradient(#4f78ab, #2f5a8f 30%, #1c416f 70%, #14335a);
+    box-shadow: inset 0 1px 0 rgb(20 40 70 / 0.5);
   }
-  .sea span { position: absolute; inset-inline: 0; height: 2px; background: rgb(255 255 255 / 0.22); }
+  .sea span { position: absolute; inset-inline: 0; height: 2px; background: rgb(255 255 255 / 0.1); }
   .copy { position: absolute; left: 88px; top: 48px; width: 760px; }
   .org { display: block; height: 22px; width: auto; }
   h1 {
