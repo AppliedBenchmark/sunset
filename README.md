@@ -18,15 +18,16 @@ telemetry, and never uploads your code.
 $ npx @appliedbenchmark/sunset scan
 Errors (1)
 
-  error   app.py:3:39  model-retired
+  error   app.py:3:46  model-retired
     gpt-4.5-preview (openai) was retired on 2025-07-14. Recommended replacement: gpt-4.1 (openai).
 
 Warnings (1)
 
-  warning src/agent.ts:4:11  model-retiring
-    claude-sonnet-4-5-20250929 (anthropic) retires on 2026-11-30, in 53 days. Recommended replacement: claude-sonnet-5-5 (anthropic).
+  warning src/agent.ts:4:16  model-retiring
+    claude-sonnet-4-5-20250929 (anthropic) retires on 2026-11-30, in 51 days. Recommended replacement: claude-sonnet-5-5 (anthropic).
 
 1 error, 1 warning, 0 notices
+Scanned 2 files on 2026-10-10 with sunset 1.0.0, remote registry v14 (675 entries, last checked 2026-10-10, today).
 ```
 
 Covered platforms:
