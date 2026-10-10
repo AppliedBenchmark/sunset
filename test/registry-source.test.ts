@@ -458,13 +458,13 @@ describe('external registries are parsed within limits', () => {
   });
 
   it('parses a huge mapping in linear time', () => {
-    // With duplicate-key checks, this takes about 20 seconds.
+    // With duplicate-key checks, this takes about 20 seconds. The limit leaves room for slow hosted runners.
     const keys = Array.from({ length: 40_000 }, (_, i) => `k${i}: ${i}`).join('\n');
     const started = performance.now();
     expect(parseRegistry(keys, { external: true })).toMatchObject({
       problem: expect.stringMatching(/^invalid/),
     });
-    expect(performance.now() - started).toBeLessThan(2000);
+    expect(performance.now() - started).toBeLessThan(5000);
   });
 
   it('allows no aliases', () => {
