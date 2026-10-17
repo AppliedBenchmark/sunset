@@ -4,8 +4,8 @@
 # Seeded on 2026-10-08 from the official pages in registry/sources.yaml. Every value is in its
 # entry's source_excerpt, and every excerpt is word for word in the snapshot of its source.
 schema_version: 1
-registry_version: 14
-generated_at: '2026-10-10T00:00:00Z'
+registry_version: 15
+generated_at: '2026-10-17T00:00:00Z'
 models:
 - id: 'openai:ada'
   provider: openai
@@ -3914,8 +3914,8 @@ models:
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `gemini-3.5-flash` | May 19, 2026 | No shutdown date announced | `gemini-3.6-flash` (requests to `gemini-3.5-flash` are automatically routed to `gemini-3.6-flash`) |'
-  verified_on: '2026-10-10'
+  source_excerpt: '| `gemini-3.5-flash` | May 19, 2026 | N/A | `gemini-3.6-flash` (not available to select in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to `gemini-3.6-flash`) |'
+  verified_on: '2026-10-17'
   notes: null
 - id: 'gemini-api:gemini-3.5-flash-lite'
   provider: google
@@ -4016,8 +4016,8 @@ models:
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `gemini-3.7-flash` | August 13, 2026 | No shutdown date announced | `gemini-3.8-flash` (requests to `gemini-3.7-flash` are automatically routed to `gemini-3.8-flash`) |'
-  verified_on: '2026-10-10'
+  source_excerpt: '| `gemini-3.7-flash` | August 13, 2026 | N/A | `gemini-3.8-flash` (not available to select in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to `gemini-3.8-flash`) |'
+  verified_on: '2026-10-17'
   notes: null
 - id: 'gemini-api:gemini-3.8-flash'
   provider: google
