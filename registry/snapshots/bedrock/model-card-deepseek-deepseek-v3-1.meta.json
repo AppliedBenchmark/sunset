@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-deepseek-deepseek-v3-1.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"riZQedNpm3qKinJVKG5bk2TxaFw=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:34 GMT",
-  "sha256": "9d308172fd95ab5d9a05be4656780d85e42fd731ee701c5965aa4730252b8c15",
+  "fetched_at": "2026-10-17T09:19:12Z",
+  "etag": "\"AsPJcn/uObuSV5tSnrfXY0Y2Tgk=-gzip\"",
+  "last_modified": "Sat, 17 Oct 2026 02:19:22 GMT",
+  "sha256": "cfd5f02821a8b82c21f5aadb8de5da60ed7b699bac8c86051e2b387fc89e6754",
   "normalizer_version": 1
 }

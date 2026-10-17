@@ -45,7 +45,7 @@ Knowledge cutoff: Jan 2025
 
 ###### Tip
 
-Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and Features
 

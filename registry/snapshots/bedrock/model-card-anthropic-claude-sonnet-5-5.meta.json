@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-5-5.html"
   ],
-  "fetched_at": "2026-10-10T13:32:01Z",
-  "etag": "\"y9n3VOyEdQmj2cmtOJip6Knn/TQ=-gzip\"",
-  "last_modified": "Sat, 10 Oct 2026 07:14:29 GMT",
-  "sha256": "5ca07c86217acfd188890ca1639efb7c460da254aca7297753e40f4e4b8858ab",
+  "fetched_at": "2026-10-17T09:19:12Z",
+  "etag": "\"d0EkA4ZB3Na8uZZl2S3TEiMmZrU=-gzip\"",
+  "last_modified": "Sat, 17 Oct 2026 02:19:29 GMT",
+  "sha256": "687b3cd8d351343f6730899c86a06c068bc609e6bdb30672e566da6b604f57ab",
   "normalizer_version": 1
 }

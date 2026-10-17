@@ -51,7 +51,7 @@ Marketplace product ID: prod-6cyn7tgqazjhu
 
 ## Endpoints and APIs supported
 
-The following tables show which endpoints and APIs are supported for Claude Haiku 5.5. For more information, see APIs supported by Amazon Bedrock and Endpoints supported by Amazon Bedrock.
+The following tables show which endpoints and APIs are supported for Claude Haiku 5.5. For more information, see APIs supported by Amazon Bedrock and Inference endpoints supported by Amazon Bedrock.
 
 Endpoint support
 
@@ -71,7 +71,7 @@ APIs supported on bedrock-mantle endpoint
 
 ###### Tip
 
-Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and Features
 
@@ -111,6 +111,10 @@ For more information, see Compaction.
 ## Pricing
 
 This model is a third-party model offered and billed through AWS Marketplace. Charges appear on your AWS bill and in AWS Cost Explorer under the model provider (not under Amazon Bedrock). For pricing, see the Amazon Bedrock Pricing page.
+
+###### Note
+
+Claude Haiku 5.5 uses tiered long-context pricing. Prompts of 100,000 tokens or fewer are billed at the standard per-token rates. Prompts that exceed 100,000 tokens are billed at higher rates for input, output, and cache read and write operations. The rates for prompts over 100,000 tokens appear in a separate row, labeled Claude Haiku 5.5 - Long Context.
 
 ## Programmatic Access
 
