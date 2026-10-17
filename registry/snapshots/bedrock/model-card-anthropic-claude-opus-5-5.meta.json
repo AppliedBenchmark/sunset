@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-opus-5-5.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"qIMN8JjOcBXah0alNzxjg31vUx4=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:25 GMT",
-  "sha256": "2f66919663fd1c2199114885de56496a90ac910d28fb9319ffc3fcdc3f9d67d4",
+  "fetched_at": "2026-10-17T09:19:12Z",
+  "etag": "\"86zxZrfzBw9gXDpog8+Wd1Tssx4=-gzip\"",
+  "last_modified": "Sat, 17 Oct 2026 02:19:01 GMT",
+  "sha256": "1ccd6393c0be921fb118e768cb0e38304b35c05557132b3d1176f84516e7e6ad",
   "normalizer_version": 1
 }

@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-qwen-qwen3-coder-480b-a35b-instruct.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"V7g/Jmv/++tgplNlfHtqAsZgI3Q=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:34 GMT",
-  "sha256": "7938670e617cb071777c9f909122f4e984eb3a4156d7d65d4d0113f5f1aae8a4",
+  "fetched_at": "2026-10-17T09:19:12Z",
+  "etag": "\"oLcdcjSF6b+4lqefXRKyFTj5fnc=-gzip\"",
+  "last_modified": "Sat, 17 Oct 2026 02:19:42 GMT",
+  "sha256": "665834049165e0c8dbd15137f9020c47537b1fd63670b8529eb260f97cac84c1",
   "normalizer_version": 1
 }

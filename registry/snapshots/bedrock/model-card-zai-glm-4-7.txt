@@ -31,7 +31,7 @@ Model lifecycle: Legacy
 Context window: 203K tokens
 
 -
-Max output tokens: 4K
+Max output tokens: 128K
 
 | Input Modalities | Output Modalities | APIs supported | Endpoints supported |
 | Audio | Embedding | Responses | bedrock-runtime |
@@ -42,7 +42,7 @@ Max output tokens: 4K
 
 ###### Tip
 
-Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and Features
 
