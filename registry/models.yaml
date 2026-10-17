@@ -4,8 +4,8 @@
 # Seeded on 2026-10-08 from the official pages in registry/sources.yaml. Every value is in its
 # entry's source_excerpt, and every excerpt is word for word in the snapshot of its source.
 schema_version: 1
-registry_version: 14
-generated_at: '2026-10-10T00:00:00Z'
+registry_version: 15
+generated_at: '2026-10-17T00:00:00Z'
 models:
 - id: 'openai:ada'
   provider: openai
@@ -5499,14 +5499,14 @@ models:
   aliases: []
   status: active
   deprecation_date: null
-  retirement_date: null
-  retirement_date_qualifier: exact
+  retirement_date: '2027-09-02'
+  retirement_date_qualifier: no_earlier_than
   recommended_replacements: []
   drop_in: false
   source: vertex/model-versions
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions
-  source_excerpt: '| `gemini-3.8-flash` | September 2, 2026 | No retirement date announced | |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `gemini-3.8-flash` | September 2, 2026 | September 2, 2027 or later | |'
+  verified_on: '2026-10-17'
   notes: null
 - id: 'vertex:gemini-3.8-flash-cyber'
   provider: google
@@ -5872,6 +5872,57 @@ models:
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions
   source_excerpt: '| `veo-3.1-generate-001` | November 17, 2025 | November 17, 2026 or later | |'
   verified_on: '2026-10-08'
+  notes: null
+- id: 'vertex:gemini-4-argon'
+  provider: google
+  platform: vertex
+  model_id: 'gemini-4-argon'
+  version: null
+  aliases: []
+  status: active
+  deprecation_date: null
+  retirement_date: '2027-10-13'
+  retirement_date_qualifier: no_earlier_than
+  recommended_replacements: []
+  drop_in: false
+  source: vertex/model-versions
+  source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions
+  source_excerpt: '| `gemini-4-argon` | October 13, 2026 | October 13, 2027 or later | |'
+  verified_on: '2026-10-17'
+  notes: null
+- id: 'vertex:gemini-3.8-live'
+  provider: google
+  platform: vertex
+  model_id: 'gemini-3.8-live'
+  version: null
+  aliases: []
+  status: active
+  deprecation_date: null
+  retirement_date: '2027-09-25'
+  retirement_date_qualifier: no_earlier_than
+  recommended_replacements: []
+  drop_in: false
+  source: vertex/model-versions
+  source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions
+  source_excerpt: '| `gemini-3.8-live` | September 24, 2026 | September 25, 2027 or later | |'
+  verified_on: '2026-10-17'
+  notes: null
+- id: 'vertex:gemini-4-argon-cyber-permissive'
+  provider: google
+  platform: vertex
+  model_id: 'gemini-4-argon-cyber-permissive'
+  version: null
+  aliases: []
+  status: active
+  deprecation_date: null
+  retirement_date: null
+  retirement_date_qualifier: exact
+  recommended_replacements: []
+  drop_in: false
+  source: vertex/model-versions
+  source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions
+  source_excerpt: '| `gemini-4-argon-cyber-permissive` | October 13, 2026 | No retirement date announced | |'
+  verified_on: '2026-10-17'
   notes: null
 - id: 'vertex:deepseek-ocr-maas'
   provider: deepseek
