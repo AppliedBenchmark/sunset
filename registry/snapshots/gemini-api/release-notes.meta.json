@@ -1,9 +1,9 @@
 {
   "source": "gemini-api/release-notes",
   "urls": ["https://ai.google.dev/gemini-api/docs/changelog.md.txt"],
-  "fetched_at": "2026-10-10T13:27:22Z",
+  "fetched_at": "2026-10-17T09:19:19Z",
   "etag": null,
   "last_modified": null,
-  "sha256": "b3305fa3a428601928442aa6509a43bc085f09f219cb48774f0c393e49e69f02",
+  "sha256": "e7852430af2c1161365d74b5543f7d75aa766b4db02b1441e69053432425580e",
   "normalizer_version": 1
 }

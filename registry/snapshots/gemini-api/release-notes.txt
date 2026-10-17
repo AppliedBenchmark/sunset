@@ -1,9 +1,19 @@
 This page documents updates to the Gemini API.
 
+## October 13, 2026
+
+- **Gemini 4 Argon (`gemini-4-argon`) generally available (GA)** : Released
+Gemini 4 Argon (`gemini-4-argon`),
+our most capable model built for complex coding, agentic, math, and science
+tasks.
+
+For API changes, pricing, and migration guidance, see
+What's new in Gemini 4 Argon.
+
 ## October 8, 2026
 
-- **Gemini 3.7 Flash deprecation** : `gemini-3.7-flash` is deprecated and has been replaced by `gemini-3.8-flash`. All requests to `gemini-3.7-flash` are automatically routed to `gemini-3.8-flash`. Update your model string to `gemini-3.8-flash` and review the Gemini 3.8 Flash guide.
-- **Gemini 3.5 Flash deprecation** : `gemini-3.5-flash` is deprecated and has been replaced by `gemini-3.6-flash`. All requests to `gemini-3.5-flash` are automatically routed to `gemini-3.6-flash`. Update your model string to `gemini-3.6-flash` (or `gemini-3.8-flash`) and review the Gemini 3.6 Flash guide.
+- **Gemini 3.7 Flash deprecation** : `gemini-3.7-flash` is deprecated and has been replaced by `gemini-3.8-flash`. It is no longer available to select in Google AI Studio, and API requests to `gemini-3.7-flash` are automatically routed to `gemini-3.8-flash`. Update your model string to `gemini-3.8-flash` and review the Gemini 3.8 Flash guide.
+- **Gemini 3.5 Flash deprecation** : `gemini-3.5-flash` is deprecated and has been replaced by `gemini-3.6-flash`. It is no longer available to select in Google AI Studio, and API requests to `gemini-3.5-flash` are automatically routed to `gemini-3.6-flash`. Update your model string to `gemini-3.6-flash` (or `gemini-3.8-flash`) and review the Gemini 3.6 Flash guide.
 - **Deep Research Agent `deep-research-pro-preview-12-2025` deprecation** :
 The `deep-research-pro-preview-12-2025` agent is deprecated and will be
 shut down on **October 23,
@@ -119,7 +129,7 @@ workflows.
 
 To get started, see the
 Gemini 3.8 Flash model page and
-the Latest model guide.
+the Gemini 3.8 Flash guide.
 
 ## September 1, 2026
 
@@ -199,11 +209,11 @@ Released stable, production-ready versions of our latest 3.x Flash models:
 - **Gemini 3.6 Flash** (`gemini-3.6-flash`): Features improved token efficiency and code/agentic planning capabilities at a lower price point than 3.5 Flash, resolving developer feedback around output verbosity.
 - **Gemini 3.5 Flash-Lite** (`gemini-3.5-flash-lite`): Offers a low-latency, highly cost-effective subagent option designed for high-volume automation.
 
-To learn more, see the Latest Gemini model
-guide.
+To learn more, see the
+Gemini 3.6 Flash guide.
 - **Deprecated parameters** : The sampling parameters `temperature`, `top_p`
 and `top_k` are now deprecated. See the
-Latest Gemini Model
+Gemini 3.6 Flash guide
 for details.
 
 ## July 6, 2026
