@@ -1,9 +1,9 @@
 {
   "source": "deepseek/updates",
   "urls": ["https://api-docs.deepseek.com/updates/"],
-  "fetched_at": "2026-10-07T23:03:44Z",
-  "etag": "\"b1bcb57fc9d1b311d9f7c4214f856d6b\"",
-  "last_modified": "Thu, 24 Sep 2026 09:35:24 GMT",
-  "sha256": "9cc8daa84225ba0456b69f844f60a423defcdd7cd214f0cf4eb3398cda912749",
+  "fetched_at": "2026-10-24T09:30:47Z",
+  "etag": "\"f27bf4fa502153c549a1aa187d51b077\"",
+  "last_modified": "Mon, 19 Oct 2026 06:05:47 GMT",
+  "sha256": "5cdc03b27f05f1997239ee61a4009450c7aba11cc0c90bbf28702278870ecebd",
   "normalizer_version": 1
 }
