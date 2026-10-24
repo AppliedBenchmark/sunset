@@ -1,13 +1,13 @@
-Claude Sonnet 5 on Google Cloud is built for coding, agents, and professional work at
+Anthropic's Claude Sonnet 5 on Google Cloud is built for coding, agents, and professional work at
 scale.
 
 **Retirement Date:** Not sooner than December 24, 2026.
 
-- **Agents**: Claude Sonnet 5 on Google Cloud can operate as both a lead-agent and sub-agent in production pipelines, with reliable tool use and the cost profile to run high-volume agentic workloads at scale.
-- **Coding**: Claude Sonnet 5 on Google Cloud is built for everyday development work: building features, refactoring, and debugging across complex codebases without losing quality.
+- **Agents**: Anthropic's Claude Sonnet 5 on Google Cloud can operate as both a lead-agent and sub-agent in production pipelines, with reliable tool use and the cost profile to run high-volume agentic workloads at scale.
+- **Coding**: Anthropic's Claude Sonnet 5 on Google Cloud is built for everyday development work: building features, refactoring, and debugging across complex codebases without losing quality.
 - **Enterprise workflows**: Users need fewer rounds of editing to reach production-ready documents, spreadsheets, and presentations. Perfect for teams that need a reliable, everyday model for office tasks.
-- **Financial analysis**: Claude Sonnet 5 on Google Cloud pairs general intelligence improvements with stronger analysis and spreadsheet work, fitting high-volume financial workflows where precision and iteration speed matter.
-- **Computer use**: Claude Sonnet 5 on Google Cloud is our most efficient computer-use model, making browser automation cost-effective enough to deploy across business tools at scale.
+- **Financial analysis**: Anthropic's Claude Sonnet 5 on Google Cloud pairs general intelligence improvements with stronger analysis and spreadsheet work, fitting high-volume financial workflows where precision and iteration speed matter.
+- **Computer use**: Anthropic's Claude Sonnet 5 on Google Cloud is our most efficient computer-use model, making browser automation cost-effective enough to deploy across business tools at scale.
 
 Try in Agent Studio
 

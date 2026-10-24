@@ -1,14 +1,14 @@
-Claude Opus 4.7 on Google Cloud is optimized for coding, enterprise agents, and
+Anthropic's Claude Opus 4.7 on Google Cloud is optimized for coding, enterprise agents, and
 professional work.
 
 **Retirement Date:** Not sooner than April 16, 2027.
 
-- **Coding**: Claude Opus 4.7 on Google Cloud is built for agentic coding at scale, excelling at long-horizon projects, complex implementations, and polished UI design. It handles the full lifecycle from architecture to deployment, including design-quality UI so senior engineers can delegate complex work with confidence.
-- **Enterprise workflows**: Claude Opus 4.7 on Google Cloud sets the standard for enterprise workflows, carrying context across sessions to manage complex, multi-day projects end-to-end with professional polish and industry-leading performance on spreadsheets, slides, and docs.
-- **Long-running agents**: Claude Opus 4.7 on Google Cloud powers production agentic workflows, orchestrating complex multi-tool tasks with industry-leading reliability. It plans deliberately, uses memory to learn across sessions, and drives long-running work forward with minimal oversight.
-- **Financial analysis**: Claude Opus 4.7 on Google Cloud brings frontier reasoning to financial workflows, reading dense filings and charts at high fidelity and carrying context across an entire deal or reporting cycle. It handles the nuance and precision that compliance-sensitive work demands.
-- **Cybersecurity**: Claude Opus 4.7 on Google Cloud advances reasoning for security workflows, holding long traces and large codebases in context to catch subtle patterns and complex attack vectors.
-- **Computer use**: Claude Opus 4.7 on Google Cloud is our most capable production model for computer-use, bringing high-resolution vision and deep reasoning to multi-step tasks that span multiple applications and require planning and judgment.
+- **Coding**: Anthropic's Claude Opus 4.7 on Google Cloud is built for agentic coding at scale, excelling at long-horizon projects, complex implementations, and polished UI design. It handles the full lifecycle from architecture to deployment, including design-quality UI so senior engineers can delegate complex work with confidence.
+- **Enterprise workflows**: Anthropic's Claude Opus 4.7 on Google Cloud sets the standard for enterprise workflows, carrying context across sessions to manage complex, multi-day projects end-to-end with professional polish and industry-leading performance on spreadsheets, slides, and docs.
+- **Long-running agents**: Anthropic's Claude Opus 4.7 on Google Cloud powers production agentic workflows, orchestrating complex multi-tool tasks with industry-leading reliability. It plans deliberately, uses memory to learn across sessions, and drives long-running work forward with minimal oversight.
+- **Financial analysis**: Anthropic's Claude Opus 4.7 on Google Cloud brings frontier reasoning to financial workflows, reading dense filings and charts at high fidelity and carrying context across an entire deal or reporting cycle. It handles the nuance and precision that compliance-sensitive work demands.
+- **Cybersecurity**: Anthropic's Claude Opus 4.7 on Google Cloud advances reasoning for security workflows, holding long traces and large codebases in context to catch subtle patterns and complex attack vectors.
+- **Computer use**: Anthropic's Claude Opus 4.7 on Google Cloud is our most capable production model for computer-use, bringing high-resolution vision and deep reasoning to multi-step tasks that span multiple applications and require planning and judgment.
 
 Try in Agent Studio
 
