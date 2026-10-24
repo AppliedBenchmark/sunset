@@ -4,10 +4,10 @@
     "https://ai.google.dev/gemini-api/docs/deprecations.md.txt",
     "https://ai.google.dev/gemini-api/docs/deprecations?hl=en"
   ],
-  "fetched_at": "2026-10-10T13:27:22Z",
+  "fetched_at": "2026-10-24T09:30:54Z",
   "etag": null,
   "last_modified": null,
-  "sha256": "6285876f4c0c735bd055b6f3b846dac2c31f2347004c7f97cd0746133b6d1a82",
+  "sha256": "60186e54fc916befdc26ffce8cf9003a91987afe58e09a5e6f54e78a4132c041",
   "normalizer_version": 1,
   "row_classes": {
     "row-gray": [
@@ -47,9 +47,15 @@
       "veo-3.0-generate-001",
       "veo-3.0-fast-generate-001",
       "veo-2.0-generate-001",
+      "veo-3.1-lite-generate-preview",
+      "veo-3.1-generate-preview",
+      "veo-3.1-fast-generate-preview",
       "veo-3.0-generate-preview",
       "veo-3.0-fast-generate-preview",
-      "gemini-robotics-er-1.5-preview"
+      "gemini-omni-flash-preview",
+      "gemini-robotics-er-1.6-preview",
+      "gemini-robotics-er-1.5-preview",
+      "antigravity-preview-05-2026"
     ]
   }
 }
