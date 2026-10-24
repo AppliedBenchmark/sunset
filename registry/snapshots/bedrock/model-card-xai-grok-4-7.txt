@@ -4,7 +4,7 @@
 
 ## Model Details
 
-Grok 4.7 is xAI's frontier model, built for coding, agentic tasks, and knowledge work, with support for text and image input. It builds on previous generations of Grok with a focus on long-running agents and more ambitious interactive work. It offers a 500K context window and configurable reasoning efforts (low, medium, high, xhigh).
+Grok 4.7 is xAI's frontier model, built for coding, agentic tasks, and knowledge work, with support for text and image input. It builds on previous generations of Grok with a focus on long-running agents and more ambitious interactive work. It offers a 524,288-token context window shared between input and output, and configurable reasoning efforts (low, medium, high, xhigh).
 
 -
 Model launch date: September 28, 2026
@@ -28,7 +28,10 @@ End User License Agreements and Terms of Use: View
 Model lifecycle: Active
 
 -
-Context window: 500K tokens
+Context window: 524,288 tokens, shared between input and output
+
+-
+Max output tokens: 524,288 minus input tokens
 
 -
 Reasoning: Supported (configurable: low, medium, high, xhigh)
@@ -47,7 +50,7 @@ Bedrock Features
 Features supported using bedrock-runtime endpoint
 
 | Supported | Not Supported |
-| Projects (default project only) Invocation logs Response streaming Application inference profiles (Invoke and Converse APIs only; not supported with Responses or Chat Completions APIs) Implicit Prompt Caching Reasoning Structured outputs Guardrails | Server-side tool use Intelligent prompt routing Count tokens |
+| Projects (default project only) Invocation logs Response streaming Application inference profiles (Invoke and Converse APIs only; not supported with Responses or Chat Completions APIs) Implicit Prompt Caching Reasoning Structured outputs Guardrails Client-side tool calling Flows Prompt management Prompt optimization (base model ID xai.grok-4.7 only) Model evaluation (base model ID xai.grok-4.7 only; inference parameters are not supported) | Server-side tool use Intelligent prompt routing Count tokens Explicit Prompt Caching |
 
 ## Pricing
 
@@ -59,7 +62,7 @@ The following table shows on-demand pricing for Grok 4.7 by inference option.
 
 All prices are per 1 million tokens. Pricing shown is for the Standard tier.
 
-Priority and Flex tier support: In addition to Standard, Grok 4.7 supports the Priority and Flex service tiers. Priority is billed at 1.75 times the Standard per-token rate (a 75% premium) and Flex at 0.5 times the Standard rate (a 50% discount). Apply these multipliers to the Standard rates shown above. For details on each service tier, see service tiers.
+Priority and Flex tier support: In addition to Standard, Grok 4.7 supports the Priority and Flex service tiers on the Responses, Chat Completions, and Invoke APIs. The Converse API supports the Standard tier only for this model; requesting priority or flex through Converse returns a validation error. Priority is billed at 1.75 times the Standard per-token rate (a 75% premium) and Flex at 0.5 times the Standard rate (a 50% discount). Apply these multipliers to the Standard rates shown above. For details on each service tier, see service tiers.
 
 ## Programmatic Access
 
@@ -68,11 +71,11 @@ Use the following model IDs and endpoint URLs to access this model programmatica
 | Endpoint | Model ID | In-Region endpoint URL | Geo inference ID | Global inference ID |
 | bedrock-runtime | xai.grok-4.7 | Not supported | us.xai.grok-4.7 | global.xai.grok-4.7 |
 
-On bedrock-runtime, the base URL is "https://bedrock-runtime.{region}.amazonaws.com/openai/v1" and requests must name the geographic cross-Region inference ID us.xai.grok-4.7 or global.xai.grok-4.7 as the model.
+On bedrock-runtime, the base URL is "https://bedrock-runtime.{region}.amazonaws.com/openai/v1" and requests must name the geographic cross-Region inference ID us.xai.grok-4.7 or the Global cross-Region inference ID global.xai.grok-4.7 as the model.
 
 ## Service Tiers
 
-Amazon Bedrock offers multiple service tiers to match your workload requirements. Standard provides pay-per-token access with no commitment (set "service_tier": "default" or omit the field). Priority delivers faster, prioritized processing for a price premium (set "service_tier": "priority"). Flex provides lower-cost access for flexible, non-time-sensitive workloads (set "service_tier": "flex"). For more information, see service tiers.
+Amazon Bedrock offers multiple service tiers to match your workload requirements. Standard provides pay-per-token access with no commitment (set "service_tier": "default" or omit the field). Priority delivers faster, prioritized processing for a price premium (set "service_tier": "priority"). Flex provides lower-cost access for flexible, non-time-sensitive workloads (set "service_tier": "flex"). For this model, Priority and Flex are available on the Responses, Chat Completions, and Invoke APIs only — the Converse API supports Standard only. For more information, see service tiers.
 
 | Standard | Priority | Flex | Reserved |
 | | | | |
@@ -115,6 +118,8 @@ Grok 4.7 is available on the bedrock-runtime endpoint using Geo (US) and Global 
 | me-central-1 (UAE) | | | |
 | il-central-1 (Tel Aviv) | | | |
 | sa-east-1 (São Paulo) | | | |
+| us-gov-east-1 (AWS GovCloud (US-East)) | | | |
+| us-gov-west-1 (AWS GovCloud (US-West)) | | | |
 
 Geo inference details
 
@@ -207,7 +212,7 @@ messages=[
 {"role": "user", "content": [{"text": "Can you explain the features of Amazon Bedrock?"}]}
 ]
 )
-print(response["output"]["message"]["content"][0]["text"])
+print(response)
 
 ## Usage Considerations and Limitations
 

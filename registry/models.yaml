@@ -4,8 +4,8 @@
 # Seeded on 2026-10-08 from the official pages in registry/sources.yaml. Every value is in its
 # entry's source_excerpt, and every excerpt is word for word in the snapshot of its source.
 schema_version: 1
-registry_version: 14
-generated_at: '2026-10-10T00:00:00Z'
+registry_version: 15
+generated_at: '2026-10-24T00:00:00Z'
 models:
 - id: 'openai:ada'
   provider: openai
@@ -6449,7 +6449,7 @@ models:
   source: bedrock/model-card-anthropic-claude-haiku-5-5
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html
   source_excerpt: 'EOL no sooner than: October 7, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:anthropic.claude-opus-4-1-20250805-v1:0'
   provider: anthropic
@@ -6483,7 +6483,7 @@ models:
   source: bedrock/model-card-anthropic-claude-opus-5-5
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-opus-5-5.html
   source_excerpt: 'EOL no sooner than: September 22, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:anthropic.claude-sonnet-4-20250514-v1:0'
   provider: anthropic
@@ -6517,7 +6517,7 @@ models:
   source: bedrock/model-card-anthropic-claude-sonnet-5-5
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-5-5.html
   source_excerpt: 'EOL no sooner than: September 28, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:cohere.command-r-plus-v1:0'
   provider: cohere
@@ -6568,7 +6568,7 @@ models:
   source: bedrock/model-card-openai-gpt-6-astra
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-astra.html
   source_excerpt: 'EOL no sooner than: September 8, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:openai.gpt-6-luna'
   provider: openai
@@ -6585,7 +6585,7 @@ models:
   source: bedrock/model-card-openai-gpt-6-luna
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-luna.html
   source_excerpt: 'EOL no sooner than: September 22, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:openai.gpt-6-sol'
   provider: openai
@@ -6602,7 +6602,7 @@ models:
   source: bedrock/model-card-openai-gpt-6-sol
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-sol.html
   source_excerpt: 'EOL no sooner than: September 22, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:twelvelabs.marengo-embed-2-7-v1:0'
   provider: twelvelabs
@@ -6653,7 +6653,7 @@ models:
   source: bedrock/model-card-xai-grok-4-7
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-7.html
   source_excerpt: 'EOL no sooner than: September 28, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:deepseek.r1-v1:0'
   provider: deepseek
@@ -6670,7 +6670,7 @@ models:
   source: bedrock/model-card-deepseek-deepseek-r1
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-deepseek-deepseek-r1.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:deepseek.v3-v1:0'
   provider: deepseek
@@ -6687,7 +6687,7 @@ models:
   source: bedrock/model-card-deepseek-deepseek-v3-1
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-deepseek-deepseek-v3-1.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: 'The card also lists deepseek.v3.1, the model ID on bedrock-mantle.'
 - id: 'bedrock:google.gemma-3-12b-it'
   provider: google
@@ -6704,7 +6704,7 @@ models:
   source: bedrock/model-card-google-gemma-3-12b-it
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-12b-it.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:google.gemma-3-27b-it'
   provider: google
@@ -6721,7 +6721,7 @@ models:
   source: bedrock/model-card-google-gemma-3-27b-pt
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-27b-pt.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:google.gemma-3-4b-it'
   provider: google
@@ -6738,7 +6738,7 @@ models:
   source: bedrock/model-card-google-gemma-3-4b-it
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-4b-it.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama3-1-70b-instruct-v1:0'
   provider: meta
@@ -6755,7 +6755,7 @@ models:
   source: bedrock/model-card-meta-llama-3-1-70b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-1-70b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama3-1-8b-instruct-v1:0'
   provider: meta
@@ -6772,7 +6772,7 @@ models:
   source: bedrock/model-card-meta-llama-3-1-8b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-1-8b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama3-2-11b-instruct-v1:0'
   provider: meta
@@ -6789,7 +6789,7 @@ models:
   source: bedrock/model-card-meta-llama-3-2-11b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-11b-instruct.html
   source_excerpt: 'Model EOL date: July 7, 2026'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama3-2-1b-instruct-v1:0'
   provider: meta
@@ -6806,7 +6806,7 @@ models:
   source: bedrock/model-card-meta-llama-3-2-1b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-1b-instruct.html
   source_excerpt: 'Model EOL date: July 7, 2026'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama3-2-3b-instruct-v1:0'
   provider: meta
@@ -6823,7 +6823,7 @@ models:
   source: bedrock/model-card-meta-llama-3-2-3b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-3b-instruct.html
   source_excerpt: 'Model EOL date: July 7, 2026'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama3-2-90b-instruct-v1:0'
   provider: meta
@@ -6840,7 +6840,7 @@ models:
   source: bedrock/model-card-meta-llama-3-2-90b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-2-90b-instruct.html
   source_excerpt: 'Model EOL date: July 7, 2026'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama3-3-70b-instruct-v1:0'
   provider: meta
@@ -6857,7 +6857,7 @@ models:
   source: bedrock/model-card-meta-llama-3-3-70b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-3-70b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama3-70b-instruct-v1:0'
   provider: meta
@@ -6874,7 +6874,7 @@ models:
   source: bedrock/model-card-meta-llama-3-70b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-70b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama3-8b-instruct-v1:0'
   provider: meta
@@ -6891,7 +6891,7 @@ models:
   source: bedrock/model-card-meta-llama-3-8b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-8b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama4-maverick-17b-instruct-v1:0'
   provider: meta
@@ -6908,7 +6908,7 @@ models:
   source: bedrock/model-card-meta-llama-4-maverick-17b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-4-maverick-17b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:meta.llama4-scout-17b-instruct-v1:0'
   provider: meta
@@ -6925,7 +6925,7 @@ models:
   source: bedrock/model-card-meta-llama-4-scout-17b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-4-scout-17b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:minimax.minimax-m2.1'
   provider: minimax
@@ -6942,7 +6942,7 @@ models:
   source: bedrock/model-card-minimax-minimax-m2-1
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-minimax-minimax-m2-1.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:minimax.minimax-m2'
   provider: minimax
@@ -6959,7 +6959,7 @@ models:
   source: bedrock/model-card-minimax-minimax-m2
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-minimax-minimax-m2.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:mistral.devstral-2-123b'
   provider: mistral
@@ -6976,7 +6976,7 @@ models:
   source: bedrock/model-card-mistral-ai-devstral-2-123b
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-devstral-2-123b.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:mistral.mistral-7b-instruct-v0:2'
   provider: mistral
@@ -6993,7 +6993,7 @@ models:
   source: bedrock/model-card-mistral-ai-mistral-7b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-mistral-7b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:mistral.mixtral-8x7b-instruct-v0:1'
   provider: mistral
@@ -7010,7 +7010,7 @@ models:
   source: bedrock/model-card-mistral-ai-mixtral-8x7b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-mixtral-8x7b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:mistral.voxtral-mini-3b-2507'
   provider: mistral
@@ -7027,7 +7027,7 @@ models:
   source: bedrock/model-card-mistral-ai-voxtral-mini-3b-2507
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-voxtral-mini-3b-2507.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:mistral.voxtral-small-24b-2507'
   provider: mistral
@@ -7044,7 +7044,7 @@ models:
   source: bedrock/model-card-mistral-ai-voxtral-small-24b-2507
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-voxtral-small-24b-2507.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:moonshot.kimi-k2-thinking'
   provider: moonshot
@@ -7061,7 +7061,7 @@ models:
   source: bedrock/model-card-moonshot-ai-kimi-k2-thinking
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k2-thinking.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: 'The card also lists moonshotai.kimi-k2-thinking, the model ID on bedrock-mantle.'
 - id: 'bedrock:nvidia.nemotron-nano-12b-v2'
   provider: nvidia
@@ -7078,7 +7078,7 @@ models:
   source: bedrock/model-card-nvidia-nvidia-nemotron-nano-12b-v2-vl-bf16
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-nvidia-nvidia-nemotron-nano-12b-v2-vl-bf16.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:nvidia.nemotron-nano-9b-v2'
   provider: nvidia
@@ -7095,7 +7095,7 @@ models:
   source: bedrock/model-card-nvidia-nvidia-nemotron-nano-9b-v2
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-nvidia-nvidia-nemotron-nano-9b-v2.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:qwen.qwen3-coder-30b-a3b-v1:0'
   provider: qwen
@@ -7112,7 +7112,7 @@ models:
   source: bedrock/model-card-qwen-qwen3-coder-30b-a3b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-qwen-qwen3-coder-30b-a3b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: 'The card also lists qwen.qwen3-coder-30b-a3b-instruct, the model ID on bedrock-mantle.'
 - id: 'bedrock:qwen.qwen3-coder-480b-a35b-v1:0'
   provider: qwen
@@ -7129,7 +7129,7 @@ models:
   source: bedrock/model-card-qwen-qwen3-coder-480b-a35b-instruct
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-qwen-qwen3-coder-480b-a35b-instruct.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: 'The card also lists qwen.qwen3-coder-480b-a35b-instruct, the model ID on bedrock-mantle.'
 - id: 'bedrock:zai.glm-4.7-flash'
   provider: zai
@@ -7146,7 +7146,7 @@ models:
   source: bedrock/model-card-zai-glm-4-7-flash
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-zai-glm-4-7-flash.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'bedrock:zai.glm-4.7'
   provider: zai
@@ -7163,7 +7163,7 @@ models:
   source: bedrock/model-card-zai-glm-4-7
   source_url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-zai-glm-4-7.html
   source_excerpt: 'Model EOL date: March 30, 2027'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-24'
   notes: null
 - id: 'azure-openai:codex-mini@2025-05-16'
   provider: openai

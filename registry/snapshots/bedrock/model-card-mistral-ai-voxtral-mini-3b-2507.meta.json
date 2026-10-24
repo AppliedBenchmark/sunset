@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-voxtral-mini-3b-2507.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"ZvuFeOrnk1qzPg79g9y9ID9N4Gw=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:30 GMT",
-  "sha256": "175a153c93a4faeef3adcce1f53a52b25264ac7c13c4e7cafdd43ae7bbccf8e0",
+  "fetched_at": "2026-10-24T09:30:46Z",
+  "etag": "\"2jWPb/zeJ2augr0H9evGpljpAJQ=-gzip\"",
+  "last_modified": "Sat, 24 Oct 2026 03:37:35 GMT",
+  "sha256": "6414e3d4d3ff33b9cec8a2273e28aa8f07df215bf653c1bce2538f996d74dfa5",
   "normalizer_version": 1
 }

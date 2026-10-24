@@ -48,7 +48,7 @@ Marketplace product ID: prod-hqau7gqhlqsrg
 
 ## Endpoints and APIs supported
 
-The following tables show which endpoints and APIs GPT-6 Astra supports. For more information, see APIs supported by Amazon Bedrock and Endpoints supported by Amazon Bedrock.
+The following tables show which endpoints and APIs GPT-6 Astra supports. For more information, see APIs supported by Amazon Bedrock and Inference endpoints supported by Amazon Bedrock.
 
 Endpoint support
 
@@ -83,12 +83,12 @@ Bedrock Features
 Features supported using bedrock-runtime
 
 | Supported | Not Supported |
-| Projects (default project only) Invocation logs Response streaming Abuse detection Guardrails (Converse API only) Application inference profiles (Converse API only; not supported with Responses or Chat Completions APIs) Structured outputs (JSON Schema; see API configuration) Reasoning Summaries (Responses API only) | Server-side tool use Intelligent prompt routing Count tokens |
+| Projects (default project only) Invocation logs Response streaming Abuse detection Guardrails (Converse API only) Application inference profiles (InvokeModel and Converse APIs only; not supported with Responses or Chat Completions) Implicit Prompt Caching (Responses, Chat Completions, InvokeModel, and Converse APIs) Explicit Prompt Caching (Responses, Chat Completions, and InvokeModel APIs; not supported with Converse) Structured outputs (JSON Schema; see API configuration) Reasoning Summaries (Responses, Converse, and ConverseStream APIs; on Converse, set additionalModelRequestFields.reasoning.summary) | Server-side tool use Intelligent prompt routing Count tokens |
 
 Features supported using bedrock-mantle
 
 | Supported | Not Supported |
-| Server-side tool calling Projects Implicit Prompt Caching (Responses API only) Explicit Prompt Caching (Responses API only) Reasoning Summaries (Responses API only) | Application inference profiles |
+| Server-side tool calling Projects Implicit Prompt Caching (Responses and Chat Completions APIs) Explicit Prompt Caching (Responses and Chat Completions APIs) Reasoning Summaries (Responses API only) Structured outputs (JSON Schema; Responses and Chat Completions APIs) | Application inference profiles |
 
 ### JSON Schema output on bedrock-runtime
 
@@ -117,9 +117,15 @@ For JSON Schema output with the Converse API, you must set additionalModelReques
 }
 }
 
+Converse content blocks
+
+On the bedrock-runtime endpoint, Converse accepts text and image content blocks in user messages. This model doesn't accept document content blocks, and it doesn't accept an image content block inside a toolResult. A request that includes either is rejected with a ValidationException. To send a document to this model, use the Responses API with an input_file content part instead.
+
 ## Pricing
 
 All prices are in USD per 1 million tokens. The following tables list Standard and Ultrafast prices.
+
+The Input — 30-minute cache write column is the price per 1 million tokens written to the prompt cache. The 30-minute figure is how long a cached prompt prefix is retained, not a quantity of tokens. For more information, see prompt caching.
 
 Commercial In-Region and Geo CRIS prices include a 10% premium over the corresponding OpenAI rates for the same service tier. You do not need to add this premium.
 
@@ -127,14 +133,14 @@ Priority and Flex tiers are not supported for this model.
 
 ### Standard — Commercial Regions, short context (272K input tokens or fewer)
 
-| Inference option | Input | Input — 30m cache write | Input — cache read | Output |
+| Inference option | Input | Input — 30-minute cache write | Input — cache read | Output |
 | In-Region | $11.00 | $13.75 | $1.10 | $55.00 |
 | Geo CRIS | $11.00 | $13.75 | $1.10 | $55.00 |
 | Global CRIS | $10.00 | $12.50 | $1.00 | $50.00 |
 
 ### Standard — Commercial Regions, long context (more than 272K input tokens)
 
-| Inference option | Input | Input — 30m cache write | Input — cache read | Output |
+| Inference option | Input | Input — 30-minute cache write | Input — cache read | Output |
 | In-Region | $22.00 | $27.50 | $2.20 | $82.50 |
 | Geo CRIS | $22.00 | $27.50 | $2.20 | $82.50 |
 | Global CRIS | $20.00 | $25.00 | $2.00 | $75.00 |
@@ -143,21 +149,21 @@ Ultrafast prices are six times the corresponding Standard prices. On bedrock-run
 
 ### Ultrafast — Commercial Regions, short context (272K input tokens or fewer)
 
-| Inference option | Input | Input — 30m cache write | Input — cache read | Output |
+| Inference option | Input | Input — 30-minute cache write | Input — cache read | Output |
 | In-Region (us-east-1) | $66.00 | $82.50 | $6.60 | $330.00 |
 | Geo CRIS (US) | $66.00 | $82.50 | $6.60 | $330.00 |
 | Global CRIS | $60.00 | $75.00 | $6.00 | $300.00 |
 
 ### Ultrafast — Commercial Regions, long context (more than 272K input tokens)
 
-| Inference option | Input | Input — 30m cache write | Input — cache read | Output |
+| Inference option | Input | Input — 30-minute cache write | Input — cache read | Output |
 | In-Region (us-east-1) | $132.00 | $165.00 | $13.20 | $495.00 |
 | Geo CRIS (US) | $132.00 | $165.00 | $13.20 | $495.00 |
 | Global CRIS | $120.00 | $150.00 | $12.00 | $450.00 |
 
 ## Programmatic Access
 
-To call this model from code, use the following model IDs and endpoint URLs. For more information, see APIs supported by Amazon Bedrock and Endpoints supported by Amazon Bedrock.
+To call this model from code, use the following model IDs and endpoint URLs. For more information, see APIs supported by Amazon Bedrock and Inference endpoints supported by Amazon Bedrock.
 
 | Endpoint | Model ID | In-Region endpoint URL | Geo inference ID | Global inference ID |
 | bedrock-mantle | openai.gpt-6-astra | https://bedrock-mantle.us-east-1.api.aws/openai/v1 https://bedrock-mantle.us-west-2.api.aws/openai/v1 (Standard only) | Not supported | Not supported |

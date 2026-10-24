@@ -51,7 +51,7 @@ Marketplace product ID: prod-6cyn7tgqazjhu
 
 ## Endpoints and APIs supported
 
-The following tables show which endpoints and APIs are supported for Claude Haiku 5.5. For more information, see APIs supported by Amazon Bedrock and Endpoints supported by Amazon Bedrock.
+The following tables show which endpoints and APIs are supported for Claude Haiku 5.5. For more information, see APIs supported by Amazon Bedrock and Inference endpoints supported by Amazon Bedrock.
 
 Endpoint support
 
@@ -71,7 +71,7 @@ APIs supported on bedrock-mantle endpoint
 
 ###### Tip
 
-Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and Features
 
@@ -80,12 +80,12 @@ Bedrock Features
 Features supported using bedrock-runtime endpoint
 
 | Supported | Not Supported |
-| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Guardrails Knowledge base Model evaluation Prompt management Flows Agents Computer use Prompt optimization | Intelligent prompt routing Count tokens Structured outputs |
+| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Guardrails Knowledge base Model evaluation Prompt management Flows Agents Computer use Prompt optimization (base model ID anthropic.claude-haiku-5-5 only) Client-side tool calling Server-side tool use (tool search only; regex and BM25) Application inference profiles Invocation logs Structured outputs | Intelligent prompt routing Count tokens |
 
 Features supported using bedrock-mantle endpoint
 
 | Supported | Not Supported |
-| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Count tokens Computer use | Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Intelligent prompt routing Structured outputs |
+| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Count tokens Computer use Structured outputs | Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Intelligent prompt routing |
 
 Implicit and Explicit Prompt Caching using bedrock-runtime and bedrock-mantle endpoints
 
@@ -101,6 +101,17 @@ For more information, see Computer use.
 | Tool type | Beta header |
 | computer_20251124 | computer-use-2025-11-24 |
 
+Client tools and toolsets using bedrock-runtime endpoint
+
+For more information, see Tool use.
+
+| Tool type | Beta header |
+| computer_toolset_20260801 | None required |
+| browser_toolset_20260801 | None required |
+| bash_20250124 | None required |
+| text_editor_20250728 | None required |
+| memory_20250818 | None required |
+
 Compaction using bedrock-runtime endpoint
 
 For more information, see Compaction.
@@ -111,6 +122,10 @@ For more information, see Compaction.
 ## Pricing
 
 This model is a third-party model offered and billed through AWS Marketplace. Charges appear on your AWS bill and in AWS Cost Explorer under the model provider (not under Amazon Bedrock). For pricing, see the Amazon Bedrock Pricing page.
+
+###### Note
+
+Claude Haiku 5.5 uses tiered long-context pricing. Prompts of 100,000 tokens or fewer are billed at the standard per-token rates. Prompts that exceed 100,000 tokens are billed at higher rates for input, output, and cache read and write operations. The rates for prompts over 100,000 tokens appear in a separate row, labeled Claude Haiku 5.5 - Long Context.
 
 ## Programmatic Access
 

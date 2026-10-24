@@ -51,7 +51,7 @@ Marketplace product ID: prod-pjfguoisodbd6
 
 ## Endpoints and APIs supported
 
-The following tables show which endpoints and APIs are supported for Claude Sonnet 5.5. For more information, see APIs supported by Amazon Bedrock and Endpoints supported by Amazon Bedrock.
+The following tables show which endpoints and APIs are supported for Claude Sonnet 5.5. For more information, see APIs supported by Amazon Bedrock and Inference endpoints supported by Amazon Bedrock.
 
 Endpoint support
 
@@ -71,7 +71,7 @@ APIs supported on bedrock-mantle endpoint
 
 ###### Tip
 
-Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and Features
 
@@ -80,12 +80,12 @@ Bedrock Features
 Features supported using bedrock-runtime endpoint
 
 | Supported | Not Supported |
-| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Computer use | Intelligent prompt routing Count tokens Structured outputs |
+| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Computer use Client-side tool calling (tool_choice types auto and none only) Server-side tool use (tool search only) Application inference profiles Invocation logs Structured outputs | Intelligent prompt routing Count tokens |
 
 Features supported using bedrock-mantle endpoint
 
 | Supported | Not Supported |
-| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Count tokens Computer use | Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Intelligent prompt routing Structured outputs |
+| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Count tokens Computer use Structured outputs | Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Intelligent prompt routing |
 
 Implicit and Explicit Prompt Caching using bedrock-runtime and bedrock-mantle endpoints
 

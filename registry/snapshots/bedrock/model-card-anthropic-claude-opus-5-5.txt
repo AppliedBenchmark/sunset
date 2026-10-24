@@ -51,7 +51,7 @@ Marketplace product ID: prod-e5xo6z26ie45g
 
 ## Endpoints and APIs supported
 
-The following tables show which endpoints and APIs are supported for Claude Opus 5.5. For more information, see APIs supported by Amazon Bedrock and Endpoints supported by Amazon Bedrock.
+The following tables show which endpoints and APIs are supported for Claude Opus 5.5. For more information, see APIs supported by Amazon Bedrock and Inference endpoints supported by Amazon Bedrock.
 
 Endpoint support
 
@@ -71,7 +71,7 @@ APIs supported on bedrock-mantle endpoint
 
 ###### Tip
 
-Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and Features
 
@@ -80,12 +80,12 @@ Bedrock Features
 Features supported using bedrock-runtime endpoint
 
 | Supported | Not Supported |
-| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Computer use | Intelligent prompt routing Count tokens Structured outputs |
+| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Computer use Client-side tool calling (tool_choice types auto and none only) Server-side tool use (tool search only; regex and BM25) Application inference profiles Invocation logs Structured outputs | Intelligent prompt routing Count tokens |
 
 Features supported using bedrock-mantle endpoint
 
 | Supported | Not Supported |
-| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Count tokens Computer use | Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Intelligent prompt routing Structured outputs |
+| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Count tokens Computer use Client-side tool calling (tool_choice types auto and none only) Server-side tool use (tool search only; regex and BM25) Structured outputs | Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Intelligent prompt routing Application inference profiles Invocation logs |
 
 Implicit and Explicit Prompt Caching using bedrock-runtime and bedrock-mantle endpoints
 
@@ -100,6 +100,17 @@ For more information, see Computer use.
 
 | Tool type | Beta header |
 | computer_20251124 | computer-use-2025-11-24 |
+
+Client tools and toolsets using bedrock-runtime and bedrock-mantle endpoints
+
+For more information, see Tool use.
+
+| Tool type | Beta header |
+| computer_toolset_20260801 | None required |
+| browser_toolset_20260801 | None required |
+| bash_20250124 | None required |
+| text_editor_20250728 | None required |
+| memory_20250818 | None required |
 
 Compaction using bedrock-runtime endpoint
 
@@ -117,7 +128,7 @@ This model is a third-party model offered and billed through AWS Marketplace. Ch
 Use the following model IDs and endpoint URLs to access this model programmatically. For more information about the available APIs and endpoints, see APIs supported and Endpoints supported.
 
 | Endpoint | Model ID | In-Region endpoint URL | Geo inference ID | Global inference ID |
-| bedrock-runtime | anthropic.claude-opus-5-5 | N/A | us.anthropic.claude-opus-5-5 eu.anthropic.claude-opus-5-5 au.anthropic.claude-opus-5-5 jp.anthropic.claude-opus-5-5 | global.anthropic.claude-opus-5-5 |
+| bedrock-runtime | anthropic.claude-opus-5-5 | https://bedrock-runtime.eu-west-2.amazonaws.com In-Region inference with the bare model ID is available in eu-west-2 (London) only. From any other Region, use a geo or global inference profile ID. | us.anthropic.claude-opus-5-5 eu.anthropic.claude-opus-5-5 au.anthropic.claude-opus-5-5 jp.anthropic.claude-opus-5-5 | global.anthropic.claude-opus-5-5 |
 | bedrock-mantle | anthropic.claude-opus-5-5 | https://bedrock-mantle.{region}.api.aws/anthropic/v1/messages | N/A | N/A |
 
 For example, if region is us-east-1 (N. Virginia), then the bedrock-runtime endpoint URL will be "https://bedrock-runtime.us-east-1.amazonaws.com" and for bedrock-mantle will be "https://bedrock-mantle.us-east-1.api.aws/anthropic/v1/messages".

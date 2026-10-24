@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-3-1-70b-instruct.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"WBfPn4wP4jV9p+TGXm4bkbawbDE=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:25 GMT",
-  "sha256": "05ddd481481bfd7813900d5fde054830d8ffd2a6df5a94a8d3b819fa69e4ddfc",
+  "fetched_at": "2026-10-24T09:30:46Z",
+  "etag": "\"0jRkKz5JYgWcvymt1anOYfzM7v0=-gzip\"",
+  "last_modified": "Sat, 24 Oct 2026 03:37:50 GMT",
+  "sha256": "084fb6687479ea179a90548dbe5eae7fe6439ce3879db0101e8554c65d06e92c",
   "normalizer_version": 1
 }

@@ -28,7 +28,7 @@ End User License Agreements and Terms of Use: View
 Model lifecycle: Legacy
 
 -
-Context window: 128K tokens
+Context window: 256K tokens
 
 -
 Max output tokens: 16K
@@ -42,7 +42,7 @@ Max output tokens: 16K
 
 ###### Tip
 
-Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and Features
 
