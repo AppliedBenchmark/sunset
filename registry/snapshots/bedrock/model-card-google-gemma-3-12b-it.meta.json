@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-google-gemma-3-12b-it.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"+yr7rxYCV6565iayzq2CPsO1jXA=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:26 GMT",
-  "sha256": "cf2bb3f22340585ea5acd68cfede351c2de6294e4ca4c431eafe9adc90721855",
+  "fetched_at": "2026-10-24T09:30:46Z",
+  "etag": "\"5JoPXYx2fkrTaePKH1gcaIpOVuo=-gzip\"",
+  "last_modified": "Sat, 24 Oct 2026 03:38:05 GMT",
+  "sha256": "705b22201a8efea8ca0e43bd9c29d2795db63c3509c5f535f61156d95a5e8ee4",
   "normalizer_version": 1
 }

@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-luna.html"
   ],
-  "fetched_at": "2026-10-10T13:32:01Z",
-  "etag": "\"Sg3q/zou3ul240s4wQSH0AI85pY=-gzip\"",
-  "last_modified": "Sat, 10 Oct 2026 07:14:28 GMT",
-  "sha256": "4e6b4404e46e071340e0ad506c06ed60b05f626cb6d115b872932618b2c9c25c",
+  "fetched_at": "2026-10-24T09:30:46Z",
+  "etag": "\"8b4SCx1lpNYFuwcuHRzf8LMiA2I=-gzip\"",
+  "last_modified": "Sat, 24 Oct 2026 03:37:43 GMT",
+  "sha256": "38e77ca0ce1d06dc44583b9e39d0e3e443122a3b49c5a701d44985cb9a79e48e",
   "normalizer_version": 1
 }

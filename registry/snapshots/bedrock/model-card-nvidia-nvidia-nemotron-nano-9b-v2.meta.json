@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-nvidia-nvidia-nemotron-nano-9b-v2.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"GbI2MWQAZ/7D+gGar/6YoyjnKtY=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:15 GMT",
-  "sha256": "3e57968d4ac50108a15d65a11430c31ce28feb4313c041c15b0a3894bfc5525e",
+  "fetched_at": "2026-10-24T09:30:46Z",
+  "etag": "\"1SCzxkR/942TjCi7pPNe7QYFpVE=-gzip\"",
+  "last_modified": "Sat, 24 Oct 2026 03:37:20 GMT",
+  "sha256": "797e7e3077d110bcc999dc4d9927c87f2b66e3fe01c4b117ec83108adb3ec05e",
   "normalizer_version": 1
 }

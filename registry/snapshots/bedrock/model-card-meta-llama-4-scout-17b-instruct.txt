@@ -45,7 +45,7 @@ Knowledge cutoff: Aug 2024
 
 ###### Tip
 
-Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and Features
 
@@ -55,6 +55,10 @@ Features supported using bedrock-runtime endpoint
 
 | Supported | Not Supported |
 | Response streaming Guardrails Prompt management Flows Agents | Intelligent prompt routing Abuse detection Prompt optimization Count tokens Knowledge base Model evaluation Structured outputs |
+
+###### Note
+
+Tool use and response streaming are supported separately, but not together. A ConverseStream request that includes a toolConfig field fails with This model doesn't support tool use in streaming mode. Use the non-streaming Converse operation when you need tool use.
 
 ## Pricing
 
