@@ -4,8 +4,8 @@
 # Seeded on 2026-10-08 from the official pages in registry/sources.yaml. Every value is in its
 # entry's source_excerpt, and every excerpt is word for word in the snapshot of its source.
 schema_version: 1
-registry_version: 14
-generated_at: '2026-10-10T00:00:00Z'
+registry_version: 15
+generated_at: '2026-10-31T00:00:00Z'
 models:
 - id: 'openai:ada'
   provider: openai
@@ -23,7 +23,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `ada` | $0.40 / 1M tokens | `babbage-002` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:babbage'
   provider: openai
@@ -41,7 +41,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `babbage` | $0.50 / 1M tokens | `babbage-002` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:babbage-002'
   provider: openai
@@ -59,7 +59,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-09-28 | `babbage-002` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:chatgpt-4o-latest'
   provider: openai
@@ -77,7 +77,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-02-17 | `chatgpt-4o-latest` | `gpt-5.1-chat-latest` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:chatgpt-image-latest'
   provider: openai
@@ -96,7 +96,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Dec 1, 2026 | `chatgpt-image-latest` | `gpt-image-2.5-sunburst` or `gpt-image-2.5-flare` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:code-cushman-001'
   provider: openai
@@ -114,7 +114,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2023-03-23 | `code-cushman-001` | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:code-cushman-002'
   provider: openai
@@ -132,7 +132,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2023-03-23 | `code-cushman-002` | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:code-davinci-001'
   provider: openai
@@ -150,7 +150,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2023-03-23 | `code-davinci-001` | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:code-davinci-002'
   provider: openai
@@ -168,7 +168,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `code-davinci-002` | --- | `gpt-3.5-turbo-instruct` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:code-davinci-edit-001'
   provider: openai
@@ -186,7 +186,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `code-davinci-edit-001` | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:code-search-ada-code-001'
   provider: openai
@@ -204,7 +204,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `code-search-ada-code-001` | $4.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:code-search-ada-text-001'
   provider: openai
@@ -222,7 +222,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `code-search-ada-text-001` | $4.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:code-search-babbage-code-001'
   provider: openai
@@ -240,7 +240,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `code-search-babbage-code-001` | $5.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:code-search-babbage-text-001'
   provider: openai
@@ -258,7 +258,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `code-search-babbage-text-001` | $5.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:codex-mini-latest'
   provider: openai
@@ -276,7 +276,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-02-12 | `codex-mini-latest` | `gpt-5-codex-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:computer-use-preview'
   provider: openai
@@ -294,7 +294,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `computer-use-preview-2025-03-11` \| `computer-use-preview` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:computer-use-preview-2025-03-11'
   provider: openai
@@ -312,7 +312,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `computer-use-preview-2025-03-11` \| `computer-use-preview` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:curie'
   provider: openai
@@ -330,7 +330,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `curie` | $2.00 / 1M tokens | `davinci-002` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:dall-e-2'
   provider: openai
@@ -350,7 +350,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-05-12 | `dall-e-2` | `gpt-image-2`, `gpt-image-1`, or `gpt-image-1-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:dall-e-3'
   provider: openai
@@ -370,7 +370,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-05-12 | `dall-e-3` | `gpt-image-2`, `gpt-image-1`, or `gpt-image-1-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:davinci'
   provider: openai
@@ -388,7 +388,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `davinci` | $20.00 / 1M tokens | `davinci-002` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:davinci-002'
   provider: openai
@@ -406,7 +406,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-09-28 | `davinci-002` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-3.5-turbo'
   provider: openai
@@ -414,7 +414,7 @@ models:
   model_id: 'gpt-3.5-turbo'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -424,7 +424,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-3.5-turbo-0125` \| `gpt-3.5-turbo`, `gpt-3.5-turbo-completions` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-3.5-turbo-0125'
   provider: openai
@@ -432,7 +432,7 @@ models:
   model_id: 'gpt-3.5-turbo-0125'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -442,7 +442,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-3.5-turbo-0125` \| `gpt-3.5-turbo`, `gpt-3.5-turbo-completions` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-3.5-turbo-0301'
   provider: openai
@@ -460,7 +460,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-09-13 | `gpt-3.5-turbo-0301` | $15.00 / 1M input tokens + $20.00 / 1M output tokens | `gpt-3.5-turbo` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-3.5-turbo-0613'
   provider: openai
@@ -478,7 +478,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-09-13 | `gpt-3.5-turbo-0613` | $1.50 / 1M input tokens + $2.00 / 1M output tokens | `gpt-3.5-turbo` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-3.5-turbo-1106'
   provider: openai
@@ -496,7 +496,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-09-28 | `gpt-3.5-turbo-1106` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-3.5-turbo-16k-0613'
   provider: openai
@@ -514,7 +514,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-09-13 | `gpt-3.5-turbo-16k-0613` | $3.00 / 1M input tokens + $4.00 / 1M output tokens | `gpt-3.5-turbo` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-3.5-turbo-completions'
   provider: openai
@@ -522,7 +522,7 @@ models:
   model_id: 'gpt-3.5-turbo-completions'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -532,7 +532,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-3.5-turbo-0125` \| `gpt-3.5-turbo`, `gpt-3.5-turbo-completions` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-3.5-turbo-instruct'
   provider: openai
@@ -550,7 +550,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-09-28 | `gpt-3.5-turbo-instruct` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4'
   provider: openai
@@ -558,7 +558,7 @@ models:
   model_id: 'gpt-4'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -568,7 +568,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4-0613` \| `gpt-4`, `gpt-4-0613-completions`, `gpt-4-completions` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-0125-preview'
   provider: openai
@@ -586,7 +586,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-03-26 | `gpt-4-0125-preview` (including `gpt-4-turbo-preview` and `gpt-4-turbo-preview-completions`, which point to this snapshot) | `gpt-5` or `gpt-4.1*` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-0314'
   provider: openai
@@ -604,7 +604,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-03-26 | `gpt-4-0314` | `gpt-5` or `gpt-4.1*` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-0613'
   provider: openai
@@ -612,7 +612,7 @@ models:
   model_id: 'gpt-4-0613'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -622,7 +622,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4-0613` \| `gpt-4`, `gpt-4-0613-completions`, `gpt-4-completions` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-0613-completions'
   provider: openai
@@ -630,7 +630,7 @@ models:
   model_id: 'gpt-4-0613-completions'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -640,7 +640,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4-0613` \| `gpt-4`, `gpt-4-0613-completions`, `gpt-4-completions` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-1106-preview'
   provider: openai
@@ -648,7 +648,7 @@ models:
   model_id: 'gpt-4-1106-preview'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -658,7 +658,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4-1106-preview` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page also lists it in the 2025-09-26 announcement with shutdown 2026-03-26 and replacement gpt-5; this entry uses the newer October 23, 2026 row.'
 - id: 'openai:gpt-4-1106-vision-preview'
   provider: openai
@@ -676,7 +676,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-12-06 | `gpt-4-1106-vision-preview` | $10.00 / 1M input tokens + $30 / 1M output tokens | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-32k'
   provider: openai
@@ -694,7 +694,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-06-06 | `gpt-4-32k` | $60.00 / 1M input tokens + $120 / 1M output tokens | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-32k-0314'
   provider: openai
@@ -712,7 +712,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-06-06 | `gpt-4-32k-0314` | $60.00 / 1M input tokens + $120 / 1M output tokens | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-32k-0613'
   provider: openai
@@ -730,7 +730,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-06-06 | `gpt-4-32k-0613` | $60.00 / 1M input tokens + $120 / 1M output tokens | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-completions'
   provider: openai
@@ -738,7 +738,7 @@ models:
   model_id: 'gpt-4-completions'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -748,7 +748,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4-0613` \| `gpt-4`, `gpt-4-0613-completions`, `gpt-4-completions` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-turbo'
   provider: openai
@@ -756,7 +756,7 @@ models:
   model_id: 'gpt-4-turbo'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -766,7 +766,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4-turbo` \| `gpt-4-turbo-2024-04-09`, `gpt-4-turbo-completions` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-turbo-2024-04-09'
   provider: openai
@@ -774,7 +774,7 @@ models:
   model_id: 'gpt-4-turbo-2024-04-09'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -784,7 +784,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4-turbo` \| `gpt-4-turbo-2024-04-09`, `gpt-4-turbo-completions` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-turbo-completions'
   provider: openai
@@ -792,7 +792,7 @@ models:
   model_id: 'gpt-4-turbo-completions'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -802,7 +802,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4-turbo` \| `gpt-4-turbo-2024-04-09`, `gpt-4-turbo-completions` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-turbo-preview'
   provider: openai
@@ -820,7 +820,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-03-26 | `gpt-4-0125-preview` (including `gpt-4-turbo-preview` and `gpt-4-turbo-preview-completions`, which point to this snapshot) | `gpt-5` or `gpt-4.1*` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-turbo-preview-completions'
   provider: openai
@@ -838,7 +838,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-03-26 | `gpt-4-0125-preview` (including `gpt-4-turbo-preview` and `gpt-4-turbo-preview-completions`, which point to this snapshot) | `gpt-5` or `gpt-4.1*` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4-vision-preview'
   provider: openai
@@ -856,7 +856,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-12-06 | `gpt-4-vision-preview` | $10.00 / 1M input tokens + $30 / 1M output tokens | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4.1-nano'
   provider: openai
@@ -864,7 +864,7 @@ models:
   model_id: 'gpt-4.1-nano'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -874,7 +874,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4.1-nano` \| `gpt-4.1-nano-2025-04-14` | `gpt-5.6-luna` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4.1-nano-2025-04-14'
   provider: openai
@@ -882,7 +882,7 @@ models:
   model_id: 'gpt-4.1-nano-2025-04-14'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -892,7 +892,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4.1-nano` \| `gpt-4.1-nano-2025-04-14` | `gpt-5.6-luna` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4.5-preview'
   provider: openai
@@ -910,7 +910,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-07-14 | `gpt-4.5-preview` | `gpt-4.1` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-2024-05-13'
   provider: openai
@@ -918,7 +918,7 @@ models:
   model_id: 'gpt-4o-2024-05-13'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -928,7 +928,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-4o-2024-05-13` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-audio'
   provider: openai
@@ -946,7 +946,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Jan 20, 2027 | `gpt-4o-audio` | `gpt-audio-1.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-audio-preview'
   provider: openai
@@ -964,7 +964,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-05-07 | `gpt-4o-audio-preview` | `gpt-audio-1.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-audio-preview-2024-10-01'
   provider: openai
@@ -982,7 +982,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-10-10 | `gpt-4o-audio-preview-2024-10-01` | `gpt-audio-1.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-mini-audio'
   provider: openai
@@ -1000,7 +1000,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Jan 20, 2027 | `gpt-4o-mini-audio` | `gpt-audio-1.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-mini-audio-preview'
   provider: openai
@@ -1018,7 +1018,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-05-07 | `gpt-4o-mini-audio-preview` | `gpt-audio-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-mini-realtime'
   provider: openai
@@ -1036,7 +1036,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Jan 20, 2027 | `gpt-4o-mini-realtime` | `gpt-realtime-2.1-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-mini-realtime-preview'
   provider: openai
@@ -1054,7 +1054,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-05-07 | `gpt-4o-mini-realtime-preview` | `gpt-realtime-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-mini-search-preview-2025-03-11'
   provider: openai
@@ -1072,7 +1072,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-4o-mini-search-preview-2025-03-11` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-mini-transcribe'
   provider: openai
@@ -1090,8 +1090,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Feb 26, 2027 | `gpt-4o-mini-transcribe` | `gpt-live-transcribe` or `gpt-transcribe` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Feb 26, 2027 | `gpt-4o-mini-transcribe` \| `gpt-4o-mini-transcribe-2025-12-15` | `gpt-live-transcribe` or `gpt-transcribe` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-mini-transcribe-2025-03-20'
   provider: openai
@@ -1109,7 +1109,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Jan 20, 2027 | `gpt-4o-mini-transcribe-2025-03-20` | `gpt-4o-mini-transcribe-2025-12-15` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-mini-tts-2025-03-20'
   provider: openai
@@ -1126,8 +1126,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Jan 6, 2027 | `gpt-4o-mini-tts-2025-03-20` | `gpt-realtime-2.1-mini` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Jan 6, 2027 | `gpt-4o-mini-tts` \| `gpt-4o-mini-tts-2025-03-20` | `gpt-realtime-2.1-mini` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-mini-tts-2025-12-15'
   provider: openai
@@ -1144,8 +1144,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Jan 6, 2027 | `gpt-4o-mini-tts-2025-12-15` | `gpt-realtime-2.1-mini` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Jan 6, 2027 | `gpt-4o-mini-tts` \| `gpt-4o-mini-tts-2025-12-15` | `gpt-realtime-2.1-mini` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-realtime'
   provider: openai
@@ -1163,7 +1163,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Jan 20, 2027 | `gpt-4o-realtime` | `gpt-realtime-2.1` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-realtime-preview'
   provider: openai
@@ -1181,7 +1181,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-05-07 | `gpt-4o-realtime-preview` | `gpt-realtime-1.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-realtime-preview-2024-10-01'
   provider: openai
@@ -1199,7 +1199,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-10-10 | `gpt-4o-realtime-preview-2024-10-01` | `gpt-realtime-1.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-realtime-preview-2024-12-17'
   provider: openai
@@ -1217,7 +1217,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-05-07 | `gpt-4o-realtime-preview-2024-12-17` | `gpt-realtime-1.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-realtime-preview-2025-06-03'
   provider: openai
@@ -1235,7 +1235,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-05-07 | `gpt-4o-realtime-preview-2025-06-03` | `gpt-realtime-1.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-search-preview-2025-03-11'
   provider: openai
@@ -1253,7 +1253,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-4o-search-preview-2025-03-11` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-transcribe'
   provider: openai
@@ -1272,7 +1272,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Feb 26, 2027 | `gpt-4o-transcribe` | `gpt-live-transcribe` or `gpt-transcribe` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-4o-transcribe-diarize'
   provider: openai
@@ -1291,7 +1291,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Feb 26, 2027 | `gpt-4o-transcribe-diarize` | `gpt-live-transcribe` or `gpt-transcribe` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5-2025-08-07'
   provider: openai
@@ -1308,8 +1308,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Dec 11, 2026 | `gpt-5-2025-08-07` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Dec 11, 2026 | `gpt-5` \| `gpt-5-2025-08-07` | `gpt-5.6-sol` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5-chat-latest'
   provider: openai
@@ -1327,7 +1327,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-5-chat-latest` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5-codex'
   provider: openai
@@ -1345,7 +1345,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-5-codex` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5-mini-2025-08-07'
   provider: openai
@@ -1362,8 +1362,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Dec 11, 2026 | `gpt-5-mini-2025-08-07` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Dec 11, 2026 | `gpt-5-mini` \| `gpt-5-mini-2025-08-07` | `gpt-5.6-terra` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5-nano-2025-08-07'
   provider: openai
@@ -1380,8 +1380,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Dec 11, 2026 | `gpt-5-nano-2025-08-07` | `gpt-5.6-luna` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Dec 11, 2026 | `gpt-5-nano` \| `gpt-5-nano-2025-08-07` | `gpt-5.6-luna` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5-pro-2025-10-06'
   provider: openai
@@ -1398,8 +1398,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Dec 11, 2026 | `gpt-5-pro-2025-10-06` | `gpt-5.6-sol` (`reasoning.mode: pro`) |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Dec 11, 2026 | `gpt-5-pro` \| `gpt-5-pro-2025-10-06` | `gpt-5.6-sol` (`reasoning.mode: pro`) |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.1'
   provider: openai
@@ -1416,8 +1416,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Apr 1, 2027 | `gpt-5.1` | `gpt-6-sol` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Apr 1, 2027 | `gpt-5.1` \| `gpt-5.1-2025-11-13` | `gpt-6-sol` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.1-chat-latest'
   provider: openai
@@ -1435,7 +1435,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-5.1-chat-latest` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.1-codex'
   provider: openai
@@ -1453,7 +1453,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-5.1-codex` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.1-codex-max'
   provider: openai
@@ -1471,7 +1471,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-5.1-codex-max` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.1-codex-mini'
   provider: openai
@@ -1489,7 +1489,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-5.1-codex-mini` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.2-chat-latest'
   provider: openai
@@ -1507,7 +1507,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Aug 10, 2026 | `gpt-5.2-chat-latest` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.2-codex'
   provider: openai
@@ -1525,7 +1525,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-5.2-codex` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.3-chat-latest'
   provider: openai
@@ -1543,7 +1543,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Aug 10, 2026 | `gpt-5.3-chat-latest` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.3-codex'
   provider: openai
@@ -1561,7 +1561,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Apr 1, 2027 | `gpt-5.3-codex` | `gpt-6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.4-cyber'
   provider: openai
@@ -1578,7 +1578,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Oct 1, 2026 | `gpt-5.4-cyber` | The most capable cyber model available to you. |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-5.4-nano'
   provider: openai
@@ -1595,8 +1595,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Apr 1, 2027 | `gpt-5.4-nano` | `gpt-6-luna` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Apr 1, 2027 | `gpt-5.4-nano` \| `gpt-5.4-nano-2026-03-17` | `gpt-6-luna` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-audio'
   provider: openai
@@ -1613,8 +1613,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Jan 20, 2027 | `gpt-audio` | `gpt-audio-1.5` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Jan 20, 2027 | `gpt-audio` \| `gpt-audio-2025-08-28` | `gpt-audio-1.5` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-audio-mini'
   provider: openai
@@ -1631,8 +1631,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Jan 20, 2027 | `gpt-audio-mini` | `gpt-audio-1.5` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Jan 20, 2027 | `gpt-audio-mini` \| `gpt-audio-mini-2025-12-15` | `gpt-audio-1.5` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-audio-mini-2025-10-06'
   provider: openai
@@ -1650,7 +1650,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-audio-mini-2025-10-06` | `gpt-audio-1.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-image-1'
   provider: openai
@@ -1658,7 +1658,7 @@ models:
   model_id: 'gpt-image-1'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -1669,7 +1669,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `gpt-image-1` | `gpt-image-2.5-sunburst` or `gpt-image-2.5-flare` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-image-1-mini'
   provider: openai
@@ -1688,7 +1688,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Dec 1, 2026 | `gpt-image-1-mini` | `gpt-image-2.5-sunburst` or `gpt-image-2.5-flare` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-image-1.5'
   provider: openai
@@ -1706,8 +1706,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Dec 1, 2026 | `gpt-image-1.5` | `gpt-image-2.5-sunburst` or `gpt-image-2.5-flare` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Dec 1, 2026 | `gpt-image-1.5` \| `gpt-image-1.5-2025-12-16` | `gpt-image-2.5-sunburst` or `gpt-image-2.5-flare` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-realtime'
   provider: openai
@@ -1724,8 +1724,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Jan 20, 2027 | `gpt-realtime` | `gpt-realtime-2.1` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Jan 20, 2027 | `gpt-realtime` \| `gpt-realtime-2025-08-28` | `gpt-realtime-2.1` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-realtime-mini'
   provider: openai
@@ -1742,8 +1742,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Jan 20, 2027 | `gpt-realtime-mini` | `gpt-realtime-2.1-mini` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Jan 20, 2027 | `gpt-realtime-mini` \| `gpt-realtime-mini-2025-12-15` | `gpt-realtime-2.1-mini` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:gpt-realtime-mini-2025-10-06'
   provider: openai
@@ -1761,7 +1761,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `gpt-realtime-mini-2025-10-06` | `gpt-realtime-2.1-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o1'
   provider: openai
@@ -1769,7 +1769,7 @@ models:
   model_id: 'o1'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -1779,7 +1779,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `o1-2024-12-17` \| `o1` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o1-2024-12-17'
   provider: openai
@@ -1787,7 +1787,7 @@ models:
   model_id: 'o1-2024-12-17'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -1797,7 +1797,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `o1-2024-12-17` \| `o1` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o1-mini'
   provider: openai
@@ -1815,7 +1815,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-10-27 | `o1-mini` | `o4-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o1-preview'
   provider: openai
@@ -1833,7 +1833,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-07-28 | `o1-preview` | `o3` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o1-pro'
   provider: openai
@@ -1841,7 +1841,7 @@ models:
   model_id: 'o1-pro'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -1851,7 +1851,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `o1-pro-2025-03-19` \| `o1-pro` | `gpt-5.6-sol` (`reasoning.mode: pro`) |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o1-pro-2025-03-19'
   provider: openai
@@ -1859,7 +1859,7 @@ models:
   model_id: 'o1-pro-2025-03-19'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -1869,7 +1869,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `o1-pro-2025-03-19` \| `o1-pro` | `gpt-5.6-sol` (`reasoning.mode: pro`) |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o3-2025-04-16'
   provider: openai
@@ -1886,8 +1886,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Dec 11, 2026 | `o3-2025-04-16` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Dec 11, 2026 | `o3` \| `o3-2025-04-16` | `gpt-5.6-sol` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o3-deep-research'
   provider: openai
@@ -1905,7 +1905,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `o3-deep-research-2025-06-26` \| `o3-deep-research` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o3-deep-research-2025-06-26'
   provider: openai
@@ -1923,7 +1923,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `o3-deep-research-2025-06-26` \| `o3-deep-research` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o3-mini'
   provider: openai
@@ -1931,7 +1931,7 @@ models:
   model_id: 'o3-mini'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -1941,7 +1941,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `o3-mini-2025-01-31` \| `o3-mini` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o3-mini-2025-01-31'
   provider: openai
@@ -1949,7 +1949,7 @@ models:
   model_id: 'o3-mini-2025-01-31'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -1959,7 +1959,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `o3-mini-2025-01-31` \| `o3-mini` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o3-pro-2025-06-10'
   provider: openai
@@ -1976,8 +1976,8 @@ models:
   drop_in: false
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
-  source_excerpt: '| Dec 11, 2026 | `o3-pro-2025-06-10` | `gpt-5.6-sol` (`reasoning.mode: pro`) |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| Dec 11, 2026 | `o3-pro` \| `o3-pro-2025-06-10` | `gpt-5.6-sol` (`reasoning.mode: pro`) |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o4-mini'
   provider: openai
@@ -1985,7 +1985,7 @@ models:
   model_id: 'o4-mini'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -1995,7 +1995,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `o4-mini-2025-04-16` \| `o4-mini` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o4-mini-2025-04-16'
   provider: openai
@@ -2003,7 +2003,7 @@ models:
   model_id: 'o4-mini-2025-04-16'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-23'
   retirement_date_qualifier: exact
@@ -2013,7 +2013,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| October 23, 2026 | `o4-mini-2025-04-16` \| `o4-mini` | `gpt-5.6-terra` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o4-mini-deep-research'
   provider: openai
@@ -2031,7 +2031,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `o4-mini-deep-research-2025-06-26` \| `o4-mini-deep-research` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:o4-mini-deep-research-2025-06-26'
   provider: openai
@@ -2049,7 +2049,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| July 23, 2026 | `o4-mini-deep-research-2025-06-26` \| `o4-mini-deep-research` | `gpt-5.6-sol` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:sora-2'
   provider: openai
@@ -2066,7 +2066,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-09-24 | `sora-2` | --- |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:sora-2-2025-10-06'
   provider: openai
@@ -2083,7 +2083,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-09-24 | `sora-2-2025-10-06` | --- |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:sora-2-2025-12-08'
   provider: openai
@@ -2100,7 +2100,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-09-24 | `sora-2-2025-12-08` | --- |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:sora-2-pro'
   provider: openai
@@ -2117,7 +2117,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-09-24 | `sora-2-pro` | --- |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:sora-2-pro-2025-10-06'
   provider: openai
@@ -2134,7 +2134,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2026-09-24 | `sora-2-pro-2025-10-06` | --- |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-ada-001'
   provider: openai
@@ -2152,7 +2152,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-ada-001` | $0.40 / 1M tokens | `gpt-3.5-turbo-instruct` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-babbage-001'
   provider: openai
@@ -2170,7 +2170,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-babbage-001` | $0.50 / 1M tokens | `gpt-3.5-turbo-instruct` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-curie-001'
   provider: openai
@@ -2188,7 +2188,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-curie-001` | $2.00 / 1M tokens | `gpt-3.5-turbo-instruct` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-davinci-001'
   provider: openai
@@ -2206,7 +2206,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-davinci-001` | $20.00 / 1M tokens | `gpt-3.5-turbo-instruct` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-davinci-002'
   provider: openai
@@ -2224,7 +2224,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-davinci-002` | $20.00 / 1M tokens | `gpt-3.5-turbo-instruct` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-davinci-003'
   provider: openai
@@ -2242,7 +2242,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-davinci-003` | $20.00 / 1M tokens | `gpt-3.5-turbo-instruct` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-davinci-edit-001'
   provider: openai
@@ -2260,7 +2260,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-davinci-edit-001` | `gpt-4o` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-moderation-007'
   provider: openai
@@ -2278,7 +2278,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-10-27 | `text-moderation-007` | `omni-moderation` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-moderation-latest'
   provider: openai
@@ -2296,7 +2296,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-10-27 | `text-moderation-latest` | `omni-moderation` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-moderation-stable'
   provider: openai
@@ -2314,7 +2314,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2025-10-27 | `text-moderation-stable` | `omni-moderation` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-search-ada-doc-001'
   provider: openai
@@ -2332,7 +2332,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-search-ada-doc-001` | $4.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-search-ada-query-001'
   provider: openai
@@ -2350,7 +2350,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-search-ada-query-001` | $4.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-search-babbage-doc-001'
   provider: openai
@@ -2368,7 +2368,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-search-babbage-doc-001` | $5.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-search-babbage-query-001'
   provider: openai
@@ -2386,7 +2386,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-search-babbage-query-001` | $5.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-search-curie-doc-001'
   provider: openai
@@ -2404,7 +2404,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-search-curie-doc-001` | $20.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-search-curie-query-001'
   provider: openai
@@ -2422,7 +2422,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-search-curie-query-001` | $20.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-search-davinci-doc-001'
   provider: openai
@@ -2440,7 +2440,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-search-davinci-doc-001` | $200.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-search-davinci-query-001'
   provider: openai
@@ -2458,7 +2458,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-search-davinci-query-001` | $200.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-similarity-ada-001'
   provider: openai
@@ -2476,7 +2476,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-similarity-ada-001` | $4.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-similarity-babbage-001'
   provider: openai
@@ -2494,7 +2494,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-similarity-babbage-001` | $5.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-similarity-curie-001'
   provider: openai
@@ -2512,7 +2512,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-similarity-curie-001` | $20.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:text-similarity-davinci-001'
   provider: openai
@@ -2530,7 +2530,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| 2024-01-04 | `text-similarity-davinci-001` | $200.00 / 1M tokens | `text-embedding-3-small` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:tts-1'
   provider: openai
@@ -2548,7 +2548,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Jan 6, 2027 | `tts-1` | `gpt-realtime-2.1-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:tts-1-hd'
   provider: openai
@@ -2566,7 +2566,7 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Jan 6, 2027 | `tts-1-hd` | `gpt-realtime-2.1-mini` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'openai:whisper-1'
   provider: openai
@@ -2585,7 +2585,279 @@ models:
   source: openai/deprecations
   source_url: https://developers.openai.com/api/docs/deprecations
   source_excerpt: '| Feb 26, 2027 | `whisper-1` | `gpt-live-transcribe` or `gpt-transcribe` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-5.4-nano-2026-03-17'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-5.4-nano-2026-03-17'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2027-04-01'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-6-luna', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Apr 1, 2027 | `gpt-5.4-nano` \| `gpt-5.4-nano-2026-03-17` | `gpt-6-luna` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-5.1-2025-11-13'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-5.1-2025-11-13'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2027-04-01'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-6-sol', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Apr 1, 2027 | `gpt-5.1` \| `gpt-5.1-2025-11-13` | `gpt-6-sol` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-4o-mini-tts'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-4o-mini-tts'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2027-01-06'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-realtime-2.1-mini', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Jan 6, 2027 | `gpt-4o-mini-tts` \| `gpt-4o-mini-tts-2025-03-20` | `gpt-realtime-2.1-mini` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-4o-mini-transcribe-2025-12-15'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-4o-mini-transcribe-2025-12-15'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2027-02-26'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-live-transcribe', platform: openai }
+    - { model_id: 'gpt-transcribe', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Feb 26, 2027 | `gpt-4o-mini-transcribe` \| `gpt-4o-mini-transcribe-2025-12-15` | `gpt-live-transcribe` or `gpt-transcribe` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-realtime-2025-08-28'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-realtime-2025-08-28'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2027-01-20'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-realtime-2.1', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Jan 20, 2027 | `gpt-realtime` \| `gpt-realtime-2025-08-28` | `gpt-realtime-2.1` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-audio-2025-08-28'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-audio-2025-08-28'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2027-01-20'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-audio-1.5', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Jan 20, 2027 | `gpt-audio` \| `gpt-audio-2025-08-28` | `gpt-audio-1.5` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-realtime-mini-2025-12-15'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-realtime-mini-2025-12-15'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2027-01-20'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-realtime-2.1-mini', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Jan 20, 2027 | `gpt-realtime-mini` \| `gpt-realtime-mini-2025-12-15` | `gpt-realtime-2.1-mini` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-audio-mini-2025-12-15'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-audio-mini-2025-12-15'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2027-01-20'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-audio-1.5', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Jan 20, 2027 | `gpt-audio-mini` \| `gpt-audio-mini-2025-12-15` | `gpt-audio-1.5` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-5'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-5'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2026-12-11'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-5.6-sol', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Dec 11, 2026 | `gpt-5` \| `gpt-5-2025-08-07` | `gpt-5.6-sol` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-5-mini'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-5-mini'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2026-12-11'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-5.6-terra', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Dec 11, 2026 | `gpt-5-mini` \| `gpt-5-mini-2025-08-07` | `gpt-5.6-terra` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-5-nano'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-5-nano'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2026-12-11'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-5.6-luna', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Dec 11, 2026 | `gpt-5-nano` \| `gpt-5-nano-2025-08-07` | `gpt-5.6-luna` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-5-pro'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-5-pro'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2026-12-11'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-5.6-sol', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Dec 11, 2026 | `gpt-5-pro` \| `gpt-5-pro-2025-10-06` | `gpt-5.6-sol` (`reasoning.mode: pro`) |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:o3'
+  provider: openai
+  platform: openai
+  model_id: 'o3'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2026-12-11'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-5.6-sol', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Dec 11, 2026 | `o3` \| `o3-2025-04-16` | `gpt-5.6-sol` |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:o3-pro'
+  provider: openai
+  platform: openai
+  model_id: 'o3-pro'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2026-12-11'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-5.6-sol', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Dec 11, 2026 | `o3-pro` \| `o3-pro-2025-06-10` | `gpt-5.6-sol` (`reasoning.mode: pro`) |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'openai:gpt-image-1.5-2025-12-16'
+  provider: openai
+  platform: openai
+  model_id: 'gpt-image-1.5-2025-12-16'
+  version: null
+  aliases: []
+  status: deprecated
+  deprecation_date: null
+  retirement_date: '2026-12-01'
+  retirement_date_qualifier: exact
+  recommended_replacements:
+    - { model_id: 'gpt-image-2.5-sunburst', platform: openai }
+    - { model_id: 'gpt-image-2.5-flare', platform: openai }
+  drop_in: false
+  source: openai/deprecations
+  source_url: https://developers.openai.com/api/docs/deprecations
+  source_excerpt: '| Dec 1, 2026 | `gpt-image-1.5` \| `gpt-image-1.5-2025-12-16` | `gpt-image-2.5-sunburst` or `gpt-image-2.5-flare` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'anthropic:claude-1.0'
   provider: anthropic
