@@ -1,4 +1,4 @@
-Claude Sonnet 4.5 on Google Cloud is Anthropic's Sonnet-class model for powering
+Anthropic's Claude Sonnet 4.5 on Google Cloud is Anthropic's Sonnet-class model for powering
 real-world agents, with industry leading capabilities around coding, computer
 use, cybersecurity, and working with office files like spreadsheets.
 

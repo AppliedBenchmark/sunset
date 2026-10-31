@@ -4,8 +4,8 @@
 # Seeded on 2026-10-08 from the official pages in registry/sources.yaml. Every value is in its
 # entry's source_excerpt, and every excerpt is word for word in the snapshot of its source.
 schema_version: 1
-registry_version: 14
-generated_at: '2026-10-10T00:00:00Z'
+registry_version: 15
+generated_at: '2026-10-31T00:00:00Z'
 models:
 - id: 'openai:ada'
   provider: openai
@@ -4738,7 +4738,7 @@ models:
   source: vertex/partner-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models
   source_excerpt: 'Claude 3.5 Haiku on Google Cloud is **deprecated as of January 5, 2026** and will be **shut down on July 5, 2026**. Claude 3.5 Haiku on Google Cloud is available to existing customers only. Claude 3.5 Haiku on Google Cloud, the next generation of Anthropic''s fastest and most cost-effective model, is optimal for use cases where speed and affordability matter. View model card in Model Garden | Model ID | `claude-3-5-haiku` ||'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-3-5-sonnet'
   provider: anthropic
@@ -4755,7 +4755,7 @@ models:
   source: vertex/partner-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models
   source_excerpt: 'Claude 3.5 Sonnet on Google Cloud is **deprecated as of August 20, 2025** and will be **shut down on February 19, 2026**. Claude 3.5 Sonnet on Google Cloud is available to existing customers only. Claude 3.5 Sonnet on Google Cloud outperforms Anthropic''s Claude 3 Opus on Google Cloud on a wide range of Anthropic''s evaluations with the speed and cost of Anthropic''s mid-tier model, Claude 3 Sonnet on Google Cloud. | Model ID | `claude-3-5-sonnet` ||'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-3-5-sonnet-v2'
   provider: anthropic
@@ -4772,7 +4772,7 @@ models:
   source: vertex/partner-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models
   source_excerpt: 'Claude 3.5 Sonnet v2 on Google Cloud is **deprecated as of August 20, 2025** and will be **shut down on February 19, 2026**. Claude 3.5 Sonnet v2 on Google Cloud is available to existing customers only. Claude 3.5 Sonnet v2 on Google Cloud is a state-of-the-art model for real-world software engineering tasks and agentic capabilities. Try in Agent Studio | Model ID | `claude-3-5-sonnet-v2` ||'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-3-7-sonnet'
   provider: anthropic
@@ -4789,7 +4789,7 @@ models:
   source: vertex/partner-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models
   source_excerpt: 'Claude 3.7 Sonnet on Google Cloud is **deprecated as of November 11, 2025** and will be **shut down on May 11, 2026**. Claude 3.7 Sonnet on Google Cloud is available to existing customers only. Claude 3.7 Sonnet on Google Cloud is a state-of-the-art model for real-world software engineering tasks and agentic capabilities. | Model ID | `claude-3-7-sonnet` ||'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-3-haiku'
   provider: anthropic
@@ -4806,7 +4806,7 @@ models:
   source: vertex/partner-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models
   source_excerpt: 'Anthropic''s Claude 3 Haiku on Google Cloud is **deprecated as of February 23, 2026** and will be **shut down on August 23, 2026**. Anthropic''s Claude 3 Haiku on Google Cloud is available to existing customers only. Anthropic''s Claude 3 Haiku on Google Cloud is Anthropic''s fastest vision and text model for near-instant responses to basic queries, meant for seamless AI experiences mimicking human interactions. | Model ID | `claude-3-haiku` ||'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-3-opus'
   provider: anthropic
@@ -4823,7 +4823,7 @@ models:
   source: vertex/partner-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models
   source_excerpt: 'Anthropic''s Claude 3 Opus on Google Cloud is **deprecated as of June 30, 2025** and will be **shut down on August 1, 2025**. Claude 3 Opus on Google Cloud is available to existing customers only. Anthropic''s Claude 3 Opus on Google Cloud is a powerful AI model with top-level performance on highly complex tasks. It can navigate open-ended prompts and sight-unseen scenarios with remarkable fluency and human-like understanding. Claude 3 Opus on Google Cloud is optimized for the following use cases: - Task automation, such as interactive coding and planning, or running complex actions across APIs and databases. - Research and development tasks, such as research review, brainstorming and hypothesis generation, and product testing. - Strategy tasks, such as advanced analysis of charts and graphs, financials and market trends, and forecasting. - Vision tasks, such as processing images to return text output. Also, analysis of charts, graphs, technical diagrams, reports, and other visual content. | Model ID | `claude-3-opus` ||'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-fable-5'
   provider: anthropic
@@ -4840,7 +4840,7 @@ models:
   source: vertex/claude-fable-5
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5
   source_excerpt: '**Retirement Date:** Not sooner than June 8, 2027.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-fable-5-1'
   provider: anthropic
@@ -4857,7 +4857,7 @@ models:
   source: vertex/claude-fable-5-1
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5-1
   source_excerpt: '**Retirement date:** No sooner than March 1, 2027.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-haiku-4-5'
   provider: anthropic
@@ -4867,14 +4867,14 @@ models:
   aliases: []
   status: active
   deprecation_date: null
-  retirement_date: '2026-10-15'
+  retirement_date: '2026-12-07'
   retirement_date_qualifier: no_earlier_than
   recommended_replacements: []
   drop_in: false
   source: vertex/claude-haiku-4-5
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-4-5
-  source_excerpt: '**Retirement Date:** Not sooner than Oct 15, 2026.'
-  verified_on: '2026-10-08'
+  source_excerpt: '**Retirement Date:** Not sooner than December 7, 2026.'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-haiku-5-5'
   provider: anthropic
@@ -4891,7 +4891,7 @@ models:
   source: vertex/claude-haiku-5-5
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5
   source_excerpt: '**Retirement Date:** Not sooner than October 7, 2027.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-opus-4'
   provider: anthropic
@@ -4908,7 +4908,7 @@ models:
   source: vertex/claude-opus-4
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4
   source_excerpt: '**Retirement Date:** Not sooner than May 14, 2026.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-opus-4-1'
   provider: anthropic
@@ -4925,7 +4925,7 @@ models:
   source: vertex/claude-opus-4-1
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-1
   source_excerpt: '**Retirement Date:** Not sooner than Aug 5, 2026.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-opus-4-5'
   provider: anthropic
@@ -4942,7 +4942,7 @@ models:
   source: vertex/claude-opus-4-5
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-5
   source_excerpt: '**Retirement Date:** Not sooner than Nov 24, 2026.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-opus-4-6'
   provider: anthropic
@@ -4959,7 +4959,7 @@ models:
   source: vertex/claude-opus-4-6
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-6
   source_excerpt: '**Retirement Date:** Not sooner than February 5, 2027.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-opus-4-7'
   provider: anthropic
@@ -4976,7 +4976,7 @@ models:
   source: vertex/claude-opus-4-7
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-7
   source_excerpt: '**Retirement Date:** Not sooner than April 16, 2027.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-opus-4-8'
   provider: anthropic
@@ -4993,7 +4993,7 @@ models:
   source: vertex/claude-opus-4-8
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-4-8
   source_excerpt: '**Retirement Date:** Not sooner than May 28, 2027.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-opus-5'
   provider: anthropic
@@ -5010,7 +5010,7 @@ models:
   source: vertex/claude-opus-5
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-5
   source_excerpt: '**Retirement Date:** Not sooner than January 24, 2027.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-opus-5-5'
   provider: anthropic
@@ -5027,7 +5027,7 @@ models:
   source: vertex/claude-opus-5-5
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-5-5
   source_excerpt: '**Retirement Date:** Not sooner than September 22, 2027.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-sonnet-4'
   provider: anthropic
@@ -5044,7 +5044,7 @@ models:
   source: vertex/claude-sonnet-4
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-4
   source_excerpt: '**Retirement Date:** Not sooner than May 14, 2026.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-sonnet-4-5'
   provider: anthropic
@@ -5061,7 +5061,7 @@ models:
   source: vertex/claude-sonnet-4-5
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-4-5
   source_excerpt: '**Retirement Date:** Not sooner than Sept 29, 2026.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-sonnet-5'
   provider: anthropic
@@ -5078,7 +5078,7 @@ models:
   source: vertex/claude-sonnet-5
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-5
   source_excerpt: '**Retirement Date:** Not sooner than December 24, 2026.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:claude-sonnet-5-5'
   provider: anthropic
@@ -5095,7 +5095,7 @@ models:
   source: vertex/claude-sonnet-5-5
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-5-5
   source_excerpt: '**Retirement Date:** Not sooner than September 28, 2027.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:code-gecko'
   provider: google
@@ -5626,7 +5626,7 @@ models:
   source: vertex/partner-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models
   source_excerpt: 'Jamba 1.5 Large is **deprecated as of August 27, 2025** and will be **shut down on February 27, 2026**. Jamba 1.5 Large is available to existing customers only. AI21 Labs''s Jamba 1.5 Large is well balanced across quality, throughput, and low cost. View model card in Model Garden | Model ID | `jamba-1.5-large` ||'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:jamba-1.5-mini'
   provider: ai21
@@ -5643,7 +5643,7 @@ models:
   source: vertex/partner-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models
   source_excerpt: 'Jamba 1.5 Mini is **deprecated as of August 27, 2025** and will be **shut down on February 27, 2026**. Jamba 1.5 Mini is available to existing customers only. AI21 Labs''s Jamba 1.5 Mini is well balanced across quality, throughput, and low cost. View model card in Model Garden | Model ID | `jamba-1.5-mini` ||'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:multimodalembedding@001'
   provider: google
@@ -5879,7 +5879,7 @@ models:
   model_id: 'deepseek-ocr-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -5888,7 +5888,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `deepseek-ocr-maas` | July 21, 2026 | October 21, 2026 | Self-deploy DeepSeek-OCR on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:deepseek-r1-0528-maas'
   provider: deepseek
@@ -5896,7 +5896,7 @@ models:
   model_id: 'deepseek-r1-0528-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -5905,7 +5905,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `deepseek-r1-0528-maas` | July 21, 2026 | October 21, 2026 | Self-deploy DeepSeek-R1 on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:deepseek-v3.2-maas'
   provider: deepseek
@@ -5913,7 +5913,7 @@ models:
   model_id: 'deepseek-v3.2-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -5922,7 +5922,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `deepseek-v3.2-maas` | July 21, 2026 | October 21, 2026 | Self-deploy DeepSeek-V3.2 on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:deepseek-v3.1-maas'
   provider: deepseek
@@ -5930,7 +5930,7 @@ models:
   model_id: 'deepseek-v3.1-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -5939,7 +5939,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `deepseek-v3.1-maas` | July 21, 2026 | October 21, 2026 | Self-deploy DeepSeek-V3.1 on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:glm-5-maas'
   provider: zai
@@ -5947,7 +5947,7 @@ models:
   model_id: 'glm-5-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -5956,7 +5956,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `glm-5-maas` | July 21, 2026 | October 21, 2026 | Self-deploy GLM 5 on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:glm-4.7-maas'
   provider: zai
@@ -5964,7 +5964,7 @@ models:
   model_id: 'glm-4.7-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -5973,7 +5973,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `glm-4.7-maas` | July 21, 2026 | October 21, 2026 | Self-deploy GLM 4.7 on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:gpt-oss-20b-maas'
   provider: openai
@@ -5981,7 +5981,7 @@ models:
   model_id: 'gpt-oss-20b-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -5990,7 +5990,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `gpt-oss-20b-maas` | July 21, 2026 | October 21, 2026 | Self-deploy GPT OSS on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:kimi-k2-thinking-maas'
   provider: moonshotai
@@ -5998,7 +5998,7 @@ models:
   model_id: 'kimi-k2-thinking-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -6007,7 +6007,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `kimi-k2-thinking-maas` | July 21, 2026 | October 21, 2026 | Self-deploy Kimi K2 on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:llama-3.3-70b-instruct-maas'
   provider: meta
@@ -6015,7 +6015,7 @@ models:
   model_id: 'llama-3.3-70b-instruct-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -6024,7 +6024,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `llama-3.3-70b-instruct-maas` | July 21, 2026 | October 21, 2026 | Self-deploy Llama 3.3 on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:minimax-m2-maas'
   provider: minimax
@@ -6032,7 +6032,7 @@ models:
   model_id: 'minimax-m2-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -6041,7 +6041,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `minimax-m2-maas` | July 21, 2026 | October 21, 2026 | Self-deploy MiniMax M2 on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:multilingual-e5-large-instruct-maas'
   provider: intfloat
@@ -6049,7 +6049,7 @@ models:
   model_id: 'multilingual-e5-large-instruct-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -6058,7 +6058,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `multilingual-e5-large-instruct-maas` | July 21, 2026 | October 21, 2026 | Self-deploy E5 Text Embedding on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:multilingual-e5-small-maas'
   provider: intfloat
@@ -6066,7 +6066,7 @@ models:
   model_id: 'multilingual-e5-small-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -6075,7 +6075,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `multilingual-e5-small-maas` | July 21, 2026 | October 21, 2026 | Self-deploy E5 Text Embedding on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:qwen3-235b-a22b-instruct-2507-maas'
   provider: qwen
@@ -6083,7 +6083,7 @@ models:
   model_id: 'qwen3-235b-a22b-instruct-2507-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -6092,7 +6092,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `qwen3-235b-a22b-instruct-2507-maas` | July 21, 2026 | October 21, 2026 | Self-deploy Qwen3 on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:qwen3-coder-480b-a35b-instruct-maas'
   provider: qwen
@@ -6100,7 +6100,7 @@ models:
   model_id: 'qwen3-coder-480b-a35b-instruct-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -6109,7 +6109,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `qwen3-coder-480b-a35b-instruct-maas` | July 21, 2026 | October 21, 2026 | Self-deploy Qwen3 Coder on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:qwen3-next-80b-a3b-instruct-maas'
   provider: qwen
@@ -6117,7 +6117,7 @@ models:
   model_id: 'qwen3-next-80b-a3b-instruct-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -6126,7 +6126,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `qwen3-next-80b-a3b-instruct-maas` | July 21, 2026 | October 21, 2026 | Self-deploy Qwen3 Next on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:qwen3-next-80b-a3b-thinking-maas'
   provider: qwen
@@ -6134,7 +6134,7 @@ models:
   model_id: 'qwen3-next-80b-a3b-thinking-maas'
   version: null
   aliases: []
-  status: deprecated
+  status: retired
   deprecation_date: '2026-07-21'
   retirement_date: '2026-10-21'
   retirement_date_qualifier: exact
@@ -6143,7 +6143,7 @@ models:
   source: vertex/open-model-deprecations
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/open-models
   source_excerpt: '| `qwen3-next-80b-a3b-thinking-maas` | July 21, 2026 | October 21, 2026 | Self-deploy Qwen3 Next on Model Garden |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:grok-4.1-fast-reasoning'
   provider: xai
@@ -6160,7 +6160,7 @@ models:
   source: vertex/grok-4-1-fast
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-1-fast
   source_excerpt: '**Deprecated:** The Grok 4.1 model family (including `xai/grok-4.1-fast-reasoning` and `xai/grok-4.1-fast-non-reasoning`) is deprecated on the Gemini Enterprise Agent Platform and will be shut down on August 20, 2026.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The Grok 4.1 Fast page''s notice names it with its publisher, as code calls it on the OpenAI-compatible endpoint (https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/responses).'
 - id: 'vertex:grok-4.1-fast-non-reasoning'
   provider: xai
@@ -6177,7 +6177,7 @@ models:
   source: vertex/grok-4-1-fast
   source_url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-1-fast
   source_excerpt: '**Deprecated:** The Grok 4.1 model family (including `xai/grok-4.1-fast-reasoning` and `xai/grok-4.1-fast-non-reasoning`) is deprecated on the Gemini Enterprise Agent Platform and will be shut down on August 20, 2026.'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The Grok 4.1 Fast page''s notice names it with its publisher, as code calls it on the OpenAI-compatible endpoint (https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/responses).'
 - id: 'vertex:imagen-3.0-generate-002'
   provider: google
@@ -6194,7 +6194,7 @@ models:
   source: vertex/imagen-3-0-generate
   source_url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/3-0-generate
   source_excerpt: '| Versions | imagen-3.0-generate-002 Launch stage: GA Release date: January 29, 2025 Discontinuation date: June 30, 2026 | imagen-3.0-generate-002 Launch stage: GA Release date: January 29, 2025 Discontinuation date: June 30, 2026 |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:imagen-3.0-generate-001'
   provider: google
@@ -6211,7 +6211,7 @@ models:
   source: vertex/imagen-3-0-generate
   source_url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/3-0-generate
   source_excerpt: '| Versions | imagen-3.0-generate-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 | imagen-3.0-generate-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:imagen-3.0-fast-generate-001'
   provider: google
@@ -6228,7 +6228,7 @@ models:
   source: vertex/imagen-3-0-generate
   source_url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/3-0-generate
   source_excerpt: '| Versions | imagen-3.0-fast-generate-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 | imagen-3.0-fast-generate-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:imagen-3.0-capability-001'
   provider: google
@@ -6245,7 +6245,7 @@ models:
   source: vertex/imagen-3-0-generate
   source_url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/3-0-generate
   source_excerpt: '| Versions | imagen-3.0-capability-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 | imagen-3.0-capability-001 Launch stage: GA Release date: December 10, 2024 Discontinuation date: June 30, 2026 |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:imagen-4.0-generate-001'
   provider: google
@@ -6262,7 +6262,7 @@ models:
   source: vertex/imagen-4-0-generate
   source_url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/4-0-generate
   source_excerpt: '| Versions | imagen-4.0-generate-001 Launch stage: GA Release date: August 14, 2025 Discontinuation date: June 30, 2026 | imagen-4.0-generate-001 Launch stage: GA Release date: August 14, 2025 Discontinuation date: June 30, 2026 |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:imagen-4.0-fast-generate-001'
   provider: google
@@ -6279,7 +6279,7 @@ models:
   source: vertex/imagen-4-0-generate
   source_url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/4-0-generate
   source_excerpt: '| Versions | imagen-4.0-fast-generate-001 Launch stage: GA Release date: August 14, 2025 Discontinuation date: June 30, 2026 | imagen-4.0-fast-generate-001 Launch stage: GA Release date: August 14, 2025 Discontinuation date: June 30, 2026 |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:imagen-4.0-ultra-generate-001'
   provider: google
@@ -6296,7 +6296,7 @@ models:
   source: vertex/imagen-4-0-generate
   source_url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/4-0-generate
   source_excerpt: '| Versions | imagen-4.0-ultra-generate-001 Launch stage: GA Release date: August 14, 2025 Discontinuation date: June 30, 2026 | imagen-4.0-ultra-generate-001 Launch stage: GA Release date: August 14, 2025 Discontinuation date: June 30, 2026 |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:virtual-try-on-001'
   provider: google
@@ -6313,7 +6313,7 @@ models:
   source: vertex/imagen-virtual-try-on-001
   source_url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/imagen/virtual-try-on-001
   source_excerpt: '| Versions | virtual-try-on-001 Launch stage: GA Release date: January 20, 2026 Discontinuation date: January 20, 2027 | virtual-try-on-001 Launch stage: GA Release date: January 20, 2026 Discontinuation date: January 20, 2027 |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'bedrock:ai21.jamba-1-5-large-v1:0'
   provider: ai21
