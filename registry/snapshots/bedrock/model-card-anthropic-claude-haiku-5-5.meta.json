@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"MW6P0Hby1/5N7LX8DWMKZv34ZSs=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:22 GMT",
-  "sha256": "21b307b513464e7241dbb10bc9f40e697841cce5e890700907869ed217279322",
+  "fetched_at": "2026-10-31T10:54:29Z",
+  "etag": "\"YA37MsLsidIwwpH5KwV/Apje7CE=-gzip\"",
+  "last_modified": "Sat, 31 Oct 2026 03:36:17 GMT",
+  "sha256": "70b3715eec47c9a2869f9978b95e0decf262a51445d76b42c43c5c1ae2a8dd90",
   "normalizer_version": 1
 }
