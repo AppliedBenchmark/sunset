@@ -48,7 +48,7 @@ Marketplace product ID: prod-zpwu74hhojefo
 
 ## Endpoints and APIs supported
 
-These tables show the endpoints and APIs that GPT-6 Sol supports. See APIs supported by Amazon Bedrock and Endpoints supported by Amazon Bedrock.
+These tables show the endpoints and APIs that GPT-6 Sol supports. See APIs supported by Amazon Bedrock and Inference endpoints supported by Amazon Bedrock.
 
 Endpoint support
 
@@ -78,7 +78,7 @@ For Chat Completions, use /openai/v1/chat/completions.
 
 ###### Tip
 
-For new applications, use the bedrock-runtime endpoint when possible. See Endpoints supported by Amazon Bedrock for details.
+For new applications, use the bedrock-runtime endpoint when possible. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and features
 
@@ -87,7 +87,7 @@ Amazon Bedrock features
 Features supported on the bedrock-runtime endpoint
 
 | Supported | Not Supported |
-| Projects (default project only) Invocation logs Response streaming Abuse detection Guardrails (Responses, Chat Completions, InvokeModel, and Converse APIs) Application inference profiles (InvokeModel and Converse APIs only; not supported with Responses or Chat Completions) Implicit Prompt Caching (Responses, Chat Completions, InvokeModel, and Converse APIs) Explicit Prompt Caching (Responses, Chat Completions, and InvokeModel APIs; not supported with Converse) Structured outputs (Responses, Chat Completions, InvokeModel, and Converse APIs) Reasoning Summaries (Responses API only) | Server-side tool use Intelligent prompt routing Count tokens Knowledge Bases |
+| Projects (default project only) Invocation logs Response streaming Abuse detection Guardrails (Responses, Chat Completions, InvokeModel, and Converse APIs) Application inference profiles (InvokeModel and Converse APIs only; not supported with Responses or Chat Completions) Implicit Prompt Caching (Responses, Chat Completions, InvokeModel, and Converse APIs) Explicit Prompt Caching (Responses, Chat Completions, and InvokeModel APIs; not supported with Converse) Structured outputs (Responses, Chat Completions, InvokeModel, and Converse APIs) Reasoning Summaries (Responses, Converse, and ConverseStream APIs; on Converse, set additionalModelRequestFields.reasoning.summary) | Server-side tool use Intelligent prompt routing Count tokens Knowledge Bases |
 
 Features supported on the bedrock-mantle endpoint
 
@@ -145,6 +145,10 @@ For JSON Schema output with the Converse API, you must set additionalModelReques
 }
 }
 
+Converse content blocks
+
+On the bedrock-runtime endpoint, Converse accepts text and image content blocks in user messages. This model doesn't accept document content blocks, and it doesn't accept an image content block inside a toolResult. A request that includes either is rejected with a ValidationException. To send a document to this model, use the Responses API with an input_file content part instead.
+
 ## Pricing
 
 All prices are in USD per 1 million tokens for the Standard tier.
@@ -181,7 +185,7 @@ Use these model IDs and endpoint URLs to call the model. See APIs supported and 
 | bedrock-runtime | openai.gpt-6-sol | Not supported | us.openai.gpt-6-sol | global.openai.gpt-6-sol |
 | bedrock-mantle | openai.gpt-6-sol | https://bedrock-mantle.{region}.api.aws/openai/v1 | Not supported | Not supported |
 
-On bedrock-runtime:
+Configure your client for the bedrock-runtime endpoint as follows:
 
 -
 Use this base URL: https://bedrock-runtime.{region}.amazonaws.com/openai/v1.

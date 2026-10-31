@@ -1,9 +1,9 @@
 {
   "source": "bedrock/model-card-zai-glm-4-7",
   "urls": ["https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-zai-glm-4-7.html"],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"t+yXTtMgqVMBxiS82zXkkVlS0n8=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:29 GMT",
-  "sha256": "e198c92a0ca14933c885960bfae156f7878c85164debc5b7a61fa4b0507bdc2d",
+  "fetched_at": "2026-10-31T10:54:29Z",
+  "etag": "\"HDL5sB6L+RO68g3d6xZYUfuv9po=-gzip\"",
+  "last_modified": "Sat, 31 Oct 2026 03:34:11 GMT",
+  "sha256": "baa6999176a3e2cf0ad4a9af26b8f22ee97fa5dc72d281802c1a1edc6d40c6fa",
   "normalizer_version": 1
 }

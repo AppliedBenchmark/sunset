@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-nvidia-nvidia-nemotron-nano-12b-v2-vl-bf16.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"UuqWx24LMqIXWG/AV1W5ssXkok0=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:29 GMT",
-  "sha256": "c5cff7ba4ce1708a5ff8364e57dbd66152a989ce6c1a855bf36156cd3e4cffdc",
+  "fetched_at": "2026-10-31T10:54:29Z",
+  "etag": "\"ufg6J3qdpT5+43bxhlN54ALkFSc=-gzip\"",
+  "last_modified": "Sat, 31 Oct 2026 03:35:12 GMT",
+  "sha256": "9a22eaefdb540d6fb3568a8d7fa2d549bb5e2890b7078e465f16be3a86e04695",
   "normalizer_version": 1
 }
