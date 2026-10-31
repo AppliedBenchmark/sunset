@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/sonnet-5-5.md.txt"
   ],
-  "fetched_at": "2026-10-07T23:07:58Z",
+  "fetched_at": "2026-10-31T10:54:35Z",
   "etag": null,
   "last_modified": null,
-  "sha256": "2c44fa5f8528a63612c1d0b1bbf644d5885c15ad52096a90ef204d880426485f",
+  "sha256": "86a1df279f601b56621f1bc3950223582133440b3671326be35807f661898e04",
   "normalizer_version": 1
 }
