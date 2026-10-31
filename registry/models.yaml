@@ -4,8 +4,8 @@
 # Seeded on 2026-10-08 from the official pages in registry/sources.yaml. Every value is in its
 # entry's source_excerpt, and every excerpt is word for word in the snapshot of its source.
 schema_version: 1
-registry_version: 14
-generated_at: '2026-10-10T00:00:00Z'
+registry_version: 15
+generated_at: '2026-10-31T00:00:00Z'
 models:
 - id: 'openai:ada'
   provider: openai
@@ -3235,7 +3235,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `embedding-001` | April 9, 2024 | October 30, 2025 | `gemini-embedding-2` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:embedding-2-preview'
   provider: google
@@ -3253,7 +3253,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `embedding-2-preview` | March 10, 2026 | August 10, 2026 | `gemini-embedding-2` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:embedding-gecko-001'
   provider: google
@@ -3271,7 +3271,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `embedding-gecko-001` | | October 30, 2025 | `gemini-embedding-2` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.0-flash'
   provider: google
@@ -3289,7 +3289,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.0-flash` | February 5, 2025 | June 1, 2026 | `gemini-3.6-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.0-flash-001'
   provider: google
@@ -3307,7 +3307,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.0-flash-001` | February 5, 2025 | June 1, 2026 | `gemini-3.6-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.0-flash-lite'
   provider: google
@@ -3325,7 +3325,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.0-flash-lite` | February 25, 2025 | June 1, 2026 | `gemini-3.1-flash-lite` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.0-flash-lite-001'
   provider: google
@@ -3343,7 +3343,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.0-flash-lite-001` | February 25, 2025 | June 1, 2026 | `gemini-3.1-flash-lite` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.0-flash-lite-preview'
   provider: google
@@ -3356,12 +3356,12 @@ models:
   retirement_date: '2025-12-09'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'gemini-2.5-flash-lite', platform: gemini-api }
+    - { model_id: 'gemini-3.1-flash-lite', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `gemini-2.0-flash-lite-preview` | February 5, 2025 | December 9, 2025 | `gemini-2.5-flash-lite` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `gemini-2.0-flash-lite-preview` | February 5, 2025 | December 9, 2025 | `gemini-3.1-flash-lite` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.0-flash-lite-preview-02-05'
   provider: google
@@ -3374,12 +3374,12 @@ models:
   retirement_date: '2025-12-09'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'gemini-2.5-flash-lite', platform: gemini-api }
+    - { model_id: 'gemini-3.1-flash-lite', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `gemini-2.0-flash-lite-preview-02-05` | February 5, 2025 | December 9, 2025 | `gemini-2.5-flash-lite` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `gemini-2.0-flash-lite-preview-02-05` | February 5, 2025 | December 9, 2025 | `gemini-3.1-flash-lite` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.0-flash-live-001'
   provider: google
@@ -3397,7 +3397,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.0-flash-live-001` | April 9, 2025 | December 9, 2025 | `gemini-3.8-live` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.0-flash-preview-image-generation'
   provider: google
@@ -3415,7 +3415,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.0-flash-preview-image-generation` | May 7, 2025 | November 14, 2025 | `gemini-nano-banana-2.1` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-computer-use-preview-10-2025'
   provider: google
@@ -3433,7 +3433,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-computer-use-preview-10-2025` | October 7, 2025 | July 28, 2026 | `gemini-3.8-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-flash'
   provider: google
@@ -3450,7 +3450,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-flash` | June 17, 2025 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-flash-image'
   provider: google
@@ -3468,7 +3468,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-flash-image` | October 2, 2025 | March 15, 2027 | `gemini-3.1-flash-lite-image` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:gemini-2.5-flash-image-preview'
   provider: google
@@ -3486,7 +3486,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-flash-image-preview` | May 7, 2025 | January 15, 2026 | `gemini-nano-banana-2.1` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-flash-lite'
   provider: google
@@ -3503,7 +3503,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-flash-lite` | July 22, 2025 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-flash-lite-preview-09-2025'
   provider: google
@@ -3521,7 +3521,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-flash-lite-preview-09-2025` | September 25, 2025 | March 31, 2026 | `gemini-3.1-flash-lite` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-flash-native-audio-preview-12-2025'
   provider: google
@@ -3539,7 +3539,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-flash-native-audio-preview-12-2025` | December 12, 2025 | November 17, 2026 | `gemini-3.8-live` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:gemini-2.5-flash-preview-05-20'
   provider: google
@@ -3557,7 +3557,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-flash-preview-05-20` | May 20, 2025 | November 18, 2025 | `gemini-3.6-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-flash-preview-09-25'
   provider: google
@@ -3575,7 +3575,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-flash-preview-09-25` | September 25, 2025 | February 17, 2026 | `gemini-3.6-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-flash-preview-tts'
   provider: google
@@ -3594,7 +3594,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-flash-preview-tts` | May 20, 2025 | November 17, 2026 | `gemini-3.8-flash-tts` or `gemini-3.8-flash-lite-tts` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:gemini-2.5-pro'
   provider: google
@@ -3611,7 +3611,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-pro` | June 17, 2025 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-pro-preview-03-25'
   provider: google
@@ -3629,7 +3629,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-pro-preview-03-25` | March 3, 2025 | December 2, 2025 | `gemini-3.1-pro-preview` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-pro-preview-05-06'
   provider: google
@@ -3647,7 +3647,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-pro-preview-05-06` | May 6, 2025 | December 2, 2025 | `gemini-3.1-pro-preview` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-pro-preview-06-05'
   provider: google
@@ -3665,7 +3665,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-pro-preview-06-05` | June 5, 2025 | December 2, 2025 | `gemini-3.1-pro-preview` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-pro-preview-tts'
   provider: google
@@ -3684,7 +3684,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-2.5-pro-preview-tts` | May 20, 2025 | November 17, 2026 | `gemini-3.8-flash-tts` or `gemini-3.8-flash-lite-tts` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:gemini-3-flash-preview'
   provider: google
@@ -3702,7 +3702,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3-flash-preview` | December 17, 2025 | No shutdown date announced | `gemini-3.6-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3-pro-image'
   provider: google
@@ -3719,7 +3719,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3-pro-image` | May 28, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3-pro-image-preview'
   provider: google
@@ -3737,7 +3737,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3-pro-image-preview` | November 20, 2025 | June 25, 2026 | `gemini-3-pro-image` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3-pro-preview'
   provider: google
@@ -3755,7 +3755,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3-pro-preview` | November 18, 2025 | March 9, 2026 | `gemini-3.1-pro-preview` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.1-flash-image'
   provider: google
@@ -3773,7 +3773,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.1-flash-image` | May 28, 2026 | No shutdown date announced | `gemini-nano-banana-2.1` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.1-flash-image-preview'
   provider: google
@@ -3791,7 +3791,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.1-flash-image-preview` | February 26, 2026 | June 25, 2026 | `gemini-nano-banana-2.1` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.1-flash-lite'
   provider: google
@@ -3809,7 +3809,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.1-flash-lite` | May 7, 2026 | May 7, 2027 | `gemini-3.5-flash-lite` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:gemini-3.1-flash-lite-image'
   provider: google
@@ -3826,7 +3826,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.1-flash-lite-image` | June 30, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.1-flash-lite-preview'
   provider: google
@@ -3844,7 +3844,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.1-flash-lite-preview` | March 3, 2026 | May 25, 2026 | `gemini-3.1-flash-lite` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.1-flash-live-preview'
   provider: google
@@ -3862,7 +3862,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.1-flash-live-preview` | March 11, 2026 | November 17, 2026 | `gemini-3.8-live` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:gemini-3.1-flash-tts-preview'
   provider: google
@@ -3881,7 +3881,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.1-flash-tts-preview` | February 26, 2026 | November 17, 2026 | `gemini-3.8-flash-tts` or `gemini-3.8-flash-lite-tts` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:gemini-3.1-pro-preview'
   provider: google
@@ -3898,7 +3898,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.1-pro-preview` | February 19, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.5-flash'
   provider: google
@@ -3914,8 +3914,8 @@ models:
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `gemini-3.5-flash` | May 19, 2026 | No shutdown date announced | `gemini-3.6-flash` (requests to `gemini-3.5-flash` are automatically routed to `gemini-3.6-flash`) |'
-  verified_on: '2026-10-10'
+  source_excerpt: '| `gemini-3.5-flash` | May 19, 2026 | N/A | `gemini-3.6-flash` (not available to select in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to `gemini-3.6-flash`) |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.5-flash-lite'
   provider: google
@@ -3932,7 +3932,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.5-flash-lite` | July 21, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.5-live-translate-preview'
   provider: google
@@ -3949,7 +3949,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.5-live-translate-preview` | June 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.5-transcribe'
   provider: google
@@ -3966,7 +3966,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.5-transcribe` | August 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.5-transcribe-live'
   provider: google
@@ -3983,7 +3983,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.5-transcribe-live` | August 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.6-flash'
   provider: google
@@ -4000,7 +4000,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.6-flash` | July 21, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.7-flash'
   provider: google
@@ -4016,8 +4016,8 @@ models:
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `gemini-3.7-flash` | August 13, 2026 | No shutdown date announced | `gemini-3.8-flash` (requests to `gemini-3.7-flash` are automatically routed to `gemini-3.8-flash`) |'
-  verified_on: '2026-10-10'
+  source_excerpt: '| `gemini-3.7-flash` | August 13, 2026 | N/A | `gemini-3.8-flash` (not available to select in Google AI Studio; the endpoint is not shutting down and automatically routes API requests to `gemini-3.8-flash`) |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.8-flash'
   provider: google
@@ -4034,7 +4034,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.8-flash` | September 2, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.8-flash-lite-tts'
   provider: google
@@ -4051,7 +4051,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.8-flash-lite-tts` | September 22, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.8-flash-tts'
   provider: google
@@ -4068,7 +4068,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.8-flash-tts` | September 22, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.8-live'
   provider: google
@@ -4085,7 +4085,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.8-live` | September 15, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-3.8-live-extended-thinking'
   provider: google
@@ -4102,7 +4102,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-3.8-live-extended-thinking` | September 15, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-embedding-001'
   provider: google
@@ -4120,7 +4120,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-embedding-001` | July 14, 2025 | May 14, 2028 | `gemini-embedding-2` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:gemini-embedding-2'
   provider: google
@@ -4137,7 +4137,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-embedding-2` | April 22, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-embedding-exp'
   provider: google
@@ -4155,7 +4155,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-embedding-exp` | | October 30, 2025 | `gemini-embedding-2` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-embedding-exp-03-07'
   provider: google
@@ -4173,7 +4173,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-embedding-exp-03-07` | | October 30, 2025 | `gemini-embedding-2` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-live-2.5-flash-preview'
   provider: google
@@ -4191,7 +4191,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-live-2.5-flash-preview` | June 17, 2025 | December 9, 2025 | `gemini-3.8-live` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-nano-banana-2.1'
   provider: google
@@ -4208,7 +4208,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-nano-banana-2.1` | October 6, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-omni-1.1-flash'
   provider: google
@@ -4225,7 +4225,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-omni-1.1-flash` | August 27, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-omni-flash-preview'
   provider: google
@@ -4233,17 +4233,17 @@ models:
   model_id: 'gemini-omni-flash-preview'
   version: null
   aliases: []
-  status: active
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-22'
-  retirement_date_qualifier: no_earlier_than
+  retirement_date_qualifier: exact
   recommended_replacements:
     - { model_id: 'gemini-omni-1.1-flash', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `gemini-omni-flash-preview` | June 30, 2026 | October 22, 2026 | `gemini-omni-1.1-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:gemini-robotics-er-1.5-preview'
   provider: google
@@ -4256,12 +4256,12 @@ models:
   retirement_date: '2026-04-30'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'gemini-robotics-er-1.6-preview', platform: gemini-api }
+    - { model_id: 'gemini-robotics-er-2-preview', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `gemini-robotics-er-1.5-preview` | September 25, 2025 | April 30, 2026 | `gemini-robotics-er-1.6-preview` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `gemini-robotics-er-1.5-preview` | September 25, 2025 | April 30, 2026 | `gemini-robotics-er-2-preview` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-robotics-er-1.6-preview'
   provider: google
@@ -4269,17 +4269,17 @@ models:
   model_id: 'gemini-robotics-er-1.6-preview'
   version: null
   aliases: []
-  status: active
+  status: retired
   deprecation_date: null
   retirement_date: '2026-08-31'
-  retirement_date_qualifier: no_earlier_than
+  retirement_date_qualifier: exact
   recommended_replacements:
     - { model_id: 'gemini-robotics-er-2-preview', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `gemini-robotics-er-1.6-preview` | April 14, 2026 | August 31, 2026 | gemini-robotics-er-2-preview |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `gemini-robotics-er-1.6-preview` | April 14, 2026 | August 31, 2026 | `gemini-robotics-er-2-preview` |'
+  verified_on: '2026-10-31'
   notes: 'Not marked as shut down (gray row) on the HTML page; the date is the earliest possible shutdown date and has passed.'
 - id: 'gemini-api:imagen-3.0-generate-002'
   provider: google
@@ -4292,12 +4292,12 @@ models:
   retirement_date: '2025-11-10'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'imagen-4.0-generate-001', platform: gemini-api }
+    - { model_id: 'gemini-nano-banana-2.1', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `imagen-3.0-generate-002` | February 6, 2025 | November 10, 2025 | `imagen-4.0-generate-001` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `imagen-3.0-generate-002` | February 6, 2025 | November 10, 2025 | `gemini-nano-banana-2.1` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:imagen-4.0-fast-generate-001'
   provider: google
@@ -4315,7 +4315,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `imagen-4.0-fast-generate-001` | June 24, 2025 | August 17, 2026 | `gemini-nano-banana-2.1` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:imagen-4.0-generate-001'
   provider: google
@@ -4333,7 +4333,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `imagen-4.0-generate-001` | June 24, 2025 | August 17, 2026 | `gemini-nano-banana-2.1` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:imagen-4.0-generate-preview-06-06'
   provider: google
@@ -4346,12 +4346,12 @@ models:
   retirement_date: '2026-02-17'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'imagen-4.0-generate-001', platform: gemini-api }
+    - { model_id: 'gemini-nano-banana-2.1', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `imagen-4.0-generate-preview-06-06` | June 24, 2025 | February 17, 2026 | `imagen-4.0-generate-001` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `imagen-4.0-generate-preview-06-06` | June 24, 2025 | February 17, 2026 | `gemini-nano-banana-2.1` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:imagen-4.0-ultra-generate-001'
   provider: google
@@ -4369,7 +4369,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `imagen-4.0-ultra-generate-001` | June 24, 2025 | August 17, 2026 | `gemini-nano-banana-2.1` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:imagen-4.0-ultra-generate-preview-06-06'
   provider: google
@@ -4382,12 +4382,12 @@ models:
   retirement_date: '2026-02-17'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'imagen-4.0-ultra-generate-001', platform: gemini-api }
+    - { model_id: 'gemini-nano-banana-2.1', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `imagen-4.0-ultra-generate-preview-06-06` | June 24, 2025 | February 17, 2026 | `imagen-4.0-ultra-generate-001` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `imagen-4.0-ultra-generate-preview-06-06` | June 24, 2025 | February 17, 2026 | `gemini-nano-banana-2.1` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:lyria-3-clip-preview'
   provider: google
@@ -4404,7 +4404,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `lyria-3-clip-preview` | March 25, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:lyria-3-pro-preview'
   provider: google
@@ -4422,7 +4422,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `lyria-3-pro-preview` | March 25, 2026 | No shutdown date announced | `lyria-3.5` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:lyria-3.5'
   provider: google
@@ -4439,7 +4439,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `lyria-3.5` | September 3, 2026 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:lyria-realtime-exp'
   provider: google
@@ -4456,7 +4456,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `lyria-realtime-exp` | May 20, 2025 | No shutdown date announced | |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:text-embedding-004'
   provider: google
@@ -4474,7 +4474,7 @@ models:
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `text-embedding-004` | April 9, 2024 | January 14, 2026 | `gemini-embedding-2` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:veo-2.0-generate-001'
   provider: google
@@ -4487,12 +4487,12 @@ models:
   retirement_date: '2026-06-30'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'veo-3.1-generate-preview', platform: gemini-api }
+    - { model_id: 'gemini-omni-1.1-flash', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `veo-2.0-generate-001` | April 9, 2025 | June 30, 2026 | `veo-3.1-generate-preview` or the GA models on the Gemini Enterprise Agent Platform |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `veo-2.0-generate-001` | April 9, 2025 | June 30, 2026 | `gemini-omni-1.1-flash` or the GA models on the Gemini Enterprise Agent Platform |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:veo-3.0-fast-generate-001'
   provider: google
@@ -4505,12 +4505,12 @@ models:
   retirement_date: '2026-06-30'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'veo-3.1-fast-generate-preview', platform: gemini-api }
+    - { model_id: 'gemini-omni-1.1-flash', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `veo-3.0-fast-generate-001` | September 9, 2025 | June 30, 2026 | `veo-3.1-fast-generate-preview` or the GA models on the Gemini Enterprise Agent Platform |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `veo-3.0-fast-generate-001` | September 9, 2025 | June 30, 2026 | `gemini-omni-1.1-flash` or the GA models on the Gemini Enterprise Agent Platform |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:veo-3.0-fast-generate-preview'
   provider: google
@@ -4523,12 +4523,12 @@ models:
   retirement_date: '2025-11-12'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'veo-3.1-fast-generate-preview', platform: gemini-api }
+    - { model_id: 'gemini-omni-1.1-flash', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `veo-3.0-fast-generate-preview` | July 31, 2025 | November 12, 2025 | `veo-3.1-fast-generate-preview` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `veo-3.0-fast-generate-preview` | July 31, 2025 | November 12, 2025 | `gemini-omni-1.1-flash` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:veo-3.0-generate-001'
   provider: google
@@ -4541,12 +4541,12 @@ models:
   retirement_date: '2026-06-30'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'veo-3.1-generate-preview', platform: gemini-api }
+    - { model_id: 'gemini-omni-1.1-flash', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `veo-3.0-generate-001` | September 9, 2025 | June 30, 2026 | `veo-3.1-generate-preview` or the GA models on the Gemini Enterprise Agent Platform |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `veo-3.0-generate-001` | September 9, 2025 | June 30, 2026 | `gemini-omni-1.1-flash` or the GA models on the Gemini Enterprise Agent Platform |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:veo-3.0-generate-preview'
   provider: google
@@ -4559,12 +4559,12 @@ models:
   retirement_date: '2025-11-12'
   retirement_date_qualifier: exact
   recommended_replacements:
-    - { model_id: 'veo-3.1-generate-preview', platform: gemini-api }
+    - { model_id: 'gemini-omni-1.1-flash', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
-  source_excerpt: '| `veo-3.0-generate-preview` | July 31, 2025 | November 12, 2025 | `veo-3.1-generate-preview` |'
-  verified_on: '2026-10-08'
+  source_excerpt: '| `veo-3.0-generate-preview` | July 31, 2025 | November 12, 2025 | `gemini-omni-1.1-flash` |'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:veo-3.1-fast-generate-preview'
   provider: google
@@ -4572,17 +4572,17 @@ models:
   model_id: 'veo-3.1-fast-generate-preview'
   version: null
   aliases: []
-  status: active
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-22'
-  retirement_date_qualifier: no_earlier_than
+  retirement_date_qualifier: exact
   recommended_replacements:
     - { model_id: 'gemini-omni-1.1-flash', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `veo-3.1-fast-generate-preview` | October 15, 2025 | October 22, 2026 | `gemini-omni-1.1-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:veo-3.1-generate-preview'
   provider: google
@@ -4590,17 +4590,17 @@ models:
   model_id: 'veo-3.1-generate-preview'
   version: null
   aliases: []
-  status: active
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-22'
-  retirement_date_qualifier: no_earlier_than
+  retirement_date_qualifier: exact
   recommended_replacements:
     - { model_id: 'gemini-omni-1.1-flash', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `veo-3.1-generate-preview` | October 15, 2025 | October 22, 2026 | `gemini-omni-1.1-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
 - id: 'gemini-api:veo-3.1-lite-generate-preview'
   provider: google
@@ -4608,18 +4608,52 @@ models:
   model_id: 'veo-3.1-lite-generate-preview'
   version: null
   aliases: []
-  status: active
+  status: retired
   deprecation_date: null
   retirement_date: '2026-10-22'
-  retirement_date_qualifier: no_earlier_than
+  retirement_date_qualifier: exact
   recommended_replacements:
     - { model_id: 'gemini-omni-1.1-flash', platform: gemini-api }
   drop_in: false
   source: gemini-api/deprecations
   source_url: https://ai.google.dev/gemini-api/docs/deprecations
   source_excerpt: '| `veo-3.1-lite-generate-preview` | March 31, 2026 | October 22, 2026 | `gemini-omni-1.1-flash` |'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: 'The page says its shutdown dates are the earliest possible dates.'
+- id: 'gemini-api:gemini-robotics-er-2-preview'
+  provider: google
+  platform: gemini-api
+  model_id: 'gemini-robotics-er-2-preview'
+  version: null
+  aliases: []
+  status: active
+  deprecation_date: null
+  retirement_date: null
+  retirement_date_qualifier: exact
+  recommended_replacements: []
+  drop_in: false
+  source: gemini-api/deprecations
+  source_url: https://ai.google.dev/gemini-api/docs/deprecations
+  source_excerpt: '| `gemini-robotics-er-2-preview` | July 30, 2026 | No shutdown date announced | |'
+  verified_on: '2026-10-31'
+  notes: null
+- id: 'gemini-api:gemini-robotics-er-2-streaming-preview'
+  provider: google
+  platform: gemini-api
+  model_id: 'gemini-robotics-er-2-streaming-preview'
+  version: null
+  aliases: []
+  status: active
+  deprecation_date: null
+  retirement_date: null
+  retirement_date_qualifier: exact
+  recommended_replacements: []
+  drop_in: false
+  source: gemini-api/deprecations
+  source_url: https://ai.google.dev/gemini-api/docs/deprecations
+  source_excerpt: '| `gemini-robotics-er-2-streaming-preview` | July 30, 2026 | No shutdown date announced | |'
+  verified_on: '2026-10-31'
+  notes: null
 - id: 'gemini-api:gemini-2.5-flash-preview-native-audio-dialog'
   provider: google
   platform: gemini-api
@@ -4635,7 +4669,7 @@ models:
   source: gemini-api/release-notes
   source_url: https://ai.google.dev/gemini-api/docs/changelog
   source_excerpt: '## October 20, 2025 - The following Gemini Live API models are now shut down: - `gemini-2.5-flash-preview-native-audio-dialog` - `gemini-2.5-flash-exp-native-audio-thinking-dialog`'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-2.5-flash-exp-native-audio-thinking-dialog'
   provider: google
@@ -4652,7 +4686,7 @@ models:
   source: gemini-api/release-notes
   source_url: https://ai.google.dev/gemini-api/docs/changelog
   source_excerpt: '## October 20, 2025 - The following Gemini Live API models are now shut down: - `gemini-2.5-flash-preview-native-audio-dialog` - `gemini-2.5-flash-exp-native-audio-thinking-dialog`'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-1.5-pro'
   provider: google
@@ -4669,7 +4703,7 @@ models:
   source: gemini-api/release-notes
   source_url: https://ai.google.dev/gemini-api/docs/changelog
   source_excerpt: '## September 29, 2025 - The following Gemini 1.5 models are now shut down: - `gemini-1.5-pro` - `gemini-1.5-flash-8b` - `gemini-1.5-flash`'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-1.5-flash-8b'
   provider: google
@@ -4686,7 +4720,7 @@ models:
   source: gemini-api/release-notes
   source_url: https://ai.google.dev/gemini-api/docs/changelog
   source_excerpt: '## September 29, 2025 - The following Gemini 1.5 models are now shut down: - `gemini-1.5-pro` - `gemini-1.5-flash-8b` - `gemini-1.5-flash`'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'gemini-api:gemini-1.5-flash'
   provider: google
@@ -4703,7 +4737,7 @@ models:
   source: gemini-api/release-notes
   source_url: https://ai.google.dev/gemini-api/docs/changelog
   source_excerpt: '## September 29, 2025 - The following Gemini 1.5 models are now shut down: - `gemini-1.5-pro` - `gemini-1.5-flash-8b` - `gemini-1.5-flash`'
-  verified_on: '2026-10-08'
+  verified_on: '2026-10-31'
   notes: null
 - id: 'vertex:chat-bison'
   provider: google
