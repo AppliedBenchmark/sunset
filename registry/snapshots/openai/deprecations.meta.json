@@ -1,9 +1,9 @@
 {
   "source": "openai/deprecations",
   "urls": ["https://developers.openai.com/api/docs/deprecations.md"],
-  "fetched_at": "2026-10-07T23:03:43Z",
-  "etag": "W/\"1d45c62d72c88a8481a0a2e612770742\"",
-  "last_modified": "Wed, 07 Oct 2026 22:50:06 GMT",
-  "sha256": "9efa540fdf2dc9d0bef5ff197e5cc4a1443b9ee32e0de4e2d4c5c0ca9b5b6543",
+  "fetched_at": "2026-11-07T11:42:25Z",
+  "etag": "W/\"6ba7f34054ff263c3a9c82423fa9675f\"",
+  "last_modified": "Sat, 07 Nov 2026 05:31:20 GMT",
+  "sha256": "15f9d9619c77f51e7c96d385b536f3048f00179dca65d84511c17c9354c57dcd",
   "normalizer_version": 1
 }
