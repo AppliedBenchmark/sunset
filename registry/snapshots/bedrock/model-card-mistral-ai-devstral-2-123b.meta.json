@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-devstral-2-123b.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"9e29lNWbPqSBJFVMbPCF00B/4K0=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:24 GMT",
-  "sha256": "77a2db046d33e1d00e3d607ba42d85478a53bee45264e32ed1751cea285dbfd8",
+  "fetched_at": "2026-11-07T11:42:30Z",
+  "etag": "\"R/NbCoRtA3F4zQ3M/qORDf7FS4c=-gzip\"",
+  "last_modified": "Sat, 07 Nov 2026 03:32:08 GMT",
+  "sha256": "5af67e66ea157cc161c0ad174e5be738493bc68801862e62e1cec55cdde9e53b",
   "normalizer_version": 1
 }
