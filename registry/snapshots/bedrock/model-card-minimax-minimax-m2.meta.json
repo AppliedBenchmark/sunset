@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-minimax-minimax-m2.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"nBRizg9AI1kWItv0+XnVuS0tIWk=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:25 GMT",
-  "sha256": "a6953c3b230dc120b499081b1a7b577336a14f3c43a4b53132ffc1529a1cc59f",
+  "fetched_at": "2026-11-14T12:08:32Z",
+  "etag": "\"Iz5wKzoADaZ49PMCo8hJmtNh344=-gzip\"",
+  "last_modified": "Sat, 14 Nov 2026 01:40:20 GMT",
+  "sha256": "059e60522857aa7cf56b92ac19afe87cd6faa1c524e3df204a7d400cb751cbb0",
   "normalizer_version": 1
 }

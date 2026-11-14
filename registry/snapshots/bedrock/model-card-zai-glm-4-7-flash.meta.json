@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-zai-glm-4-7-flash.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"n9PzDNZAooAx72AAx0I3pbYUK5s=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:26 GMT",
-  "sha256": "055bbbdb74b0bf2d665a01e51a77d5c2ff52a61fe7fdfa331851f0d436992266",
+  "fetched_at": "2026-11-14T12:08:32Z",
+  "etag": "\"91m9JI0wCP5ec/wlwWB4yDNySjQ=-gzip\"",
+  "last_modified": "Sat, 14 Nov 2026 01:40:22 GMT",
+  "sha256": "1627e88c17c43e5468f3b8ad4c2e107333c162399ffabf79eecc0d6a0583824b",
   "normalizer_version": 1
 }

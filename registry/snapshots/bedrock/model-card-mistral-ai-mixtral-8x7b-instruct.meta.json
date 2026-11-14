@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-mistral-ai-mixtral-8x7b-instruct.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"nnpqNk/USIyoQW2I+QF4TueLCTg=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:31 GMT",
-  "sha256": "7526f3c3643e4012694185a67e95f1f1859852b429246500bb4ab66c2d7d85d4",
+  "fetched_at": "2026-11-14T12:08:32Z",
+  "etag": "\"DUiWi0zGrw3payj+q+mfbcDvb38=-gzip\"",
+  "last_modified": "Sat, 14 Nov 2026 01:40:26 GMT",
+  "sha256": "ca459e6c52517fb407a4209f04d41d06e6accbc7769ea7751c33a0c36308ea55",
   "normalizer_version": 1
 }

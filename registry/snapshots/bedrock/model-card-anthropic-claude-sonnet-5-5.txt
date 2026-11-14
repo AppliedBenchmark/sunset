@@ -34,7 +34,10 @@ Context window: 1M tokens
 Max output tokens: 128K
 
 -
-Reasoning: Supported (adaptive thinking is on by default; effort level configurable — low, medium, high, xhigh, max; default: high)
+Reasoning: Supported (adaptive thinking is on by default; thinking.type: "disabled" is not supported, so use "between_tools" to turn off up-front thinking at high effort or below; effort level configurable — low, medium, high, xhigh, max; default: high) See Adaptive thinking.
+
+-
+Preserved thinking: Thinking blocks are bound to the model and the conversation prefix that produced them. Replay earlier turns unchanged, or a request returns a 400 error. On Claude Sonnet 5.5, thinking blocks are also bound to the AWS account that produced them. For more information, see Preserved thinking.
 
 -
 Knowledge cutoff: June 2026
@@ -51,7 +54,7 @@ Marketplace product ID: prod-pjfguoisodbd6
 
 ## Endpoints and APIs supported
 
-The following tables show which endpoints and APIs are supported for Claude Sonnet 5.5. For more information, see APIs supported by Amazon Bedrock and Endpoints supported by Amazon Bedrock.
+The following tables show which endpoints and APIs are supported for Claude Sonnet 5.5. For more information, see APIs supported by Amazon Bedrock and Inference endpoints supported by Amazon Bedrock.
 
 Endpoint support
 
@@ -71,7 +74,7 @@ APIs supported on bedrock-mantle endpoint
 
 ###### Tip
 
-Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Endpoints supported by Amazon Bedrock for details.
+Whenever possible, we recommend using the bedrock-runtime endpoint for new applications. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and Features
 
@@ -80,14 +83,14 @@ Bedrock Features
 Features supported using bedrock-runtime endpoint
 
 | Supported | Not Supported |
-| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Computer use | Intelligent prompt routing Count tokens Structured outputs |
+| Response streaming Explicit Prompt Caching Abuse detection Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Computer use Client-side tool calling (tool_choice types auto and none only) Server-side tool use (tool search only) Application inference profiles Invocation logs Structured outputs Watermarking | Intelligent prompt routing Count tokens Implicit Prompt Caching |
 
 Features supported using bedrock-mantle endpoint
 
 | Supported | Not Supported |
-| Response streaming Implicit Prompt Caching Explicit Prompt Caching Abuse detection Count tokens Computer use | Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Intelligent prompt routing Structured outputs |
+| Response streaming Explicit Prompt Caching Abuse detection Count tokens Computer use Structured outputs Watermarking | Guardrails Prompt optimization Knowledge base Model evaluation Prompt management Flows Agents Intelligent prompt routing Implicit Prompt Caching |
 
-Implicit and Explicit Prompt Caching using bedrock-runtime and bedrock-mantle endpoints
+Explicit Prompt Caching using bedrock-runtime and bedrock-mantle endpoints
 
 For more information, see Prompt caching for faster model inference.
 
@@ -101,12 +104,30 @@ For more information, see Computer use.
 | Tool type | Beta header |
 | computer_20251124 | computer-use-2025-11-24 |
 
+Client tools and toolsets using bedrock-runtime endpoint
+
+For more information, see Tool use.
+
+| Tool type | Beta header |
+| computer_toolset_20260801 | None required |
+| browser_toolset_20260801 | None required |
+| bash_20250124 | None required |
+| text_editor_20250728 | None required |
+| memory_20250818 | None required |
+
 Compaction using bedrock-runtime endpoint
 
 For more information, see Compaction.
 
 | Compaction supported | Beta value |
-| Yes | compact-2026-09-04 |
+| Yes | compact-2026-09-04, compact-2026-01-12 |
+
+Fallback credit for refused requests (beta)
+
+When Claude Sonnet 5.5 refuses a request, the response can include a fallback credit token. Redeem the token when you retry the same request on a fallback model, and the retry is billed for the cached conversation prefix at cache-read rates instead of cache-write rates. For more information, see Fallback credit for refused requests (beta).
+
+| Supported endpoints | Beta value | Valid fallback models |
+| bedrock-runtime, bedrock-mantle | fallback-credit-2026-07-01 | Claude Sonnet 5 (anthropic.claude-sonnet-5) |
 
 ## Pricing
 
