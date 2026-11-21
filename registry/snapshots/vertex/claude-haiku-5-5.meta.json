@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5.md.txt"
   ],
-  "fetched_at": "2026-10-07T23:07:58Z",
+  "fetched_at": "2026-11-21T13:26:44Z",
   "etag": null,
   "last_modified": null,
-  "sha256": "4c4c1659d521a4ce37fa8a8699b766c474106ed5a03a3811f9e0ab32f5c65f66",
+  "sha256": "c4b0fe20065d2957767596bf7d6830817056fc18888eec7fcdc03f24963a6888",
   "normalizer_version": 1
 }
