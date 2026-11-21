@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-astra.html"
   ],
-  "fetched_at": "2026-10-10T13:32:01Z",
-  "etag": "\"2HTLe75Mm/qM9CE5+H9kvx3COfg=-gzip\"",
-  "last_modified": "Sat, 10 Oct 2026 07:14:17 GMT",
-  "sha256": "db8cf53de01099aeee9eec84e5535a9d7f9c21248705a6da8ded4a0a0d4689a7",
+  "fetched_at": "2026-11-21T13:26:45Z",
+  "etag": "\"d+RaG5zM+5ci5XQydRNyTErQBxY=-gzip\"",
+  "last_modified": "Sat, 21 Nov 2026 05:05:14 GMT",
+  "sha256": "6de6dc3b160f1a3f59492051d994cd7d59361db774f86f4a77ad0da9497cbf2c",
   "normalizer_version": 1
 }
