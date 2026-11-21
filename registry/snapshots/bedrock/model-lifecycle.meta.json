@@ -1,9 +1,9 @@
 {
   "source": "bedrock/model-lifecycle",
   "urls": ["https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html"],
-  "fetched_at": "2026-10-07T23:03:43Z",
-  "etag": "\"HenMFOV1l971fKaEXvuF+gQMMeo=-gzip\"",
-  "last_modified": "Wed, 07 Oct 2026 19:39:22 GMT",
-  "sha256": "920c9018822094250a3379dee24386a57e61c6ff38804f9301bca940b678b562",
+  "fetched_at": "2026-11-21T13:26:45Z",
+  "etag": "\"0fh7vR+1Kn59WCyNi6BvsAnQ2zg=-gzip\"",
+  "last_modified": "Sat, 21 Nov 2026 05:05:20 GMT",
+  "sha256": "c2df85f6643b8b7e2a0a4ad7a65133ea7bbc4ff1cab84f7a19ae065dcbc511b5",
   "normalizer_version": 1
 }
