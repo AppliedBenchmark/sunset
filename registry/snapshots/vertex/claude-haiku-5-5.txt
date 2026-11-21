@@ -1,4 +1,4 @@
-Claude Haiku 5.5 on Google Cloud is a high-performance, cost-effective model built for
+Anthropic's Claude Haiku 5.5 on Google Cloud is a high-performance, cost-effective model built for
 coding, sub-agents, and latency-sensitive experiences at scale. For full
 information, see [Anthropic's
 documentation](https://platform.claude.com/docs/en/models/haiku-5-5/overview).
@@ -21,5 +21,5 @@ View model card in Model Garden
 |---|---|---|
 | Images | - **Limitation and specifications:** See Vision in Anthropic's documentation |
 | Documents | - **Limitation and specifications:** See PDF support in Anthropic's documentation |
-| Model availability (Includes fixed quota \& Provisioned Throughput) | - United States - `Multi-region` - Europe - `Multi-region` - Global - `global endpoint` |
+| Model availability (Includes fixed quota \& Provisioned Throughput) | - United States - `us (US multi-region)` - Europe - `eu (Europe multi-region)` - Global - `global endpoint` |
 | ML processing | - United States - `Multi-region` - Europe - `Multi-region` - Asia Pacific - `asia-southeast1` |

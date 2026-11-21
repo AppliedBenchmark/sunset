@@ -1,4 +1,4 @@
-Claude Opus 4.6 on Google Cloud is optimized for coding, enterprise agents, and professional work.
+Anthropic's Claude Opus 4.6 on Google Cloud is optimized for coding, enterprise agents, and professional work.
 
 **Retirement Date:** Not sooner than February 5, 2027.
 
@@ -6,7 +6,7 @@ Claude Opus 4.6 on Google Cloud is optimized for coding, enterprise agents, and 
 - **Coding:** Handle everyday development tasks with enhanced performance---or plan and execute complex software projects spanning hours or days---with the ability to save, maintain, and reference information across multiple sessions.
 - **Cybersecurity:** Deploy agents that autonomously patch vulnerabilities before exploitation---shifting from reactive detection to proactive defense.
 - **Financial analysis:** Conduct entry-level financial analysis, deliver advanced predictive analysis, or preemptively develop intelligent risk management strategies that leverage best-in-class domain knowledge.
-- **Computer use:** Claude Opus 4.6 on Google Cloud is a highly accurate model for computer use, enabling developers to direct Claude to use computers the way people do.
+- **Computer use:** Anthropic's Claude Opus 4.6 on Google Cloud is a highly accurate model for computer use, enabling developers to direct Claude to use computers the way people do.
 - **Business tasks:** Generate and edit office files like slides, documents, and spreadsheets with minimal input.
 - **Research:** Perform focused analysis across multiple data sources, turning expert analysis into final deliverables. Ideal for complex problem solving, rapid business intelligence, and real-time decision support.
 
