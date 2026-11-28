@@ -1,9 +1,9 @@
 {
   "source": "anthropic/model-deprecations",
   "urls": ["https://platform.claude.com/docs/en/about-claude/model-deprecations.md"],
-  "fetched_at": "2026-10-10T13:36:26Z",
+  "fetched_at": "2026-11-28T14:09:19Z",
   "etag": null,
   "last_modified": null,
-  "sha256": "eb59537fa27099e0d45e32de667445bc547644051e4b69eaed6d1674c8bbc53e",
+  "sha256": "f874a5b76de5f83e45375206b567c52da28bb85424eaa88aa07a00b2dbbe85e7",
   "normalizer_version": 1
 }
