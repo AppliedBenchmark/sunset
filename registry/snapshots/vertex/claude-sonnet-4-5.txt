@@ -1,8 +1,11 @@
-Claude Sonnet 4.5 on Google Cloud is Anthropic's Sonnet-class model for powering
+> [!CAUTION]
+> **Caution:** As of September 29, 2026, Anthropic's Claude Sonnet 4.5 on Google Cloud (`claude-sonnet-4-5`) is deprecated and will be shut down on November 30, 2026. Anthropic's Claude Sonnet 4.5 on Google Cloud is available to existing customers only. For more information, see Partner model deprecations.
+
+Anthropic's Claude Sonnet 4.5 on Google Cloud is Anthropic's Sonnet-class model for powering
 real-world agents, with industry leading capabilities around coding, computer
 use, cybersecurity, and working with office files like spreadsheets.
 
-**Retirement Date:** Not sooner than Sept 29, 2026.
+**Retirement Date:** November 30, 2026.
 
 - **Long-running agents**: Power production-ready assistants for multi-step, real-time applications, from customer support automation to complex operational workflows that require peak accuracy, intelligence, and speed.
 - **Coding**: Handle everyday development tasks with enhanced performance - or plan and execute complex software projects spanning hours or days - with the ability to save, maintain, and reference information across multiple sessions.
@@ -17,7 +20,7 @@ Try in Agent Studio
 View model card in Model Garden
 
 | Model ID | `claude-sonnet-4-5` ||
-| Launch stage | GA ||
+| Launch stage | deprecated ||
 | Supported inputs \& outputs | - Inputs: Text, Code, Images - Outputs: Text ||
 | Token limits | - Maximum input tokens: 1M (Preview) 200,000 (GA) - Maximum output tokens: 64,000 ||
 | Capabilities | - Supported - Web search - Batch predictions - Prompt caching - Function calling - Extended thinking - Count tokens - Not supported ||
