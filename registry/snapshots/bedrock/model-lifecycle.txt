@@ -16,8 +16,7 @@ GPT-6.1 Sol follows the OpenAI first-party model's lifecycle and end-of-life ter
 
 When a model enters its Legacy period, the EOL date of the model is added to the model card.
 
-###### Note
-
+Note
 Model lifecycle dates are specific to Amazon Bedrock and may differ from dates published by model providers (such as Anthropic or Cohere). For Amazon Bedrock usage, only the dates on the model card apply.
 
 ## Active

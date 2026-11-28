@@ -3,9 +3,9 @@
   "urls": [
     "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-meta-llama-4-maverick-17b-instruct.html"
   ],
-  "fetched_at": "2026-10-08T19:48:41Z",
-  "etag": "\"YR4ZtDV2AlMLiwtXriv9gagR0pU=-gzip\"",
-  "last_modified": "Thu, 08 Oct 2026 19:30:25 GMT",
-  "sha256": "ccfd6f0e1c757f0e5b0b7e0c182ef3283c138e614742c8c8705cf115f106cdc8",
+  "fetched_at": "2026-11-28T14:09:27Z",
+  "etag": "\"zR/mbtLO9atUIyPO6j7A6WKNXh0=-gzip\"",
+  "last_modified": "Sat, 28 Nov 2026 00:03:07 GMT",
+  "sha256": "809f270473abe9c273035d489607ea4aedd4051a514e9248d415612ea9b4df17",
   "normalizer_version": 1
 }

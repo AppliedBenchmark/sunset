@@ -48,7 +48,7 @@ Marketplace product ID: prod-fiwlckcpwkwli
 
 ## Endpoints and APIs supported
 
-These tables show the endpoints and APIs that GPT-6 Luna supports. See APIs supported by Amazon Bedrock and Endpoints supported by Amazon Bedrock.
+These tables show the endpoints and APIs that GPT-6 Luna supports. See APIs supported by Amazon Bedrock and Inference endpoints supported by Amazon Bedrock.
 
 Endpoint support
 
@@ -66,8 +66,7 @@ APIs supported on the bedrock-mantle endpoint
 | Messages | Responses | Chat Completions | Converse | Invoke |
 | | | | | |
 
-###### Note
-
+Note
 On bedrock-mantle, both APIs use the /openai/v1 base path. Do not use /v1. Use either API with this model:
 
 -
@@ -76,9 +75,8 @@ For Responses, use /openai/v1/responses.
 -
 For Chat Completions, use /openai/v1/chat/completions.
 
-###### Tip
-
-For new applications, use the bedrock-runtime endpoint when possible. See Endpoints supported by Amazon Bedrock for details.
+Tip
+For new applications, use the bedrock-runtime endpoint when possible. See Inference endpoints supported by Amazon Bedrock for details.
 
 ## Capabilities and features
 
@@ -87,7 +85,7 @@ Amazon Bedrock features
 Features supported on the bedrock-runtime endpoint
 
 | Supported | Not Supported |
-| Projects (default project only) Invocation logs Response streaming Abuse detection Guardrails (Responses, Chat Completions, InvokeModel, and Converse APIs) Application inference profiles (InvokeModel and Converse APIs only; not supported with Responses or Chat Completions) Implicit Prompt Caching (Responses, Chat Completions, InvokeModel, and Converse APIs) Explicit Prompt Caching (Responses, Chat Completions, and InvokeModel APIs; not supported with Converse) Structured outputs (Responses, Chat Completions, InvokeModel, and Converse APIs) Reasoning Summaries (Responses API only) | Server-side tool use Intelligent prompt routing Count tokens Knowledge Bases |
+| Projects (default project only) Invocation logs Response streaming Abuse detection Guardrails (Responses, Chat Completions, InvokeModel, and Converse APIs) Application inference profiles (InvokeModel and Converse APIs only; not supported with Responses or Chat Completions) Implicit Prompt Caching (Responses, Chat Completions, InvokeModel, and Converse APIs) Explicit Prompt Caching (Responses, Chat Completions, and InvokeModel APIs; not supported with Converse) Structured outputs (Responses, Chat Completions, InvokeModel, and Converse APIs) Reasoning Summaries (Responses, Converse, and ConverseStream APIs; on Converse, set additionalModelRequestFields.reasoning.summary) | Server-side tool use Intelligent prompt routing Count tokens Knowledge Bases |
 
 Features supported on the bedrock-mantle endpoint
 
@@ -133,8 +131,7 @@ For Converse, set outputConfig.textFormat.type to json_schema. In outputConfig.t
 
 Use an object schema. Put all fields in required. Set additionalProperties to false. Validate your schema before you send it. Check for refusals or incomplete responses before you parse the output.
 
-###### Important
-
+Important
 For JSON Schema output with the Converse API, you must set additionalModelRequestFields.text.format.strict to true, in addition to specifying the schema in outputConfig. Include the following field in your request.
 
 {
@@ -144,6 +141,10 @@ For JSON Schema output with the Converse API, you must set additionalModelReques
 }
 }
 }
+
+Converse content blocks
+
+On the bedrock-runtime endpoint, Converse accepts text and image content blocks in user messages. This model doesn't accept document content blocks, and it doesn't accept an image content block inside a toolResult. A request that includes either is rejected with a ValidationException. To send a document to this model, use the Responses API with an input_file content part instead.
 
 ## Pricing
 
@@ -169,8 +170,7 @@ Priority and Flex tiers are not supported for these inference options.
 
 Long-context rates apply to the full request when input exceeds 272,000 tokens.
 
-###### Note
-
+Note
 Prices are subject to change. For current prices, see Amazon Bedrock pricing.
 
 ## Call the model
@@ -181,7 +181,7 @@ Use these model IDs and endpoint URLs to call the model. See APIs supported and 
 | bedrock-mantle | openai.gpt-6-luna | https://bedrock-mantle.{region}.api.aws/openai/v1 | Not supported | Not supported |
 | bedrock-runtime | openai.gpt-6-luna | Not supported | us.openai.gpt-6-luna | global.openai.gpt-6-luna |
 
-On bedrock-runtime:
+Configure your client for the bedrock-runtime endpoint as follows:
 
 -
 Use this base URL: https://bedrock-runtime.{region}.amazonaws.com/openai/v1.
@@ -296,8 +296,7 @@ bedrock-runtime
 export OPENAI_API_KEY="<provide your Bedrock API key>"
 export OPENAI_BASE_URL="https://bedrock-runtime.us-east-1.amazonaws.com/openai/v1"
 
-###### Note
-
+Note
 On bedrock-runtime, use a cross-Region inference profile as the model: us.openai.gpt-6-luna or global.openai.gpt-6-luna. This model does not support in-Region calls on this endpoint.
 
 Your IAM identity needs bedrock:InvokeModel permission for both resources:
